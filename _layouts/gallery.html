@@ -1,0 +1,9 @@
+<div class="gallery">
+  {% for image in site.static_files %}
+    {% if image.path contains '_gallery/' %}
+      <a href="{{ site.baseurl }}{{ image.path }}" data-toggle="lightbox" data-gallery="gallery">
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name }}" class="gallery-image">
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>
