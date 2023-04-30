@@ -19,8 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
+twitter_username: 
+github_username: olenisinelo
 minimal_mistakes_skin: default
 search: true
 
@@ -58,22 +58,23 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
+  name   : "Cyrill Rafael Vasilyev"
+  #avatar : "uprootiny/uprootiny.github.io/gallery/AAA_9.jpg"
+  avatar : "/gallery/AAA_9.jpg"
   bio    : "My awesome biography constrained to a sentence or two goes here."
   links:
-    - label: "Website"
+    - label: ""
       icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://cyrillrafael.com"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/olenisinelo"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/olenisinelo"
 
 footer:
   links:
@@ -110,6 +111,9 @@ defaults:
 category_archive:
   type: liquid
   path: /categories/
+painting_archive:
+  type: liquid
+  path: /paintings/
 tag_archive:
   type: liquid
   path: /tags/
