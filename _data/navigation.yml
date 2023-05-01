@@ -1,4 +1,6 @@
 main:
+  - title: "Prints"
+    url: /prints/
   - title: "Posts"
     url: /posts/
   - title: "Categories"
