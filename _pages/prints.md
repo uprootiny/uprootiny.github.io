@@ -1,6 +1,7 @@
 ---
 permalink: /prints/
 title:  "Prints"
+---
 
 gallery:
   - url: /gallery/1.jpg
