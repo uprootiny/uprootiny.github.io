@@ -13,10 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
+title: Hypersticial Supraspaces
 email:
-description: >- # this means to ignore newlines until "baseurl:"
-Cyrill Rafael Art
+description: Cyrill Rafael Art
 # twitter_username: 
 github_username: olenisinelo
 minimal_mistakes_skin: air
@@ -62,12 +61,15 @@ author:
   name   : "Cyrill Rafael Vasilyev"
   #avatar : "uprootiny/uprootiny.github.io/gallery/AAA_9.jpg"
   avatar : "/gallery/AAA_9.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "
+3 / 3
+
+I evoke subtle realms, defying our habits of thought, revealing a truth that nourishes and enlivens. Through materiality, I hope for a visceral response, celebrating vision and our non-difference from the transparent vibrancy of matter. My work: pareidolic imagery, mythopoetic fascinations, large surfaces as bodies and spaces, emphasising material qualities."
   links:
     - label: "Website"
       url: "https://cyrillrafael.wordpress.com/#jp-carousel-38"
       icon: "fas fa-fw fa-picture-o"
-      url: "https://cyrillrafael.com"
+      url: "https://www.cyrillrafael.com"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
@@ -88,7 +90,7 @@ footer:
       url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/uprootiny/uprootiny.github.io"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
