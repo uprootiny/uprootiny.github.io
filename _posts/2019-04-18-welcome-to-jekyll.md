@@ -1,6 +1,7 @@
 ---
-title: "Welcome to Jekyll!"
+title: "Manifesto"
 date: 2019-04-18T15:34:30-04:00
+date: 2023-05-066T20:12:30-04:00
 categories:
   - blog
 tags:

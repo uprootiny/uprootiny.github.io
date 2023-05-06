@@ -68,7 +68,7 @@ author:
   links:
     - label: "Website"
       url: "https://cyrillrafael.wordpress.com/#jp-carousel-38"
-      icon: "fas fa-fw fa-link"
+      icon: "fas fa-fw fa-picture-o"
       url: "https://cyrillrafael.com"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
@@ -78,6 +78,9 @@ author:
       url: "https://github.com/olenisinelo"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/olenisinelo"
+    - label: "Photos"
+      icon: "fas fa-fw fa-camera-retro"
       url: "https://instagram.com/olenisinelo"
 
 footer:

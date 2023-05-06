@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: gallery
 title: My Carousel
 permalink: /my-carousel/
 ---

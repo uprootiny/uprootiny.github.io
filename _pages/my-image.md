@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: gallery
 title: My Image
 permalink: /my-image/
 ---
