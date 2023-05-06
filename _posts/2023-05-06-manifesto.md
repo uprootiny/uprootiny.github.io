@@ -4,6 +4,12 @@ date: 2023-05-066T20:12:30-04:00
 categories:
   - blog
 ---
+
+
+![multitude of ecologies we inhabit](/assets/images/photo_2023-04-29_00-16-53.jpg)
+
+
+
 A bloom in emptiness obtains. A fire is lit upon the vast branching geometries of supersticial hyperspaces.
 May the scintillating affectivity that defies our wake-centric habits of thought,
 Be our guide to the non-difference from the transparent vibrancy of matter,
