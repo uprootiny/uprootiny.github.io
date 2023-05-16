@@ -1,13 +1,18 @@
 ---
 layout: default
 ---
-
+<head>
+  <link rel="stylesheet" href="/assets/lightbox2/css/lightbox.min.css">
+</head>
 <h1>Gallery</h1>
 
+<script src="/assets/lightbox2/js/lightbox-plus-jquery.min.js"></script>
 <div class="gallery">
   {% for image in site.static_files %}
     {% if image.path contains '/_gallery/' %}
-      <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name }}">
+      <a href="{{ site.baseurl }}{{ image.path }}" data-lightbox="gallery" data-title="{{ image.name }}">
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name }}">
+      </a>
     {% endif %}
   {% endfor %}
 </div>
