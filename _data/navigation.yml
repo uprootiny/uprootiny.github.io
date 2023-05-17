@@ -3,11 +3,7 @@ main:
     url: /prints/
   - title: "Gallery"
     url: /gallery/
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
   - title: "About"
     url: /about/
+  - title: "CV"
+    url: /cv/
