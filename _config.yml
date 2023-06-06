@@ -30,7 +30,7 @@ remote_theme: mmistakes/minimal-mistakes #FIXME
 
 # include:
 #   - _pages
-include: ["_pages"]
+# include: ["_pages"]
 
 
 
