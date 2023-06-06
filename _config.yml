@@ -14,17 +14,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 baseurl: /uprootiny.github.io
-title: Hypersticial Supraspaces
-email:
+title: Cyrill Rafael
+email: olenisinelo@gmail.com
 description: Cyrill Rafael Art
 # twitter_username: 
 github_username: olenisinelo
-minimal_mistakes_skin: default
+
+minimal_mistakes_skin: default #FIXME
 search: true
 
 # Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+markdown: kramdown #FIXME
+remote_theme: mmistakes/minimal-mistakes #FIXME
 # Outputting
 
 # include:
