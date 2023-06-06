@@ -21,7 +21,7 @@ description: Cyrill Rafael Art
 github_username: olenisinelo
 
 minimal_mistakes_skin: default #FIXME
-search: true
+search: false
 
 # Build settings
 markdown: kramdown #FIXME
