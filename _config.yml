@@ -51,7 +51,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
+  # - jekyll-feed
   - jemoji
   - jekyll-include-cache
 
@@ -71,6 +71,9 @@ plugins:
 #     - label: "GitHub"
 #       icon: "fab fa-fw fa-github"
 #       url: "https://github.com/olenisinelo"
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-telegram"
+#       url: "https://github.com/olenisinelo"
 #     - label: "Instagram"
 #       icon: "fab fa-fw fa-instagram"
 #       url: "https://instagram.com/olenisinelo"
@@ -78,17 +81,24 @@ plugins:
 #       icon: "fas fa-fw fa-camera-retro"
 #       url: "https://instagram.com/olenisinelo"
 
-# footer:
-#   links:
-#     - label: "Twitter"
-#       icon: "fab fa-fw fa-twitter-square"
-#       url: "https://twitter.com/"
-#     - label: "GitHub"
-#       icon: "fab fa-fw fa-github"
-#       url: "https://github.com/uprootiny/uprootiny.github.io"
-#     - label: "Instagram"
-#       icon: "fab fa-fw fa-instagram"
-#       url: "https://instagram.com/"
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/uprootiny/uprootiny.github.io"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/olenisinelo"
+    - label: "Telegram"
+      icon: "fab fa-fw fa-telegram"
+      url: "tel:// +31 6 86 21 81 99"
+
 
 defaults:
   # _pages
