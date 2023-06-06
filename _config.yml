@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 baseurl: /uprootiny.github.io
-title: Cyrill Rafael
+title: Cyrill Rafael Vasilyev
 email: olenisinelo@gmail.com
 description: Cyrill Rafael Art
 # twitter_username: 
@@ -55,40 +55,40 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-author:
-  name   : "Cyrill Rafael Vasilyev"
-  #avatar : "uprootiny/uprootiny.github.io/gallery/AAA_9.jpg"
-  avatar : "/gallery/AAA_9.jpg"
-  bio    : "•"
-  links:
-    - label: "Website"
-      url: "https://cyrillrafael.wordpress.com/#jp-carousel-38"
-      icon: "fas fa-fw fa-picture-o"
-      url: "https://www.cyrillrafael.com"
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-    #   url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/olenisinelo"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/olenisinelo"
-    - label: "Photos"
-      icon: "fas fa-fw fa-camera-retro"
-      url: "https://instagram.com/olenisinelo"
+# author:
+#   name   : "Cyrill Rafael Vasilyev"
+#   #avatar : "uprootiny/uprootiny.github.io/gallery/AAA_9.jpg"
+#   avatar : "/gallery/AAA_9.jpg"
+#   bio    : "•"
+#   links:
+#     - label: "Website"
+#       url: "https://cyrillrafael.wordpress.com/#jp-carousel-38"
+#       icon: "fas fa-fw fa-picture-o"
+#       url: "https://www.cyrillrafael.com"
+#     # - label: "Twitter"
+#     #   icon: "fab fa-fw fa-twitter-square"
+#     #   url: "https://twitter.com/"
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       url: "https://github.com/olenisinelo"
+#     - label: "Instagram"
+#       icon: "fab fa-fw fa-instagram"
+#       url: "https://instagram.com/olenisinelo"
+#     - label: "Photos"
+#       icon: "fas fa-fw fa-camera-retro"
+#       url: "https://instagram.com/olenisinelo"
 
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/uprootiny/uprootiny.github.io"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+# footer:
+#   links:
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       url: "https://twitter.com/"
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       url: "https://github.com/uprootiny/uprootiny.github.io"
+#     - label: "Instagram"
+#       icon: "fab fa-fw fa-instagram"
+#       url: "https://instagram.com/"
 
 defaults:
   # _pages
