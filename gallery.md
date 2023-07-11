@@ -19,10 +19,12 @@ permalink: /paintings/
   {% assign title = image.name | replace: year, "" | replace: '.jpg', "" | replace: '.png', "" %}
   
   <div class="painting" data-year="{{ year }}">
-  <br/>
   
-    <h2>{{ title | capitalize }} {{ year }}</h2>
     <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ title }}" />
+        <h2>{{ title | capitalize }} {{ year }}</h2>
+          <br/>
+
+
   </div>
   
   {% endif %}
