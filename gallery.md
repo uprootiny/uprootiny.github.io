@@ -7,28 +7,19 @@ permalink: /paintings/
   <link rel="stylesheet" href="/assets/lightbox2/css/lightbox.min.css">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
-<!-- <h1>Gallery</h1> -->
-
 
 <div class="gallery">
-  {% for image in site.static_files %}
+  {% assign sorted_paintings = site.static_files | where: "path", "/paintings/" | sort: "name" %}
   
-  {% if image.path contains '/paintings/' %}
+  {% for image in sorted_paintings %}
+    {% assign name_parts = image.name | split: ' ' %}
+    {% assign year = name_parts[0] %}
+    {% assign title = image.name | replace: year, "" | replace: '.jpg', "" | replace: '.png', "" %}
   
-  {% assign name_parts = image.name | split: ' ' %}
-  {% assign year = name_parts[0] %}
-  {% assign title = image.name | replace: year, "" | replace: '.jpg', "" | replace: '.png', "" %}
-  
-  <div class="painting" data-year="{{ year }}">
-  
-    <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ title }}" />
-        <h2>{{ title | capitalize }} {{ year }}</h2>
-          <br/>
-
-
-  </div>
-  
-  {% endif %}
-  
+    <div class="painting" data-year="{{ year }}">
+      <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ title }}" />
+      <h2>{{ title | capitalize }} {{ year }}</h2>
+      <br/>
+    </div>
   {% endfor %}
 </div>
