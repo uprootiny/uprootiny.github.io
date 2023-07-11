@@ -5,6 +5,7 @@ permalink: /paintings/
 ---
 <head>
   <link rel="stylesheet" href="/assets/lightbox2/css/lightbox.min.css">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <!-- <h1>Gallery</h1> -->
 
