@@ -1,3 +1,7 @@
+---
+layout: default
+title: Artistic Statement
+---
 Cyrill Rafael Vasilyev (1992) is an artist born in Moscow, Russia, and based in The Hague, Netherlands.
 His painterly installations are characterised by large sizes, vibrant colours, and a stark, bare rendering of the materiality of the work, which often communicates a tactile quality and engages the viewers senses with a bold intensity.
 His interest in the world’s contemplative traditions leads him to address in his work the themes of cyclicity, embodiment, flux, death, transcendence and dream-like, conditional nature of human experience and human reality.
