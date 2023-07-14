@@ -1,6 +1,6 @@
 Cyrill Rafael Vasilyev (1992) is an artist from Moscow, Russia, based in The Hague, Netherlands.
 
-Education:
+Education: 
 2009-2014 Russian State University for Humanities, Moscow, specialist degree in History
 2014-2018 Royal Academy of Art, The Hague, Ba. Fine Arts, painting department
 
