@@ -20,7 +20,7 @@ description: Cyrill Rafael Art
 # twitter_username: 
 github_username: olenisinelo
 
-minimal_mistakes_skin: default #FIXME
+minimal_mistakes_skin: none #FIXME
 search: false
 
 # Build settings
