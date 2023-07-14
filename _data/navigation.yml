@@ -1,9 +1,0 @@
-main:
-  - title: "Prints"
-    url: /prints/
-  - title: "Gallery"
-    url: /gallery/
-  - title: "About"
-    url: /about/
-  - title: "CV"
-    url: /cv/
