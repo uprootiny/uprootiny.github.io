@@ -115,6 +115,21 @@ defaults:
     values:
       layout: single
       author_profile: true
+  - scope:
+     path: ""
+     type: "prints"
+    values:
+     layout: "single"
+     title: "Prints"
+     permalink: "/prints/"
+
+  - scope:
+     path: ""
+     type: "paintings"
+    values:
+     layout: "single"
+     title: "Paintings"
+     permalink: "/paintings/"
 
 painting_archive:
   type: liquid
