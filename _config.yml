@@ -1,0 +1,26 @@
+theme: minima
+title: Cyrill Rafael Vasilyev
+description: Showcase of my artwork
+
+# Base URL
+baseurl: "/"
+
+# Permalinks
+permalink: /:title/
+
+# Navigation links
+nav_links:
+  - title: Home
+    url: /
+  - title: Paintings
+    url: /paintings
+  - title: Prints
+    url: /prints
+  - title: About
+    url: /about
+  - title: CV
+    url: /cv
+  - title: Instagram
+    url: https://www.instagram.com/olenisinelo/
+  - title: Telegram
+    url: https://t.me/uprootiny/
