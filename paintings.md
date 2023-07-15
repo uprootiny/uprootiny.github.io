@@ -4,20 +4,18 @@ title: Paintings
 permalink: /paintings/
 ---
 
-<h1>{{ page.title }}</h1>
-
 <div class="image-container">
-  {% assign sorted_paintings = site.static_files | where: "path", "/paintings/" | sort: "modified_time" | reverse %}
-  {% for painting in sorted_paintings %}
-    {% assign filename_parts = painting.name | split: " " %}
-    {% assign year = filename_parts[0] %}
-    {% assign title_parts = filename_parts | slice: 1, filename_parts.size | join: " " %}
-    {% assign title = title_parts | remove: ".jpg" %}
-
-    <div class="painting-item">
-      <img src="{{ site.baseurl }}/paintings/{{ painting.name }}" alt="{{ title }}">
-      <p class="image-title">{{ title }}</p>
-      <p class="image-year">{{ year }}</p>
-    </div>
+  {% for painting in site.static_files %}
+    {% if painting.path contains "/paintings/" %}
+      {% assign filename_parts = painting.basename | split: " " %}
+      {% assign year = filename_parts[0] %}
+      {% assign title = filename_parts | slice: 1 | join: " " %}
+      
+      <div class="image-item">
+        <img src="{{ site.baseurl }}{{ painting.path }}" alt="{{ title }}">
+        <p class="image-title">{{ title }}</p>
+        <p class="image-year">{{ year }}</p>
+      </div>
+    {% endif %}
   {% endfor %}
 </div>
