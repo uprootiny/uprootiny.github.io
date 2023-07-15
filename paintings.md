@@ -1,5 +1,5 @@
 ---
-layout: text
+layout: paintings
 title: Paintings
 permalink: /paintings/
 ---
