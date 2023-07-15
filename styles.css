@@ -25,6 +25,7 @@ body {
 
 /* Center the text content and limit its width */
 .content {
+    padding-top: 2em;
     max-width: 600px; /* Adjust the width to your preference */
     margin: 0 auto; /* Center the content horizontally */
   }
@@ -104,3 +105,12 @@ ul.horizontal-list {
     background-color: #f0f0f0; /* Change the background color on hover */
   }
     
+
+
+
+  .about-page {
+    background-image: url("{{ site.baseurl }}/assets/images/moroccan portal.jpg");
+    background-size: cover; /* Adjust the background image size to cover the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+  }
+  
