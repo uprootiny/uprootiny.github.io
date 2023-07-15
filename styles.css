@@ -9,6 +9,7 @@ body {
   font-family: Menlo, monospace;
   font-size: 1.8rem;
   background: linear-gradient(to bottom, white, lightgray);
+  background-attachment: fixed; /* Fix the background position relative to the viewport */
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Set minimum height to fill the entire viewport height */
