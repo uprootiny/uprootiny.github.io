@@ -5,9 +5,6 @@ permalink: /paintings/
 ---
 
 {% assign paintings_by_year = site.static_files | where: "path", "/paintings/" | group_by_exp: "painting", "painting.basename | split: ' ' | first" %}
-
-{% include "navbar.html" %}
-
 <div class="image-container">
   {% for year in paintings_by_year %}
     {% assign year_paintings = year.items | sort: "painting.basename" | reverse %}

@@ -3,9 +3,6 @@ layout: gallery
 title: prints
 permalink: /prints/
 ---
-
-{% include "navbar.html" %}
-
 <div class="image-container">
   {% for print in site.static_files %}
     {% if print.path contains "/prints/" %}
