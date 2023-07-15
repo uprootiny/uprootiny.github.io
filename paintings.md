@@ -4,18 +4,19 @@ title: Paintings
 permalink: /paintings/
 ---
 
+<h1>{{ page.title }}</h1>
+
+{% assign paintings_by_year = site.static_files | where: "path", "/paintings/" | group_by_exp: "painting", "painting.basename | split: ' ' | first" %}
+
 <div class="image-container">
-  {% for painting in site.static_files %}
-    {% if painting.path contains "/paintings/" %}
-      {% assign filename_parts = painting.basename | split: " " %}
-      {% assign year = filename_parts[0] %}
-      {% assign title = filename_parts | slice: 1 | join: " " %}
-      
+  {% for year in paintings_by_year %}
+    {% assign year_paintings = year.items | sort: "painting.basename" | reverse %}
+    {% for painting in year_paintings %}
       <div class="image-item">
-        <img src="{{ site.baseurl }}{{ painting.path }}" alt="{{ title }}">
-        <p class="image-title">{{ title }}</p>
-        <p class="image-year">{{ year }}</p>
+        <img src="{{ site.baseurl }}{{ painting.path }}" alt="">
+        <!-- If you want to display the year below each image -->
+        <p class="image-year">{{ year.name }}</p>
       </div>
-    {% endif %}
+    {% endfor %}
   {% endfor %}
 </div>
