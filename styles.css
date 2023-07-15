@@ -1,3 +1,11 @@
+html, body {
+    height: 100%; /* Make sure the body fills the entire viewport height */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Prevent scrolling beyond the content */
+  }
+  
+
 body {
   font-family: Menlo, monospace;
   font-size: 1.8rem;
