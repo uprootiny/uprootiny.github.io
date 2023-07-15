@@ -35,3 +35,20 @@ ul.horizontal-list {
     background-color: #f0f0f0; /* Change the background color on hover */
   }
     
+
+/* Ensure images take full width of the page */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .image-item {
+    flex: 1 0 100%; /* Take full width */
+  }
+  
+  /* Ensure images resize to fit the viewport */
+  .image-item img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
