@@ -6,8 +6,9 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
 </head>
 <body>
+  <main>
   {% include navbar.html %}
-
+ <div class="wrapper">
   <div class="image-container">
     {% assign images = site.static_files | where: "path", page.dir | sort: "path" | reverse %}
     {% for image in images %}
@@ -23,6 +24,7 @@
       </div>
     {% endfor %}
   </div>
-
+  </div>
+</main>
 </body>
 </html>
