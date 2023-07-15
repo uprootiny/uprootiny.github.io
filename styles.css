@@ -51,7 +51,21 @@ body {
 
 
 }
-
+.image-title-year {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .image-title {
+    flex: 1; /* Make the title div take up the available space to align to the left */
+  }
+  
+  .image-year {
+    flex-shrink: 0; /* Prevent the year div from shrinking to fit its content */
+  }
+  
   
   .image-item {
     flex: 1 0 100%; /* Take full width */
