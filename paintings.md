@@ -15,7 +15,7 @@ permalink: /paintings/
   {% assign extension = painting.extname %}
 
   <div class="image-container">
-    <img src="{{ site.baseurl }}{{ painting.path }}" alt="{{ title }}">
+    <img src="{{ site.baseurl }}{{ painting.path | relative_url }}" alt="{{ title }}">
     <div class="image-title">{{ title }}</div>
     <div class="image-year">{{ year }}</div>
   </div>
