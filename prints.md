@@ -4,7 +4,6 @@ title: prints
 permalink: /prints/
 ---
 <div class="image-container">
-{% include "navbar.html" %}
   {% for print in site.static_files %}
     {% if print.path contains "/prints/" %}
       <div class="image-item">
