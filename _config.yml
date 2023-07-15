@@ -2,9 +2,7 @@ theme: jekyll-theme-minimal
 title: Cyrill Rafael Vasilyev
 description: Artwork showcase
 
-# Base URL
-baseurl: ""
-
+url: www.cyrillrafael.com
 # Permalinks
 permalink: /:title/
 
