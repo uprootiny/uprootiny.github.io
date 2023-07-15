@@ -1,26 +1,23 @@
 ---
 layout: default
+title: Paintings
+permalink: /paintings/
 ---
 
-<h1>Paintings</h1>
+<h1>{{ page.title }}</h1>
 
-{% assign sorted_paintings = site.static_files | where: "path", "/paintings/" %}
-{% assign paintings = sorted_paintings | sort: "modified_time" | reverse %}
+<div class="image-container">
+  {% assign sorted_paintings = site.static_files | where: "path", "/paintings/" | sort: "modified_time" | reverse %}
+  {% for painting in sorted_paintings %}
+    {% assign filename_parts = painting.name | split: " " %}
+    {% assign year = filename_parts[0] %}
+    {% assign title_parts = filename_parts | slice: 1, filename_parts.size | join: " " %}
+    {% assign title = title_parts | remove: ".jpg" %}
 
-{% for painting in paintings %}
-  {% if painting.extname == '.jpg' or painting.extname == '.jpeg' or painting.extname == '.png' or painting.extname == '.gif' %}
-    {% assign name_parts = painting.name | split: ' ' %}
-    {% assign year = name_parts[0] %}
-    {% assign title = name_parts[1] %}
-    {% for part in name_parts limit: 2 offset: 2 %}
-      {% assign title = title | append: ' ' | append: part %}
-    {% endfor %}
-
-    <div class="image-container">
+    <div class="painting-item">
       <img src="{{ site.baseurl }}/paintings/{{ painting.name }}" alt="{{ title }}">
-      <div class="image-title">{{ title }}</div>
+      <p class="image-title">{{ title }}</p>
+      <p class="image-year">{{ year }}</p>
     </div>
-
-    <br> <!-- Add space between paintings -->
-  {% endif %}
-{% endfor %}
+  {% endfor %}
+</div>
