@@ -1,5 +1,4 @@
 <!-- _layouts/gallery.html -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +6,8 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
 </head>
 <body>
+  {% include navbar.html %}
+
   <div class="image-container">
     {% assign images = site.static_files | where: "path", page.dir | sort: "path" | reverse %}
     {% for image in images %}
