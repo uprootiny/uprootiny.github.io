@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: text
 title: Curriculum Vitæ
 ---
 Cyrill Rafael Vasilyev (1992) is an artist from Moscow, Russia, based in The Hague, Netherlands.

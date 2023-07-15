@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: text
 title: Artistic Statement
 ---
 Cyrill Rafael Vasilyev (1992) is an artist born in Moscow, Russia, and based in The Hague, Netherlands.
