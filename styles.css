@@ -7,3 +7,31 @@ body {
   max-width: 100%;
   height: auto;
 }
+
+ul.horizontal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  ul.horizontal-list li.nav-item {
+    margin-right: 20px; /* Adjust the spacing between list items as needed */
+  }
+  
+  ul.horizontal-list li.nav-item:last-child {
+    margin-right: 0; /* Remove the right margin from the last list item */
+  }
+  
+  /* Style the links */
+  ul.horizontal-list li.nav-item a {
+    text-decoration: none;
+    color: #333; /* Change the link color as needed */
+    padding: 8px 12px; /* Add padding around the links */
+  }
+  
+  /* Optional: Add hover effect */
+  ul.horizontal-list li.nav-item a:hover {
+    background-color: #f0f0f0; /* Change the background color on hover */
+  }
+    

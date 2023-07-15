@@ -1,7 +1,7 @@
 <nav>
-    <ul>
+    <ul class="horizontal-list">
       {% for link in site.nav_links %}
-        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        <li class="nav-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
     </ul>
   </nav>
