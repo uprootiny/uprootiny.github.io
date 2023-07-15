@@ -1,20 +1,29 @@
+<!-- _layouts/gallery.html -->
+
 <!DOCTYPE html>
 <html>
-  <head>
-    
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+<head>
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+</head>
+<body>
+  <h1>{{ page.title }}</h1>
 
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    {% include navbar.html %}
+  <div class="image-container">
+    {% assign images = site.static_files | where: "path", page.dir | sort: "path" | reverse %}
+    {% for image in images %}
+      {% assign filename_parts = image.basename | split: " " %}
+      {% assign year = filename_parts[0] %}
+      {% assign title = filename_parts | slice: 1 | join: " " %}
 
-    <main>
-        <div class="gallery-container">
-      {{ content }}
-        </div>
-    </main>
+      <div class="image-item">
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ title }}">
+        <h2 class="image-title">{{ title }}</p>
+        <h2 class="image-year">{{ year }}</p>
+        <br/>
+      </div>
+    {% endfor %}
+  </div>
 
-  </body>
+</body>
 </html>
