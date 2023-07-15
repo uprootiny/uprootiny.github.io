@@ -12,12 +12,13 @@ permalink: /paintings/
     {% assign name_parts = painting.name | split: " " %}
     {% assign year = name_parts[0] %}
     {% assign title_parts = name_parts | drop_first: 1 %}
-    {% assign title = title_parts | join: " " | split: "." | first %}
+    {% assign title_with_extension = title_parts | join: " " %}
+    {% assign title = title_with_extension | split: "." | first %}
 
     <div class="image-item">
       <img src="{{ site.baseurl }}{{ painting.path | relative_url }}" alt="{{ title }}">
-      <div class="image-title">{{ painting.name }}</div>
-      <div class="image-year">{{ year }}</div>
+      <div class="image-title">{{ painting.name }} <div class="image-year">{{ year }}</div></div>
+      
     </div>
   {% endfor %}
 </div>
