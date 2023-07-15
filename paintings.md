@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: gallery
 title: Paintings
 permalink: /paintings/
 ---
 
-<h1>{{ page.title }}</h1>
-
 {% assign paintings_by_year = site.static_files | where: "path", "/paintings/" | group_by_exp: "painting", "painting.basename | split: ' ' | first" %}
+
+{% include "navbar.html" %}
 
 <div class="image-container">
   {% for year in paintings_by_year %}

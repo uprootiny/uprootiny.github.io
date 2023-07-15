@@ -20,3 +20,7 @@ nav_links:
     url: https://www.instagram.com/cyrillrafael/
   - title: Telegram
     url: https://t.me/+31686218199/
+
+# Redirects
+redirects:
+  - www.cyrillrafael.com: /paintings
