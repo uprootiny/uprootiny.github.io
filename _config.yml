@@ -3,7 +3,7 @@ title: Cyrill Rafael Vasilyev
 description: Artwork showcase
 
 # Base URL
-baseurl: "/"
+baseurl: ""
 
 # Permalinks
 permalink: /:title/
