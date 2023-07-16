@@ -109,7 +109,7 @@ ul.horizontal-list {
 
 
   .about-page {
-    background-image: url("{{ site.baseurl }}/assets/images/background.jpg");
+    background-image: url("/assets/images/background.jpg");
     background-size: cover; /* Adjust the background image size to cover the container */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
   }
