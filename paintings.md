@@ -11,8 +11,8 @@ permalink: /paintings/
   {% for painting in sorted_paintings %}
     {% assign name_parts = painting.name | split: " " %}
     {% assign year = name_parts[0] %}
-    {% assign title_parts = name_parts | drop_first: 1 %}
-    {% assign title = title_parts | join: " " %}
+    {% assign title_parts = name_parts | drop_first: 1 | join: " " | split: "." | drop_last: 1 %}
+    {% assign title = title_parts[0] %}
 
 
     <div class="image-item">
