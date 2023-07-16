@@ -16,10 +16,12 @@ nav_links:
     url: /about
   - title: CV
     url: /cv
-  - title: Instagram <i class="fab fa-instagram"></i>
+  - title: Instagram
     url: https://www.instagram.com/cyrillrafael/
-  - title: Telegram <i class="fab fa-telegram"></i>
+    icon: fas fa-instagram
+  - title: Telegram
     url: https://t.me/+31686218199/
+    icon: far fa-telegram
 
 # Redirects
 redirects:
