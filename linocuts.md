@@ -1,7 +1,7 @@
 ---
 layout: text
-title: prints
-permalink: /prints/
+title: linocuts
+permalink: /linocuts/
 ---
 <div class="image-container">
   {% for print in site.static_files %}
