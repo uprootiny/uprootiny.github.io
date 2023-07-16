@@ -10,17 +10,18 @@ permalink: /:title/
 nav_links:
   - title: Paintings
     url: /paintings
-  - title: Prints
-    url: /prints
+  - title: Linocuts
+    url: /linocuts
   - title: About
     url: /about
   - title: CV
     url: /cv
   - title: Instagram
     url: https://www.instagram.com/cyrillrafael/
-  - title: Telegram
+  - title: Telegram <i class="fab fa-telegram"></i>
     url: https://t.me/+31686218199/
 
 # Redirects
 redirects:
-  - www.cyrillrafael.com: /paintings
+  - www.cyrillrafael.com/: /paintings
+  - /: /paintings
