@@ -27,3 +27,12 @@ nav_links:
 redirects:
   - from: "/"
     to: "/paintings/"
+
+
+paintings_data:
+  - filename: my_dear_teacher.jpg
+    dimensions: 220x120cm
+  - filename: behind_red_door_sitting.jpg
+    dimensions: 220x120cm
+  - filename: 2018 untitled.jpg
+    dimensions: 120x160cm
