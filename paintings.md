@@ -26,7 +26,7 @@ permalink: /paintings/
 
             <div class="image-title">{{ title }}</div>
            <div class="image-dimensions">{{ dimensions }}</div>
-
+<div><br/></div>
             <div class="image-year">{{ year }}</div>
 
         </div>
