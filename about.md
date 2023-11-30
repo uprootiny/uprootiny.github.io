@@ -1,5 +1,5 @@
 ---
-layout: text
+layout: painted-background
 title: Artistic Statement
 ---
 
