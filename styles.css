@@ -110,10 +110,9 @@ ul.horizontal-list {
 
   .about-page {
     background-image: url("/assets/images/background.jpg");
-    padding: 2rem;
+    padding: 2ex;
     background-size: cover; /* Adjust the background image size to cover the container */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
-    font-size: 1.6rem;
-
+    font-size: 18px;
   }
   
