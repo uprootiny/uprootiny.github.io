@@ -71,15 +71,18 @@ body {
   }
   
   
-  .image-item {
-    flex: 1 0 100%; /* Take full width */
-  }
-  
-  /* Ensure images resize to fit the viewport */
-  .image-item img {
-    width: 100%; /* Set the image width to 100% of the container */
-    height: auto; /* Maintain aspect ratio */
-  }
+
+.image-item {
+  flex: 1 0 100%; /* Take full width */
+  touch-action: manipulation; /* Enable touch gestures without delay */
+}
+
+/* Ensure images resize to fit the viewport */
+.image-item img {
+  width: 100%; /* Set the image width to 100% of the container */
+  height: auto; /* Maintain aspect ratio */
+  user-drag: none; /* Disable the ability to drag the image */
+}
 
 ul.horizontal-list {
     list-style: none;
@@ -125,3 +128,21 @@ ul.horizontal-list {
     flex: 1; /* Fill remaining vertical space */
     min-height: 100%; /* Ensure the wrapper fills at least the viewport height */
   }
+
+
+/* Set the initial scale for the viewport */
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+/* Disable pinch zooming on the gallery container */
+.gallery-container {
+  touch-action: manipulation;
+}
+
+/* Adjust styles for the wrapper and content to allow full-width images */
+.wrapper, .content {
+  width: 100%;
+  max-width: 100%;
+}
