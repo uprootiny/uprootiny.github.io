@@ -49,7 +49,6 @@ body {
   width: 100%;
   max-width: 100%;
   width: auto;
-  height: 100vh; /* Set the gallery height equal to the viewport height */
 
   display: flex;
   flex-wrap: wrap;
@@ -75,13 +74,15 @@ body {
 
 .image-item {
   flex: 1 0 100%; /* Take full width */
-  touch-action: manipulation; /* Enable touch gestures without delay */
+  height: 100vh; /* Set the gallery height equal to the viewport height */
 }
 
 /* Ensure images resize to fit the viewport */
 .image-item img {
   width: 100%; /* Set the image width to 100% of the container */
   height: auto; /* Maintain aspect ratio */
+      height: 100vh; /* Set the gallery height equal to the viewport height */
+
   user-drag: none; /* Disable the ability to drag the image */
 }
 
