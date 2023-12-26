@@ -46,29 +46,32 @@ body {
 }
 
 .image-container {
-  width: 100%;
-  max-width: 100%;
-  width: auto;
-
   display: flex;
   flex-wrap: wrap;
-
-
 }
+
+.image-item {
+  flex: 1 0 33.33%; /* Adjust the width based on the number of images per row */
+  max-width: 33.33%; /* Ensure images don't overflow the container */
+  box-sizing: border-box; /* Include padding and borders in the width */
+  padding: 10px; /* Add padding to images for spacing */
+}
+
 .image-title-year {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .image-title {
-    flex: 1; /* Make the title div take up the available space to align to the left */
-  }
-  
-  .image-year {
-    flex-shrink: 0; /* Prevent the year div from shrinking to fit its content */
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.image-title {
+  flex: 1; /* Make the title div take up the available space to align to the left */
+}
+
+.image-year {
+  flex-shrink: 0; /* Prevent the year div from shrinking to fit its content */
+}
+
   
   
 
