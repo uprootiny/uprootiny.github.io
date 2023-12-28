@@ -80,10 +80,12 @@ body {
 
 /* Ensure images resize to fit the viewport */
 .image-item img {
-  width: 100%; /* Set the image width to 100% of the container */
-  height: auto; /* Maintain aspect ratio */
-      height: 100vh; /* Set the gallery height equal to the viewport height */
+  width: 100%;
+  max-width: 100%; /* Ensure the image doesn't stretch beyond its natural width */
+  height: auto;
+  height: 100vh; /* Set the gallery height equal to the viewport height */
 
+  object-fit: contain; /* Maintain aspect ratio and fit within the container */
   user-drag: none; /* Disable the ability to drag the image */
 }
 
