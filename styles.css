@@ -51,8 +51,6 @@ body {
 }
 
 .image-item {
-  flex: 1 0 33.33%; /* Adjust the width based on the number of images per row */
-  max-width: 33.33%; /* Ensure images don't overflow the container */
   box-sizing: border-box; /* Include padding and borders in the width */
   padding: 10px; /* Add padding to images for spacing */
 }
