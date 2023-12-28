@@ -1,63 +1,33 @@
-html, body {
-    height: 100%; /* Make sure the body fills the entire viewport height */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
-  }
-  
-
 body {
   font-family: Menlo, monospace;
   font-size: 1.8rem;
   background: linear-gradient(to bottom, white, lightgray);
-  background-attachment: fixed; /* Fix the background position relative to the viewport */
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Set minimum height to fill the entire viewport height */
-
-}  
+  min-height: 100vh;
+}
 
 .wrapper {
-    flex: 1; /* Fill remaining vertical space */
-    flex: 1; /* Fill remaining vertical space */
-    min-height: 100%; /* Ensure the wrapper fills at least the viewport height */
-  }
+  flex: 1;
+}
 
-
-  
-
-
-/* Center the text content and limit its width */
 .content {
-    padding-top: 2em;
-    max-width: 600px; /* Adjust the width to your preference */
-    margin: 0 auto; /* Center the content horizontally */
-  }
-  
-  
-  /* Increase the font size for better readability on mobile devices */
-  p {
-    font-size: 18px; /* Adjust the font size to your preference */
-  }
-
-.gallery-container {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  width: auto;
+  padding: 2em;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .image-container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1em;
-  margin-bottom: 1em;
-
+  gap: 2em; /* Adjust the gap between images */
 }
 
-
 .image-item {
-  box-sizing: border-box; /* Include padding and borders in the width */
-  padding: 10px; /* Add padding to images for spacing */
+  flex: 1 0 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  margin-bottom: 2em;
 }
 
 .image-title-year {
@@ -65,99 +35,35 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
-  margin-top: 0.5em; /* Add margin at the top of each title section */
 }
 
 .image-title,
 .image-dimensions,
 .image-year {
-  margin-right: 0.5em; /* Add margin between title, dimensions, and year */
-  margin-bottom: 0.5em; /* Add margin below each item to create separation */
+  margin-right: 0.5em;
 }
 
-  
-  
-
-.image-item {
-  flex: 1 0 100%; /* Take full width */
-  height: 100vh; /* Set the gallery height equal to the viewport height */
-  box-sizing: border-box;
-  padding: 1em; /* Add padding around each image for spacing */
-  margin-bottom: 2em; /* Add margin at the bottom of each image to create space */
-
-}
-
-/* Ensure images resize to fit the viewport */
 .image-item img {
   width: 100%;
-  max-width: 100%; /* Ensure the image doesn't stretch beyond its natural width */
+  max-width: 100%;
   height: auto;
-  height: 100vh; /* Set the gallery height equal to the viewport height */
-
-  object-fit: contain; /* Maintain aspect ratio and fit within the container */
-  user-drag: none; /* Disable the ability to drag the image */
+  object-fit: contain;
+  user-drag: none;
 }
 
-ul.horizontal-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  ul.horizontal-list li.nav-item {
-    margin-right: 20px; /* Adjust the spacing between list items as needed */
-  }
-  
-  ul.horizontal-list li.nav-item:last-child {
-    margin-right: 0; /* Remove the right margin from the last list item */
-  }
-  
-  /* Style the links */
-  ul.horizontal-list li.nav-item a {
-    text-decoration: none;
-    color: #333; /* Change the link color as needed */
-    padding: 8px 12px; /* Add padding around the links */
-  }
-  
-  /* Optional: Add hover effect */
-  ul.horizontal-list li.nav-item a:hover {
-    background-color: #f0f0f0; /* Change the background color on hover */
-  }
-    
-
-
-
-  .about-page {
-    padding: 2ex;
-    background-size: cover; /* Adjust the background image size to cover the container */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    font-size: 18px;
-  }
-  
-
-  .painted-background {
-    background-image: url("/assets/images/background.jpg");
-    flex: 1; /* Fill remaining vertical space */
-    flex: 1; /* Fill remaining vertical space */
-    min-height: 100%; /* Ensure the wrapper fills at least the viewport height */
-  }
-
-
-/* Set the initial scale for the viewport */
-@viewport {
-  width: device-width;
-  zoom: 1.0;
+.about-page {
+  padding: 2ex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 18px;
 }
 
-/* Disable pinch zooming on the gallery container */
+.painted-background {
+  background-image: url("/assets/images/background.jpg");
+  flex: 1;
+  min-height: 100%;
+}
+
 .gallery-container {
   touch-action: manipulation;
-}
-
-/* Adjust styles for the wrapper and content to allow full-width images */
-.wrapper, .content {
-  width: 100%;
-  max-width: 100%;
 }
