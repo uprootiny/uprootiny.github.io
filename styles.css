@@ -33,6 +33,7 @@ body {
     margin: 0 auto; /* Center the content horizontally */
   }
   
+  
   /* Increase the font size for better readability on mobile devices */
   p {
     font-size: 18px; /* Adjust the font size to your preference */
@@ -48,7 +49,11 @@ body {
 .image-container {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
 }
+
 
 .image-item {
   box-sizing: border-box; /* Include padding and borders in the width */
@@ -60,6 +65,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-top: 0.5em; /* Add margin at the top of each title section */
+
 }
 
 .image-title {
@@ -76,6 +83,10 @@ body {
 .image-item {
   flex: 1 0 100%; /* Take full width */
   height: 100vh; /* Set the gallery height equal to the viewport height */
+  box-sizing: border-box;
+  padding: 1em; /* Add padding around each image for spacing */
+  margin-bottom: 2em; /* Add margin at the bottom of each image to create space */
+
 }
 
 /* Ensure images resize to fit the viewport */
