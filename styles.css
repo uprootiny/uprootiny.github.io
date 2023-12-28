@@ -65,16 +65,15 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
   margin-top: 0.5em; /* Add margin at the top of each title section */
-
 }
 
-.image-title {
-  flex: 1; /* Make the title div take up the available space to align to the left */
-}
-
+.image-title,
+.image-dimensions,
 .image-year {
-  flex-shrink: 0; /* Prevent the year div from shrinking to fit its content */
+  margin-right: 0.5em; /* Add margin between title, dimensions, and year */
+  margin-bottom: 0.5em; /* Add margin below each item to create separation */
 }
 
   
