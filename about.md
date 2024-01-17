@@ -5,27 +5,14 @@ title: Artistic Statement
 
 <div class="about-page">
 
-Cyrill Rafael Vasilyev (1992) is an artist born in Moscow, Russia, and based in The Hague, Netherlands.
-His painterly installations are characterised by large sizes, vibrant colours, and a stark, bare rendering of the materiality of the work, which often communicates a tactile quality and engages the viewers senses with a bold intensity.
+Cyrill Rafael Vasilyev (1992) is&nbsp;an&nbsp;artist born in&nbsp;Moscow, Russia, and based in&nbsp;The Hague, Netherlands. His painterly installations are characterised by&nbsp;large sizes, vibrant colours, and a&nbsp;stark, bare rendering of&nbsp;the materiality of&nbsp;the work, which often communicates a&nbsp;tactile quality and engages the viewers senses with a&nbsp;bold intensity.
 
-<br/>
-<br/>
-His interest in the world’s contemplative traditions leads him to address in his work the themes of cyclicity, embodiment, flux, death, transcendence and dream-like, conditional nature of human experience and human reality.
-“In my practice I strive to evoke the subtle, ephemeral realms that ebb, flow and glide through the upper registers of our sensorium.
+His interest in&nbsp;the world&rsquo;s contemplative traditions leads him to&nbsp;address in&nbsp;his work the themes of&nbsp;cyclicity, embodiment, flux, death, transcendence and dream-like, conditional nature of&nbsp;human experience and human reality. &laquo;In&nbsp;my&nbsp;practice&nbsp;I strive to&nbsp;evoke the subtle, ephemeral realms that ebb, flow and glide through the upper registers of&nbsp;our sensorium.
 
-<br/>
-<br/>
+The scintillating affectivity that defies our wake-centric habits of&nbsp;thought and reveals a&nbsp;deeper, more nebulous truth of&nbsp;what nourishes&nbsp;us and makes&nbsp;us feel alive.
 
-The scintillating affectivity that defies our wake-centric habits of thought and reveals a deeper, more nebulous truth of what nourishes us and makes us feel alive.
+With my&nbsp;work&nbsp;I hope to&nbsp;achieve a&nbsp;somatic, visceral response. I&nbsp;try to&nbsp;let the materiality of&nbsp;my&nbsp;medium speak, so&nbsp;that it&nbsp;draws forth our own physicality. Transparent vibrancy of&nbsp;matter&mdash; that forms our being and the multitude of&nbsp;ecologies we&nbsp;inhabit&mdash; unceasing, effervescent, generous. Our non-difference from it&nbsp;can be&nbsp;a&nbsp;revelation.
 
-<br/>
-<br/>
-
-With my work I hope to achieve a somatic, visceral response. I try to let the materiality of my medium speak, so that it draws forth our own physicality. Transparent vibrancy of matter— that forms our being and the multitude of ecologies we inhabit— unceasing, effervescent, generous. Our non-difference from it can be a revelation.
-
-<br/>
-<br/>
-
-My subject matter is informed by pareidolic imagery and a matrix of mythopoetic and everyday fascinations. I prefer to work with large surfaces which could be related to both as bodies and spaces in the context of the installation, and always strife to emphasise the character and qualities of the materials I use, and celebrate the gift of vision, which can open us in such profound ways to the realities we live in.”
+My&nbsp;subject matter is&nbsp;informed by&nbsp;pareidolic imagery and a&nbsp;matrix of&nbsp;mythopoetic and everyday fascinations. I&nbsp;prefer to&nbsp;work with large surfaces which could be&nbsp;related to&nbsp;both as&nbsp;bodies and spaces in&nbsp;the context of&nbsp;the installation, and always strife to&nbsp;emphasise the character and qualities of&nbsp;the materials I&nbsp;use, and celebrate the gift of&nbsp;vision, which can open&nbsp;us in&nbsp;such profound ways to&nbsp;the realities we&nbsp;live&nbsp;in.&raquo;
 
 </div>
