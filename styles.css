@@ -59,6 +59,7 @@ body {
   object-fit: contain;
   user-drag: none;
 }
+
 .about-page {
  display: inline;
  padding: 1.2em;
@@ -67,5 +68,8 @@ body {
  line-height: 1.5; /* Increases vertical rhythm */
  word-spacing: 0.1em; /* Increases horizontal space between words */
  letter-spacing: 0.05em; /* Increases space between letters */
- background-image: url("/assets/images/background.jpg");
+}
+.painted-background {
+  background-image: url("/assets/images/background.jpg");
+
 }
