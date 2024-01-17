@@ -37,6 +37,7 @@ a {
  
 .content {
   padding: 2em;
+  height: 0vmax;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -51,6 +52,7 @@ a {
   box-sizing: border-box;
   padding: 1em;
   margin-bottom: 2em;
+  height: 92vh;
 }
 
 .image-title-year {
