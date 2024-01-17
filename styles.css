@@ -24,7 +24,7 @@ body {
  
 .content {
   padding: 2em;
-  height: 0vmax;
+  /* height: 0vmax; */
   max-width: 600px;
   margin: 0 auto;
 }
