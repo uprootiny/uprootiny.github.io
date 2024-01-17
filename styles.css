@@ -28,7 +28,7 @@ ul {
   text-decoration: none;
 }
 
-.a {
+a {
   color: silver;
   transition: color 0.5s ease-in-out;
   flex: 1 0 auto;
