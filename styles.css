@@ -2,7 +2,6 @@ body {
   font-family: Menlo, monospace;
   font-size: 2.5rem; /* Adjust font size to be large */
   background: linear-gradient(to bottom, white, lightgray);
-  background-image: url("/assets/images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -59,4 +58,6 @@ body {
 .about-page {
   padding: 2em;
   font-size: 1.8rem;
+  background-image: url("/assets/images/background.jpg");
+
 }
