@@ -20,7 +20,7 @@ body {
   background-color: #f5f5f5;
 }
 
-ul.a {
+ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -28,7 +28,7 @@ ul.a {
   text-decoration: none;
 }
 
-.li {
+.a {
   color: silver;
   transition: color 0.5s ease-in-out;
   flex: 1 0 auto;
@@ -79,11 +79,7 @@ ul.a {
 .about-page {
  display: inline;
  padding: 1.2em;
- font-size: 1.1rem;
  white-space: pre-wrap; /* Preserves white space and breaks lines */
- line-height: 1.1; /* Increases vertical rhythm */
- word-spacing: 0.1em; /* Increases horizontal space between words */
- letter-spacing: 0.05em; /* Increases space between letters */
 }
 .painted-background {
   background-image: url("/assets/images/background.jpg");
