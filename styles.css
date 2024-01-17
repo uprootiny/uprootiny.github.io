@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .horizontal-list {
   display: flex;
   justify-content: space-around;
@@ -17,6 +18,21 @@ body {
   font-family: Menlo, monospace;
   font-size: 2.5rem;
   background-color: #f5f5f5;
+}
+
+ul.a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.li {
+  color: silver;
+  transition: color 0.5s ease-in-out;
+  flex: 1 0 auto;
+  min-width: 100px; /* Adjust this value as needed */
  }
  
 .content {
@@ -63,9 +79,9 @@ body {
 .about-page {
  display: inline;
  padding: 1.2em;
- font-size: 1.4rem;
+ font-size: 1.1rem;
  white-space: pre-wrap; /* Preserves white space and breaks lines */
- line-height: 1.5; /* Increases vertical rhythm */
+ line-height: 1.1; /* Increases vertical rhythm */
  word-spacing: 0.1em; /* Increases horizontal space between words */
  letter-spacing: 0.05em; /* Increases space between letters */
 }
