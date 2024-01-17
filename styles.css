@@ -30,8 +30,6 @@ body {
 }
 
 .image-container {
-  display: grid; /* Use grid layout for flexibility */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
   gap: 2em;
 }
 
@@ -68,7 +66,7 @@ body {
 
 .about-page {
  display: inline;
- padding: 1.2em;
+ padding: 0.8ex;
  white-space: pre-wrap; /* Preserves white space and breaks lines */
 }
 .painted-background {
