@@ -58,6 +58,7 @@ body {
 .about-page {
   padding: 2em;
   font-size: 1.8rem;
+  white-space: pre-wrap; /* Preserves white space and breaks lines */
   line-height: 1.5; /* Increases vertical rhythm */
   word-spacing: 0.1em; /* Increases horizontal space between words */
   letter-spacing: 0.05em; /* Increases space between letters */
