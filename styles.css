@@ -54,17 +54,13 @@ body {
   object-fit: contain;
   user-drag: none;
 }
-
 .about-page {
-  padding: 2em;
-  font-size: 1.8rem;
-  white-space: pre-wrap; /* Preserves white space and breaks lines */
-  line-height: 1.5; /* Increases vertical rhythm */
-  word-spacing: 0.1em; /* Increases horizontal space between words */
-  letter-spacing: 0.05em; /* Increases space between letters */
-  margin-top: 2em; /* Provides space above the About section */
-  margin-bottom: 2em; /* Provides space below the About section */
-  background-image: url("/assets/images/background.jpg");
-
- }
- 
+ display: inline;
+ padding: 1.2em;
+ font-size: 1.4rem;
+ white-space: pre-wrap; /* Preserves white space and breaks lines */
+ line-height: 1.5; /* Increases vertical rhythm */
+ word-spacing: 0.1em; /* Increases horizontal space between words */
+ letter-spacing: 0.05em; /* Increases space between letters */
+ background-image: url("/assets/images/background.jpg");
+}
