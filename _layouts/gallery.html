@@ -1,9 +1,33 @@
-<div class="gallery">
-  {% for image in site.static_files %}
-    {% if image.path contains '_gallery/' %}
-      <a href="{{ site.baseurl }}{{ image.path }}" data-toggle="lightbox" data-gallery="gallery">
-        <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.name }}" class="gallery-image">
-      </a>
-    {% endif %}
-  {% endfor %}
-</div>
+<!-- _layouts/gallery.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  <main>
+    {% include navbar.html %}
+
+ <div class="wrapper">
+
+  <div class="image-container">
+    {% assign images = site.static_files | where: "path", page.dir | sort: "path" | reverse %}
+    {% for image in images %}
+      {% assign filename_parts = image.basename | split: " " %}
+      {% assign year = filename_parts[0] %}
+      {% assign title = filename_parts | slice: 1 | join: " " %}
+
+      <div class="image-item">
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ title }}">
+        <h2 class="image-title">{{ title }}</p>
+        <h2 class="image-year">{{ year }}</p>
+        <br/>
+      </div>
+    {% endfor %}
+  </div>
+  </div>
+</main>
+</body>
+</html>
