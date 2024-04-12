@@ -71,6 +71,7 @@ body {
  padding: 0.8ex;
  white-space: pre-wrap; /* Preserves white space and breaks lines */
 }
+
 .painted-background {
   background-image: url("/assets/images/background.jpg");
 

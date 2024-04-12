@@ -18,10 +18,10 @@ nav_links:
     url: /cv
   - title: Instagram
     url: https://www.instagram.com/cyrillrafael/
-    icon: fas fa-instagram
+    icon: fab fa-instagram
   - title: Telegram
     url: https://t.me/+31686218199/
-    icon: far fa-telegram
+    icon: fab fa-telegram
 
 # Redirects
 redirects:
