@@ -73,11 +73,12 @@ body {
 
 .painted-background {
   background-image: url("/assets/images/background.jpg");
-  background-size: cover; /* Ensures the background image covers the entire container */
-  background-position: center; /* Adjust as needed to ensure the most important part of the image is visible */
-  min-height: 100vh; /* Adjust this value as needed to ensure the full height of the image is displayed */
-
-}
+  background-size: auto; /* Adjusts the size of the background image to fit the container */
+  background-repeat: repeat; /* Allows the background image to tile both horizontally and vertically */
+  background-position: center; /* Centers the background image */
+  min-height: 100vh; /* Ensures the container takes up at least the full height of the viewport */
+ }
+ 
  
 a {
   text-decoration: none;
