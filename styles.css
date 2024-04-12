@@ -74,6 +74,9 @@ body {
 
 .painted-background {
   background-image: url("/assets/images/background.jpg");
+  background-size: cover; /* Ensures the background image covers the entire container */
+  background-position: center; /* Adjust as needed to ensure the most important part of the image is visible */
+  min-height: 100vh; /* Adjust this value as needed to ensure the full height of the image is displayed */
 
 }
  
