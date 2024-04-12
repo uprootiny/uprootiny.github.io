@@ -63,7 +63,6 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  user-drag: none;
 }
 
 .about-page {
