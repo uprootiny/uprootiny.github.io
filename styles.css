@@ -96,3 +96,31 @@ ul {
   text-decoration: none;
 }
 
+
+
+/* Hide icons by default */
+.nav-item i {
+  display: none;
+ }
+ 
+ /* Show icons on small screens */
+ @media (max-width: 768px) {
+  .nav-item i {
+     display: inline;
+  }
+ }
+ 
+ /* Hide text on small screens */
+ @media (max-width: 768px) {
+  .nav-item a {
+     display: none;
+  }
+ }
+ 
+ /* Show text on larger screens */
+ @media (min-width: 769px) {
+  .nav-item a {
+     display: inline;
+  }
+ }
+ 
