@@ -1,12 +1,19 @@
+# Site Settings
 title: Cyrill Rafael Vasilyev
 description: Artwork showcase
-theme: null
+url: "https://cyrillrafael.org"
+baseurl: ""  # Leave empty for GitHub Pages
 
-url: www.cyrillrafael.com
-# Permalinks
+# Permalink Structure
 permalink: /:title/
 
-# Navigation links
+# Jekyll Collections
+collections:
+  pages:
+    output: true
+    permalink: /:title/
+
+# Navigation Links
 nav_links:
   - title: Paintings
     url: /paintings
@@ -16,25 +23,40 @@ nav_links:
     url: /about
   - title: CV
     url: /cv
+  - title: Exhibitions
+    url: /exhibitions/
   - title: Instagram
     url: https://www.instagram.com/cyrillrafael/
     icon: fab fa-instagram
   - title: Telegram
     url: https://t.me/+31686218199/
     icon: fab fa-telegram
-  - title: Exhibitions
-    url: /exhibitions/
 
-# Redirects
+# Ensure Exhibition Images are Included
+include:
+  - _pages
+  - exhibition2025  # Ensure exhibition images are included
+
+# Redirects (optional)
 redirects:
   - from: "/"
     to: "/paintings/"
 
+# Plugins (Required for GitHub Pages)
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
-paintings_data:
-  - filename: my_dear_teacher.jpg
-    dimensions: 220x120cm
-  - filename: behind_red_door_sitting.jpg
-    dimensions: 220x120cm
-  - filename: 2018 untitled.jpg
-    dimensions: 120x160cm
+# Markdown Engine
+markdown: kramdown
+
+# Exclusions
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Debugging (useful for GitHub Pages)
+verbose: true
+
