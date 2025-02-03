@@ -1,62 +1,46 @@
-# Site Settings
-title: Cyrill Rafael Vasilyev
-description: Artwork showcase
-url: "https://cyrillrafael.org"
-baseurl: ""  # Leave empty for GitHub Pages
+title: "Cyrill Rafael Vasilyev"
+description: "Artwork showcase"
+theme: minima  # Ensure Jekyll uses a known theme
 
-# Permalink Structure
-permalink: /:title/
+url: "https://cyrillrafael.org"  # Ensure full URL with https
+baseurl: ""  # Important for GitHub Pages
 
-# Jekyll Collections
-collections:
-  pages:
-    output: true
-    permalink: /:title/
+# Permalinks
+permalink: "/:title/"
 
-# Navigation Links
+# Navigation links
 nav_links:
-  - title: Paintings
-    url: /paintings
-  - title: Linocuts
-    url: /linocuts
-  - title: About
-    url: /about
-  - title: CV
-    url: /cv
-  - title: Exhibitions
-    url: /installations/
-  - title: Instagram
-    url: https://www.instagram.com/cyrillrafael/
-    icon: fab fa-instagram
-  - title: Telegram
-    url: https://t.me/+31686218199/
-    icon: fab fa-telegram
+  - title: "Paintings"
+    url: "/paintings"
+  - title: "Linocuts"
+    url: "/linocuts"
+  - title: "About"
+    url: "/about"
+  - title: "CV"
+    url: "/cv"
+  - title: "Instagram"
+    url: "https://www.instagram.com/cyrillrafael/"
+    icon: "fab fa-instagram"
+  - title: "Telegram"
+    url: "https://t.me/+31686218199/"
+    icon: "fab fa-telegram"
+  - title: "Installations"
+    url: "/installations/"
 
-# Ensure Exhibition Images are Included
-include:
-  - _pages
-  - installation2025  # Ensure installation images are included
-
-# Redirects (optional)
+# Redirects
 redirects:
   - from: "/"
     to: "/paintings/"
 
-# Plugins (Required for GitHub Pages)
-plugins:
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-
-# Markdown Engine
-markdown: kramdown
-
-# Exclusions
+# Exclude unnecessary files from Jekyll processing
 exclude:
+  - .git
   - README.md
+  - LICENSE
   - Gemfile
   - Gemfile.lock
+  - _site
+  - vendor
+  - node_modules
 
-# Debugging (useful for GitHub Pages)
-verbose: true
 
