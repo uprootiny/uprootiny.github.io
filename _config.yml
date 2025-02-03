@@ -22,6 +22,8 @@ nav_links:
   - title: Telegram
     url: https://t.me/+31686218199/
     icon: fab fa-telegram
+  - title: Exhibitions
+    url: /exhibitions/
 
 # Redirects
 redirects:
