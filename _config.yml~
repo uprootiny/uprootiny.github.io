@@ -1,0 +1,40 @@
+title: Cyrill Rafael Vasilyev
+description: Artwork showcase
+theme: null
+
+url: www.cyrillrafael.com
+# Permalinks
+permalink: /:title/
+
+# Navigation links
+nav_links:
+  - title: Paintings
+    url: /paintings
+  - title: Linocuts
+    url: /linocuts
+  - title: About
+    url: /about
+  - title: CV
+    url: /cv
+  - title: Instagram
+    url: https://www.instagram.com/cyrillrafael/
+    icon: fab fa-instagram
+  - title: Telegram
+    url: https://t.me/+31686218199/
+    icon: fab fa-telegram
+  - title: Exhibitions
+    url: /exhibitions/
+
+# Redirects
+redirects:
+  - from: "/"
+    to: "/paintings/"
+
+
+paintings_data:
+  - filename: my_dear_teacher.jpg
+    dimensions: 220x120cm
+  - filename: behind_red_door_sitting.jpg
+    dimensions: 220x120cm
+  - filename: 2018 untitled.jpg
+    dimensions: 120x160cm
