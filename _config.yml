@@ -24,7 +24,7 @@ nav_links:
   - title: CV
     url: /cv
   - title: Exhibitions
-    url: /exhibitions/
+    url: /installations/
   - title: Instagram
     url: https://www.instagram.com/cyrillrafael/
     icon: fab fa-instagram
@@ -35,7 +35,7 @@ nav_links:
 # Ensure Exhibition Images are Included
 include:
   - _pages
-  - exhibition2025  # Ensure exhibition images are included
+  - installation2025  # Ensure installation images are included
 
 # Redirects (optional)
 redirects:

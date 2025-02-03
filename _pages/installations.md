@@ -1,15 +1,15 @@
 ---
 layout: default
 title: Exhibitions
-permalink: /exhibitions/
+permalink: /installations/
 ---
 
 # Exhibitions Showcase
 
 <div class="gallery">
-  {% assign exhibitions = site.static_files | where_exp: "file", "file.path contains '/exhibition2025/'" %}
+  {% assign installations = site.static_files | where_exp: "file", "file.path contains '/installation2025/'" %}
   
-  {% for image in exhibitions %}
+  {% for image in installations %}
     <div class="image-item">
       <img src="{{ image.path | relative_url }}" alt="Exhibition Image">
     </div>
