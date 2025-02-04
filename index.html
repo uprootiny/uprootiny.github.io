@@ -1,0 +1,22 @@
+<div class="image-container">
+<p>{% assign paintings = site.static_files | where_exp: “file”,
+“file.path contains ‘/paintings/’” %} {% assign sorted_paintings =
+paintings | sort: “path” | reverse %}</p>
+<p>{% for painting in sorted_paintings %} {% assign name_parts =
+painting.name | split: ” ” %} {% assign year = name_parts[0] %} {%
+assign title_parts = name_parts | slice: 1, name_parts.size | join: ” ”
+| split: “.” %} {% assign title = title_parts[0] %}</p>
+<pre><code>&lt;div class=&quot;image-item&quot;&gt;
+  &lt;img src=&quot;{{ site.baseurl }}{{ painting.path | relative_url }}&quot; alt=&quot;{{ title }}&quot;&gt;
+    &lt;div class=&quot;image-title-year&quot;&gt;
+
+        &lt;div class=&quot;image-title&quot;&gt;{{ title }}&lt;/div&gt;
+
+        &lt;div class=&quot;image-year&quot;&gt;{{ year }}&lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;br/&gt;
+  
+&lt;/div&gt;</code></pre>
+<p>{% endfor %}</p>
+</div>
