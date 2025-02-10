@@ -1,6 +1,5 @@
 title: "Cyrill Rafael Vasilyev"
 description: "Artwork showcase"
-# theme: minima   # Use a known theme
 
 url: "https://cyrillrafael.org"  # Full URL with https if needed
 baseurl: ""                     # Important for GitHub Pages on a user site
