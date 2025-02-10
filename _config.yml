@@ -1,38 +1,44 @@
-title: Cyrill Rafael Vasilyev
-description: Artwork showcase
-theme: null
+title: "Cyrill Rafael Vasilyev"
+description: "Artwork showcase"
+theme: minima   # Use a known theme
 
-url: www.cyrillrafael.com
+url: "https://cyrillrafael.org"  # Full URL with https if needed
+baseurl: ""                     # Important for GitHub Pages on a user site
+
 # Permalinks
-permalink: /:title/
+permalink: "/:title/"
 
 # Navigation links
 nav_links:
-  - title: Paintings
-    url: /paintings
-  - title: Linocuts
-    url: /linocuts
-  - title: About
-    url: /about
-  - title: CV
-    url: /cv
-  - title: Instagram
-    url: https://www.instagram.com/cyrillrafael/
-    icon: fab fa-instagram
-  - title: Telegram
-    url: https://t.me/+31686218199/
-    icon: fab fa-telegram
+  - title: "Paintings"
+    url: "/paintings"
+  - title: "Linocuts"
+    url: "/linocuts"
+  - title: "About"
+    url: "/about"
+  - title: "CV"
+    url: "/cv"
+  - title: "Instagram"
+    url: "https://www.instagram.com/cyrillrafael/"
+    icon: "fab fa-instagram"
+  - title: "Telegram"
+    url: "https://t.me/+31686218199/"
+    icon: "fab fa-telegram"
+  - title: "Installations"
+    url: "/installations/"
 
-# Redirects
+# Exclude unnecessary files from Jekyll processing
+exclude:
+  - .git
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - _site
+  - vendor
+  - node_modules
+
+# Redirects (if you actually want to redirect your homepage)
 redirects:
   - from: "/"
     to: "/paintings/"
-
-
-paintings_data:
-  - filename: my_dear_teacher.jpg
-    dimensions: 220x120cm
-  - filename: behind_red_door_sitting.jpg
-    dimensions: 220x120cm
-  - filename: 2018 untitled.jpg
-    dimensions: 120x160cm
