@@ -3,8 +3,7 @@ description: "Artwork showcase"
 
 url: "https://cyrillrafael.org"  # Full URL with https if needed
 baseurl: ""                     # Important for GitHub Pages on a user site
-env:
-  PAGES_REPO_NWO: "uprootiny/uprootiny.github.io"
+repository: "uprootiny/uprootiny.github.io"
 
 # Permalinks
 permalink: "/:title/"
