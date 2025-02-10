@@ -1,11 +1,10 @@
 ---
-layout: default
-title: Installations
+layout: text
+title: installations
 permalink: /installations/
 ---
 
 <div class="image-container">
-  {% raw %}
   {% for image in site.static_files %}
     {% if image.path contains "/installation2025/" %}
       {% assign filename = image.path | split: "/" | last %}
@@ -20,11 +19,8 @@ permalink: /installations/
       {% endif %}
       <div class="image-item">
         <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ title }}">
-        <div class="caption">
-          <span class="year">{{ year }}</span> – <span class="title">{{ title }}</span>
-        </div>
+        <div class="caption">{{ title }} – {{ year }}</div>
       </div>
     {% endif %}
   {% endfor %}
-  {% endraw %}
 </div>
