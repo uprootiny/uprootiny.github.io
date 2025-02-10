@@ -37,6 +37,9 @@ exclude:
   - _site
   - vendor
   - node_modules
+  
+include:
+  - installation2025
 
 # Redirects (if you actually want to redirect your homepage)
 redirects:
