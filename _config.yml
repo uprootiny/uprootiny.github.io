@@ -45,5 +45,5 @@ include:
 redirects:
   - from: "/"
     to: "/paintings/"
-  - from: "/installations"
+  - from: "/installations/"
     to: "/installations.html"
