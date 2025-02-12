@@ -13,7 +13,35 @@
       margin: 0;
       padding: 0;
     }
+        nav {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 0.5em 1em;
+      border-bottom: 1px solid #ccc;
+    }
     
+    .horizontal-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-family: 'Menlo', 'Courier New', monospace;
+      font-size: 2.5rem;
+      background-color: transparent;
+    }
+    
+    .horizontal-list a {
+      text-decoration: none;
+      color: #333; /* dark color for contrast */
+      transition: box-shadow 0.5s ease-in-out;
+    }
+    
+    a:hover {
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    }
+    
+
     .horizontal-list {
       display: flex;
       justify-content: space-around;
