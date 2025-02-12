@@ -24,8 +24,8 @@ nav_links:
   - title: "Telegram"
     url: "https://t.me/+31686218199/"
     icon: "fab fa-telegram"
-  - title: "Installations"
-    url: "/installations/"
+  - title: "Installation Views"
+    url: "/installations.html"
 
 # Exclude unnecessary files from Jekyll processing
 exclude:
@@ -45,5 +45,3 @@ include:
 redirects:
   - from: "/"
     to: "/paintings/"
-  - from: "/installations/"
-    to: "/installations.html"
