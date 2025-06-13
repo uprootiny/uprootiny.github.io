@@ -14,7 +14,7 @@ permalink: /paintings/
       <img src="{{ site.baseurl }}{{ filepath | relative_url }}" alt="{{ painting.title }}">
       <div class="image-title-year">
         <div class="image-title">{{ painting.title }}</div>
-        <div class="image-dimensions">{{ painting.dimensions }}</div>
+        <div class="image-dimensions">{{ painting.dimensions | default: "" }}</div>
         <div class="image-year">{{ painting.year }}</div>
       </div>
       <br/>
