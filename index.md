@@ -42,7 +42,7 @@ permalink: /
     {% endif %}
 
     <div class="image-item">
-      <img src="{{ site.baseurl }}{{ filepath | relative_url }}" alt="{{ painting.title }}">
+      <img src="{{ site.baseurl }}{{ filepath | uri_escape | relative_url }}" alt="{{ painting.title }}">
       <div class="image-title-year">
         <div class="image-title">{{ painting.title }}</div>
         <div class="image-dimensions">{{ final_dimensions }}</div>
