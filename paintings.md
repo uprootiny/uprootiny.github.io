@@ -14,14 +14,13 @@ permalink: /paintings/
   {%- endcomment -%}
   {% assign gallery = "" | split: "" %}
   {% for file in all_statics %}
-    {% if file.path contains '/paintings/' and file.extname == '.jpg' %}
+    {% if file.path contains '/paintings/' and ( file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' ) %}
       {% assign gallery = gallery | push: file %}
     {% endif %}
   {% endfor %}
 
   {%- comment -%}
-    2. Sort by filename  
-       (or by path, or even by extracted year—up to you)
+    2. Sort by path
   {%- endcomment -%}
   {% assign gallery = gallery | sort: "path" %}
 
@@ -30,18 +29,11 @@ permalink: /paintings/
   {%- endcomment -%}
   {% for art in gallery %}
     {% assign fn = art.name %}
-
-    {%- comment -%}
-      Parse "YYYY rest‑of‑title.ext"
-    {%- endcomment -%}
     {% assign parts = fn | split: ' ' %}
     {% assign year = parts[0] | plus: 0 %}
     {% assign rest = parts | slice: 1, parts.size | join: ' ' %}
-    {% assign title = rest | replace: art.extname, '' %}
+    {% assign title = rest | remove: art.extname %}
 
-    {%- comment -%}
-      Lookup dimensions in data/titles.yml by year+title
-    {%- endcomment -%}
     {% assign dims = 'unknown' %}
     {% for item in meta_list %}
       {% if item.year == year and item.title == title %}
@@ -51,8 +43,9 @@ permalink: /paintings/
     {% endfor %}
 
     <div class="image-item">
+      {% assign esc_fn = fn | uri_escape %}
       <img
-        src="{{ art.path | relative_url }}"
+        src="{{ site.baseurl }}/paintings/{{ esc_fn }}"
         alt="{{ title }}"
         loading="lazy"
       />
