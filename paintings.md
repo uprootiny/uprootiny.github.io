@@ -42,7 +42,8 @@ permalink: /paintings/
     {% endif %}
 
     <div class="image-item">
-<img src="{{ site.baseurl }}{{ filepath | uri_escape | relative_url }}" alt="{{ painting.title }}">
+{% assign encoded_filename = filepath | uri_escape %}
+<img src="{{ site.baseurl }}{{ encoded_filename | relative_url }}" alt="{{ painting.title }}">
       <div class="image-title-year">
         <div class="image-title">{{ painting.title }}</div>
         <div class="image-dimensions">{{ final_dimensions }}</div>
