@@ -1,7 +1,7 @@
 ---
 layout: paintings
 title: Paintings
-permalink: /paintings/
+permalink: /
 ---
 
 <div class="image-container">
