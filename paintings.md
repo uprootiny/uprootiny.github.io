@@ -1,16 +1,20 @@
 ---
-layout: paintings
+layout: paintings   {# or whatever layout you use #}
 title: Paintings
-permalink: /paintings/
+permalink: /paintings/   {# or '/' on the index #}
 ---
 
-<div class="image-container">
+<div class="gallery">
 
-  {% assign meta = site.data.titles %}
-  {% assign gallery = "" | split: "" %}
+  {%- assign meta = site.data.titles -%}
+  {%- assign gallery = "" | split: "" -%}
 
+  {%- comment -%}
+    1) Grab every static file under /paintings/ with jpg/jpeg/png
+  {%- endcomment -%}
   {% for f in site.static_files %}
-    {% if f.relative_path contains 'paintings/' %}
+    {% assign rel = f.path | remove_first: site.source %}
+    {% if rel contains '/paintings/' %}
       {% assign ext = f.extname | downcase %}
       {% if ext == '.jpg' or ext == '.jpeg' or ext == '.png' %}
         {% assign gallery = gallery | push: f %}
@@ -18,15 +22,24 @@ permalink: /paintings/
     {% endif %}
   {% endfor %}
 
-  {% assign gallery = gallery | sort: "relative_path" %}
+  {%- comment -%}
+    2) Sort as you like (here by path)
+  {%- endcomment -%}
+  {% assign gallery = gallery | sort: "path" %}
 
+  {%- comment -%}
+    3) Render each image
+  {%- endcomment -%}
   {% for art in gallery %}
-    {% assign fn = art.relative_path | remove_first: "paintings/" %}
-    {% assign parts = fn | split: " " %}
-    {% assign year = parts[0] | plus: 0 %}
-    {% assign title = parts | slice: 1, parts.size | join: " " | remove: art.extname %}
+    {%- assign fn = art.path | remove_first: '/paintings/' -%}
+    {%- assign parts = fn | split: ' ' -%}
+    {%- assign year = parts[0] | plus: 0 -%}
+    {%- assign title = parts | slice: 1, parts.size | join: ' ' | remove: art.extname -%}
 
-    {% assign dims = "200x220cm" %}
+    {%- comment -%}
+      Lookup optional dimensions
+    {%- endcomment -%}
+    {% assign dims = "unknown" %}
     {% for item in meta %}
       {% if item.year == year and item.title == title %}
         {% assign dims = item.dimensions %}
@@ -34,18 +47,19 @@ permalink: /paintings/
       {% endif %}
     {% endfor %}
 
-    <div class="image-item">
-      {%- assign esc_fn = fn | uri_escape -%}
+    <div class="painting">
+      {%- assign esc = fn | uri_escape -%}
       <img
-        src="{{ site.baseurl }}/paintings/{{ esc_fn }}"
+        src="{{ '/paintings/' | append: esc | relative_url }}"
         alt="{{ title }}"
         loading="lazy"
       />
-      <div class="image-title-year">
-        <div class="image-title">{{ title }}</div>
-        <div class="image-dimensions">{{ dims }}</div>
-        <div class="image-year">{{ year }}</div>
+      <div class="info">
+        <div class="title">{{ title }}</div>
+        <div class="year">{{ year }}</div>
+        <div class="dimensions">{{ dims }}</div>
       </div>
     </div>
   {% endfor %}
+
 </div>
