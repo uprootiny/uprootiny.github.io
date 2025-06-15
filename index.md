@@ -1,54 +1,55 @@
 ---
 layout: paintings
 title: Paintings
-permalink: /
+permalink: /paintings/
 ---
 
 <div class="image-container">
-  {% assign paintings = site.data.titles | sort: "year" | reverse %}
-  {% for painting in paintings %}
-    {% assign filename = painting.year | append: " " | append: painting.title | append: ".jpg" %}
-    {% assign filepath = "/paintings/" | append: filename %}
-    
-    {% comment %} Try to parse dimensions from filename first {% endcomment %}
-    {% assign filename_dimensions = "" %}
-    {% if filename contains "x" %}
-      {% assign parts = filename | split: " " %}
-      {% for part in parts %}
-        {% if part contains "x" and part contains "cm" %}
-          {% assign filename_dimensions = part %}
-          {% break %}
-        {% elsif part contains "x" %}
-          {% assign nums = part | split: "x" %}
-          {% if nums.size == 2 %}
-            {% assign first_num = nums[0] | plus: 0 %}
-            {% assign second_num = nums[1] | plus: 0 %}
-            {% if first_num > 0 and second_num > 0 %}
-              {% assign filename_dimensions = part | append: "cm" %}
-              {% break %}
-            {% endif %}
-          {% endif %}
-        {% endif %}
-      {% endfor %}
+  {% assign paintings_data = site.data.titles %}
+  
+  {% assign paintings = site.static_files %}
+  
+  {% assign filtered_paintings = "" | split: "" %}
+  
+  {% for file in paintings %}
+    {% if file.path contains '/paintings/' and file.extname == '.jpg' %}
+      {% assign filtered_paintings = filtered_paintings | push: file %}
     {% endif %}
+  {% endfor %}
+  
+  {% assign sorted_paintings = filtered_paintings | sort: "path" %}
+  
+  {% for painting_file in sorted_paintings %}
+    {% assign filename = painting_file.name %}
     
-    {% comment %} Determine final dimensions: filename > YAML > default {% endcomment %}
-    {% if filename_dimensions != "" %}
-      {% assign final_dimensions = filename_dimensions %}
-    {% elsif painting.dimensions %}
-      {% assign final_dimensions = painting.dimensions %}
+    {% assign parts = filename | split: ' ' %}
+    {% assign year_str = parts[0] %}
+    {% assign year = year_str | plus: 0 %}
+    {% assign title_parts = parts | slice: 1, parts.size %}
+    {% assign raw_title = title_parts | join: ' ' %}
+    {% assign title = raw_title | remove: '.jpg' %}
+    
+    {% assign meta = nil %}
+    {% for entry in paintings_data %}
+      {% if entry.year == year and entry.title == title %}
+        {% assign meta = entry %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if meta %}
+      {% assign dimensions = meta.dimensions %}
     {% else %}
-      {% assign final_dimensions = "200x220cm" %}
+      {% assign dimensions = "unknown" %}
     {% endif %}
-
+    
     <div class="image-item">
-      <img src="{{ site.baseurl }}{{ filepath | uri_escape | relative_url }}" alt="{{ painting.title }}">
+      <img src="{{ painting_file.path | relative_url }}" alt="{{ title }}" loading="lazy" />
       <div class="image-title-year">
-        <div class="image-title">{{ painting.title }}</div>
-        <div class="image-dimensions">{{ final_dimensions }}</div>
-        <div class="image-year">{{ painting.year }}</div>
+        <div class="image-title">{{ title }}</div>
+        <div class="image-dimensions">{{ dimensions }}</div>
+        <div class="image-year">{{ year }}</div>
       </div>
-      <br/>
     </div>
   {% endfor %}
 </div>
