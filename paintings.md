@@ -4,30 +4,27 @@ title: Paintings
 permalink: /paintings/
 ---
 
-<div class="image-container">
-  {% assign paintings_data = site.data.titles %}
-  
-  {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/paintings/' and file.extname == '.jpg'" %}
-  
-  {% assign sorted_paintings = paintings | sort: "path" %}
-  
-  {% for painting_file in sorted_paintings %}
-    {% assign filename = painting_file.name %}
-    
-    {% comment %}
-      Filename pattern: "YYYY title.jpg"
-      We want to extract year and title:
-    {% endcomment %}
+{% assign paintings_data = site.data.titles %}
+{% assign static_files = site.static_files %}
+
+{% assign filtered_files = "" | split: "" %}
+
+{% for file in static_files %}
+  {% if file.path contains '/paintings/' and file.extname == '.jpg' %}
+    {% assign filtered_files = filtered_files | push: file %}
+  {% endif %}
+{% endfor %}
+
+{% assign sorted_files = filtered_files | sort: "path" %}
+
+<div class="gallery">
+  {% for file in sorted_files %}
+    {% assign filename = file.name %}
     {% assign parts = filename | split: ' ' %}
     {% assign year_str = parts[0] %}
     {% assign year = year_str | plus: 0 %}
-    {% assign title_parts = parts | slice: 1, parts.size %}
-    {% assign raw_title = title_parts | join: ' ' %}
-    {% assign title = raw_title | remove: '.jpg' %}
+    {% assign title = parts | slice: 1, parts.size | join: ' ' | remove: '.jpg' %}
     
-    {% comment %}
-      Now try to find metadata entry in titles.yml by year+title
-    {% endcomment %}
     {% assign meta = nil %}
     {% for entry in paintings_data %}
       {% if entry.year == year and entry.title == title %}
@@ -36,18 +33,12 @@ permalink: /paintings/
       {% endif %}
     {% endfor %}
     
-    {% if meta %}
-      {% assign dimensions = meta.dimensions %}
-    {% else %}
-      {% assign dimensions = "unknown" %}
-    {% endif %}
-    
-    <div class="image-item">
-      <img src="{{ painting_file.path | relative_url }}" alt="{{ title }}" loading="lazy" />
-      <div class="image-title-year">
-        <div class="image-title">{{ title }}</div>
-        <div class="image-dimensions">{{ dimensions }}</div>
-        <div class="image-year">{{ year }}</div>
+    <div class="painting">
+      <img src="{{ file.path | relative_url }}" alt="{{ title }}" loading="lazy" />
+      <div class="info">
+        <div class="title">{{ title }}</div>
+        <div class="year">{{ year }}</div>
+        <div class="dimensions">{% if meta %}{{ meta.dimensions }}{% else %}unknown{% endif %}</div>
       </div>
     </div>
   {% endfor %}
