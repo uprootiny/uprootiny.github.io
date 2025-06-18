@@ -1,7 +1,7 @@
 ---
-layout: paintings   {# or whatever layout you use #}
+layout: paintings
 title: Paintings
-permalink: /paintings/   {# or '/' on the index #}
+permalink: /paintings/
 ---
 
 <div class="gallery">
