@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h1>Paintings Gallery</h1>
+<p>Testing Zola build...</p>
+
 <div class="gallery">
-    {% set_global paintings = load_data(path="paintings.json") %}
-    {% for painting in paintings %}
-        <div class="painting">
-            <img src="{{ get_url(path='paintings/' ~ painting.filename) }}" alt="{{ painting.title }}" loading="lazy" />
-            <div class="info">
-                <div class="title">{{ painting.title }}</div>
-                <div class="year">{{ painting.year }}</div>
-                <div class="dimensions">{{ painting.dimensions }}</div>
-            </div>
+    <div class="painting">
+        <img src="{{ get_url(path='paintings/2023 star rabbit.jpg') }}" alt="star rabbit" loading="lazy" />
+        <div class="info">
+            <div class="title">star rabbit</div>
+            <div class="year">2023</div>
+            <div class="dimensions">220x120cm</div>
         </div>
-    {% endfor %}
+    </div>
 </div>
 {% endblock content %}
