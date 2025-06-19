@@ -1,9 +1,9 @@
 name: Build and Deploy Zola
 on:
   push:
-    branches: [ zola-gallery ]
+    branches: [ zola-clean ]
   pull_request:
-    branches: [ zola-gallery ]
+    branches: [ zola-clean ]
 
 permissions:
   contents: read
@@ -41,7 +41,7 @@ jobs:
           path: ./public
 
   deploy:
-    if: github.ref == 'refs/heads/zola-gallery'
+    if: github.ref == 'refs/heads/zola-clean'
     environment:
       name: github-pages-zola
       url: ${{ steps.deployment.outputs.page_url }}
