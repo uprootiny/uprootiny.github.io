@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="gallery">
-    {% set paintings = load_data(path="static/paintings.json") %}
+    {% set paintings = load_data(path="paintings.json") %}
     {% for painting in paintings | reverse %}
         <div class="painting">
             <img src="{{ get_url(path='paintings/' ~ painting.filename) }}" alt="{{ painting.title }}" loading="lazy" />
