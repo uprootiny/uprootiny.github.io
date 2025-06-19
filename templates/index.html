@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="gallery">
+    {% set paintings = load_data(path="static/paintings.json") %}
+    {% for painting in paintings | reverse %}
+        <div class="painting">
+            <img src="{{ get_url(path='paintings/' ~ painting.filename) }}" alt="{{ painting.title }}" loading="lazy" />
+            <div class="info">
+                <div class="title">{{ painting.title }}</div>
+                <div class="year">{{ painting.year }}</div>
+                <div class="dimensions">{{ painting.dimensions }}</div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}

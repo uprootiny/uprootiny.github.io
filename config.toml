@@ -1,0 +1,6 @@
+base_url = "https://uprootiny.github.io"
+title = "Paintings"
+compile_sass = true
+
+[extra]
+show_dimensions = true
