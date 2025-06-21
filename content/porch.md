@@ -31,11 +31,23 @@ Artistic practice flowing through all available channels—from traditional canv
 
 Each pathway leads deeper into the practice:
 
+### **Essential Explorations**
 - **[Map](/map)** - Trace the geographical and temporal flows of artistic evolution
 - **[Store](/store)** - Acquire works in various forms: physical, digital, experiential
 - **[Essays](/essays)** - Explore the philosophical and technical foundations
 - **[Series](/serials)** - Follow ongoing explorations and developing themes  
 - **[Collaborate](/collaborations)** - Join the expanding network of contemplative practice
+
+### **Experimental Territories** 
+*Where conventional websites fear to tread*
+
+- **[Experiments](/experiments)** - Wild prototypes and impossible digital paint mixing
+- **[Playground](/playground)** - Interactive tools for contemplative color exploration
+- **[Oracle](/oracle)** - Ask the colors your questions, receive chromatic wisdom
+- **[Digital Debris](/lab/debris)** - Beautiful failures and cybernetic tchotchkes
+- **[AI Studio](/lab/ai-studio)** - Your machine learning painting partner with opinions
+- **[VR Studios](/lab/vr-studio)** - Impossible painting spaces and gravity-optional environments
+- **[Dream Journal](/lab/dream-journal)** - Transform night visions into paintable reality
 
 ## The Choice
 

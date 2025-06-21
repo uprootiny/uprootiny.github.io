@@ -62,3 +62,39 @@ description = "Ongoing projects"
 title = "Collaborate"
 url = "/collaborations"
 description = "Open calls and partnerships"
+
+# Experimental territories (accessible via porch)
+[[extra.experimental_nav]]
+title = "Experiments"
+url = "/experiments"
+description = "Wild prototypes and impossible digital paint mixing"
+
+[[extra.experimental_nav]]
+title = "Playground"
+url = "/playground"
+description = "Interactive tools for contemplative color exploration"
+
+[[extra.experimental_nav]]
+title = "Oracle"
+url = "/oracle"
+description = "Ask the colors your questions, receive chromatic wisdom"
+
+[[extra.experimental_nav]]
+title = "Digital Debris"
+url = "/lab/debris"
+description = "Beautiful failures and cybernetic tchotchkes"
+
+[[extra.experimental_nav]]
+title = "AI Studio"
+url = "/lab/ai-studio"
+description = "Your machine learning painting partner with opinions"
+
+[[extra.experimental_nav]]
+title = "VR Studios"
+url = "/lab/vr-studio"
+description = "Impossible painting spaces and gravity-optional environments"
+
+[[extra.experimental_nav]]
+title = "Dream Journal"
+url = "/lab/dream-journal"
+description = "Transform night visions into paintable reality"

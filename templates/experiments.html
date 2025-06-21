@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<style>
+.experiments-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+.experiments-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.experiments-header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: colorShift 8s ease-in-out infinite;
+}
+
+@keyframes colorShift {
+    0%, 100% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(180deg); }
+}
+
+.experiments-description {
+    font-size: 1.3em;
+    font-style: italic;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.experiments-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.experiments-content h2 {
+    color: #4ecdc4;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 2em;
+    border-left: 5px solid #ff6b6b;
+    padding-left: 20px;
+    background: rgba(78, 205, 196, 0.1);
+    padding: 15px 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.experiments-content h3 {
+    color: #feca57;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    position: relative;
+    padding-left: 30px;
+}
+
+.experiments-content h3::before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.experiments-content h4 {
+    color: #96ceb4;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.experiments-content p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.experiments-content ul, .experiments-content ol {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.experiments-content li {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.experiments-content li::marker {
+    color: #4ecdc4;
+}
+
+.experiments-content strong {
+    color: #feca57;
+    font-weight: 600;
+}
+
+.experiments-content em {
+    color: #ff6b6b;
+    font-style: italic;
+}
+
+/* Special experiment boxes */
+.experiment-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(78, 205, 196, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px 0;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.experiment-box:hover {
+    border-color: rgba(254, 202, 87, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Graveyard section styling */
+.experiments-content h2:contains("Graveyard") {
+    color: #9ca3af;
+    border-color: #6b7280;
+    background: rgba(107, 114, 128, 0.1);
+}
+
+/* Warning section styling */
+.experiments-content h2:contains("Warning") {
+    color: #f59e0b;
+    border-color: #dc2626;
+    background: rgba(220, 38, 38, 0.1);
+    animation: warningGlow 3s ease-in-out infinite;
+}
+
+@keyframes warningGlow {
+    0%, 100% { box-shadow: 0 0 10px rgba(220, 38, 38, 0.3); }
+    50% { box-shadow: 0 0 25px rgba(220, 38, 38, 0.6); }
+}
+
+/* Interactive elements */
+.prototype-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.status-active { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+.status-beta { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
+.status-broken { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+.status-haunted { background: rgba(147, 51, 234, 0.2); color: #9333ea; }
+
+/* Mad science section */
+.experiments-content h2:contains("Mad Science") {
+    background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+    color: white;
+    border: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .experiments-layout {
+        padding: 20px 10px;
+    }
+    
+    .experiments-header h1 {
+        font-size: 2.2em;
+    }
+    
+    .experiments-content h2 {
+        font-size: 1.6em;
+    }
+}
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="experiments-layout">
+    <header class="experiments-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="experiments-description">{{ page.description }}</p>
+        {% endif %}
+    </header>
+    
+    <div class="experiments-content">
+        {{ page.content | safe }}
+    </div>
+</div>
+
+<script>
+// Add dynamic status indicators to experiment titles
+document.addEventListener('DOMContentLoaded', function() {
+    const h3Elements = document.querySelectorAll('.experiments-content h3');
+    
+    h3Elements.forEach(function(h3) {
+        const text = h3.textContent.toLowerCase();
+        let statusClass = '';
+        
+        if (text.includes('generative') || text.includes('biometric')) {
+            statusClass = 'status-active';
+        } else if (text.includes('quantum') || text.includes('temporal')) {
+            statusClass = 'status-beta';
+        } else if (text.includes('graveyard') || text.includes('failed')) {
+            statusClass = 'status-broken';
+        } else if (text.includes('telepathic') || text.includes('ghost')) {
+            statusClass = 'status-haunted';
+        }
+        
+        if (statusClass) {
+            const status = document.createElement('span');
+            status.className = 'prototype-status ' + statusClass;
+            status.textContent = statusClass.replace('status-', '').toUpperCase();
+            h3.appendChild(status);
+        }
+    });
+    
+    // Add hover effects to experiment boxes
+    const content = document.querySelector('.experiments-content');
+    const h3s = content.querySelectorAll('h3');
+    
+    h3s.forEach(function(h3) {
+        // Find the next few paragraphs after each h3 and wrap them
+        let nextElement = h3.nextElementSibling;
+        const elements = [h3];
+        
+        while (nextElement && !nextElement.matches('h2, h3')) {
+            elements.push(nextElement);
+            nextElement = nextElement.nextElementSibling;
+        }
+        
+        if (elements.length > 1) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'experiment-box';
+            
+            elements[0].parentNode.insertBefore(wrapper, elements[0]);
+            elements.forEach(el => wrapper.appendChild(el));
+        }
+    });
+});
+</script>
+{% endblock %}

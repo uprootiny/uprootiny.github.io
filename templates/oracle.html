@@ -1,0 +1,519 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<style>
+.oracle-layout {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #2c1810, #1a0e0a, #0f0506);
+    min-height: 100vh;
+    color: #f0e6d2;
+    font-family: 'Times New Roman', serif;
+}
+
+.oracle-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 40px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.1), transparent);
+    border-radius: 20px;
+    position: relative;
+}
+
+.oracle-header::before {
+    content: "☸";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+    color: #ffd700;
+    opacity: 0.7;
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+
+.oracle-header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffd700;
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+    font-weight: 300;
+}
+
+.oracle-interface {
+    background: rgba(255, 215, 0, 0.05);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.question-input {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#oracle-question {
+    width: 100%;
+    min-height: 120px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #f0e6d2;
+    font-family: 'Times New Roman', serif;
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+#oracle-question:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+#oracle-question::placeholder {
+    color: rgba(240, 230, 210, 0.5);
+    font-style: italic;
+}
+
+#consult-oracle {
+    background: linear-gradient(45deg, #8b4513, #cd853f);
+    border: 2px solid #ffd700;
+    color: #f0e6d2;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: 'Times New Roman', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#consult-oracle:hover {
+    background: linear-gradient(45deg, #cd853f, #daa520);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+.oracle-response {
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.oracle-response.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.color-prophecy {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.oracle-color {
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.oracle-color:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+}
+
+.color-swatch {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid rgba(255, 215, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.color-meaning {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #daa520;
+}
+
+.oracle-wisdom {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.oracle-wisdom h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 10px;
+}
+
+.oracle-wisdom p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.oracle-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.oracle-content h2 {
+    color: #daa520;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 2em;
+    text-align: center;
+    border-top: 2px solid rgba(255, 215, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    padding: 20px 0;
+}
+
+.oracle-content h3 {
+    color: #cd853f;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    padding-left: 20px;
+    border-left: 4px solid #ffd700;
+}
+
+.oracle-content h4 {
+    color: #daa520;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.oracle-content strong {
+    color: #ffd700;
+    font-weight: 600;
+}
+
+.oracle-content em {
+    color: #cd853f;
+    font-style: italic;
+}
+
+/* Cultural color sections */
+.color-family {
+    background: rgba(255, 215, 0, 0.08);
+    border-left: 5px solid #ffd700;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Pigment oracles */
+.pigment-oracle {
+    background: rgba(139, 69, 19, 0.2);
+    border: 2px solid rgba(205, 133, 63, 0.5);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+/* Ethics section */
+.oracle-ethics {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px dashed rgba(255, 215, 0, 0.5);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+}
+
+/* Community experiences */
+.community-experience {
+    background: rgba(255, 215, 0, 0.05);
+    border-left: 4px solid #cd853f;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 10px 10px 0;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .oracle-layout {
+        padding: 20px 10px;
+    }
+    
+    .oracle-header h1 {
+        font-size: 2.2em;
+    }
+    
+    .color-prophecy {
+        grid-template-columns: 1fr;
+    }
+    
+    .oracle-interface {
+        padding: 20px;
+    }
+}
+
+/* Mystical glow effect */
+@keyframes mysticGlow {
+    0%, 100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); }
+}
+
+.oracle-interface:hover {
+    animation: mysticGlow 3s ease-in-out infinite;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="oracle-layout">
+    <header class="oracle-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="oracle-description">{{ page.description }}</p>
+        {% endif %}
+    </header>
+    
+    <div class="oracle-content">
+        {{ page.content | safe }}
+    </div>
+</div>
+
+<script>
+// Oracle JavaScript functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const consultButton = document.getElementById('consult-oracle');
+    const questionInput = document.getElementById('oracle-question');
+    const responseDiv = document.getElementById('oracle-response');
+    
+    // Color meanings database
+    const colorMeanings = {
+        red: { meaning: "Passion, life force, transformation", culture: "Universal vitality" },
+        blue: { meaning: "Wisdom, communication, infinite sky", culture: "Divine truth and peace" },
+        yellow: { meaning: "Enlightenment, new beginnings", culture: "Solar consciousness" },
+        green: { meaning: "Growth, healing, natural harmony", culture: "Heart wisdom" },
+        purple: { meaning: "Spiritual insight, mysticism", culture: "Crown consciousness" },
+        orange: { meaning: "Creativity, enthusiasm, courage", culture: "Sacred flame" },
+        brown: { meaning: "Grounding, earth connection", culture: "Ancestral wisdom" },
+        white: { meaning: "Purity, clarity, new potential", culture: "Divine light" },
+        black: { meaning: "Mystery, depth, fertile void", culture: "Sacred unknown" },
+        pink: { meaning: "Compassion, gentle love", culture: "Heart opening" },
+        turquoise: { meaning: "Communication, healing waters", culture: "Throat chakra wisdom" },
+        gold: { meaning: "Divine consciousness, wisdom", culture: "Solar enlightenment" }
+    };
+    
+    // Pigment stories database
+    const pigmentStories = {
+        red: "Born from cinnabar and iron oxide, red carries the memory of earth's fire and mercury's transformation.",
+        blue: "Ultramarine's journey from Afghan lapis lazuli to European masters reminds us that true beauty requires patience.",
+        yellow: "Chrome yellow's toxic brilliance teaches us that progress often carries hidden costs.",
+        green: "Malachite's copper origin connects us to the green world through mineral transformation.",
+        purple: "Tyrian purple's rarity once made it worth more than gold, teaching us about scarcity and value.",
+        orange: "Realgar's arsenic content reminds us that nature's most beautiful gifts can be dangerous.",
+        brown: "Umber's earth origin grounds us in the soil from which all life springs.",
+        white: "Titanium white's modern chemistry replaced lead white's historical toxicity—evolution in safety.",
+        black: "Ivory black's origin in charred bone reminds us that creation requires sacrifice.",
+        pink: "Quinacridone's synthetic origin shows how modern chemistry can birth new forms of beauty.",
+        turquoise: "Copper carbonate's weathered beauty teaches us about transformation through time.",
+        gold: "Real gold leaf's permanence reminds us that some things are truly eternal."
+    };
+    
+    // Meditation guidance database
+    const meditationGuidance = {
+        red: "Sit with this color during times when you need courage. Breathe strength into your core.",
+        blue: "Meditate on blue when seeking clarity in communication. Let truth flow through your words.",
+        yellow: "Focus on yellow during creative blocks. Allow new ideas to illuminate your consciousness.",
+        green: "Use green meditation for healing work. Visualize growth and renewal in all aspects of life.",
+        purple: "Purple meditation opens spiritual channels. Sit quietly and listen to your inner wisdom.",
+        orange: "Orange energizes creative projects. Meditate on this color before artistic endeavors.",
+        brown: "Brown meditation grounds scattered energy. Feel your connection to earth and ancestors.",
+        white: "White meditation clears mental clutter. Begin each day with a few minutes of white light visualization.",
+        black: "Black meditation reveals hidden aspects of self. Embrace the fertile darkness of not-knowing.",
+        pink: "Pink meditation opens the heart. Use this color to cultivate self-compassion and kindness.",
+        turquoise: "Turquoise meditation balances emotional expression. Find your authentic voice through this color.",
+        gold: "Gold meditation connects you to highest wisdom. Reserve this practice for life's important decisions."
+    };
+    
+    if (consultButton && questionInput && responseDiv) {
+        consultButton.addEventListener('click', function() {
+            const question = questionInput.value.trim();
+            if (!question) {
+                alert('Please ask the colors a question first.');
+                return;
+            }
+            
+            // Generate oracle response
+            const colors = generateColorResponse(question);
+            const message = generateOracleMessage(question, colors);
+            
+            displayOracleResponse(colors, message);
+        });
+    }
+    
+    function generateColorResponse(question) {
+        // Simple algorithm based on question characteristics
+        const questionLower = question.toLowerCase();
+        const questionLength = question.length;
+        const vowelCount = (question.match(/[aeiou]/gi) || []).length;
+        const words = question.split(' ').length;
+        
+        // Use question characteristics to influence color selection
+        const colorKeys = Object.keys(colorMeanings);
+        const primaryIndex = questionLength % colorKeys.length;
+        const secondaryIndex = vowelCount % colorKeys.length;
+        const tertiaryIndex = words % colorKeys.length;
+        
+        return [
+            colorKeys[primaryIndex],
+            colorKeys[secondaryIndex],
+            colorKeys[tertiaryIndex]
+        ];
+    }
+    
+    function generateOracleMessage(question, colors) {
+        const templates = [
+            "The colors speak of transformation through {primary}. Let {secondary} guide your heart while {tertiary} illuminates the path forward.",
+            "In the dance of {primary} and {secondary}, find the wisdom that {tertiary} reveals. Your question carries the seeds of its own answer.",
+            "The ancient dialogue between {primary} and {secondary} suggests that {tertiary} holds the key you seek. Trust the process.",
+            "As {primary} embraces {secondary}, the spirit of {tertiary} whispers: the answer lives within the question itself.",
+            "The oracle sees {primary} rising, {secondary} flowing, and {tertiary} grounding your intentions. The way forward is illuminated."
+        ];
+        
+        const template = templates[Math.floor(Math.random() * templates.length)];
+        return template
+            .replace('{primary}', colors[0])
+            .replace('{secondary}', colors[1])
+            .replace('{tertiary}', colors[2]);
+    }
+    
+    function displayOracleResponse(colors, message) {
+        // Generate color swatches
+        const colorHexes = {
+            red: '#dc2626', blue: '#2563eb', yellow: '#eab308', green: '#16a34a',
+            purple: '#9333ea', orange: '#ea580c', brown: '#92400e', white: '#f8fafc',
+            black: '#1f2937', pink: '#ec4899', turquoise: '#06b6d4', gold: '#fbbf24'
+        };
+        
+        // Update color swatches and meanings
+        colors.forEach((color, index) => {
+            const colorElement = document.getElementById(['primary-color', 'secondary-color', 'tertiary-color'][index]);
+            if (colorElement) {
+                const swatch = colorElement.querySelector('.color-swatch');
+                const meaning = colorElement.querySelector('.color-meaning');
+                
+                if (swatch && meaning) {
+                    swatch.style.backgroundColor = colorHexes[color] || '#666';
+                    meaning.textContent = colorMeanings[color]?.meaning || 'Mystery';
+                }
+            }
+        });
+        
+        // Update oracle message
+        const messageElement = document.getElementById('oracle-message');
+        if (messageElement) {
+            messageElement.textContent = message;
+        }
+        
+        // Update pigment story
+        const pigmentElement = document.getElementById('pigment-story');
+        if (pigmentElement) {
+            const primaryColor = colors[0];
+            pigmentElement.textContent = pigmentStories[primaryColor] || 'The origins of this color are lost in the mists of time.';
+        }
+        
+        // Update meditation guidance
+        const meditationElement = document.getElementById('meditation-guidance');
+        if (meditationElement) {
+            const primaryColor = colors[0];
+            meditationElement.textContent = meditationGuidance[primaryColor] || 'Sit quietly with this color and allow its wisdom to emerge naturally.';
+        }
+        
+        // Show response with animation
+        responseDiv.classList.remove('hidden');
+        setTimeout(() => {
+            responseDiv.classList.add('show');
+        }, 100);
+    }
+    
+    // Style content sections
+    const content = document.querySelector('.oracle-content');
+    
+    // Wrap color family sections
+    const colorHeaders = content.querySelectorAll('h4');
+    colorHeaders.forEach(function(h4) {
+        if (h4.textContent.includes('Family')) {
+            let nextElement = h4.nextElementSibling;
+            const elements = [h4];
+            
+            while (nextElement && nextElement.tagName === 'UL') {
+                elements.push(nextElement);
+                nextElement = nextElement.nextElementSibling;
+            }
+            
+            if (elements.length > 1) {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'color-family';
+                
+                elements[0].parentNode.insertBefore(wrapper, elements[0]);
+                elements.forEach(el => wrapper.appendChild(el));
+            }
+        }
+    });
+    
+    // Style pigment oracle sections
+    const pigmentHeaders = content.querySelectorAll('h4');
+    pigmentHeaders.forEach(function(h4) {
+        if (h4.textContent.includes('(') && h4.textContent.includes(')')) {
+            let nextElement = h4.nextElementSibling;
+            const elements = [h4];
+            
+            while (nextElement && !nextElement.matches('h3, h4')) {
+                elements.push(nextElement);
+                nextElement = nextElement.nextElementSibling;
+            }
+            
+            if (elements.length > 1) {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'pigment-oracle';
+                
+                elements[0].parentNode.insertBefore(wrapper, elements[0]);
+                elements.forEach(el => wrapper.appendChild(el));
+            }
+        }
+    });
+    
+    // Style community experiences
+    const quotes = content.querySelectorAll('p');
+    quotes.forEach(function(p) {
+        if (p.textContent.startsWith('"') && p.textContent.includes('**')) {
+            p.className = 'community-experience';
+        }
+    });
+});
+</script>
+{% endblock %}
