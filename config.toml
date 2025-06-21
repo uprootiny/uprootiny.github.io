@@ -1,6 +1,64 @@
 base_url = "https://uprootiny.github.io"
-title = "Paintings"
+title = "Cyrill Rafael Vasilyev"
+description = "Artwork showcase"
 compile_sass = true
 
 [extra]
 show_dimensions = true
+
+# Navigation menu configuration
+[[extra.nav_links]]
+title = "Paintings"
+url = "/paintings"
+
+[[extra.nav_links]]
+title = "About"
+url = "/about"
+
+[[extra.nav_links]]
+title = "CV"
+url = "/cv"
+
+[[extra.nav_links]]
+title = "Instagram"
+url = "https://www.instagram.com/cyrillrafael/"
+external = true
+icon = "fab fa-instagram"
+
+[[extra.nav_links]]
+title = "Telegram"
+url = "https://t.me/+31686218199/"
+external = true
+icon = "fab fa-telegram"
+
+[[extra.nav_links]]
+title = "☸"
+url = "/porch"
+description = "Expansions and possibilities"
+class = "dharma-wheel"
+
+# Hidden expanded navigation (accessible via porch)
+[[extra.expanded_nav]]
+title = "Map"
+url = "/map"
+description = "Interactive exhibition map"
+
+[[extra.expanded_nav]]
+title = "Store"
+url = "/store"
+description = "Prints, digital, classes, commissions"
+
+[[extra.expanded_nav]]
+title = "Essays"
+url = "/essays"
+description = "Techniques and philosophy"
+
+[[extra.expanded_nav]]
+title = "Series"
+url = "/serials"
+description = "Ongoing projects"
+
+[[extra.expanded_nav]]
+title = "Collaborate"
+url = "/collaborations"
+description = "Open calls and partnerships"

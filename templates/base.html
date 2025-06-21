@@ -4,12 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ config.description }}{% endif %}">
     <link rel="stylesheet" href="{{ get_url(path='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    {% block extra_head %}{% endblock extra_head %}
 </head>
 <body>
     <nav>
         <ul class="horizontal-list">
-            <li class="nav-item"><a href="{{ get_url(path='/') }}">Paintings</a></li>
+            {% for link in config.extra.nav_links %}
+            <li class="nav-item {% if link.class %}{{ link.class }}{% endif %}">
+                <a href="{% if link.external %}{{ link.url }}{% else %}{{ get_url(path=link.url) }}{% endif %}"
+                   {% if link.external %}target="_blank" rel="noopener"{% endif %}
+                   title="{{ link.description | default(value=link.title) }}">
+                    {% if link.icon %}
+                        <i class="{{ link.icon }}"></i>
+                    {% endif %}
+                    {{ link.title }}
+                </a>
+            </li>
+            {% endfor %}
         </ul>
     </nav>
     
@@ -20,5 +34,15 @@
             </div>
         </div>
     </main>
+    
+    <footer>
+        <div class="footer-content">
+            <a href="{{ get_url(path='/porch') }}" class="footer-expansion-link" title="Discover expanded possibilities">
+                isn't there more to the website?
+            </a>
+        </div>
+    </footer>
+    
+    {% block extra_js %}{% endblock extra_js %}
 </body>
 </html>

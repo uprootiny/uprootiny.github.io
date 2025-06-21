@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="collaborations-layout">
+    <header class="collaborations-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="collaborations-description">{{ page.description }}</p>
+        {% endif %}
+    </header>
+    
+    <div class="collaborations-content">
+        {{ page.content | safe }}
+    </div>
+</div>
+
+<style>
+.collaborations-layout {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.collaborations-header {
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 30px;
+    border-radius: 15px;
+    margin-bottom: 60px;
+}
+
+.collaborations-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.collaborations-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.collaborations-content {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #34495e;
+}
+
+.collaborations-content h2 {
+    color: #2c3e50;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    position: relative;
+    padding-left: 30px;
+}
+
+.collaborations-content h2::before {
+    content: "🤝";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.collaborations-content h3 {
+    color: #8e44ad;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #f8f9fa, transparent);
+    border-left: 4px solid #8e44ad;
+    border-radius: 0 8px 8px 0;
+}
+
+.collaborations-content h4 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Open call styling */
+.collaborations-content h3:contains("Open Call") {
+    background: linear-gradient(90deg, #e8f5e8, transparent);
+    border-color: #27ae60;
+    color: #27ae60;
+}
+
+.collaborations-content h3:contains("Open Call")::after {
+    content: " 🔔";
+}
+
+/* Current opportunities */
+.collaborations-content h3:contains("Current") {
+    background: linear-gradient(90deg, #fff3cd, transparent);
+    border-color: #f39c12;
+    color: #e67e22;
+}
+
+.collaborations-content h3:contains("Current")::after {
+    content: " ⭐";
+}
+
+/* Partnerships */
+.collaborations-content h3:contains("Partnership") {
+    background: linear-gradient(90deg, #e3f2fd, transparent);
+    border-color: #3498db;
+    color: #2980b9;
+}
+
+.collaborations-content h3:contains("Partnership")::after {
+    content: " 🔗";
+}
+
+/* Application process styling */
+.collaborations-content ol {
+    counter-reset: step-counter;
+    list-style: none;
+    padding-left: 0;
+}
+
+.collaborations-content ol li {
+    counter-increment: step-counter;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    position: relative;
+    padding-left: 60px;
+}
+
+.collaborations-content ol li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: #3498db;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Contact information highlighting */
+.collaborations-content p:contains("@") {
+    background: #e8f4f8;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+/* Status indicators */
+.collaborations-content strong:contains("Deadline") {
+    color: #e74c3c;
+    background: #ffeaea;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.collaborations-content strong:contains("Status") {
+    color: #27ae60;
+    background: #eafaf1;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.collaborations-content strong:contains("Format") {
+    color: #8e44ad;
+    background: #f4ecf7;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* Special project boxes */
+.collaborations-content blockquote {
+    border: none;
+    margin: 30px 0;
+    padding: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    font-style: normal;
+}
+
+.collaborations-content blockquote h4 {
+    color: white;
+    margin-top: 0;
+}
+
+/* Lists */
+.collaborations-content ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.collaborations-content li {
+    margin-bottom: 8px;
+}
+
+.collaborations-content li::marker {
+    color: #8e44ad;
+}
+
+/* Timeline and dates */
+.collaborations-content em:contains("2025"),
+.collaborations-content em:contains("2026") {
+    background: #fff3cd;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: 600;
+    color: #856404;
+}
+
+/* Pricing and investment info */
+.collaborations-content p:contains("€") {
+    font-weight: 600;
+    color: #27ae60;
+}
+
+.collaborations-content p {
+    margin-bottom: 15px;
+}
+</style>
+{% endblock %}

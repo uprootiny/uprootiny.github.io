@@ -1,0 +1,20 @@
+[
+  {
+    "year": 2025,
+    "name": "Togatta Residence 044",
+    "location": "Togatta Onsen, Zao Town, Japan",
+    "coordinates": [38.7, 140.6],
+    "duration": "TBD",
+    "description": "Artist residency in traditional Japanese hot spring town",
+    "type": "International"
+  },
+  {
+    "year": 2020,
+    "name": "Pilotenkueche",
+    "location": "Leipzig, Germany",
+    "coordinates": [51.3397, 12.3731],
+    "duration": "3 months",
+    "description": "International artist residency program in Leipzig",
+    "type": "International"
+  }
+]

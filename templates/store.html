@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="store-layout">
+    <header class="store-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="store-description">{{ page.description }}</p>
+        {% endif %}
+    </header>
+    
+    <div class="store-navigation">
+        <ul class="store-nav-list">
+            <li><a href="{{ get_url(path='/store/prints') }}" class="store-nav-link">
+                <h3>Print-on-Demand</h3>
+                <p>High-quality reproductions and limited editions</p>
+            </a></li>
+            <li><a href="{{ get_url(path='/store/digital') }}" class="store-nav-link">
+                <h3>Digital Collections</h3>
+                <p>NFTs, downloads, and VR experiences</p>
+            </a></li>
+            <li><a href="{{ get_url(path='/store/classes') }}" class="store-nav-link">
+                <h3>Masterclasses</h3>
+                <p>Workshops and educational offerings</p>
+            </a></li>
+            <li><a href="{{ get_url(path='/store/commissions') }}" class="store-nav-link">
+                <h3>Commissions</h3>
+                <p>Custom artworks and installations</p>
+            </a></li>
+        </ul>
+    </div>
+    
+    <div class="store-content">
+        {{ page.content | safe }}
+    </div>
+</div>
+
+<style>
+.store-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.store-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.store-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.store-description {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.store-navigation {
+    margin-bottom: 50px;
+}
+
+.store-nav-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.store-nav-link {
+    display: block;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.store-nav-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #007bff;
+}
+
+.store-nav-link h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.store-nav-link p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.store-content {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #444;
+}
+
+.store-content h2 {
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.store-content h3 {
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+</style>
+{% endblock %}

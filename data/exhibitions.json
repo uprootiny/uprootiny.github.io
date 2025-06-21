@@ -1,0 +1,236 @@
+[
+  {
+    "year": 2025,
+    "title": "Mountains of May",
+    "venue": "Machiaijo Gallery",
+    "location": "Togatta, Japan",
+    "type": "Duo",
+    "coordinates": [38.7, 140.6],
+    "description": "Exhibition in collaboration with Togatta Onsen residency"
+  },
+  {
+    "year": 2024,
+    "title": "Fields of Air",
+    "venue": "SeeLab",
+    "location": "The Hague, Netherlands",
+    "type": "Solo",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Solo exhibition showcasing recent works"
+  },
+  {
+    "year": 2023,
+    "title": "Open Works",
+    "venue": "Annastate",
+    "location": "The Hague, Netherlands",
+    "type": "Group",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Group exhibition with artist collective"
+  },
+  {
+    "year": 2022,
+    "title": "Garden of Stars",
+    "venue": "Sterrentuin",
+    "location": "The Hague, Netherlands",
+    "type": "Group",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Outdoor installation and exhibition"
+  },
+  {
+    "year": 2021,
+    "title": "Royal Painting Prize nominee",
+    "venue": "Royal Palace",
+    "location": "Amsterdam, Netherlands",
+    "type": "Award",
+    "coordinates": [52.3676, 4.9041],
+    "description": "Nomination for prestigious painting prize"
+  },
+  {
+    "year": 2021,
+    "title": "Infinitesimal",
+    "venue": "A Shop Called Life",
+    "location": "Rotterdam, Netherlands",
+    "type": "Group",
+    "coordinates": [51.9225, 4.47917],
+    "description": "Collaborative exhibition with ANNASTATE"
+  },
+  {
+    "year": 2020,
+    "title": "Rites of Passage",
+    "venue": "West",
+    "location": "The Hague, Netherlands",
+    "type": "Group",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Group exhibition with ANNASTATE"
+  },
+  {
+    "year": 2020,
+    "title": "Burenpost",
+    "venue": "Grafische Werkplaats",
+    "location": "The Hague, Netherlands",
+    "type": "Group",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Neighbors postal project"
+  },
+  {
+    "year": 2020,
+    "title": "How do you call what are you doing?",
+    "venue": "Kunst Drift",
+    "location": "Breda, Netherlands",
+    "type": "Group",
+    "coordinates": [51.5719, 4.7683],
+    "description": "Conceptual group exhibition"
+  },
+  {
+    "year": 2020,
+    "title": "Part Of Hoogtij",
+    "venue": "Ruimtevaart",
+    "location": "The Hague, Netherlands",
+    "type": "Group",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Part of high tide festival with ANNASTATE"
+  },
+  {
+    "year": 2019,
+    "title": "The Three Obliques of a Perspective",
+    "venue": "Gallery",
+    "location": "Tbilisi, Georgia",
+    "type": "Group",
+    "coordinates": [41.7151, 44.8271],
+    "description": "International exhibition in Georgia"
+  },
+  {
+    "year": 2019,
+    "title": "Daag van Architectuur",
+    "venue": "Various",
+    "location": "Netherlands",
+    "type": "Festival",
+    "coordinates": [52.1326, 5.2913],
+    "description": "Architecture day participation as ANNASTATE"
+  },
+  {
+    "year": 2019,
+    "title": "Unplugged #3",
+    "venue": "Helicopter",
+    "location": "The Hague, Netherlands",
+    "type": "Group",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Music and visual art collaboration"
+  },
+  {
+    "year": 2019,
+    "title": "In Bloom",
+    "venue": "Korzo",
+    "location": "The Hague, Netherlands",
+    "type": "Group",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Spring-themed group exhibition"
+  },
+  {
+    "year": 2019,
+    "title": "STILL TIME",
+    "venue": "Annastate",
+    "location": "The Hague, Netherlands",
+    "type": "Festival",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Curated music festival"
+  },
+  {
+    "year": 2019,
+    "title": "Progeny",
+    "venue": "Private space",
+    "location": "The Hague, Netherlands",
+    "type": "Group",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Intimate exhibition with Gideon Oosten and Zahar Bondar"
+  },
+  {
+    "year": 2018,
+    "title": "Halfway Where",
+    "venue": "Grey Space in the Middle",
+    "location": "The Hague, Netherlands",
+    "type": "Group",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Contemporary art exhibition"
+  },
+  {
+    "year": 2018,
+    "title": "Nokia's Tagline",
+    "venue": "MOOOF",
+    "location": "The Hague, Netherlands",
+    "type": "Group",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Technology-themed art exhibition"
+  },
+  {
+    "year": 2018,
+    "title": "Graduation Festival",
+    "venue": "Royal Academy of Art",
+    "location": "The Hague, Netherlands",
+    "type": "Student",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Graduate exhibition showcase"
+  },
+  {
+    "year": 2018,
+    "title": "De Creatieve Stad",
+    "venue": "Grote Markt tram station and Grafische Werkplaats",
+    "location": "The Hague, Netherlands",
+    "type": "Public",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Public art intervention in urban space"
+  },
+  {
+    "year": 2018,
+    "title": "In de geest van",
+    "venue": "Lucebert's House",
+    "location": "Bergen, Netherlands",
+    "type": "Group",
+    "coordinates": [52.6667, 4.7],
+    "description": "Exhibition in poet Lucebert's former home"
+  },
+  {
+    "year": 2017,
+    "title": "Trance and moving image",
+    "venue": "EYE film museum",
+    "location": "Amsterdam, Netherlands",
+    "type": "Research",
+    "coordinates": [52.3676, 4.9041],
+    "description": "Research lab collaboration with KABK"
+  },
+  {
+    "year": 2017,
+    "title": "Sounds of Spring! or the Royal Mashup",
+    "venue": "Royal Conservatoire",
+    "location": "The Hague, Netherlands",
+    "type": "Performance",
+    "coordinates": [52.0705, 4.3007],
+    "description": "Interdisciplinary music and visual performance"
+  },
+  {
+    "year": 2016,
+    "title": "alchemy of painting",
+    "venue": "Zverev Centre for Contemporary Art",
+    "location": "Moscow, Russia",
+    "type": "Group",
+    "coordinates": [55.7558, 37.6173],
+    "description": "Contemporary painting exhibition in Moscow"
+  },
+  {
+    "year": 2015,
+    "title": "OTSEFINAM (manifesto)",
+    "venue": "TENT",
+    "location": "Rotterdam, Netherlands",
+    "type": "Group",
+    "coordinates": [51.9225, 4.47917],
+    "description": "Manifesto-based conceptual exhibition"
+  },
+  {
+    "year": 2014,
+    "title": "Installation with asemic writing",
+    "venue": "LuLoft",
+    "location": "Moscow, Russia",
+    "type": "Solo",
+    "coordinates": [55.7558, 37.6173],
+    "description": "Early installation work with experimental writing"
+  }
+]

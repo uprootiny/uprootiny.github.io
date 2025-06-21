@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="serials-layout">
+    <header class="serials-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="serials-description">{{ page.description }}</p>
+        {% endif %}
+    </header>
+    
+    <div class="serials-content">
+        {{ page.content | safe }}
+    </div>
+</div>
+
+<style>
+.serials-layout {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.serials-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.serials-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.serials-description {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.serials-content {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #34495e;
+}
+
+.serials-content h2 {
+    color: #2c3e50;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.serials-content h3 {
+    color: #e74c3c;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 600;
+    position: relative;
+}
+
+.serials-content h3::before {
+    content: "●";
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.serials-content h4 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Series status indicators */
+.serials-content h3:contains("Present") {
+    color: #27ae60;
+}
+
+.serials-content h3:contains("Present")::before {
+    content: "🔄";
+    margin-right: 10px;
+}
+
+.serials-content h3:contains("Completed") {
+    color: #95a5a6;
+}
+
+.serials-content h3:contains("Completed")::before {
+    content: "✓";
+    margin-right: 10px;
+}
+
+.serials-content h3:contains("Starting") {
+    color: #f39c12;
+}
+
+.serials-content h3:contains("Starting")::before {
+    content: "🚀";
+    margin-right: 10px;
+}
+
+/* Work info boxes */
+.serials-content p:contains("Current Status:"),
+.serials-content p:contains("Format:"),
+.serials-content p:contains("Medium:"),
+.serials-content p:contains("Concept:") {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #3498db;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Lists styling */
+.serials-content ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.serials-content li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.serials-content li::marker {
+    color: #3498db;
+}
+
+/* Special sections */
+.serials-content strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.serials-content em {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Timeline indicators */
+.serials-content p:contains("2025") {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.serials-content p:contains("2024") {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.serials-content p:contains("2023") {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* Archive sections */
+.serials-content h2:contains("Historical"),
+.serials-content h2:contains("Completed") {
+    color: #95a5a6;
+    border-color: #95a5a6;
+}
+
+/* Work in progress highlighting */
+.serials-content h2:contains("Work-in-Progress") {
+    color: #f39c12;
+    border-color: #f39c12;
+}
+
+.serials-content blockquote {
+    border-left: 4px solid #9b59b6;
+    margin: 30px 0;
+    padding: 20px 30px;
+    background: linear-gradient(90deg, #f8f9fa, #ffffff);
+    font-style: italic;
+    color: #5d6d7e;
+}
+</style>
+{% endblock %}

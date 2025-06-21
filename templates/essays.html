@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="essays-layout">
+    <header class="essays-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="essays-description">{{ page.description }}</p>
+        {% endif %}
+    </header>
+    
+    <div class="essays-content">
+        {{ page.content | safe }}
+    </div>
+</div>
+
+<style>
+.essays-layout {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Georgia, serif;
+}
+
+.essays-header {
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 30px;
+}
+
+.essays-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 300;
+}
+
+.essays-description {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.essays-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #34495e;
+}
+
+.essays-content h2 {
+    color: #2c3e50;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-left: 4px solid #3498db;
+    padding-left: 20px;
+}
+
+.essays-content h3 {
+    color: #34495e;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.essays-content h4 {
+    color: #5d6d7e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.essays-content blockquote {
+    border-left: 3px solid #bdc3c7;
+    margin: 30px 0;
+    padding: 20px 30px;
+    background: #f8f9fa;
+    font-style: italic;
+    color: #5d6d7e;
+}
+
+.essays-content ul, .essays-content ol {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.essays-content li {
+    margin-bottom: 8px;
+}
+
+.essays-content strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.essays-content em {
+    color: #7f8c8d;
+}
+
+.essays-content p {
+    margin-bottom: 20px;
+}
+
+/* Special styling for technique sections */
+.essays-content h3:contains("Techniques"),
+.essays-content h3:contains("Methods"),
+.essays-content h3:contains("Process") {
+    color: #e74c3c;
+}
+
+/* Special styling for philosophical sections */
+.essays-content h3:contains("Philosophy"),
+.essays-content h3:contains("Reflection"),
+.essays-content h3:contains("Theory") {
+    color: #9b59b6;
+}
+
+/* Resource boxes */
+.essays-content h3:contains("PDF"),
+.essays-content h3:contains("Video"),
+.essays-content h3:contains("Audio"),
+.essays-content h3:contains("Download") {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #f39c12;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<style>
+.simple-map {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.timeline-controls {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.timeline-controls input[type="range"] {
+    width: 300px;
+    margin: 0 10px;
+}
+
+.locations-list {
+    margin-top: 30px;
+}
+
+.location-item {
+    display: grid;
+    grid-template-columns: 60px 1fr 200px;
+    gap: 15px;
+    padding: 15px;
+    margin: 10px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.location-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.location-item .year {
+    font-weight: bold;
+    color: #3498db;
+    font-size: 1.1em;
+}
+
+.location-item .title {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.location-item .location {
+    color: #7f8c8d;
+    text-align: right;
+}
+
+.map-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.map-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.map-description {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="map-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="map-description">{{ page.description }}</p>
+    {% endif %}
+</div>
+
+<div class="simple-map">
+    {{ page.content | safe }}
+</div>
+
+<div id="globe-container">
+    <!-- Interactive visualization will be inserted here -->
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ get_url(path='js/globe.js') }}"></script>
+{% endblock %}
