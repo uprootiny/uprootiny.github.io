@@ -1,0 +1,112 @@
+name: Deployment Branch Switcher
+
+on:
+  workflow_dispatch:
+    inputs:
+      deployment_target:
+        description: 'Choose deployment target'
+        required: true
+        default: 'jekyll'
+        type: choice
+        options:
+        - jekyll
+        - zola-clean
+        - zola-expansions
+      branch_to_deploy:
+        description: 'Branch to deploy from'
+        required: true
+        default: 'master'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "deployment-switcher"
+  cancel-in-progress: true
+
+jobs:
+  deploy-jekyll:
+    if: ${{ github.event.inputs.deployment_target == 'jekyll' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout specified branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch_to_deploy }}
+          
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "2.7"
+          bundler-cache: true
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+        
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  deploy-zola:
+    if: ${{ github.event.inputs.deployment_target == 'zola-clean' || github.event.inputs.deployment_target == 'zola-expansions' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout specified branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch_to_deploy }}
+
+      - name: Install Zola
+        uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.20.0
+
+      - name: Build Zola site
+        run: |
+          echo "Building Zola site from branch: ${{ github.event.inputs.branch_to_deploy }}"
+          echo "Deployment target: ${{ github.event.inputs.deployment_target }}"
+          zola build
+          echo "Build completed. Contents of public/:"
+          ls -la public/ || echo "No public directory created"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  deployment-status:
+    needs: [deploy-jekyll, deploy-zola]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report deployment status
+        run: |
+          echo "Deployment Target: ${{ github.event.inputs.deployment_target }}"
+          echo "Branch Deployed: ${{ github.event.inputs.branch_to_deploy }}"
+          echo "Jekyll Job Status: ${{ needs.deploy-jekyll.result }}"
+          echo "Zola Job Status: ${{ needs.deploy-zola.result }}"
+          
+          if [[ "${{ needs.deploy-jekyll.result }}" == "success" || "${{ needs.deploy-zola.result }}" == "success" ]]; then
+            echo "✅ Deployment successful!"
+          else
+            echo "❌ Deployment failed!"
+            exit 1
+          fi
