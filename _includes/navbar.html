@@ -1,8 +1,8 @@
 <nav>
   <ul class="horizontal-list">
     {% for link in site.nav_links %}
-    <li class="nav-item">
-      <a href="{{ link.url | relative_url }}">
+    <li class="nav-item {% if link.class %}{{ link.class }}{% endif %}">
+      <a href="{{ link.url | relative_url }}" {% if link.class %}title="Expansions and possibilities"{% endif %}>
         {% if link.icon %}
           <i class="{{ link.icon }}"></i>
         {% endif %}
