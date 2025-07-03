@@ -29,6 +29,9 @@ concurrency:
 jobs:
   deploy-jekyll:
     if: ${{ github.event.inputs.deployment_target == 'jekyll' }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout specified branch
@@ -60,6 +63,9 @@ jobs:
 
   deploy-zola:
     if: ${{ github.event.inputs.deployment_target == 'zola-clean' || github.event.inputs.deployment_target == 'zola-expansions' }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout specified branch
