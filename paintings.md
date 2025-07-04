@@ -23,9 +23,9 @@ permalink: /paintings/
   {% endfor %}
 
   {%- comment -%}
-    2) Sort as you like (here by path)
+    2) Sort by year (newest first, like original)
   {%- endcomment -%}
-  {% assign gallery = gallery | sort: "path" %}
+  {% assign gallery = gallery | sort: "path" | reverse %}
 
   {%- comment -%}
     3) Render each image
