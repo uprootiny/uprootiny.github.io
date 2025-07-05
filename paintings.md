@@ -39,7 +39,7 @@ permalink: /paintings/
     {%- comment -%}
       Lookup optional dimensions
     {%- endcomment -%}
-    {% assign dims = "unknown" %}
+    {% assign dims = "220x120cm" %}
     {% for item in meta %}
       {% if item.year == year and item.title == title %}
         {% assign dims = item.dimensions %}
