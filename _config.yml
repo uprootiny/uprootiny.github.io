@@ -26,9 +26,6 @@ nav_links:
     icon: "fab fa-telegram"
   - title: "Installation Views"
     url: "/installations.html"
-  - title: "☸"
-    url: "/porch.html"
-    class: "dharma-wheel"
 
 # Exclude unnecessary files from Jekyll processing
 exclude:
