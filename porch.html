@@ -1,284 +1,207 @@
 ---
 layout: text
-title: "The Porch: A Look Into Digital Possibilities"
+title: "The Porch: What Lives Between Making and Showing"
 ---
 
 <style>
-/* Rotating wheel animations */
-.dharma-wheel {
+/* Gentle rotating elements */
+.circle {
     display: inline-block;
-    font-size: 2em;
-    margin: 0 10px;
-    animation: dharmaRotate 60s linear infinite;
-    opacity: 0.7;
-    color: #8e44ad;
+    font-size: 1.2em;
+    margin: 0 5px;
+    animation: gentleRotate 120s linear infinite;
+    opacity: 0.6;
+    color: #666;
 }
 
-.dharma-wheel.fast {
-    animation: dharmaRotate 20s linear infinite;
-    color: #e74c3c;
+.circle.slow {
+    animation: gentleRotate 180s linear infinite;
+    color: #777;
 }
 
-.dharma-wheel.slow {
-    animation: dharmaRotate 120s linear infinite;
-    color: #3498db;
+.circle.reverse {
+    animation: gentleRotate 150s linear infinite reverse;
+    color: #555;
 }
 
-.dharma-wheel.reverse {
-    animation: dharmaRotate 80s linear infinite reverse;
-    color: #f39c12;
-}
-
-@keyframes dharmaRotate {
+@keyframes gentleRotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
 
-.epicycle-container {
-    position: relative;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin: 20px;
-}
-
-.epicycle {
-    position: absolute;
-    border: 2px solid rgba(142, 68, 173, 0.3);
-    border-radius: 50%;
-    animation: epicycleRotate 40s linear infinite;
-}
-
-.epicycle-1 {
-    width: 100px;
-    height: 100px;
-    top: 0;
-    left: 0;
-}
-
-.epicycle-2 {
-    width: 60px;
-    height: 60px;
-    top: 20px;
-    left: 20px;
-    animation: epicycleRotate 25s linear infinite reverse;
-    border-color: rgba(52, 152, 219, 0.4);
-}
-
-.epicycle-3 {
-    width: 30px;
-    height: 30px;
-    top: 35px;
-    left: 35px;
-    animation: epicycleRotate 15s linear infinite;
-    border-color: rgba(243, 156, 18, 0.5);
-}
-
-.epicycle-center {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: #e74c3c;
-    border-radius: 50%;
-    top: 46px;
-    left: 46px;
-    animation: pulse 3s ease-in-out infinite;
-}
-
-@keyframes epicycleRotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.6; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.3); }
-}
-
-.exploration-wheel {
+.thinking-space {
     text-align: center;
     margin: 40px 0;
     padding: 30px;
-    background: linear-gradient(135deg, rgba(142, 68, 173, 0.1), rgba(52, 152, 219, 0.1));
-    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 15px;
     position: relative;
-    overflow: hidden;
 }
 
-.exploration-wheel::before {
+.thinking-space::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
     background: conic-gradient(
-        rgba(142, 68, 173, 0.1) 0deg,
-        rgba(52, 152, 219, 0.1) 72deg,
-        rgba(243, 156, 18, 0.1) 144deg,
-        rgba(231, 76, 60, 0.1) 216deg,
-        rgba(46, 204, 113, 0.1) 288deg,
-        rgba(142, 68, 173, 0.1) 360deg
+        rgba(0, 0, 0, 0.02) 0deg,
+        rgba(0, 0, 0, 0.01) 90deg,
+        transparent 180deg,
+        rgba(0, 0, 0, 0.01) 270deg,
+        rgba(0, 0, 0, 0.02) 360deg
     );
-    animation: wheelRotate 200s linear infinite;
+    animation: slowTurn 300s linear infinite;
     z-index: -1;
 }
 
-@keyframes wheelRotate {
+@keyframes slowTurn {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+}
+
+.possibility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.possibility-item {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 3px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.possibility-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-left-color: #999;
 }
 </style>
 
 <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: Georgia, serif; line-height: 1.8; color: #444;">
 
-<h1 style="text-align: center; font-size: 2.2em; margin-bottom: 30px; color: #2c3e50; font-weight: 300;">The Porch</h1>
+<h1 style="text-align: center; font-size: 2.2em; margin-bottom: 30px; color: #555; font-weight: 300;">The Porch</h1>
 
 <div style="text-align: center; margin: 30px 0;">
-    <span class="dharma-wheel">☸</span>
-    <span class="dharma-wheel slow">☸</span>
-    <span class="dharma-wheel fast">☸</span>
-    <span class="dharma-wheel reverse">☸</span>
-    <span class="dharma-wheel">☸</span>
+    <span class="circle">◯</span>
+    <span class="circle slow">◯</span>
+    <span class="circle reverse">◯</span>
+    <span class="circle">◯</span>
 </div>
 
-<p style="text-align: center; font-style: italic; color: #7f8c8d; margin-bottom: 40px;">Standing here at the threshold, we look out into the vast expanse of what digital space might hold.</p>
+<p style="text-align: center; font-style: italic; color: #888; margin-bottom: 40px;">This is the threshold space—neither fully inside nor out, where we sit with what is and wonder about what might be.</p>
 
-<h2 style="margin-top: 50px; margin-bottom: 25px; color: #34495e; font-size: 1.6em; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">What You've Found</h2>
+<h2 style="margin-top: 50px; margin-bottom: 25px; color: #555; font-size: 1.6em; border-bottom: 1px solid #ddd; padding-bottom: 10px;">What Actually Exists</h2>
 
-<p>You've discovered the contemplative core—paintings that breathe, dimensions that matter, a practice grounded in materiality and presence. This is the essential: color on canvas, light through pigment, the irreducible encounter between viewer and surface.</p>
+<p>Right now, this is a simple gallery site. Forty-three paintings spanning seven years. Some linocuts. A CV. An artist statement. Basic navigation. Clean presentation. It loads fast, works on phones, shows the work clearly.</p>
 
-<h2 style="margin-top: 50px; margin-bottom: 25px; color: #34495e; font-size: 1.6em; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">What Lies Beyond</h2>
+<p>This is sufficient. This is honest. This serves the paintings.</p>
 
-<p style="font-style: italic; color: #7f8c8d; text-align: center; margin: 40px 0;">The dharma wheel turns. What's possible? What's prudent? What's inevitable?</p>
+<h2 style="margin-top: 50px; margin-bottom: 25px; color: #555; font-size: 1.6em; border-bottom: 1px solid #ddd; padding-bottom: 10px;">What Might Grow</h2>
 
-<p>In the digital realm, the practice expands:</p>
+<p>But there's this restlessness. This sense that the digital space could hold more—not flashy things, not clever things, but things that serve the deeper work. Things that connect rather than distract. Things that invite contemplation rather than demand attention.</p>
 
-<h3 style="margin-top: 35px; margin-bottom: 20px; color: #8e44ad; font-size: 1.3em;">The Possible</h3>
-<p>Rhizomatic connections across time and space—exhibitions mapped as constellations, collaborations flowering through networks, techniques shared through immersive experience. The studio extends into virtual realms while remaining rooted in physical matter.</p>
+<p>So we sit here on this porch and let the mind wander...</p>
 
-<h3 style="margin-top: 35px; margin-bottom: 20px; color: #8e44ad; font-size: 1.3em;">The Prudent</h3>
-<p>Tools that serve the work, not the reverse. Technology as medium for deeper contemplative engagement, not spectacle for its own sake. Digital archives that preserve and share rather than replace direct encounter.</p>
-
-<h3 style="margin-top: 35px; margin-bottom: 20px; color: #8e44ad; font-size: 1.3em;">The Inevitable</h3>
-<p>Artistic practice flowing through all available channels—from traditional canvas to augmented reality, from individual creation to collective meditation, from local studio to global community. The boundaries dissolve while the essence remains.</p>
-
-<div class="exploration-wheel">
-    <h2 style="margin-bottom: 30px; color: #2c3e50; font-size: 1.8em; position: relative; z-index: 1;">Wheels Within Wheels: Practice Directions</h2>
-    
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 30px 0; position: relative; z-index: 1;">
-        <div class="epicycle-container">
-            <div class="epicycle epicycle-1"></div>
-            <div class="epicycle epicycle-2"></div>
-            <div class="epicycle epicycle-3"></div>
-            <div class="epicycle-center"></div>
-        </div>
-        <div class="epicycle-container">
-            <div class="epicycle epicycle-1" style="animation-duration: 50s; border-color: rgba(46, 204, 113, 0.3);"></div>
-            <div class="epicycle epicycle-2" style="animation-duration: 30s; border-color: rgba(231, 76, 60, 0.4);"></div>
-            <div class="epicycle epicycle-3" style="animation-duration: 18s; border-color: rgba(142, 68, 173, 0.5);"></div>
-            <div class="epicycle-center" style="background: #2ecc71;"></div>
-        </div>
-        <div class="epicycle-container">
-            <div class="epicycle epicycle-1" style="animation-duration: 70s; animation-direction: reverse; border-color: rgba(243, 156, 18, 0.3);"></div>
-            <div class="epicycle epicycle-2" style="animation-duration: 35s; border-color: rgba(52, 152, 219, 0.4);"></div>
-            <div class="epicycle epicycle-3" style="animation-duration: 12s; animation-direction: reverse; border-color: rgba(231, 76, 60, 0.5);"></div>
-            <div class="epicycle-center" style="background: #f39c12;"></div>
-        </div>
-    </div>
+<div class="thinking-space">
+    <h3 style="margin-bottom: 20px; color: #666; font-size: 1.4em;">The Wandering Mind</h3>
+    <p style="font-style: italic; color: #777; margin: 0;">What if the same contemplative attention that goes into painting could shape how we encounter digital space?</p>
 </div>
 
-<h2 style="margin-top: 50px; margin-bottom: 25px; color: #34495e; font-size: 1.6em; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">The Expanding Spirals</h2>
+<h2 style="margin-top: 50px; margin-bottom: 25px; color: #555; font-size: 1.6em; border-bottom: 1px solid #ddd; padding-bottom: 10px;">Some Gentle Possibilities</h2>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px 0;">
+<div class="possibility-grid">
 
-    <div style="background: linear-gradient(135deg, rgba(142, 68, 173, 0.1), transparent); padding: 25px; border-radius: 15px; border-left: 4px solid #8e44ad;">
-        <h3 style="color: #8e44ad; margin-bottom: 15px;">🌍 Interactive Globe Map</h3>
-        <p style="margin: 0; font-size: 0.95em;">3D globe with pinpointed exhibition locations color-coded by timeline. Deep violet for Moscow origins (2014-2016), blue for Academy years (2017-2019), green for ANNASTATE period (2020-2022), orange-red for international expansion (2023-2025). Smooth WebGL navigation with venue details and cultural context.</p>
+    <div class="possibility-item">
+        <h3 style="color: #777; margin-bottom: 15px; font-size: 1.1em;">A Simple Map</h3>
+        <p style="margin: 0; font-size: 0.95em; color: #666;">Maybe just a small map showing where these paintings were made. Moscow, The Hague, that residency in Japan. Not spinning globes or fancy WebGL—just a quiet way to see how place shapes practice.</p>
     </div>
 
-    <div style="background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), transparent); padding: 25px; border-radius: 15px; border-left: 4px solid #3498db;">
-        <h3 style="color: #3498db; margin-bottom: 15px;">🗺️ Network Mindmaps</h3>
-        <p style="margin: 0; font-size: 0.95em;">Interactive concept networks overlaying geography. Thematic threads connecting distant exhibitions, technical evolution traced across locations, philosophical journey deepening over time/space. Click concepts to see related exhibitions worldwide, filter by contemplative themes.</p>
+    <div class="possibility-item">
+        <h3 style="color: #777; margin-bottom: 15px; font-size: 1.1em;">Process Notes</h3>
+        <p style="margin: 0; font-size: 0.95em; color: #666;">Sometimes there are sketches, failed attempts, photos of the studio at 3am. The messiness behind the finished work. These could live somewhere, for people who are curious about the making.</p>
     </div>
 
-    <div style="background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), transparent); padding: 25px; border-radius: 15px; border-left: 4px solid #f39c12;">
-        <h3 style="color: #f39c12; margin-bottom: 15px;">🔮 Temporal Color Archaeology</h3>
-        <p style="margin: 0; font-size: 0.95em;">Reconstruct historical color palettes from archaeological pigment traces. Paint with colors as they appeared 1000 years ago, accounting for degradation, climate change, and lost binding techniques.</p>
+    <div class="possibility-item">
+        <h3 style="color: #777; margin-bottom: 15px; font-size: 1.1em;">Slow Letters</h3>
+        <p style="margin: 0; font-size: 0.95em; color: #666;">An occasional email to people who want to follow the work. Not newsletter-marketing, just honest updates about what's happening in the studio. What's being painted, what's being read, what's being learned.</p>
     </div>
 
-    <div style="background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), transparent); padding: 25px; border-radius: 15px; border-left: 4px solid #e74c3c;">
-        <h3 style="color: #e74c3c; margin-bottom: 15px;">🧬 Genetic Color Memory</h3>
-        <p style="margin: 0; font-size: 0.95em;">Explore whether color preferences are encoded in DNA. Collaborate with geneticists to create personal color palettes based on ancestral migration patterns and evolutionary color adaptations.</p>
+    <div class="possibility-item">
+        <h3 style="color: #777; margin-bottom: 15px; font-size: 1.1em;">Guest Contemplations</h3>
+        <p style="margin: 0; font-size: 0.95em; color: #666;">Other artists, writers, or thinkers responding to the work. Not reviews or critiques, but genuine encounters. What do they see? What does it evoke? How does it connect to their own practice?</p>
     </div>
 
-    <div style="background: linear-gradient(135deg, rgba(46, 204, 113, 0.1), transparent); padding: 25px; border-radius: 15px; border-left: 4px solid #2ecc71;">
-        <h3 style="color: #2ecc71; margin-bottom: 15px;">🌱 Living Paint Ecosystems</h3>
-        <p style="margin: 0; font-size: 0.95em;">Paints that grow, evolve, and die. Bacterial cultures creating color that changes over months. Paintings as organisms with lifecycles, requiring care, feeding, and eventually accepting mortality.</p>
+    <div class="possibility-item">
+        <h3 style="color: #777; margin-bottom: 15px; font-size: 1.1em;">Material Studies</h3>
+        <p style="margin: 0; font-size: 0.95em; color: #666;">The technical side: how these colors are mixed, which surfaces work best, what happens to paintings over time. For people who want to understand the craft as well as the vision.</p>
     </div>
 
-    <div style="background: linear-gradient(135deg, rgba(155, 89, 182, 0.1), transparent); padding: 25px; border-radius: 15px; border-left: 4px solid #9b59b6;">
-        <h3 style="color: #9b59b6; margin-bottom: 15px;">🎵 Synesthetic Translation Networks</h3>
-        <p style="margin: 0; font-size: 0.95em;">Global network of synesthetes contributing to a universal sound-color-texture translation database. Music becomes paintable, colors become audible, textures become tasteable.</p>
+    <div class="possibility-item">
+        <h3 style="color: #777; margin-bottom: 15px; font-size: 1.1em;">Quiet Conversations</h3>
+        <p style="margin: 0; font-size: 0.95em; color: #666;">A simple forum or space for people to share what they see in the work. Not social media chaos, but thoughtful exchanges. What memories do these colors evoke? What do they notice that others might miss?</p>
     </div>
 
-    <div style="background: linear-gradient(135deg, rgba(52, 73, 94, 0.1), transparent); padding: 25px; border-radius: 15px; border-left: 4px solid #34495e;">
-        <h3 style="color: #34495e; margin-bottom: 15px;">🌌 Cosmic Pigment Sources</h3>
-        <p style="margin: 0; font-size: 0.95em;">Paints created from meteorite minerals, lunar dust simulations, and Mars soil analogues. Extraterrestrial color palettes for painting experiences that transcend earthly limitations.</p>
+    <div class="possibility-item">
+        <h3 style="color: #777; margin-bottom: 15px; font-size: 1.1em;">Small Prints</h3>
+        <p style="margin: 0; font-size: 0.95em; color: #666;">Some of these paintings could live in homes as high-quality prints. Not mass production, but careful reproductions for people who want to sit with the work daily. Perhaps some original smaller pieces too.</p>
     </div>
 
-    <div style="background: linear-gradient(135deg, rgba(26, 188, 156, 0.1), transparent); padding: 25px; border-radius: 15px; border-left: 4px solid #1abc9c;">
-        <h3 style="color: #1abc9c; margin-bottom: 15px;">🏛️ Institutional Memory Painting</h3>
-        <p style="margin: 0; font-size: 0.95em;">Collaborate with hospitals, schools, prisons to create ongoing paintings that accumulate the emotional residue of places. Colors slowly shifting based on collective human experiences within institutional spaces.</p>
+    <div class="possibility-item">
+        <h3 style="color: #777; margin-bottom: 15px; font-size: 1.1em;">Open Studios</h3>
+        <p style="margin: 0; font-size: 0.95em; color: #666;">Occasionally opening the studio to small groups. Not performances or presentations, just the chance to see work in progress, to understand the scale and texture that photos can't capture.</p>
     </div>
 
-    <div style="background: linear-gradient(135deg, rgba(241, 196, 15, 0.1), transparent); padding: 25px; border-radius: 15px; border-left: 4px solid #f1c40f;">
-        <h3 style="color: #f1c40f; margin-bottom: 15px;">⚡ Quantum Entangled Paintings</h3>
-        <p style="margin: 0; font-size: 0.95em;">Paired canvases that influence each other across vast distances. Paint applied to one canvas affects the companion piece through quantum field interactions. Art as demonstration of non-local consciousness.</p>
+    <div class="possibility-item">
+        <h3 style="color: #777; margin-bottom: 15px; font-size: 1.1em;">Contemplative Tech</h3>
+        <p style="margin: 0; font-size: 0.95em; color: #666;">What if digital tools could slow us down instead of speed us up? Simple apps that help people look more carefully, breathe more deeply, notice more fully. Technology in service of presence, not distraction.</p>
     </div>
 
 </div>
 
-<h2 style="margin-top: 50px; margin-bottom: 25px; color: #34495e; font-size: 1.6em; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">The Invitation</h2>
+<h2 style="margin-top: 50px; margin-bottom: 25px; color: #555; font-size: 1.6em; border-bottom: 1px solid #ddd; padding-bottom: 10px;">The Honest Question</h2>
 
-<p>Each turning wheel represents a different trajectory the practice might take. Some lead toward integration with emerging technologies, others toward deeper excavation of ancient wisdom. Some explore the collective, others the intimately personal.</p>
+<p>Which of these might actually serve the work? Which might connect with people in meaningful ways? Which might grow slowly and sustainably, without demanding more attention than they deserve?</p>
 
-<h2 style="margin-top: 50px; margin-bottom: 25px; color: #34495e; font-size: 1.6em; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;">The Choice</h2>
+<p>Not everything needs to be built. Not every possibility needs to be pursued. The porch is a place for sitting with options, not for rushing toward answers.</p>
 
-<p>You may remain with the essential—the paintings, the biography, the direct encounter. This is complete and sufficient.</p>
+<h2 style="margin-top: 50px; margin-bottom: 25px; color: #555; font-size: 1.6em; border-bottom: 1px solid #ddd; padding-bottom: 10px;">What's True Right Now</h2>
 
-<p>Or you may step through the threshold into expanded possibility, where the same contemplative spirit moves through new forms and fresh collaborations.</p>
+<p>The paintings exist. People look at them. Some are moved by them. Some buy them. Some commission new ones. The basic ecology of an art practice functions.</p>
 
-<p style="font-style: italic; color: #7f8c8d; text-align: center; margin: 40px 0;">The porch is a place of choice, not obligation.</p>
+<p>These digital extensions—if they happen—should strengthen that ecology, not complicate it. They should serve the deeper work, not distract from it.</p>
 
 <div style="text-align: center; margin: 50px 0;">
-    <span class="dharma-wheel slow">☸</span>
-    <span class="dharma-wheel reverse">☸</span>
-    <span class="dharma-wheel">☸</span>
-    <span class="dharma-wheel fast">☸</span>
-    <span class="dharma-wheel slow">☸</span>
+    <span class="circle slow">◯</span>
+    <span class="circle reverse">◯</span>
+    <span class="circle">◯</span>
+    <span class="circle slow">◯</span>
 </div>
 
-<p style="font-style: italic; color: #7f8c8d; text-align: center; margin: 40px 0;">The dharma wheels spin at different speeds—some fast with technological urgency, others slow with ancient patience. Each rotation traces a different path the practice might follow.</p>
-
-<div style="background: rgba(0, 0, 0, 0.05); padding: 30px; border-radius: 15px; margin: 40px 0; border: 2px dashed rgba(142, 68, 173, 0.3);">
-    <h3 style="text-align: center; color: #8e44ad; margin-bottom: 20px;">The Meta-Question</h3>
-    <p style="text-align: center; font-style: italic; color: #555;">How does contemplative practice evolve while preserving its essential wisdom? What new forms can carry ancient insights? When does innovation serve awakening, and when does it merely distract?</p>
+<div style="background: rgba(0, 0, 0, 0.03); padding: 30px; border-radius: 15px; margin: 40px 0; border: 1px solid rgba(0, 0, 0, 0.1);">
+    <h3 style="text-align: center; color: #666; margin-bottom: 20px; font-size: 1.2em;">The Deeper Question</h3>
+    <p style="text-align: center; font-style: italic; color: #666;">How do we use digital tools to become more present, more connected, more awake—rather than more distracted, more scattered, more numb?</p>
 </div>
 
-<p style="font-style: italic; color: #7f8c8d; text-align: center; margin: 40px 0;">Some wheels turn toward the future, others circle back to forgotten wisdom. All spin within the greater stillness that remains unchanged.</p>
+<p>This is the invitation that matters: to approach technology with the same contemplative attention we bring to painting. To build only what serves. To connect only in ways that honor the depth of real encounter.</p>
 
-<hr style="margin: 50px 0; border: none; border-top: 1px solid #ecf0f1;">
+<h2 style="margin-top: 50px; margin-bottom: 25px; color: #555; font-size: 1.6em; border-bottom: 1px solid #ddd; padding-bottom: 10px;">The Porch Remains</h2>
 
-<p style="font-style: italic; color: #7f8c8d; text-align: center;">What calls to you from this digital landscape stretching toward horizons we can barely imagine?</p>
+<p>This threshold space will stay. A place to return to when the excitement of new possibilities needs to be balanced with the wisdom of patient consideration.</p>
 
-<div style="text-align: center; margin: 30px 0;">
-    <div class="epicycle-container" style="margin: 0 auto;">
-        <div class="epicycle epicycle-1" style="border-color: rgba(142, 68, 173, 0.2);"></div>
-        <div class="epicycle epicycle-2" style="border-color: rgba(52, 152, 219, 0.3);"></div>
-        <div class="epicycle epicycle-3" style="border-color: rgba(243, 156, 18, 0.4);"></div>
-        <div class="epicycle-center" style="background: linear-gradient(45deg, #8e44ad, #3498db, #f39c12); animation: pulse 4s ease-in-out infinite;"></div>
-    </div>
+<p>Some of these ideas might grow into reality. Others might remain as daydreams. Both outcomes are fine. The porch is not a planning committee—it's a place for honest dreaming.</p>
+
+<div style="text-align: center; margin: 40px 0;">
+    <span class="circle">◯</span>
+    <span class="circle slow">◯</span>
+    <span class="circle reverse">◯</span>
+    <span class="circle">◯</span>
 </div>
+
+<p style="font-style: italic; color: #888; text-align: center; margin: 40px 0;">What needs to happen will happen. What needs to wait will wait. The practice continues.</p>
 
 </div>

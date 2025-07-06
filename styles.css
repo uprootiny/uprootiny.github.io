@@ -10,16 +10,20 @@ body {
 
 .horizontal-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   list-style: none;
-  padding: 0;
+  padding: 1em 0;
   margin: 0;
   font-family: 'Menlo', 'Courier New', monospace;
-  font-size: 2.5rem;
-  /* background-color: #f5f5f5; */
-  background-color: rgba(255, 255, 255, 0); /* White background with 50% transparency */
+  font-size: 2rem; /* Slightly smaller */
+  background-color: rgba(255, 255, 255, 0);
+  flex-wrap: wrap;
+  gap: 1em; /* Add consistent spacing between items */
+}
 
+.nav-item {
+  white-space: nowrap; /* Prevent line breaks within nav items */
 }
  
 .content {
@@ -68,14 +72,19 @@ body {
 
 /* New gallery styles */
 .gallery {
-  gap: 2em;
+  gap: 4em;
 }
 
 .painting {
   box-sizing: border-box;
-  padding: 1em;
-  margin-bottom: 2em;
+  padding: 0;
+  margin-bottom: 6em; /* More space between paintings */
   text-align: center;
+}
+
+.painting-header {
+  margin-bottom: 3em; /* Large space between title and image */
+  font-size: 1.6ex;
 }
 
 .painting img {
@@ -93,7 +102,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 0.5em;
+  margin-top: 1em; /* Small space between image and info */
   font-size: 1.6ex;
 }
 

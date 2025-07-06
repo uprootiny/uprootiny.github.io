@@ -15,7 +15,7 @@ permalink: /
   {% endif %}
 {% endfor %}
 
-{% assign sorted_files = filtered_files | sort: "path" %}
+{% assign sorted_files = filtered_files | sort: "path" | reverse %}
 
 <div class="gallery">
   {% for file in sorted_files %}
@@ -25,21 +25,22 @@ permalink: /
     {% assign year = year_str | plus: 0 %}
     {% assign title = parts | slice: 1, parts.size | join: ' ' | remove: '.jpg' %}
     
-    {% assign meta = nil %}
+    {% assign dims = "220x120cm" %}
     {% for entry in paintings_data %}
       {% if entry.year == year and entry.title == title %}
-        {% assign meta = entry %}
+        {% assign dims = entry.dimensions %}
         {% break %}
       {% endif %}
     {% endfor %}
     
     <div class="painting">
-      <img src="{{ file.path | relative_url }}" alt="{{ title }}" loading="lazy" />
-      <div class="info">
+      <div class="painting-header">
         <div class="title">{{ title }}</div>
         <div class="year">{{ year }}</div>
-        <div class="dimensions">{% if meta %}{{ meta.dimensions }}{% else %}unknown{% endif %}</div>
+        <div class="dimensions">{{ dims }}</div>
       </div>
+      
+      <img src="{{ file.path | relative_url }}" alt="{{ title }}" loading="lazy" />
     </div>
   {% endfor %}
 </div>

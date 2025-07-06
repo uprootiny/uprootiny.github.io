@@ -1,0 +1,70 @@
+name: Auto-Parse Images
+
+on:
+  push:
+    paths:
+      - 'paintings/**'
+      - 'linocuts/**'
+      - 'installation2025/**'
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: 'Force update all entries'
+        required: false
+        default: 'false'
+
+jobs:
+  parse-images:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        pip install pyyaml
+        
+    - name: Parse and update images
+      run: python scripts/parse_images.py
+      env:
+        FORCE_UPDATE: ${{ github.event.inputs.force_update }}
+        
+    - name: Set up Ruby for Jekyll
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+        bundler-cache: true
+        
+    - name: Validate Jekyll build
+      run: |
+        bundle exec jekyll build --trace
+        
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add _data/titles.yml
+        git commit -m "Auto-update image metadata
+
+        🤖 Generated with [Claude Code](https://claude.ai/code)
+
+        Co-Authored-By: Claude <noreply@anthropic.com>"
+        git push

@@ -1,0 +1,137 @@
+name: Test and Deploy
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+        bundler-cache: true
+        
+    - name: Set up Python for tests
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install Python dependencies
+      run: |
+        pip install pyyaml
+        
+    - name: Run image parsing (update metadata if needed)
+      run: |
+        python3 scripts/parse_images.py
+        
+    - name: Check for metadata changes
+      id: check-changes
+      run: |
+        if [ -n "$(git status --porcelain _data/titles.yml)" ]; then
+          echo "metadata_changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "metadata_changed=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit metadata updates
+      if: steps.check-changes.outputs.metadata_changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add _data/titles.yml
+        git commit -m "Auto-update image metadata [skip ci]
+
+        🤖 Generated with [Claude Code](https://claude.ai/code)
+
+        Co-Authored-By: Claude <noreply@anthropic.com>"
+        
+    - name: Push metadata changes
+      if: steps.check-changes.outputs.metadata_changed == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+        
+    - name: Build Jekyll site
+      run: |
+        bundle exec jekyll build --trace
+        
+    - name: Run regression tests
+      run: |
+        python3 tests/test_site_integrity.py
+        
+    - name: Upload test artifacts on failure
+      if: failure()
+      uses: actions/upload-artifact@v3
+      with:
+        name: site-build-failure
+        path: |
+          _site/
+          *.log
+          
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/master' && success()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site
+        
+  # Separate job for auto-parsing that runs on image changes
+  auto-parse:
+    runs-on: ubuntu-latest
+    if: contains(github.event.head_commit.message, '[auto-parse]') || 
+        (github.event_name == 'push' && 
+         (contains(github.event.head_commit.modified, 'paintings/') ||
+          contains(github.event.head_commit.added, 'paintings/') ||
+          contains(github.event.head_commit.modified, 'linocuts/') ||
+          contains(github.event.head_commit.added, 'linocuts/')))
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        pip install pyyaml
+        
+    - name: Parse and update images
+      run: python3 scripts/parse_images.py
+      
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add _data/titles.yml
+        git commit -m "Auto-update image metadata
+
+        🤖 Generated with [Claude Code](https://claude.ai/code)
+
+        Co-Authored-By: Claude <noreply@anthropic.com>"
+        git push
