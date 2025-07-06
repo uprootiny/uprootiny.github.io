@@ -1,0 +1,442 @@
+---
+layout: text
+title: "Terminal - Site Map"
+---
+
+<style>
+body {
+    background: #000;
+    color: #00ff00;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.2;
+    overflow-x: auto;
+}
+
+.terminal-container {
+    background: #000;
+    color: #00ff00;
+    padding: 20px;
+    margin: 0;
+    max-width: none;
+    white-space: pre;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+}
+
+.terminal-header {
+    border: 1px solid #00ff00;
+    padding: 2px;
+    margin-bottom: 20px;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffff00;
+    text-decoration: underline;
+}
+
+.preview-box {
+    border: 1px solid #00ff00;
+    width: 60px;
+    height: 8px;
+    display: inline-block;
+    background: linear-gradient(90deg, #003300, #006600, #003300);
+    vertical-align: middle;
+    margin: 0 2px;
+}
+
+.preview-lino {
+    background: linear-gradient(45deg, #330000, #660000, #330000);
+}
+
+.preview-install {
+    background: linear-gradient(135deg, #000033, #000066, #000033);
+}
+
+.ascii-divider {
+    color: #006600;
+}
+
+.status-ok { color: #00ff00; }
+.status-warn { color: #ffff00; }
+.status-error { color: #ff0000; }
+
+.hidden-cursor::after {
+    content: "█";
+    animation: blink 1s infinite;
+}
+</style>
+
+<div class="terminal-container">
+<div class="terminal-header">
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ CYRILL RAFAEL VASILYEV - GALLERY TERMINAL v2.5.1                           │
+│ Copyright (c) 2024 - The Hague, Netherlands                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+</div>
+
+<span class="status-ok">[✓]</span> System initialized - 43 paintings loaded
+<span class="status-ok">[✓]</span> Network connection established  
+<span class="status-ok">[✓]</span> Gallery servers online
+
+<div class="ascii-divider">
+═══════════════════════════════════════════════════════════════════════════════
+</div>
+
+<strong>MAIN NAVIGATION TREE:</strong>
+
+├── <a href="/paintings">PAINTINGS</a> <span class="preview-box"></span> [43 works] <span class="status-ok">ONLINE</span>
+│   ├── 2024 → <a href="/paintings#2024">fields of air</a> <span class="preview-box"></span>
+│   ├── 2023 → <a href="/paintings#2023">star rabbit</a> <span class="preview-box"></span> <a href="/paintings#2023">moth</a> <span class="preview-box"></span> <a href="/paintings#2023">luminous assembly</a> <span class="preview-box"></span>
+│   ├── 2022 → <a href="/paintings#2022">climbing mount Orange</a> <span class="preview-box"></span>
+│   ├── 2021 → <a href="/paintings#2021">slowest lightning</a> <span class="preview-box"></span> <a href="/paintings#2021">time machines</a> <span class="preview-box"></span>
+│   ├── 2020 → <a href="/paintings#2020">aurora</a> <span class="preview-box"></span> <a href="/paintings#2020">spinoza staircase</a> <span class="preview-box"></span> <a href="/paintings#2020">one and many</a> <span class="preview-box"></span>
+│   ├── 2019 → <a href="/paintings#2019">wavelengths</a> <span class="preview-box"></span> <a href="/paintings#2019">brion</a> <span class="preview-box"></span> <a href="/paintings#2019">untitled (glow)</a> <span class="preview-box"></span>
+│   └── 2018 → <a href="/paintings#2018">fire of the mind</a> <span class="preview-box"></span> <a href="/paintings#2018">two moons</a> <span class="preview-box"></span> <a href="/paintings#2018">rotational meltdown</a> <span class="preview-box"></span>
+│
+├── <a href="/linocuts">LINOCUTS</a> <span class="preview-box preview-lino"></span> [8 prints] <span class="status-ok">ONLINE</span>
+│   ├── Relief print #1 <span class="preview-box preview-lino"></span>
+│   ├── Relief print #2 <span class="preview-box preview-lino"></span>
+│   ├── Relief print #3 <span class="preview-box preview-lino"></span>
+│   └── [...] <span class="preview-box preview-lino"></span><span class="preview-box preview-lino"></span><span class="preview-box preview-lino"></span><span class="preview-box preview-lino"></span><span class="preview-box preview-lino"></span>
+│
+├── <a href="/about">ABOUT</a> - Artist Statement <span class="status-ok">LOADED</span>
+│   └── Philosophy: "Contemplative traditions → Materiality → Transcendence"
+│
+├── <a href="/cv">CV</a> - Professional History <span class="status-ok">UPDATED</span>
+│   ├── Exhibitions: 2014-2025 [26 entries]
+│   ├── Residencies: Togatta (JP), Leipzig (DE)
+│   └── Education: RSUH Moscow → KABK The Hague
+│
+├── <a href="/installations.html">INSTALLATIONS</a> <span class="preview-box preview-install"></span> [11 views] <span class="status-ok">ONLINE</span>
+│   ├── Fields of Air exhibition <span class="preview-box preview-install"></span>
+│   ├── Installation view #2 <span class="preview-box preview-install"></span>
+│   └── Gallery documentation <span class="preview-box preview-install"></span><span class="preview-box preview-install"></span><span class="preview-box preview-install"></span>
+│
+└── EXTERNAL LINKS
+    ├── <a href="https://www.instagram.com/cyrillrafael/" target="_blank">Instagram</a> → @cyrillrafael
+    └── <a href="https://t.me/+31686218199/" target="_blank">Telegram</a> → +31686218199
+
+<div class="ascii-divider">
+───────────────────────────────────────────────────────────────────────────────
+</div>
+
+<strong>HIDDEN SYSTEMS:</strong>
+
+├── <a href="/porch.html">porch.html</a> <span class="status-warn">EXPERIMENTAL</span>
+│   ├── Interactive globe visualization
+│   ├── Network mindmaps and concept exploration  
+│   ├── Rotating epicycles animation system
+│   └── Practice direction brainstorming
+│
+└── <a href="/terminal.html">terminal.html</a> <span class="status-ok">ACTIVE</span> <span class="hidden-cursor"></span>
+
+<div class="ascii-divider">
+═══════════════════════════════════════════════════════════════════════════════
+</div>
+
+<strong>SYSTEM STATUS:</strong>
+
+┌─ GALLERY METRICS ──────────────────────────────────────────────────────────┐
+│ Total artworks: 43 paintings + 8 linocuts + 11 installation views         │
+│ Active period: 2018-2024 (7 years)                                         │
+│ Geographic reach: Netherlands, Germany, Japan, Russia, Georgia             │
+│ Technical stack: Jekyll + GitHub Pages + Menlo typography                  │
+│ Last update: <span id="current-date"></span>                                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─ CONNECTION INFO ──────────────────────────────────────────────────────────┐
+│ Primary domain: <a href="https://cyrillrafael.org">cyrillrafael.org</a>                                        │
+│ Mirror site: <a href="https://uprootiny.github.io">uprootiny.github.io</a>                                   │
+│ Repository: <a href="https://github.com/cyrillrafael/cyrillrafael.github.io" target="_blank">github.com/cyrillrafael/cyrillrafael.github.io</a>          │
+│ Build status: <span class="status-ok">PASSING</span>                                                        │
+│ Deploy time: ~45s via GitHub Actions                                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+<div class="ascii-divider">
+───────────────────────────────────────────────────────────────────────────────
+</div>
+
+<strong>QUICK COMMANDS:</strong>
+
+> <a href="/paintings">view latest</a>        - Jump to newest painting (2024)
+> <a href="/about">read statement</a>     - Artist philosophy and approach  
+> <a href="/cv">show exhibitions</a>    - Professional history timeline
+> <a href="/linocuts">browse prints</a>      - Alternative medium collection
+> <a href="/installations.html">see installations</a> - Exhibition documentation
+> <a href="/porch.html">enter porch</a>       - Access experimental features
+> <a href="javascript:history.back()">exit terminal</a>     - Return to previous page
+
+<div class="ascii-divider">
+═══════════════════════════════════════════════════════════════════════════════
+</div>
+
+<strong>ASCII ART PREVIEW:</strong>
+
+┌─ LATEST WORK: "fields of air" (2024) ──────┐
+│                                             │
+│   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
+│   ░░▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓░░ │
+│   ░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ │
+│   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
+│   ░░░░▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓░░░░░ │
+│   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
+│                                             │
+└─────────────────────────────────────────────┘
+
+Connection established to gallery.cyrillrafael.org:80
+Awaiting input<span class="blink">_</span>
+
+
+
+
+<div class="ascii-divider">
+═══════════════════════════════════════════════════════════════════════════════
+</div>
+
+<strong>ESSAY.TXT - ON THE COMPOSITION OF DIGITAL GALLERIES</strong>
+
+<div class="ascii-divider">
+───────────────────────────────────────────────────────────────────────────────
+</div>
+
+What we present here
+                     is a contradiction:
+
+        the infinite                 compressed into pixels
+        the haptic                   reduced to photons
+        the monumental              squeezed through fiber optic
+
+
+
+Yet something survives the translation.
+                                      Perhaps more than survives.
+
+
+The gallery as constructed here speaks in several voices:
+
+    PRIMARY VOICE       →  The paintings themselves
+                           43 works spanning 7 years
+                           Each a frozen moment of contemplative practice
+                           Colors that once lived as pigment
+                           Now approximated in light
+
+    SECONDARY VOICE     →  The navigation structure  
+                           Paintings | Linocuts | About | CV | Instagram | Telegram | Installation Views
+                           A deliberate path through the maze
+                           Each link a doorway
+                           Each doorway a choice
+
+    TERTIARY VOICE      →  The hidden systems
+                           /porch.html → experimental territories  
+                           /terminal.html → this very interface
+                           The infrastructure exposed
+                           The machine made visible
+
+
+<div class="ascii-divider">
+                ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+</div>
+
+WHAT THIS GALLERY SAYS:
+
+    ◆  That contemplative practice can translate across media
+    ◆  That large-scale physical work deserves digital preservation  
+    ◆  That viewers hunger for authentic encounter, even through screens
+    ◆  That navigation itself can be a contemplative act
+    ◆  That professional presentation and artistic vulnerability can coexist
+    ◆  That geographic spread (Moscow → The Hague → Togatta) creates meaning
+    ◆  That time transforms not just the artist but the viewing context
+
+
+<div class="ascii-divider">
+                ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+</div>
+
+WHAT THIS GALLERY LEAVES UNSAID:
+
+    ◇  The weight of the brush in the hand
+    ◇  The smell of linseed oil and turpentine mixing  
+    ◇  The physical resistance of canvas under pressure
+    ◇  The way natural light shifts throughout a viewing day
+    ◇  The sound footsteps make on gallery floors
+    ◇  The peripheral vision that encompasses entire installations
+    ◇  The way paintings change when you step closer, then further away
+
+
+                         But perhaps these absences
+                                             create a different kind of presence.
+
+
+The digital gallery operates by                    SUBSTITUTION
+                                  but also by       ADDITION
+
+        What gets added:
+        
+            → Accessibility across distance and time
+            → Ability to zoom beyond human visual limits
+            → Comparative viewing (multiple works simultaneously)
+            → Archival permanence (immune to physical degradation)
+            → Contextual layers (CVs, statements, processes)
+            → Discovery patterns impossible in physical space
+            → The democratic gaze (no gallery guards, no closing times)
+
+
+<div class="ascii-divider">
+████████████████████████████████████████████████████████████████████████████████
+</div>
+
+THE PARADOX OF DIGITAL MATERIALITY:
+
+        This terminal interface you're reading
+                                              is itself a kind of painting
+                                              
+        Pixels arranged in patterns
+        Designed to evoke materiality
+        (The green text on black background recalls old monitors
+         The Menlo typeface suggests programmer aesthetics
+         The ASCII art implies early computing culture)
+         
+        Yet none of this existed in paint.
+        All of it is constructed meaning.
+        All of it points beyond itself.
+
+
+The question becomes:
+                    Does the digital gallery betray the paintings
+                                    or
+                    Does it create new forms of contemplative encounter?
+
+
+Evidence suggests:                BOTH
+
+
+<div class="ascii-divider">
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+</div>
+
+OBSERVATIONS ON VIEWER BEHAVIOR:
+
+    ▶  In physical galleries, viewers typically spend 30 seconds per painting
+    ▶  In digital galleries, time expands and contracts unpredictably
+    ▶  The zoom function creates intimacy impossible in guarded spaces
+    ▶  Multiple tabs allow comparative viewing across decades
+    ▶  Mobile viewing creates private, intimate encounters
+    ▶  Late-night browsing adds contemplative solitude
+
+
+The gallery construction here prioritizes:
+
+        CLARITY     over    CLEVERNESS
+        ACCESS      over    EXCLUSIVITY  
+        PERMANENCE  over    TRENDINESS
+        DEPTH       over    BREADTH
+
+
+Yet hidden beneath the surface:
+                             Complexity
+                             Experimentation  
+                             Technical sophistication
+                             Philosophical investigation
+
+
+<div class="ascii-divider">
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+</div>
+
+TERMINAL REFLECTION:
+
+        Every webpage is a philosophical statement.
+        Every navigation choice reveals assumptions about viewers.
+        Every loading speed decision impacts contemplative possibility.
+        
+        This terminal page exists to make the infrastructure visible.
+        To acknowledge the medium.
+        To create space for meta-reflection.
+        
+        It says:
+                "Here is how this place is constructed.
+                 Here are the choices made and unmade.
+                 Here is what gets prioritized.
+                 Here is what gets hidden.
+                 Here is the gap between intention and execution."
+
+
+The gallery, finally, is not the paintings.
+The gallery is the RELATIONSHIP between paintings and viewers.
+Digital construction changes this relationship.
+Sometimes diminishes it.
+Sometimes enhances it.
+Always transforms it.
+
+
+                                    The contemplative question becomes:
+                                    
+                                    How to build digital spaces
+                                    that serve contemplative encounter?
+                                    
+                                    This site attempts one answer.
+
+
+<div class="ascii-divider">
+═══════════════════════════════════════════════════════════════════════════════
+</div>
+
+End of essay.txt
+
+System idle. Type 'help' for commands or use navigation above.
+Terminal ready<span class="blink">_</span>
+
+</div>
+
+<script>
+// Update current date
+document.getElementById('current-date').textContent = new Date().toISOString().split('T')[0];
+
+// Add some retro terminal effects
+document.addEventListener('DOMContentLoaded', function() {
+    // Simulate typing effect on page load
+    const container = document.querySelector('.terminal-container');
+    container.style.opacity = '0';
+    container.style.transition = 'opacity 0.5s ease-in';
+    setTimeout(() => {
+        container.style.opacity = '1';
+    }, 100);
+});
+
+// Add click sound effect (if audio context available)
+document.addEventListener('click', function() {
+    if (typeof AudioContext !== 'undefined' || typeof webkitAudioContext !== 'undefined') {
+        try {
+            const audioContext = new (AudioContext || webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.1);
+        } catch (e) {
+            // Ignore audio errors
+        }
+    }
+});
+</script>
