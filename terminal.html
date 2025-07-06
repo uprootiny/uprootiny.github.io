@@ -184,18 +184,22 @@ a:hover {
 ═══════════════════════════════════════════════════════════════════════════════
 </div>
 
-<strong>ASCII ART PREVIEW:</strong>
+<strong>INTERACTIVE GALLERY VIEWER:</strong>
 
-┌─ LATEST WORK: "fields of air" (2024) ──────┐
-│                                             │
-│   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
-│   ░░▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓░░ │
-│   ░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ │
-│   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
-│   ░░░░▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓░░░░░ │
-│   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
-│                                             │
-└─────────────────────────────────────────────┘
+<div id="ascii-gallery">
+┌─ <span id="current-title">"fields of air" (2024)</span> ──────────────────────┬─ CONTROLS ─┐
+│                                             │ [◄] [►] SCROLL │
+│ <div id="ascii-art-display">  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │ [SPACE] ZOOM  │
+│   ░░▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓░░ │ [R] RANDOM    │
+│   ░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ │ [H] HELP      │
+│   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │ [ESC] EXIT    │
+│   ░░░░▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓░░░░░ │               │
+│   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │               │</div>
+│                                             │               │
+├─────────────────────────────────────────────┴───────────────┤
+│ Gallery: <span id="gallery-counter">1/43</span> | Year: <span id="current-year">2024</span> | Dims: <span id="current-dims">220x120cm</span>        │
+│ Status: <span id="gallery-status" class="status-ok">LOADED</span> | Mode: <span id="view-mode">BROWSE</span> | FPS: <span id="fps-counter">60</span>     │
+└─────────────────────────────────────────────────────────────┘</div>
 
 Connection established to gallery.cyrillrafael.org:80
 Awaiting input<span class="blink">_</span>
