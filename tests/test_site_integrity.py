@@ -303,11 +303,16 @@ class SiteIntegrityTests:
         
         missing_images = []
         for img_path in image_paths:
-            # Convert relative path to absolute
+            # Convert relative path to absolute and handle URL encoding
             if img_path.startswith('/'):
-                full_path = self.build_dir / img_path.lstrip('/')
+                # URL decode the path for file system lookup
+                import urllib.parse
+                decoded_path = urllib.parse.unquote(img_path.lstrip('/'))
+                full_path = self.build_dir / decoded_path
             else:
-                full_path = self.build_dir / "paintings" / img_path
+                # Handle relative paths
+                decoded_path = urllib.parse.unquote(img_path)
+                full_path = self.build_dir / "paintings" / decoded_path
                 
             if not full_path.exists():
                 missing_images.append(img_path)
