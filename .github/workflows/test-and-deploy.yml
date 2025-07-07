@@ -79,12 +79,8 @@ jobs:
           _site/
           *.log
           
-    - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/master' && success()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+    # Note: Deployment handled by separate "Deploy Jekyll site to Pages" workflow
+    # This workflow focuses on testing and validation
         
   # Separate job for auto-parsing that runs on image changes
   auto-parse:
