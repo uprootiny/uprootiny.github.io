@@ -193,6 +193,69 @@ class SiteIntegrityTests:
             self.log_success("Paintings Page", f"All {len(found_paintings)} paintings appear on page")
             return True
 
+    def test_title_below_image_layout(self) -> bool:
+        """Test that painting titles appear below images, not above."""
+        print("📝 Testing title placement (below images)...")
+        
+        paintings_page = self.build_dir / "paintings" / "index.html"
+        if not paintings_page.exists():
+            self.log_failure("Title Layout", "/paintings/index.html not found")
+            return False
+            
+        with open(paintings_page, 'r', encoding='utf-8') as f:
+            content = f.read()
+            
+        # Look for the pattern: img tag followed by painting-info div
+        # This indicates titles are below images
+        correct_pattern = r'<img[^>]*>\s*<div class="painting-info">'
+        incorrect_pattern = r'<div class="painting-header">[^<]*<img'
+        
+        if re.search(correct_pattern, content, re.MULTILINE | re.DOTALL):
+            self.log_success("Title Layout", "Titles correctly placed below images")
+            return True
+        elif re.search(incorrect_pattern, content, re.MULTILINE | re.DOTALL):
+            self.log_failure("Title Layout", "Titles incorrectly placed above images")
+            return False
+        else:
+            self.log_warning("Title Layout", "Could not determine title placement pattern")
+            return True
+
+    def test_centered_awareness_basics(self) -> bool:
+        """Test basic centered awareness checks."""
+        print("🎯 Testing centered awareness basics...")
+        
+        issues = []
+        
+        # Check for common anti-patterns
+        paintings_page = self.build_dir / "paintings" / "index.html"
+        if paintings_page.exists():
+            with open(paintings_page, 'r', encoding='utf-8') as f:
+                content = f.read()
+                
+            # Check for proper painting structure
+            if 'class="painting-header"' in content:
+                issues.append("Found painting-header (titles above images)")
+            
+            if 'class="painting-info"' not in content:
+                issues.append("Missing painting-info (titles below images)")
+                
+            # Check for proper navigation
+            nav_items = ["Paintings", "Linocuts", "About", "CV"]
+            for item in nav_items:
+                if item not in content:
+                    issues.append(f"Missing navigation item: {item}")
+                    
+            # Check Studio is not in main navigation
+            if '>Studio<' in content:
+                issues.append("Studio should not be in main navigation")
+        
+        if issues:
+            self.log_failure("Centered Awareness", f"Issues found: {'; '.join(issues)}")
+            return False
+        else:
+            self.log_success("Centered Awareness", "Basic patterns check passed")
+            return True
+
     def test_paintings_chronological_order(self) -> bool:
         """Test that paintings appear in reverse chronological order (newest first)."""
         print("📅 Testing painting chronological order...")
@@ -333,10 +396,12 @@ class SiteIntegrityTests:
             self.test_required_pages_exist,
             self.test_root_redirect_or_paintings,
             self.test_paintings_appear_on_page,
+            self.test_title_below_image_layout,
             self.test_paintings_chronological_order,
             self.test_metadata_consistency,
             self.test_navigation_structure,
-            self.test_image_paths_valid
+            self.test_image_paths_valid,
+            self.test_centered_awareness_basics
         ]
         
         all_passed = True

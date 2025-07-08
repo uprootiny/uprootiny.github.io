@@ -10,20 +10,23 @@ permalink: /studio/
 <div class="gallery">
   {% for file in sorted_files %}
     {% assign filename = file.name | remove: file.extname %}
-    {% assign title = filename | replace: "SMALL", "" | replace: "fields of air ", "" | replace: " copy", "" | strip %}
+    {% assign clean_title = filename | replace: "SMALL", "" | replace: "fields of air ", "" | replace: " copy", "" | replace: "copySMALL", "" | strip %}
+    {% if clean_title == "" or clean_title == "fields of air" %}
+      {% assign clean_title = filename %}
+    {% endif %}
     
     <div class="painting">
-      <div class="painting-header">
-        <div class="title">{{ title }}</div>
+      <img 
+        src="{{ file.path | relative_url }}" 
+        alt="{{ clean_title }}" 
+        loading="lazy"
+      />
+      
+      <div class="painting-info">
+        <div class="title">{{ clean_title }}</div>
         <div class="year">2025</div>
         <div class="dimensions">studio documentation</div>
       </div>
-      
-      <img 
-        src="{{ file.path | relative_url }}" 
-        alt="{{ title }}" 
-        loading="lazy"
-      />
     </div>
   {% endfor %}
 </div>

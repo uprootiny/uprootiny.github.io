@@ -14,8 +14,6 @@ nav_links:
     url: "/paintings"
   - title: "Linocuts"
     url: "/linocuts"
-  - title: "Studio"
-    url: "/studio"
   - title: "About"
     url: "/about"
   - title: "CV"

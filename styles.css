@@ -82,8 +82,8 @@ body {
   text-align: center;
 }
 
-.painting-header {
-  margin-bottom: 3em; /* Large space between title and image */
+.painting-info {
+  margin-top: 1.5em; /* Space between image and title */
   font-size: 1.6ex;
 }
 

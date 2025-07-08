@@ -34,13 +34,13 @@ permalink: /
     {% endfor %}
     
     <div class="painting">
-      <div class="painting-header">
+      <img src="{{ file.path | relative_url }}" alt="{{ title }}" loading="lazy" />
+      
+      <div class="painting-info">
         <div class="title">{{ title }}</div>
         <div class="year">{{ year }}</div>
         <div class="dimensions">{{ dims }}</div>
       </div>
-      
-      <img src="{{ file.path | relative_url }}" alt="{{ title }}" loading="lazy" />
     </div>
   {% endfor %}
 </div>

@@ -48,18 +48,18 @@ permalink: /paintings/
     {% endfor %}
 
     <div class="painting">
-      <div class="painting-header">
-        <div class="title">{{ title }}</div>
-        <div class="year">{{ year }}</div>
-        <div class="dimensions">{{ dims }}</div>
-      </div>
-      
       {%- assign esc = fn | uri_escape -%}
       <img
         src="{{ '/paintings/' | append: esc | relative_url }}"
         alt="{{ title }}"
         loading="lazy"
       />
+      
+      <div class="painting-info">
+        <div class="title">{{ title }}</div>
+        <div class="year">{{ year }}</div>
+        <div class="dimensions">{{ dims }}</div>
+      </div>
     </div>
   {% endfor %}
 
