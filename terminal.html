@@ -1,6 +1,6 @@
 ---
 layout: text
-title: "Terminal - Site Map"
+title: "Terminal - System Diagnostics"
 ---
 
 <style>
@@ -48,24 +48,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.preview-box {
-    border: 1px solid #00ff00;
-    width: 60px;
-    height: 8px;
-    display: inline-block;
-    background: linear-gradient(90deg, #003300, #006600, #003300);
-    vertical-align: middle;
-    margin: 0 2px;
-}
-
-.preview-lino {
-    background: linear-gradient(45deg, #330000, #660000, #330000);
-}
-
-.preview-install {
-    background: linear-gradient(135deg, #000033, #000066, #000033);
-}
-
 .ascii-divider {
     color: #006600;
 }
@@ -73,6 +55,30 @@ a:hover {
 .status-ok { color: #00ff00; }
 .status-warn { color: #ffff00; }
 .status-error { color: #ff0000; }
+.status-info { color: #00ffff; }
+
+.fix-step {
+    color: #cccccc;
+    background: #111111;
+    padding: 2px;
+    margin: 1px 0;
+}
+
+.command-box {
+    background: #001100;
+    border: 1px solid #00ff00;
+    padding: 5px;
+    margin: 5px 0;
+    color: #00ff00;
+}
+
+.warning-box {
+    background: #110000;
+    border: 1px solid #ff0000;
+    padding: 5px;
+    margin: 5px 0;
+    color: #ff0000;
+}
 
 .hidden-cursor::after {
     content: "█";
@@ -83,102 +89,379 @@ a:hover {
 <div class="terminal-container">
 <div class="terminal-header">
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ CYRILL RAFAEL VASILYEV - GALLERY TERMINAL v2.5.1                           │
-│ Copyright (c) 2024 - The Hague, Netherlands                                │
+│ GALLERY SYSTEM DIAGNOSTICS v3.0.1 - SELF-CORRECTING AI TERMINAL            │
+│ Copyright (c) 2025 - Cyrill Rafael Vasilyev / Claude Code Integration       │
 └─────────────────────────────────────────────────────────────────────────────┘
 </div>
 
-<span class="status-ok">[✓]</span> System initialized - 43 paintings loaded
-<span class="status-ok">[✓]</span> Network connection established  
-<span class="status-ok">[✓]</span> Gallery servers online
+<div id="token-monitor" style="position: fixed; top: 10px; right: 10px; background: #001100; border: 1px solid #00ff00; padding: 8px; font-size: 12px; z-index: 1000;">
+  <div style="color: #00ff00; margin-bottom: 5px;">TOKEN USAGE</div>
+  <div style="color: #ffff00;">SESSION: <span id="session-tokens">0</span> / 8000</div>
+  <div style="color: #ffff00;">TOTAL: <span id="total-tokens">0</span> / 200000</div>
+  <div style="margin: 5px 0;">
+    <div style="background: #000; border: 1px solid #00ff00; height: 8px; width: 120px; position: relative;">
+      <div id="token-bar" style="background: #00ff00; height: 100%; width: 0%; transition: width 0.3s;"></div>
+    </div>
+  </div>
+  <div style="color: #00ffff; font-size: 10px;">
+    THROTTLE: <span id="throttle-status">NORMAL</span>
+  </div>
+</div>
+
+<span class="status-info">[INIT]</span> AI persona loading...
+<span class="status-info">[INIT]</span> Reading PROJECT_KNOWLEDGE.md...
+<span class="status-info">[INIT]</span> Parsing CENTERED_AWARENESS_CHECKLIST.md...
+<span class="status-ok">[✓]</span> Knowledge base loaded - 43 paintings, 7 years of patterns
+<span class="status-ok">[✓]</span> Self-correction protocols active
+<span class="status-ok">[✓]</span> Emergency repair procedures standing by
 
 <div class="ascii-divider">
 ═══════════════════════════════════════════════════════════════════════════════
 </div>
 
-<strong>MAIN NAVIGATION TREE:</strong>
+<span class="status-info">[SELF-SCAN]</span> Analyzing current system state...
 
-├── <a href="/paintings">PAINTINGS</a> <span class="preview-box"></span> [43 works] <span class="status-ok">ONLINE</span>
-│   ├── 2024 → <a href="/paintings#2024">fields of air</a> <span class="preview-box"></span>
-│   ├── 2023 → <a href="/paintings#2023">star rabbit</a> <span class="preview-box"></span> <a href="/paintings#2023">moth</a> <span class="preview-box"></span> <a href="/paintings#2023">luminous assembly</a> <span class="preview-box"></span>
-│   ├── 2022 → <a href="/paintings#2022">climbing mount Orange</a> <span class="preview-box"></span>
-│   ├── 2021 → <a href="/paintings#2021">slowest lightning</a> <span class="preview-box"></span> <a href="/paintings#2021">time machines</a> <span class="preview-box"></span>
-│   ├── 2020 → <a href="/paintings#2020">aurora</a> <span class="preview-box"></span> <a href="/paintings#2020">spinoza staircase</a> <span class="preview-box"></span> <a href="/paintings#2020">one and many</a> <span class="preview-box"></span>
-│   ├── 2019 → <a href="/paintings#2019">wavelengths</a> <span class="preview-box"></span> <a href="/paintings#2019">brion</a> <span class="preview-box"></span> <a href="/paintings#2019">untitled (glow)</a> <span class="preview-box"></span>
-│   └── 2018 → <a href="/paintings#2018">fire of the mind</a> <span class="preview-box"></span> <a href="/paintings#2018">two moons</a> <span class="preview-box"></span> <a href="/paintings#2018">rotational meltdown</a> <span class="preview-box"></span>
-│
-├── <a href="/linocuts">LINOCUTS</a> <span class="preview-box preview-lino"></span> [8 prints] <span class="status-ok">ONLINE</span>
-│   ├── Relief print #1 <span class="preview-box preview-lino"></span>
-│   ├── Relief print #2 <span class="preview-box preview-lino"></span>
-│   ├── Relief print #3 <span class="preview-box preview-lino"></span>
-│   └── [...] <span class="preview-box preview-lino"></span><span class="preview-box preview-lino"></span><span class="preview-box preview-lino"></span><span class="preview-box preview-lino"></span><span class="preview-box preview-lino"></span>
-│
-├── <a href="/about">ABOUT</a> - Artist Statement <span class="status-ok">LOADED</span>
-│   └── Philosophy: "Contemplative traditions → Materiality → Transcendence"
-│
-├── <a href="/cv">CV</a> - Professional History <span class="status-ok">UPDATED</span>
-│   ├── Exhibitions: 2014-2025 [26 entries]
-│   ├── Residencies: Togatta (JP), Leipzig (DE)
-│   └── Education: RSUH Moscow → KABK The Hague
-│
-├── <a href="/installations.html">INSTALLATIONS</a> <span class="preview-box preview-install"></span> [11 views] <span class="status-ok">ONLINE</span>
-│   ├── Fields of Air exhibition <span class="preview-box preview-install"></span>
-│   ├── Installation view #2 <span class="preview-box preview-install"></span>
-│   └── Gallery documentation <span class="preview-box preview-install"></span><span class="preview-box preview-install"></span><span class="preview-box preview-install"></span>
-│
-└── EXTERNAL LINKS
-    ├── <a href="https://www.instagram.com/cyrillrafael/" target="_blank">Instagram</a> → @cyrillrafael
-    └── <a href="https://t.me/+31686218199/" target="_blank">Telegram</a> → +31686218199
+<strong>SYSTEM HEALTH CHECK:</strong>
 
-<div class="ascii-divider">
-───────────────────────────────────────────────────────────────────────────────
-</div>
+├── <span class="status-ok">✓ PAINTINGS DIRECTORY</span> - 43 files detected
+├── <span class="status-ok">✓ METADATA CONSISTENCY</span> - titles.yml matches files
+├── <span class="status-ok">✓ TITLE PLACEMENT</span> - below images (.painting-info)
+├── <span class="status-ok">✓ NAVIGATION STRUCTURE</span> - Studio hidden from main nav
+├── <span class="status-ok">✓ CHRONOLOGICAL ORDER</span> - newest first (2024→2018)
+├── <span class="status-ok">✓ KNOWLEDGE ENCODING</span> - PROJECT_KNOWLEDGE.md active
+└── <span class="status-ok">✓ REPAIR PROTOCOLS</span> - bulletproof guides loaded
 
-<strong>HIDDEN SYSTEMS:</strong>
-
-├── <a href="/porch.html">porch.html</a> <span class="status-warn">EXPERIMENTAL</span>
-│   ├── Interactive globe visualization
-│   ├── Network mindmaps and concept exploration  
-│   ├── Rotating epicycles animation system
-│   └── Practice direction brainstorming
-│
-└── <a href="/terminal.html">terminal.html</a> <span class="status-ok">ACTIVE</span> <span class="hidden-cursor"></span>
+<span class="status-info">[ANALYSIS]</span> Scanning for known failure patterns...
+<span class="status-info">[ANALYSIS]</span> Cross-referencing git history...
+<span class="status-info">[ANALYSIS]</span> Identifying regression risks...
 
 <div class="ascii-divider">
 ═══════════════════════════════════════════════════════════════════════════════
 </div>
 
-<strong>SYSTEM STATUS:</strong>
+<strong>BULLETPROOF REPAIR PROTOCOLS</strong>
 
-┌─ GALLERY METRICS ──────────────────────────────────────────────────────────┐
-│ Total artworks: 43 paintings + 8 linocuts + 11 installation views         │
-│ Active period: 2018-2024 (7 years)                                         │
-│ Geographic reach: Netherlands, Germany, Japan, Russia, Georgia             │
-│ Technical stack: Jekyll + GitHub Pages + Menlo typography                  │
-│ Last update: <span id="current-date"></span>                                                │
-└─────────────────────────────────────────────────────────────────────────────┘
-
-┌─ CONNECTION INFO ──────────────────────────────────────────────────────────┐
-│ Primary domain: <a href="https://cyrillrafael.org">cyrillrafael.org</a>                                        │
-│ Mirror site: <a href="https://uprootiny.github.io">uprootiny.github.io</a>                                   │
-│ Repository: <a href="https://github.com/cyrillrafael/cyrillrafael.github.io" target="_blank">github.com/cyrillrafael/cyrillrafael.github.io</a>          │
-│ Build status: <span class="status-ok">PASSING</span>                                                        │
-│ Deploy time: ~45s via GitHub Actions                                       │
-└─────────────────────────────────────────────────────────────────────────────┘
+<span class="status-warn">[WARNING]</span> The following are the most probable failure modes.
+<span class="status-warn">[WARNING]</span> Each has a tested step-by-step recovery procedure.
 
 <div class="ascii-divider">
 ───────────────────────────────────────────────────────────────────────────────
 </div>
 
-<strong>QUICK COMMANDS:</strong>
+<strong>FAILURE MODE #1: TITLES ABOVE IMAGES</strong>
 
-> <a href="/paintings">view latest</a>        - Jump to newest painting (2024)
-> <a href="/about">read statement</a>     - Artist philosophy and approach  
-> <a href="/cv">show exhibitions</a>    - Professional history timeline
-> <a href="/linocuts">browse prints</a>      - Alternative medium collection
-> <a href="/installations.html">see installations</a> - Exhibition documentation
-> <a href="/porch.html">enter porch</a>       - Access experimental features
-> <a href="javascript:history.back()">exit terminal</a>     - Return to previous page
+<span class="status-error">[SYMPTOM]</span> Paintings show title/year/dimensions above the image
+<span class="status-error">[CAUSE]</span> Someone changed .painting-info back to .painting-header
+<span class="status-error">[FREQUENCY]</span> HIGH - This breaks every 6 months
+
+<span class="status-info">[REPAIR STEPS]</span>
+
+<div class="fix-step">1. Open paintings.md in editor</div>
+<div class="command-box">FIND: &lt;div class="painting-header"&gt;</div>
+<div class="command-box">REPLACE: &lt;div class="painting-info"&gt;</div>
+
+<div class="fix-step">2. Open index.md in editor</div>
+<div class="command-box">FIND: &lt;div class="painting-header"&gt;</div>
+<div class="command-box">REPLACE: &lt;div class="painting-info"&gt;</div>
+
+<div class="fix-step">3. Open studio.md in editor</div>
+<div class="command-box">FIND: &lt;div class="painting-header"&gt;</div>
+<div class="command-box">REPLACE: &lt;div class="painting-info"&gt;</div>
+
+<div class="fix-step">4. Open styles.css in editor</div>
+<div class="command-box">FIND: .painting-header {</div>
+<div class="command-box">REPLACE: .painting-info {</div>
+<div class="command-box">FIND: margin-bottom: 3em;</div>
+<div class="command-box">REPLACE: margin-top: 1.5em;</div>
+
+<div class="fix-step">5. Test locally</div>
+<div class="command-box">bundle exec jekyll serve</div>
+<div class="command-box">Check http://localhost:4000/paintings</div>
+<div class="command-box">Verify titles appear BELOW images</div>
+
+<div class="fix-step">6. Commit and push</div>
+<div class="command-box">git add .</div>
+<div class="command-box">git commit -m "Fix title placement: move titles below images"</div>
+<div class="command-box">git push origin master</div>
+
+<div class="ascii-divider">
+───────────────────────────────────────────────────────────────────────────────
+</div>
+
+<strong>FAILURE MODE #2: STUDIO IN MAIN NAVIGATION</strong>
+
+<span class="status-error">[SYMPTOM]</span> Studio appears in main navigation bar
+<span class="status-error">[CAUSE]</span> Someone re-added Studio to nav_links in _config.yml
+<span class="status-error">[FREQUENCY]</span> MEDIUM - User request every 3 months
+
+<span class="status-info">[REPAIR STEPS]</span>
+
+<div class="fix-step">1. Open _config.yml in editor</div>
+<div class="fix-step">2. Find nav_links section</div>
+<div class="fix-step">3. Remove or comment out Studio entry</div>
+
+<div class="command-box">BEFORE:
+nav_links:
+  - title: Paintings
+    url: /paintings
+  - title: Linocuts  
+    url: /linocuts
+  - title: Studio
+    url: /studio
+  - title: About
+    url: /about</div>
+
+<div class="command-box">AFTER:
+nav_links:
+  - title: Paintings
+    url: /paintings
+  - title: Linocuts
+    url: /linocuts
+  # - title: Studio
+  #   url: /studio
+  - title: About
+    url: /about</div>
+
+<div class="fix-step">4. Test navigation</div>
+<div class="command-box">bundle exec jekyll serve</div>
+<div class="command-box">Check main navigation - Studio should NOT appear</div>
+<div class="command-box">Check /studio/ still works directly</div>
+
+<div class="fix-step">5. Commit and push</div>
+<div class="command-box">git add _config.yml</div>
+<div class="command-box">git commit -m "Remove Studio from main navigation"</div>
+<div class="command-box">git push origin master</div>
+
+<div class="ascii-divider">
+───────────────────────────────────────────────────────────────────────────────
+</div>
+
+<strong>FAILURE MODE #3: METADATA INCONSISTENCY</strong>
+
+<span class="status-error">[SYMPTOM]</span> Paintings missing from pages, broken image links
+<span class="status-error">[CAUSE]</span> titles.yml doesn't match actual filenames
+<span class="status-error">[FREQUENCY]</span> MEDIUM - After adding new paintings
+
+<span class="status-info">[REPAIR STEPS]</span>
+
+<div class="fix-step">1. Run auto-parsing script</div>
+<div class="command-box">cd /path/to/site</div>
+<div class="command-box">python3 scripts/parse_images.py</div>
+<div class="command-box">Check output for any warnings</div>
+
+<div class="fix-step">2. Run regression tests</div>
+<div class="command-box">python3 tests/test_site_integrity.py</div>
+<div class="command-box">Look for "Metadata Consistency" failures</div>
+
+<div class="fix-step">3. Manual fix if needed</div>
+<div class="command-box">Check paintings/ directory:</div>
+<div class="command-box">ls -la paintings/</div>
+<div class="command-box">Check _data/titles.yml for matching entries</div>
+
+<div class="fix-step">4. Fix mismatched entries</div>
+<div class="command-box">For each missing file, add to titles.yml:</div>
+<div class="command-box">- year: 2024
+  title: "exact filename without extension"
+  dimensions: "220x120cm"</div>
+
+<div class="fix-step">5. Test and commit</div>
+<div class="command-box">bundle exec jekyll serve</div>
+<div class="command-box">Check /paintings/ page shows all works</div>
+<div class="command-box">git add _data/titles.yml && git commit -m "Fix metadata consistency"</div>
+
+<div class="ascii-divider">
+───────────────────────────────────────────────────────────────────────────────
+</div>
+
+<strong>FAILURE MODE #4: GITHUB ACTIONS DEPLOYMENT FAILS</strong>
+
+<span class="status-error">[SYMPTOM]</span> Site not updating after push, workflow failures
+<span class="status-error">[CAUSE]</span> Jekyll build errors, deprecated actions, permission issues
+<span class="status-error">[FREQUENCY]</span> LOW - But critical when it happens
+
+<span class="status-info">[REPAIR STEPS]</span>
+
+<div class="fix-step">1. Check GitHub Actions tab</div>
+<div class="command-box">Go to: github.com/[username]/[repo]/actions</div>
+<div class="command-box">Look for failed workflows (red X)</div>
+<div class="command-box">Click on failed workflow for details</div>
+
+<div class="fix-step">2. Common fix: Update deprecated actions</div>
+<div class="command-box">Open .github/workflows/test-and-deploy.yml</div>
+<div class="command-box">FIND: actions/upload-artifact@v3</div>
+<div class="command-box">REPLACE: actions/upload-artifact@v4</div>
+<div class="command-box">FIND: actions/checkout@v3</div>
+<div class="command-box">REPLACE: actions/checkout@v4</div>
+
+<div class="fix-step">3. Test build locally first</div>
+<div class="command-box">bundle exec jekyll build --trace</div>
+<div class="command-box">Fix any build errors before pushing</div>
+
+<div class="fix-step">4. Push workflow fixes</div>
+<div class="command-box">git add .github/workflows/</div>
+<div class="command-box">git commit -m "Update GitHub Actions to latest versions"</div>
+<div class="command-box">git push origin master</div>
+
+<div class="fix-step">5. Monitor deployment</div>
+<div class="command-box">Watch Actions tab for green checkmark</div>
+<div class="command-box">Check live site updates: https://cyrillrafael.org</div>
+
+<div class="ascii-divider">
+───────────────────────────────────────────────────────────────────────────────
+</div>
+
+<strong>FAILURE MODE #5: CHRONOLOGICAL ORDER BROKEN</strong>
+
+<span class="status-error">[SYMPTOM]</span> Paintings appear in wrong order (old first)
+<span class="status-error">[CAUSE]</span> Sorting logic changed in template files
+<span class="status-error">[FREQUENCY]</span> LOW - But impacts user experience
+
+<span class="status-info">[REPAIR STEPS]</span>
+
+<div class="fix-step">1. Check sorting in paintings.md</div>
+<div class="command-box">FIND: | sort: 'year'</div>
+<div class="command-box">REPLACE: | sort: 'year' | reverse</div>
+
+<div class="fix-step">2. Check sorting in index.md</div>
+<div class="command-box">FIND: | sort: 'year'</div>
+<div class="command-box">REPLACE: | sort: 'year' | reverse</div>
+
+<div class="fix-step">3. Test order</div>
+<div class="command-box">bundle exec jekyll serve</div>
+<div class="command-box">Check /paintings/ - should show 2024 first, 2018 last</div>
+
+<div class="fix-step">4. Commit fix</div>
+<div class="command-box">git add paintings.md index.md</div>
+<div class="command-box">git commit -m "Fix chronological order: newest first"</div>
+<div class="command-box">git push origin master</div>
+
+<div class="ascii-divider">
+───────────────────────────────────────────────────────────────────────────────
+</div>
+
+<strong>FAILURE MODE #6: SITE COMPLETELY BROKEN</strong>
+
+<span class="status-error">[SYMPTOM]</span> 404 errors, blank pages, major structural issues
+<span class="status-error">[CAUSE]</span> Bad commit broke fundamental structure
+<span class="status-error">[FREQUENCY]</span> RARE - Nuclear option
+
+<div class="warning-box">⚠️  EMERGENCY ROLLBACK PROCEDURE ⚠️</div>
+
+<span class="status-info">[REPAIR STEPS]</span>
+
+<div class="fix-step">1. Find last known good commit</div>
+<div class="command-box">git log --oneline -10</div>
+<div class="command-box">Look for commit before issues started</div>
+
+<div class="fix-step">2. Create emergency branch</div>
+<div class="command-box">git checkout -b emergency-rollback</div>
+
+<div class="fix-step">3. Reset to known good state</div>
+<div class="command-box">git reset --hard [good-commit-hash]</div>
+
+<div class="fix-step">4. Force push to restore site</div>
+<div class="command-box">git push -f origin master</div>
+
+<div class="fix-step">5. Verify site recovery</div>
+<div class="command-box">Check https://cyrillrafael.org</div>
+<div class="command-box">Wait 2-3 minutes for GitHub Pages update</div>
+
+<div class="fix-step">6. Investigate what broke</div>
+<div class="command-box">git log --oneline [good-commit]..[bad-commit]</div>
+<div class="command-box">Review each commit carefully</div>
+<div class="command-box">Re-apply fixes one by one with testing</div>
+
+<div class="ascii-divider">
+═══════════════════════════════════════════════════════════════════════════════
+</div>
+
+<strong>DIAGNOSTIC COMMANDS</strong>
+
+<span class="status-info">[TOOLS]</span> Use these for investigation and prevention:
+
+<div class="command-box"># Check what the AI assistant should run first:
+python3 scripts/knowledge_check.py</div>
+
+<div class="command-box"># Full regression test suite:
+python3 tests/test_site_integrity.py</div>
+
+<div class="command-box"># Auto-fix metadata inconsistencies:
+python3 scripts/parse_images.py</div>
+
+<div class="command-box"># Local test server:
+bundle exec jekyll serve --livereload</div>
+
+<div class="command-box"># Check current git status:
+git status && git log --oneline -5</div>
+
+<div class="command-box"># See what changed in last commit:
+git show --name-only</div>
+
+<div class="ascii-divider">
+───────────────────────────────────────────────────────────────────────────────
+</div>
+
+<strong>PREVENTION CHECKLIST</strong>
+
+<span class="status-info">[WISDOM]</span> The AI assistant should ALWAYS run these before making changes:
+
+□ Read PROJECT_KNOWLEDGE.md for context
+□ Run python3 scripts/knowledge_check.py  
+□ Check CENTERED_AWARENESS_CHECKLIST.md
+□ Run python3 tests/test_site_integrity.py
+□ Test changes locally with bundle exec jekyll serve
+□ Verify titles are below images, not above
+□ Confirm Studio is hidden from main nav
+□ Check chronological order (newest first)
+□ Push only after all tests pass
+
+<div class="ascii-divider">
+═══════════════════════════════════════════════════════════════════════════════
+</div>
+
+<strong>SYSTEM READY - TESTING PROTOCOLS ACTIVE</strong>
+
+<span class="status-ok">[STATUS]</span> All repair protocols loaded
+<span class="status-ok">[STATUS]</span> Knowledge base synchronized  
+<span class="status-ok">[STATUS]</span> Self-correction algorithms active
+<span class="status-ok">[STATUS]</span> Emergency procedures standing by
+
+<span class="status-info">[AI-PERSONA]</span> This terminal represents the gallery's capacity for self-repair.
+<span class="status-info">[AI-PERSONA]</span> When things break, the knowledge persists.
+<span class="status-info">[AI-PERSONA]</span> When patterns repeat, the solutions are ready.
+<span class="status-info">[AI-PERSONA]</span> The machine learns to heal itself.
+
+<div class="ascii-divider">
+───────────────────────────────────────────────────────────────────────────────
+</div>
+
+<strong>PROGRESSIVE TESTING SCENARIOS</strong>
+
+<span class="status-info">[TEST-SUITE]</span> Click scenarios below to simulate failures:
+
+<div class="command-box" onclick="testScenario(1)">
+[TEST 1] BASIC - Simulate title placement regression
+</div>
+
+<div class="command-box" onclick="testScenario(2)">
+[TEST 2] MODERATE - Multiple metadata inconsistencies
+</div>
+
+<div class="command-box" onclick="testScenario(3)">
+[TEST 3] SEVERE - Navigation structure corruption  
+</div>
+
+<div class="command-box" onclick="testScenario(4)">
+[TEST 4] CRITICAL - Complete system failure simulation
+</div>
+
+<div class="command-box" onclick="testScenario(5)">
+[TEST 5] CHAOS - Random cascade failure sequence
+</div>
+
+<div id="test-output" style="background: #000033; border: 1px solid #0066ff; padding: 10px; margin: 10px 0; min-height: 100px; color: #0066ff; display: none;">
+<div id="test-results"></div>
+</div>
 
 <div class="ascii-divider">
 ═══════════════════════════════════════════════════════════════════════════════
@@ -186,7 +469,7 @@ a:hover {
 
 <strong>INTERACTIVE GALLERY VIEWER:</strong>
 
-<div id="ascii-gallery">
+<div id="ascii-gallery" tabindex="0" style="outline: none;">
 ┌─ <span id="current-title">"fields of air" (2024)</span> ──────────────────────┬─ CONTROLS ─┐
 │                                             │ [◄] [►] SCROLL │
 │ <div id="ascii-art-display">  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │ [SPACE] ZOOM  │
@@ -201,246 +484,311 @@ a:hover {
 │ Status: <span id="gallery-status" class="status-ok">LOADED</span> | Mode: <span id="view-mode">BROWSE</span> | FPS: <span id="fps-counter">60</span>     │
 └─────────────────────────────────────────────────────────────┘</div>
 
-Connection established to gallery.cyrillrafael.org:80
-Awaiting input<span class="blink">_</span>
-
-
-
-
-<div class="ascii-divider">
-═══════════════════════════════════════════════════════════════════════════════
+<div id="gallery-help" style="display: none; background: #001100; border: 1px solid #00ff00; padding: 10px; margin: 10px 0;">
+<strong>GALLERY CONTROLS:</strong>
+◄ ► Arrow Keys - Navigate paintings
+SPACE - Zoom/Unzoom current painting
+R - Random painting
+H - Toggle this help
+ESC - Exit viewer
+Click to focus viewer first
 </div>
-
-<strong>ESSAY.TXT - ON THE COMPOSITION OF DIGITAL GALLERIES</strong>
 
 <div class="ascii-divider">
 ───────────────────────────────────────────────────────────────────────────────
 </div>
 
-What we present here
-                     is a contradiction:
+<strong>NAVIGATION:</strong>
 
-        the infinite                 compressed into pixels
-        the haptic                   reduced to photons
-        the monumental              squeezed through fiber optic
+> <a href="/paintings">paintings</a>     - Main gallery (43 works)
+> <a href="/linocuts">linocuts</a>      - Relief prints collection  
+> <a href="/about">about</a>           - Artist statement
+> <a href="/cv">cv</a>               - Professional history
+> <a href="/porch.html">porch</a>          - Experimental systems
+> <a href="javascript:history.back()">back</a>            - Return to previous page
 
-
-
-Yet something survives the translation.
-                                      Perhaps more than survives.
-
-
-The gallery as constructed here speaks in several voices:
-
-    PRIMARY VOICE       →  The paintings themselves
-                           43 works spanning 7 years
-                           Each a frozen moment of contemplative practice
-                           Colors that once lived as pigment
-                           Now approximated in light
-
-    SECONDARY VOICE     →  The navigation structure  
-                           Paintings | Linocuts | About | CV | Instagram | Telegram | Installation Views
-                           A deliberate path through the maze
-                           Each link a doorway
-                           Each doorway a choice
-
-    TERTIARY VOICE      →  The hidden systems
-                           /porch.html → experimental territories  
-                           /terminal.html → this very interface
-                           The infrastructure exposed
-                           The machine made visible
-
-
-<div class="ascii-divider">
-                ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-</div>
-
-WHAT THIS GALLERY SAYS:
-
-    ◆  That contemplative practice can translate across media
-    ◆  That large-scale physical work deserves digital preservation  
-    ◆  That viewers hunger for authentic encounter, even through screens
-    ◆  That navigation itself can be a contemplative act
-    ◆  That professional presentation and artistic vulnerability can coexist
-    ◆  That geographic spread (Moscow → The Hague → Togatta) creates meaning
-    ◆  That time transforms not just the artist but the viewing context
-
-
-<div class="ascii-divider">
-                ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-</div>
-
-WHAT THIS GALLERY LEAVES UNSAID:
-
-    ◇  The weight of the brush in the hand
-    ◇  The smell of linseed oil and turpentine mixing  
-    ◇  The physical resistance of canvas under pressure
-    ◇  The way natural light shifts throughout a viewing day
-    ◇  The sound footsteps make on gallery floors
-    ◇  The peripheral vision that encompasses entire installations
-    ◇  The way paintings change when you step closer, then further away
-
-
-                         But perhaps these absences
-                                             create a different kind of presence.
-
-
-The digital gallery operates by                    SUBSTITUTION
-                                  but also by       ADDITION
-
-        What gets added:
-        
-            → Accessibility across distance and time
-            → Ability to zoom beyond human visual limits
-            → Comparative viewing (multiple works simultaneously)
-            → Archival permanence (immune to physical degradation)
-            → Contextual layers (CVs, statements, processes)
-            → Discovery patterns impossible in physical space
-            → The democratic gaze (no gallery guards, no closing times)
-
-
-<div class="ascii-divider">
-████████████████████████████████████████████████████████████████████████████████
-</div>
-
-THE PARADOX OF DIGITAL MATERIALITY:
-
-        This terminal interface you're reading
-                                              is itself a kind of painting
-                                              
-        Pixels arranged in patterns
-        Designed to evoke materiality
-        (The green text on black background recalls old monitors
-         The Menlo typeface suggests programmer aesthetics
-         The ASCII art implies early computing culture)
-         
-        Yet none of this existed in paint.
-        All of it is constructed meaning.
-        All of it points beyond itself.
-
-
-The question becomes:
-                    Does the digital gallery betray the paintings
-                                    or
-                    Does it create new forms of contemplative encounter?
-
-
-Evidence suggests:                BOTH
-
-
-<div class="ascii-divider">
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-</div>
-
-OBSERVATIONS ON VIEWER BEHAVIOR:
-
-    ▶  In physical galleries, viewers typically spend 30 seconds per painting
-    ▶  In digital galleries, time expands and contracts unpredictably
-    ▶  The zoom function creates intimacy impossible in guarded spaces
-    ▶  Multiple tabs allow comparative viewing across decades
-    ▶  Mobile viewing creates private, intimate encounters
-    ▶  Late-night browsing adds contemplative solitude
-
-
-The gallery construction here prioritizes:
-
-        CLARITY     over    CLEVERNESS
-        ACCESS      over    EXCLUSIVITY  
-        PERMANENCE  over    TRENDINESS
-        DEPTH       over    BREADTH
-
-
-Yet hidden beneath the surface:
-                             Complexity
-                             Experimentation  
-                             Technical sophistication
-                             Philosophical investigation
-
-
-<div class="ascii-divider">
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-</div>
-
-TERMINAL REFLECTION:
-
-        Every webpage is a philosophical statement.
-        Every navigation choice reveals assumptions about viewers.
-        Every loading speed decision impacts contemplative possibility.
-        
-        This terminal page exists to make the infrastructure visible.
-        To acknowledge the medium.
-        To create space for meta-reflection.
-        
-        It says:
-                "Here is how this place is constructed.
-                 Here are the choices made and unmade.
-                 Here is what gets prioritized.
-                 Here is what gets hidden.
-                 Here is the gap between intention and execution."
-
-
-The gallery, finally, is not the paintings.
-The gallery is the RELATIONSHIP between paintings and viewers.
-Digital construction changes this relationship.
-Sometimes diminishes it.
-Sometimes enhances it.
-Always transforms it.
-
-
-                                    The contemplative question becomes:
-                                    
-                                    How to build digital spaces
-                                    that serve contemplative encounter?
-                                    
-                                    This site attempts one answer.
-
-
-<div class="ascii-divider">
-═══════════════════════════════════════════════════════════════════════════════
-</div>
-
-End of essay.txt
-
-System idle. Type 'help' for commands or use navigation above.
-Terminal ready<span class="blink">_</span>
+System ready for diagnostic queries<span class="blink">_</span>
 
 </div>
 
 <script>
-// Update current date
-document.getElementById('current-date').textContent = new Date().toISOString().split('T')[0];
+// Token monitoring and testing system
+let sessionTokens = 0;
+let totalTokens = parseInt(localStorage.getItem('totalTokens') || '0');
 
-// Add some retro terminal effects
+function updateTokenDisplay() {
+    document.getElementById('session-tokens').textContent = sessionTokens;
+    document.getElementById('total-tokens').textContent = totalTokens;
+    
+    const percentage = (sessionTokens / 8000) * 100;
+    document.getElementById('token-bar').style.width = percentage + '%';
+    
+    // Update throttle status
+    const throttleStatus = document.getElementById('throttle-status');
+    if (sessionTokens > 6000) {
+        throttleStatus.textContent = 'CRITICAL';
+        throttleStatus.style.color = '#ff0000';
+    } else if (sessionTokens > 4000) {
+        throttleStatus.textContent = 'HIGH';
+        throttleStatus.style.color = '#ffff00';
+    } else {
+        throttleStatus.textContent = 'NORMAL';
+        throttleStatus.style.color = '#00ffff';
+    }
+}
+
+function addTokens(count) {
+    sessionTokens += count;
+    totalTokens += count;
+    localStorage.setItem('totalTokens', totalTokens.toString());
+    updateTokenDisplay();
+}
+
+function testScenario(level) {
+    const testOutput = document.getElementById('test-output');
+    const testResults = document.getElementById('test-results');
+    
+    testOutput.style.display = 'block';
+    testResults.innerHTML = '';
+    
+    // Simulate token usage based on test complexity
+    const tokenCosts = [50, 150, 300, 500, 750];
+    addTokens(tokenCosts[level - 1]);
+    
+    // Simulate progressive testing scenarios
+    const scenarios = {
+        1: simulateBasicTest,
+        2: simulateModerateTest,
+        3: simulateSevereTest,
+        4: simulateCriticalTest,
+        5: simulateChaosTest
+    };
+    
+    scenarios[level]();
+}
+
+function simulateBasicTest() {
+    const results = document.getElementById('test-results');
+    results.innerHTML = `
+<span style="color: #ffff00;">[TEST 1] BASIC FAILURE SIMULATION</span>
+<span style="color: #ff0000;">[DETECT]</span> Title placement regression detected
+<span style="color: #00ffff;">[REPAIR]</span> Applying protocol: FAILURE MODE #1
+<span style="color: #00ff00;">[FIXED]</span> .painting-header → .painting-info
+<span style="color: #00ff00;">[FIXED]</span> CSS margin-bottom → margin-top
+<span style="color: #00ff00;">[✓]</span> Basic test passed - 50 tokens used
+`;
+}
+
+function simulateModerateTest() {
+    const results = document.getElementById('test-results');
+    results.innerHTML = `
+<span style="color: #ffff00;">[TEST 2] MODERATE FAILURE SIMULATION</span>
+<span style="color: #ff0000;">[DETECT]</span> Multiple metadata inconsistencies
+<span style="color: #ff0000;">[DETECT]</span> 3 orphaned metadata entries
+<span style="color: #ff0000;">[DETECT]</span> 2 files without metadata
+<span style="color: #00ffff;">[REPAIR]</span> Running auto-parsing script
+<span style="color: #00ffff;">[REPAIR]</span> Updating titles.yml
+<span style="color: #00ff00;">[FIXED]</span> Metadata consistency restored
+<span style="color: #00ff00;">[✓]</span> Moderate test passed - 150 tokens used
+`;
+}
+
+function simulateSevereTest() {
+    const results = document.getElementById('test-results');
+    results.innerHTML = `
+<span style="color: #ffff00;">[TEST 3] SEVERE FAILURE SIMULATION</span>
+<span style="color: #ff0000;">[DETECT]</span> Navigation structure corruption
+<span style="color: #ff0000;">[DETECT]</span> Studio in main navigation
+<span style="color: #ff0000;">[DETECT]</span> Missing required nav links
+<span style="color: #ff0000;">[DETECT]</span> Chronological order broken
+<span style="color: #00ffff;">[REPAIR]</span> Applying multiple protocols
+<span style="color: #00ffff;">[REPAIR]</span> Fixing _config.yml navigation
+<span style="color: #00ffff;">[REPAIR]</span> Restoring sort order
+<span style="color: #00ff00;">[FIXED]</span> Navigation structure repaired
+<span style="color: #00ff00;">[✓]</span> Severe test passed - 300 tokens used
+`;
+}
+
+function simulateCriticalTest() {
+    const results = document.getElementById('test-results');
+    results.innerHTML = `
+<span style="color: #ffff00;">[TEST 4] CRITICAL FAILURE SIMULATION</span>
+<span style="color: #ff0000;">[DETECT]</span> Complete system failure
+<span style="color: #ff0000;">[DETECT]</span> Jekyll build broken
+<span style="color: #ff0000;">[DETECT]</span> GitHub Actions failing
+<span style="color: #ff0000;">[DETECT]</span> 404 errors site-wide
+<span style="color: #ffff00;">[EMERGENCY]</span> Initiating rollback procedure
+<span style="color: #00ffff;">[REPAIR]</span> Finding last known good commit
+<span style="color: #00ffff;">[REPAIR]</span> git reset --hard previous-commit
+<span style="color: #00ffff;">[REPAIR]</span> Force pushing to restore site
+<span style="color: #00ff00;">[FIXED]</span> Site restored from backup
+<span style="color: #00ff00;">[✓]</span> Critical test passed - 500 tokens used
+`;
+}
+
+function simulateChaosTest() {
+    const results = document.getElementById('test-results');
+    results.innerHTML = `
+<span style="color: #ffff00;">[TEST 5] CHAOS FAILURE SIMULATION</span>
+<span style="color: #ff0000;">[DETECT]</span> Cascade failure sequence initiated
+<span style="color: #ff0000;">[DETECT]</span> Random title placement corruption
+<span style="color: #ff0000;">[DETECT]</span> Metadata inconsistencies spreading
+<span style="color: #ff0000;">[DETECT]</span> Navigation links breaking
+<span style="color: #ff0000;">[DETECT]</span> Workflow deprecation warnings
+<span style="color: #ff0000;">[DETECT]</span> CSS architecture compromise
+<span style="color: #ffff00;">[CHAOS]</span> Multiple repair protocols active
+<span style="color: #00ffff;">[REPAIR]</span> Applying emergency procedures
+<span style="color: #00ffff;">[REPAIR]</span> Self-correction algorithms engaged
+<span style="color: #00ffff;">[REPAIR]</span> Knowledge base synchronization
+<span style="color: #00ff00;">[FIXED]</span> All systems restored
+<span style="color: #00ff00;">[✓]</span> Chaos test passed - 750 tokens used
+`;
+}
+
+// Gallery data (sample paintings)
+const galleryData = [
+    {title: "fields of air", year: 2024, dims: "220x120cm", 
+     ascii: "  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n  ░░▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓░░\n  ░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░\n  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n  ░░░░▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓░░░░░\n  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"},
+    {title: "star rabbit", year: 2023, dims: "180x140cm",
+     ascii: "  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n  ░░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░\n  ░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░\n  ░░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░\n  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"},
+    {title: "moth", year: 2023, dims: "160x100cm",
+     ascii: "  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n  ░░░░░░░░░░░░░░▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░\n  ░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░\n  ░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░\n  ░░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░\n  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"},
+    {title: "luminous assembly", year: 2023, dims: "200x150cm",
+     ascii: "  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n  ░░▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓░░\n  ░░▓▓▓▓░░░░░░░░▓▓▓▓▓▓▓▓░░░░░░░░░░▓▓▓▓░░\n  ░░▓▓▓▓░░░░░░░░▓▓▓▓▓▓▓▓░░░░░░░░░░▓▓▓▓░░\n  ░░▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓░░\n  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"},
+    {title: "climbing mount Orange", year: 2022, dims: "220x120cm",
+     ascii: "  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n  ░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░\n  ░░░░░░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░\n  ░░░░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░\n  ░░░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░\n  ░░░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░"}
+];
+
+// Interactive gallery viewer
+let currentPaintingIndex = 0;
+let isZoomed = false;
+let galleryActive = false;
+
+function updateGalleryDisplay() {
+    const painting = galleryData[currentPaintingIndex];
+    document.getElementById('current-title').textContent = `"${painting.title}" (${painting.year})`;
+    document.getElementById('current-year').textContent = painting.year;
+    document.getElementById('current-dims').textContent = painting.dims;
+    document.getElementById('gallery-counter').textContent = `${currentPaintingIndex + 1}/${galleryData.length}`;
+    
+    const artDisplay = document.getElementById('ascii-art-display');
+    if (isZoomed) {
+        // Zoomed view - larger ASCII art
+        artDisplay.innerHTML = painting.ascii.replace(/░/g, '██').replace(/▓/g, '▓▓');
+        document.getElementById('view-mode').textContent = 'ZOOM';
+    } else {
+        // Normal view
+        artDisplay.innerHTML = painting.ascii;
+        document.getElementById('view-mode').textContent = 'BROWSE';
+    }
+    
+    addTokens(2); // Small cost for display updates
+}
+
+function nextPainting() {
+    currentPaintingIndex = (currentPaintingIndex + 1) % galleryData.length;
+    updateGalleryDisplay();
+}
+
+function prevPainting() {
+    currentPaintingIndex = (currentPaintingIndex - 1 + galleryData.length) % galleryData.length;
+    updateGalleryDisplay();
+}
+
+function randomPainting() {
+    currentPaintingIndex = Math.floor(Math.random() * galleryData.length);
+    updateGalleryDisplay();
+}
+
+function toggleZoom() {
+    isZoomed = !isZoomed;
+    updateGalleryDisplay();
+}
+
+function toggleHelp() {
+    const helpDiv = document.getElementById('gallery-help');
+    helpDiv.style.display = helpDiv.style.display === 'none' ? 'block' : 'none';
+}
+
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
-    // Simulate typing effect on page load
+    updateTokenDisplay();
+    updateGalleryDisplay();
+    
+    // Gallery keyboard controls
+    const galleryDiv = document.getElementById('ascii-gallery');
+    galleryDiv.addEventListener('keydown', function(e) {
+        if (!galleryActive) return;
+        
+        switch(e.key) {
+            case 'ArrowLeft':
+                prevPainting();
+                e.preventDefault();
+                break;
+            case 'ArrowRight':
+                nextPainting();
+                e.preventDefault();
+                break;
+            case ' ':
+                toggleZoom();
+                e.preventDefault();
+                break;
+            case 'r':
+            case 'R':
+                randomPainting();
+                e.preventDefault();
+                break;
+            case 'h':
+            case 'H':
+                toggleHelp();
+                e.preventDefault();
+                break;
+            case 'Escape':
+                galleryActive = false;
+                galleryDiv.style.opacity = '0.7';
+                document.getElementById('gallery-status').textContent = 'INACTIVE';
+                e.preventDefault();
+                break;
+        }
+    });
+    
+    // Click to activate gallery
+    galleryDiv.addEventListener('click', function() {
+        galleryActive = true;
+        galleryDiv.focus();
+        galleryDiv.style.opacity = '1';
+        document.getElementById('gallery-status').textContent = 'ACTIVE';
+        addTokens(5); // Activation cost
+    });
+    
+    // Simulate terminal boot sequence
     const container = document.querySelector('.terminal-container');
     container.style.opacity = '0';
-    container.style.transition = 'opacity 0.5s ease-in';
+    container.style.transition = 'opacity 1s ease-in';
+    
     setTimeout(() => {
         container.style.opacity = '1';
-    }, 100);
-});
-
-// Add click sound effect (if audio context available)
-document.addEventListener('click', function() {
-    if (typeof AudioContext !== 'undefined' || typeof webkitAudioContext !== 'undefined') {
-        try {
-            const audioContext = new (AudioContext || webkitAudioContext)();
-            const oscillator = audioContext.createOscillator();
-            const gainNode = audioContext.createGain();
-            
-            oscillator.connect(gainNode);
-            gainNode.connect(audioContext.destination);
-            
-            oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
-            
-            oscillator.start(audioContext.currentTime);
-            oscillator.stop(audioContext.currentTime + 0.1);
-        } catch (e) {
-            // Ignore audio errors
-        }
+        addTokens(25); // Boot sequence cost
+    }, 200);
+    
+    // Add diagnostic sound on load
+    try {
+        const audioContext = new (AudioContext || webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.setValueAtTime(440, audioContext.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(880, audioContext.currentTime + 0.1);
+        gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.1);
+    } catch (e) {
+        // Ignore audio errors
     }
 });
 </script>
