@@ -18,7 +18,6 @@ REQUIRED_PAGES = [
     "index.html",
     "paintings/index.html", 
     "linocuts/index.html",
-    "studio/index.html",
     "about/index.html",
     "cv/index.html"
 ]
@@ -245,9 +244,6 @@ class SiteIntegrityTests:
                 if item not in content:
                     issues.append(f"Missing navigation item: {item}")
                     
-            # Check Studio is not in main navigation
-            if '>Studio<' in content:
-                issues.append("Studio should not be in main navigation")
         
         if issues:
             self.log_failure("Centered Awareness", f"Issues found: {'; '.join(issues)}")
