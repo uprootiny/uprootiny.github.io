@@ -32,7 +32,27 @@ body {
   max-width: 600px;
   margin: 0 auto;
   font-size: small;
+}
 
+/* Mobile-first: remove content padding on small screens for full-width images */
+@media (max-width: 768px) {
+  .content {
+    padding: 0;
+  }
+  
+  /* Remove padding from image containers on mobile */
+  .image-item {
+    padding: 0;
+  }
+  
+  /* Add padding back to text elements only */
+  .painting-info {
+    padding: 0 1em;
+  }
+  
+  .image-title-year {
+    padding: 0 1em;
+  }
 }
 
 /* Legacy styles for backward compatibility */
@@ -64,8 +84,8 @@ body {
 }
 
 .image-item img {
-  width: 98%;
-  max-width: 98%;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
 }
@@ -88,8 +108,8 @@ body {
 }
 
 .painting img {
-  width: 98%;
-  max-width: 98%;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
