@@ -333,11 +333,11 @@ class SiteIntegrityTests:
         with open(index_path, 'r', encoding='utf-8') as f:
             content = f.read()
             
-        # Check for navigation elements
-        nav_links = ["Paintings", "Linocuts", "Studio", "About", "CV"]
+        # Check for navigation elements (Studio should NOT be in main nav)
+        required_nav_links = ["Paintings", "Linocuts", "About", "CV"]
         missing_links = []
         
-        for link in nav_links:
+        for link in required_nav_links:
             if link not in content:
                 missing_links.append(link)
                 
