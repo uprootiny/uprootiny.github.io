@@ -11,21 +11,19 @@ permalink: "/:title/"
 # Navigation links
 nav_links:
   - title: "Paintings"
-    url: "/paintings"
+    url: "/paintings/"
   - title: "Linocuts"
-    url: "/linocuts"
+    url: "/linocuts/"
   - title: "About"
-    url: "/about"
+    url: "/about/"
   - title: "CV"
-    url: "/cv"
+    url: "/cv/"
   - title: "Instagram"
     url: "https://www.instagram.com/cyrillrafael/"
-    icon: "fab fa-instagram"
   - title: "Telegram"
     url: "https://t.me/+31686218199/"
-    icon: "fab fa-telegram"
   - title: "Installations"
-    url: "/installations.html"
+    url: "/installations/"
 
 # Exclude unnecessary files from Jekyll processing
 exclude:
@@ -37,11 +35,15 @@ exclude:
   - _site
   - vendor
   - node_modules
+  - scripts
+  - tests
+  - "*.py"
+  - CENTERED_AWARENESS_CHECKLIST.md
+  - PROJECT_KNOWLEDGE.md
+  - SITEMAP.md
+  - STRESS_TEST_RESULTS.md
+  - WEBSITE_SPECIFICATION.md
+  - dashboard.html
   
 include:
   - installation2025
-
-# Redirects (if you actually want to redirect your homepage)
-redirects:
-  - from: "/"
-    to: "/paintings/"
