@@ -233,25 +233,28 @@ ul {
 
 
 
-/* Hide icons - text only navigation */
+/* Show icons in navigation */
 .nav-item i {
-  display: none;
+  font-size: 1.2em;
 }
 
-/* Mobile navbar: compact single line */
+/* Mobile navbar: compact, wrap if needed */
 @media (max-width: 768px) {
   .horizontal-list {
-    font-size: 0.8rem;
-    padding: 0.5em 0;
-    gap: 0.5em;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    font-size: 0.75rem;
+    padding: 0.5em 0.5em;
+    gap: 0.4em 0.6em;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   .nav-item a {
     display: inline;
     white-space: nowrap;
+  }
+
+  .nav-item i {
+    font-size: 1em;
   }
 }
 
