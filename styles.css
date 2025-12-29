@@ -233,30 +233,26 @@ ul {
 
 
 
-/* Hide icons by default */
+/* Hide icons - text only navigation */
 .nav-item i {
   display: none;
- }
- 
- /* Show icons on small screens */
- @media (max-width: 768px) {
-  .nav-item i {
-     display: inline;
+}
+
+/* Mobile navbar: compact single line */
+@media (max-width: 768px) {
+  .horizontal-list {
+    font-size: 0.8rem;
+    padding: 0.5em 0;
+    gap: 0.5em;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: center;
   }
- }
- 
- /* Hide text on small screens */
- @media (max-width: 768px) {
+
   .nav-item a {
-     display: none;
+    display: inline;
+    white-space: nowrap;
   }
- }
- 
- /* Show text on larger screens */
- @media (min-width: 769px) {
-  .nav-item a {
-     display: inline;
-  }
- }
+}
 
  
