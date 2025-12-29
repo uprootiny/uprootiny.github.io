@@ -1,16 +1,14 @@
-html {
-  min-height: 100%;
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Menlo', 'Courier New', monospace;
   font-size: 2.5rem;
-  background: linear-gradient(to bottom, white, lightgray);
-  background-attachment: fixed;
-  background-size: 100% 100vh;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
+  background: linear-gradient(to bottom, white, lightgray) no-repeat fixed;
+  background-size: 100% 100%;
 }
 
 .horizontal-list {
