@@ -7,7 +7,7 @@ permalink: /contact/
 ## Get in Touch
 
 **Email**
-[cyrill@cyrillrafael.org](mailto:cyrill@cyrillrafael.org)
+[olenisinelo@gmail.com](mailto:olenisinelo@gmail.com)
 
 **Instagram**
 [@cyrillrafael](https://www.instagram.com/cyrillrafael/)
