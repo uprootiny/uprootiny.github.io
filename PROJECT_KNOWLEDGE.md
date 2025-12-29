@@ -12,7 +12,7 @@ This file encodes the accumulated knowledge about this gallery website project s
 
 ### **Navigation Philosophy**
 - **Clean main navigation** - Core sections only: Paintings, Linocuts, About, CV, Social
-- **Hidden functionality** - Studio, Terminal accessible but not in main nav
+- **Hidden functionality** - Studio accessible but not in main nav
 - **Progressive disclosure** - Essential first, advanced features discoverable
 
 ### **Technical Stack**

@@ -90,7 +90,7 @@ Paintings | Linocuts | About | CV | Instagram | Telegram | Installation Views
 
 ## 🗺️ **Experimental Territory (Hidden/Future)**
 
-### **Advanced Features** (Accessible via `/porch.html`)
+### **Advanced Features** (Future/Experimental)
 
 #### **Interactive Globe Map**
 - **Pinpointed Locations**: Every exhibition and residency mapped

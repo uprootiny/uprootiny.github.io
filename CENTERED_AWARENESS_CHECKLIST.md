@@ -15,7 +15,7 @@ This checklist represents the project's ability to check itself for readiness. R
 - [ ] **Root page redirects to paintings** or displays gallery
 - [ ] **All nav links functional** (no broken links)
 - [ ] **Social links current** (Instagram, Telegram)
-- [ ] **Hidden pages accessible** (studio, terminal) but not in main nav
+- [ ] **Hidden pages accessible** (studio) but not in main nav
 - [ ] **Mobile navigation works** on small screens
 
 ### 📊 **Data Consistency**

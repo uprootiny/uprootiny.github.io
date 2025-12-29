@@ -3,15 +3,14 @@
 ## 📍 Current Live Site (Jekyll - Master Branch)
 **URL**: https://uprootiny.github.io
 **Status**: ✅ Active & Deployed
-**Last Deploy**: July 6, 2025 (terminal interface update)
+**Last Deploy**: December 2025
 
 ### Core Pages
-- **/** → **/paintings** (redirected) - Main gallery with 43 paintings, proper dimensions
+- **/** → **/paintings** (redirected) - Main gallery with 50 paintings
 - **/about** - Artist statement with painted background layout
 - **/cv** - Curriculum Vitae with exhibitions (2014-2025), residencies, education
-- **/linocuts** - Linocut prints gallery (8 prints)
-- **/installations.html** - Installation views (11 images from installation2025/)
-- **/terminal.html** - Terminal interface with site map and composition essay
+- **/linocuts** - Linocut prints gallery
+- **/installations.html** - Installation views
 
 ### Navigation Structure
 ```
@@ -64,12 +63,6 @@ Paintings | Linocuts | About | CV | Instagram | Telegram | Installation Views
 - SEO-optimized structure
 - Reliable deployment
 
-### 4. **Terminal Interface**
-- System status and navigation
-- Site map with interactive elements
-- Essay on digital gallery composition
-- Retro terminal aesthetics with modern functionality
-
 ---
 
 ## ✅ Completed Fixes
@@ -81,10 +74,8 @@ Paintings | Linocuts | About | CV | Instagram | Telegram | Installation Views
 - ✅ Responsive image display
 
 ### 2. **Content Updates**
-- ✅ Terminal interface with site map
-- ✅ Gallery composition essay
 - ✅ Professional presentation maintained
-- ✅ Footer links working properly
+- ✅ Links working properly
 
 ### 3. **Technical Improvements**
 - ✅ Reliable Jekyll deployment
@@ -109,7 +100,6 @@ Paintings | Linocuts | About | CV | Instagram | Telegram | Installation Views
 **Gallery is live and fully functional** ✅
 - Clean professional presentation
 - All content properly organized
-- Terminal interface provides advanced navigation
 - Site performs well across all devices
 
 **Ready for visitors** 🎯
