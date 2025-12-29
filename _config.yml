@@ -8,20 +8,20 @@ repository: "uprootiny/uprootiny.github.io"
 # Permalinks
 permalink: "/:title/"
 
-# Navigation links
+# Navigation links (artwork first, then info, then contact)
 nav_links:
   - title: "Paintings"
     url: "/paintings/"
   - title: "Linocuts"
     url: "/linocuts/"
+  - title: "Installations"
+    url: "/installations/"
   - title: "About"
     url: "/about/"
   - title: "CV"
     url: "/cv/"
   - title: "Contact"
     url: "/contact/"
-  - title: "Installations"
-    url: "/installations/"
   - title: "Instagram"
     url: "https://www.instagram.com/cyrillrafael/"
     icon: "fab fa-instagram"

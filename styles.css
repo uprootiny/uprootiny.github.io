@@ -28,7 +28,6 @@ body {
  
 .content {
   padding: 2em;
-  /* height: 0vmax; */
   max-width: 600px;
   margin: 0 auto;
   font-size: small;
@@ -37,7 +36,14 @@ body {
 /* Mobile-first: clean vertical ribbon layout for iPhones */
 @media (max-width: 768px) {
   .content {
-    padding: 0;
+    padding: 1em;
+  }
+
+  /* Full-width images: override content padding */
+  .gallery,
+  .image-container {
+    margin-left: -1em;
+    margin-right: -1em;
   }
 
   /* Remove padding from image containers on mobile */
@@ -55,7 +61,7 @@ body {
   .painting-info {
     padding: 0 1em;
     margin-top: 0.5em;
-    margin-bottom: 2em; /* More space below than above */
+    margin-bottom: 2em;
     font-size: 1.2ex;
   }
 
