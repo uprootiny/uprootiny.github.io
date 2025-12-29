@@ -1,6 +1,6 @@
 # Money
 
-![fire]("/workspaces/uprootiny.github.io/paintings/2018 fire of the mind.jpg")
+![fire](/paintings/2018%20fire%20of%20the%20mind.jpg)
 
 ## Payment form
 ### Acquiring
