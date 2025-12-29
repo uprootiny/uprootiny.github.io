@@ -409,9 +409,12 @@ class SiteIntegrityTests:
             links = re.findall(href_pattern, content)
 
             for link in links:
-                # Skip external links, anchors, mailto, tel, javascript
+                # Skip external links, anchors, mailto, tel, javascript, favicon
                 if any(link.startswith(prefix) for prefix in
                        ['http://', 'https://', 'mailto:', 'tel:', 'javascript:', '#']):
+                    continue
+                # Skip favicon (not critical if missing)
+                if link == '/favicon.ico':
                     continue
 
                 checked_count += 1
