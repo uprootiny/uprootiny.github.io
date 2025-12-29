@@ -20,6 +20,11 @@ jobs:
       with:
         ruby-version: '3.1'
         bundler-cache: true
+
+    - name: Install test dependencies
+      run: |
+        bundle config set --local with 'test'
+        bundle install
         
     - name: Set up Python for tests
       uses: actions/setup-python@v4
@@ -66,7 +71,16 @@ jobs:
     - name: Build Jekyll site
       run: |
         bundle exec jekyll build --trace
-        
+
+    - name: Run html-proofer (link checker)
+      run: |
+        bundle exec htmlproofer _site \
+          --disable-external \
+          --ignore-urls "/^#/,/^mailto:/,/^tel:/" \
+          --allow-missing-href \
+          --no-enforce-https \
+          --ignore-status-codes "999"
+
     - name: Run regression tests
       run: |
         python3 tests/test_site_integrity.py

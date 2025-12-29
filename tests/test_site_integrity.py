@@ -347,19 +347,19 @@ class SiteIntegrityTests:
     def test_image_paths_valid(self) -> bool:
         """Test that image paths in HTML point to existing files."""
         print("🖼️  Testing image paths...")
-        
+
         paintings_page = self.build_dir / "paintings" / "index.html"
         if not paintings_page.exists():
             self.log_warning("Image Paths", "/paintings/index.html not found")
             return True
-            
+
         with open(paintings_page, 'r', encoding='utf-8') as f:
             content = f.read()
-            
+
         # Find all image src attributes
         img_pattern = r'<img[^>]+src="([^"]+)"'
         image_paths = re.findall(img_pattern, content)
-        
+
         missing_images = []
         for img_path in image_paths:
             # Convert relative path to absolute and handle URL encoding
@@ -372,15 +372,111 @@ class SiteIntegrityTests:
                 # Handle relative paths
                 decoded_path = urllib.parse.unquote(img_path)
                 full_path = self.build_dir / "paintings" / decoded_path
-                
+
             if not full_path.exists():
                 missing_images.append(img_path)
-                
+
         if missing_images:
             self.log_failure("Image Paths", f"Missing images: {', '.join(missing_images[:5])}")
             return False
         else:
             self.log_success("Image Paths", f"All {len(image_paths)} image paths valid")
+            return True
+
+    def test_internal_links(self) -> bool:
+        """Test that all internal links point to existing pages."""
+        print("🔗 Testing internal links...")
+
+        import urllib.parse
+
+        if not self.build_dir.exists():
+            self.log_warning("Internal Links", "Build directory not found")
+            return True
+
+        broken_links = []
+        checked_count = 0
+
+        # Scan all HTML files in _site
+        for html_file in self.build_dir.rglob("*.html"):
+            with open(html_file, 'r', encoding='utf-8') as f:
+                try:
+                    content = f.read()
+                except UnicodeDecodeError:
+                    continue
+
+            # Find all href attributes
+            href_pattern = r'href="([^"]+)"'
+            links = re.findall(href_pattern, content)
+
+            for link in links:
+                # Skip external links, anchors, mailto, tel, javascript
+                if any(link.startswith(prefix) for prefix in
+                       ['http://', 'https://', 'mailto:', 'tel:', 'javascript:', '#']):
+                    continue
+
+                checked_count += 1
+
+                # Handle absolute paths (starting with /)
+                if link.startswith('/'):
+                    decoded_path = urllib.parse.unquote(link.lstrip('/'))
+                    # Remove anchor if present
+                    decoded_path = decoded_path.split('#')[0]
+                    # Remove query string if present
+                    decoded_path = decoded_path.split('?')[0]
+
+                    if not decoded_path:
+                        continue
+
+                    target_path = self.build_dir / decoded_path
+
+                    # Check if it's a directory (should have index.html)
+                    if target_path.is_dir():
+                        target_path = target_path / "index.html"
+                    # Check if path needs .html extension
+                    elif not target_path.exists() and not target_path.suffix:
+                        target_path = self.build_dir / (decoded_path.rstrip('/') + '/index.html')
+
+                    if not target_path.exists():
+                        # Also try with .html extension
+                        alt_path = self.build_dir / (decoded_path + '.html')
+                        if not alt_path.exists():
+                            broken_links.append(f"{html_file.relative_to(self.build_dir)}: {link}")
+
+        if broken_links:
+            self.log_failure("Internal Links", f"Found {len(broken_links)} broken links")
+            for bl in broken_links[:10]:  # Show first 10
+                print(f"      → {bl}")
+            if len(broken_links) > 10:
+                print(f"      ... and {len(broken_links) - 10} more")
+            return False
+        else:
+            self.log_success("Internal Links", f"All {checked_count} internal links valid")
+            return True
+
+    def test_no_duplicate_metadata(self) -> bool:
+        """Test that titles.yml has no duplicate entries."""
+        print("🔍 Testing for duplicate metadata...")
+
+        metadata = self.load_paintings_metadata()
+        if not metadata:
+            self.log_warning("Duplicate Metadata", "No metadata to check")
+            return True
+
+        seen = set()
+        duplicates = []
+
+        for entry in metadata:
+            if 'year' in entry and 'title' in entry:
+                key = (entry['year'], entry['title'])
+                if key in seen:
+                    duplicates.append(f"{entry['year']} {entry['title']}")
+                seen.add(key)
+
+        if duplicates:
+            self.log_failure("Duplicate Metadata", f"Found duplicates: {', '.join(duplicates)}")
+            return False
+        else:
+            self.log_success("Duplicate Metadata", f"No duplicates in {len(metadata)} entries")
             return True
 
     def run_all_tests(self) -> bool:
@@ -395,8 +491,10 @@ class SiteIntegrityTests:
             self.test_title_below_image_layout,
             self.test_paintings_chronological_order,
             self.test_metadata_consistency,
+            self.test_no_duplicate_metadata,
             self.test_navigation_structure,
             self.test_image_paths_valid,
+            self.test_internal_links,
             self.test_centered_awareness_basics
         ]
         

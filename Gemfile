@@ -14,3 +14,8 @@ group :jekyll_plugins do
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
 end
+
+# Testing tools
+group :test do
+  gem "html-proofer", "~> 5.0"
+end
