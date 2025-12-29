@@ -53,6 +53,7 @@ permalink: /paintings/
         src="{{ '/paintings/' | append: esc | relative_url }}"
         alt="{{ title }}"
         loading="lazy"
+        onload="this.classList.add('loaded')"
       />
       
       <div class="painting-info">
