@@ -49,7 +49,8 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add _data/titles.yml
-        git commit -m "Auto-update image metadata [skip ci]
+        # Only commit if there are staged changes
+        git diff --cached --quiet || git commit -m "Auto-update image metadata [skip ci]
 
         🤖 Generated with [Claude Code](https://claude.ai/code)
 
@@ -81,53 +82,3 @@ jobs:
           
     # Note: Deployment handled by separate "Deploy Jekyll site to Pages" workflow
     # This workflow focuses on testing and validation
-        
-  # Separate job for auto-parsing that runs on image changes
-  auto-parse:
-    runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.message, '[auto-parse]') || 
-        (github.event_name == 'push' && 
-         (contains(github.event.head_commit.modified, 'paintings/') ||
-          contains(github.event.head_commit.added, 'paintings/') ||
-          contains(github.event.head_commit.modified, 'linocuts/') ||
-          contains(github.event.head_commit.added, 'linocuts/')))
-    
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-        
-    - name: Install dependencies
-      run: |
-        pip install pyyaml
-        
-    - name: Parse and update images
-      run: python3 scripts/parse_images.py
-      
-    - name: Check for changes
-      id: verify-changed-files
-      run: |
-        if [ -n "$(git status --porcelain)" ]; then
-          echo "changed=true" >> $GITHUB_OUTPUT
-        else
-          echo "changed=false" >> $GITHUB_OUTPUT
-        fi
-        
-    - name: Commit changes
-      if: steps.verify-changed-files.outputs.changed == 'true'
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add _data/titles.yml
-        git commit -m "Auto-update image metadata
-
-        🤖 Generated with [Claude Code](https://claude.ai/code)
-
-        Co-Authored-By: Claude <noreply@anthropic.com>"
-        git push
