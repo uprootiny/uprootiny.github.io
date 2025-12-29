@@ -37,9 +37,9 @@ permalink: /
       <img src="{{ file.path | relative_url }}" alt="{{ title }}" loading="lazy" onload="this.classList.add('loaded')" />
       
       <div class="painting-info">
-        <div class="title">{{ title }}</div>
-        <div class="year">{{ year }}</div>
-        <div class="dimensions">{{ dims }}</div>
+        <span class="title">{{ title }}</span>
+        <span class="year">{{ year }}</span>
+        <span class="dimensions">{{ dims }}</span>
       </div>
     </div>
   {% endfor %}

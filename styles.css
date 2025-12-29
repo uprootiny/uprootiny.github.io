@@ -34,22 +34,43 @@ body {
   font-size: small;
 }
 
-/* Mobile-first: remove content padding on small screens for full-width images */
+/* Mobile-first: clean vertical ribbon layout for iPhones */
 @media (max-width: 768px) {
   .content {
     padding: 0;
   }
-  
+
   /* Remove padding from image containers on mobile */
   .image-item {
     padding: 0;
+    margin-bottom: 1em;
   }
-  
-  /* Add padding back to text elements only */
+
+  /* Full-width images, edge to edge */
+  .painting {
+    margin-bottom: 1.5em;
+  }
+
+  /* Compact title info on single line */
   .painting-info {
     padding: 0 1em;
+    margin-top: 0.5em;
+    margin-bottom: 2em; /* More space below than above */
+    font-size: 1.2ex;
   }
-  
+
+  /* Tighter spacing between title elements on mobile */
+  .title,
+  .dimensions,
+  .year {
+    margin-right: 0.3em;
+    font-size: 0.9em;
+  }
+
+  /* Reduce gallery gap on mobile */
+  .gallery {
+    gap: 0;
+  }
 }
 
 /* Legacy styles for backward compatibility */
@@ -109,13 +130,17 @@ body {
 .painting {
   box-sizing: border-box;
   padding: 0;
-  margin-bottom: 6em; /* More space between paintings */
+  margin-bottom: 3em; /* Space between paintings (painting-info adds more) */
   text-align: center;
 }
 
 .painting-info {
-  margin-top: 1.5em; /* Space between image and title */
-  font-size: 1.6ex;
+  margin-top: 0.8em; /* Less space above title */
+  margin-bottom: 2.5em; /* More space below title (before next painting) */
+  font-size: 1.4ex;
+  white-space: nowrap; /* Keep title/year/dimensions on single line */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .painting img {
