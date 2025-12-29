@@ -36,14 +36,14 @@ body {
 /* Mobile-first: clean vertical ribbon layout for iPhones */
 @media (max-width: 768px) {
   .content {
-    padding: 1em;
+    padding: 1.5em;
   }
 
   /* Full-width images: override content padding */
   .gallery,
   .image-container {
-    margin-left: -1em;
-    margin-right: -1em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
   }
 
   /* Remove padding from image containers on mobile */
