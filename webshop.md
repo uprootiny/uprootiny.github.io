@@ -35,6 +35,12 @@ permalink: /webshop/
 
 ### Group Exhibitions & Recognition
 
+**2022 — Garden of Stars, Sterrentuin, The Hague**
+- Outdoor exhibition curated by Shani Leseman
+- Theme: plant consciousness
+- Supported by Stroom Den Haag
+- [shanileseman.nl/Sterrentuin](https://shanileseman.nl/Sterrentuin)
+
 **2021 — Royal Painting Prize Nominee**
 - Koninklijke Prijs voor Vrije Schilderkunst
 - Exhibition at Royal Palace, Amsterdam
@@ -62,8 +68,10 @@ permalink: /webshop/
 
 | Organization | Link | Role |
 |--------------|------|------|
-| ANNASTATE | [ICI listing](https://ici-thehague.nl/) | Founding member since 2018 |
+| ANNASTATE | [@annastatedh](https://www.instagram.com/annastatedh/) / [jegensentevens.nl](https://jegensentevens.nl/2018/10/new-in-town-annastate/) | Founding member since 2018 |
 | ICI The Hague | [ici-thehague.nl](https://ici-thehague.nl/) | Network of independent initiatives |
+
+**ANNASTATE** — Artist collective of 8 KABK graduates. Platform and "state of co-being" at Willem Dreespark 102, The Hague. Members: Trijntje Noske, Gideon van Oosten, Janne Schippers, Luuk Kuypers, Cyrill Rafael Vasilyev, Sasha Zalivako, Zahar Bondars, Heleen Boeken.
 
 ### Exhibition Venues (The Hague)
 
@@ -75,6 +83,14 @@ permalink: /webshop/
 | 1646 | [1646.nl](https://1646.nl/) | — |
 | Korzo | [korzo.nl](https://www.korzo.nl/) | — |
 | Grey Space in the Middle | [greyspace.nl](https://greyspace.nl/) | — |
+| Helicopter | [helicopter.studio](https://helicopter.studio/) | — |
+| Quartair | [quartair.nl](https://quartair.nl/) | — |
+
+**Grafische Werkplaats** — Production workshop est. 1974 at Prinsegracht 16. Large format screen printing, lithography, etching, relief printing, textile printing. Temporarily at Helena van Doeverenplantsoen 3 during renovations.
+
+**Korzo** — Performing arts venue in Hofkwartier since 1980s. Full renovation 2011. Home to India Dance Festival and CaDance Festival.
+
+**Helicopter** — Artist collective and project space in former school building, Moerwijk. Founded 2016. Contact: stichtinghelicopter@gmail.com
 
 ### Other Venues
 
