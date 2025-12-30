@@ -1,11 +1,14 @@
-body {
-  font-family: 'Menlo', 'Courier New', monospace;
-  font-size: 2.5rem; /* Adjust font size to be large */
-  background: linear-gradient(to bottom, white, lightgray);
-  background-size: cover;
-  background-repeat: no-repeat;
+html, body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Menlo', 'Courier New', monospace;
+  font-size: 2.5rem;
+  background: linear-gradient(to bottom, white, lightgray) no-repeat fixed;
+  background-size: 100% 100%;
 }
 
 .horizontal-list {
@@ -28,7 +31,6 @@ body {
  
 .content {
   padding: 2em;
-  /* height: 0vmax; */
   max-width: 600px;
   margin: 0 auto;
   font-size: small;
@@ -37,7 +39,14 @@ body {
 /* Mobile-first: clean vertical ribbon layout for iPhones */
 @media (max-width: 768px) {
   .content {
-    padding: 0;
+    padding: 1.5em;
+  }
+
+  /* Full-width images: override content padding */
+  .gallery,
+  .image-container {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
   }
 
   /* Remove padding from image containers on mobile */
@@ -55,7 +64,7 @@ body {
   .painting-info {
     padding: 0 1em;
     margin-top: 0.5em;
-    margin-bottom: 2em; /* More space below than above */
+    margin-bottom: 2em;
     font-size: 1.2ex;
   }
 
@@ -233,25 +242,28 @@ ul {
 
 
 
-/* Hide icons - text only navigation */
+/* Show icons in navigation */
 .nav-item i {
-  display: none;
+  font-size: 1.2em;
 }
 
-/* Mobile navbar: compact single line */
+/* Mobile navbar: compact, wrap if needed */
 @media (max-width: 768px) {
   .horizontal-list {
-    font-size: 0.8rem;
-    padding: 0.5em 0;
-    gap: 0.5em;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    font-size: 0.75rem;
+    padding: 0.5em 0.5em;
+    gap: 0.4em 0.6em;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   .nav-item a {
     display: inline;
     white-space: nowrap;
+  }
+
+  .nav-item i {
+    font-size: 1em;
   }
 }
 
