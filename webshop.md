@@ -269,6 +269,106 @@ Typical requirements:
 
 ---
 
+## Network Recommendations
+
+*Places similar to where applications have already succeeded — "who else would they recommend?"*
+
+### Japan — AIR-J Network (Similar to Togatta)
+
+| Residency | Location | Duration | Funding | Deadline |
+|-----------|----------|----------|---------|----------|
+| **Studio Kura** | Itoshima, Kyushu | 4-12 weeks | Self-funded | Rolling |
+| **Kamiyama AIR** | Tokushima | 2-3 months | Partial | ~Feb 26 |
+| **Shiro Oni Studio** | Gunma | 1-3 months | Self-funded | Rolling |
+| **Akiyoshidai International Art Village** | Yamaguchi | Variable | Funded | Dec 25–Jan 25 |
+| **PARADISE AIR** | Matsudo, Chiba | 2-3 months | Partial | Rolling |
+| **TOKAS** | Tokyo | 2-3 months | Funded | Check website |
+
+**Studio Kura** — [studiokura.info](https://studiokura.info/en/) — Rural Kyushu, community integration, also runs ARTS ITOYA in Saga
+
+**Kamiyama AIR** — Mountain village, deep community engagement like Togatta
+
+**Akiyoshidai** — Funded program with travel support, tranquil natural environment
+
+**AIR-J Database** — [air-j.info](https://air-j.info/en/) — Complete database of 50+ Japanese residencies
+
+### Germany — Leipzig/Berlin Network (Similar to Pilotenkueche)
+
+| Residency | Location | Duration | Cost/Funding | Notes |
+|-----------|----------|----------|--------------|-------|
+| **TAKT Berlin** | Prenzlauer Berg | 1-6 months | €1,600-2,800/month | Group exhibition included |
+| **TAKT Leipzig** | Lindenau | 1-6 months | Similar | Near Pilotenkueche |
+| **LIA** | Spinnerei, Leipzig | 3 months | €800/month stipend | 83m² studio, gallery show |
+| **G11 Art Project** | Spinnerei, Leipzig | 2 months | Check website | Shared 52m² studio |
+| **Akademie Schloss Solitude** | Stuttgart | 6-12 months | €1,200/month + travel | Highly competitive |
+
+**TAKT** — [taktberlin.org](https://taktberlin.org/) — Artist-run since 2003, runs TAPIR and ARMADILLO galleries
+
+**LIA** — [liap.eu](https://liap.eu/) — At legendary Spinnerei complex, guaranteed group show
+
+**Spinnerei** — [spinnerei.de](https://www.spinnerei.de/) — 100+ studios, 14 galleries, Neo Rauch's studio
+
+**Pilotenkueche Partners** — 4bid Gallery (Amsterdam), Galerie Bipolar (Leipzig), Art Aia (Italy)
+
+### Netherlands — ICI The Hague Network (All 12 Members)
+
+| Space | Type | Website | Instagram |
+|-------|------|---------|-----------|
+| **...ism** | Project space (former billiard shop) | [ismprojects.wordpress.com](https://ismprojects.wordpress.com/) | [@ism.project.space](https://instagram.com/ism.project.space) |
+| **Æther Haga** | Artist space | [aethersofia.wixsite.com](https://aethersofia.wixsite.com/artspace/) | — |
+| **ANNASTATE** | Collective platform | — | [@annastatedh](https://instagram.com/annastatedh) |
+| **DCR** | Studios in 1930s power plant | [dedcr.nl](https://dedcr.nl/info) | — |
+| **Helicopter** | Former school, Moerwijk | [helicopter.studio](https://helicopter.studio/) | [@helicopter_studio](https://instagram.com/helicopter_studio) |
+| **iii** | Performance/technology | [instrumentinventors.org](https://instrumentinventors.org/) | [@instrumentinventors](https://instagram.com/instrumentinventors) |
+| **Quartair** | Former bread factory | [quartair.nl](https://quartair.nl/) | — |
+| **SW2** | Studios at Willem Dreespark | — | — |
+| **SEELAB** | Old beach school | [seelab.nl](http://seelab.nl/) | [@seelab_thehague](https://instagram.com/seelab_thehague) |
+| **Grey Space in the Middle** | Art/digital culture | [thegreyspace.net](https://thegreyspace.net/) | [@thegreyspaceinthemiddle](https://instagram.com/thegreyspaceinthemiddle) |
+| **TRIXIE** | Stationsbuurt | [trixiethehague.nl](https://trixiethehague.nl/) | [@trixie_thehague](https://instagram.com/trixie_thehague) |
+| **WEST** | Former US embassy (BIS) | [westdenhaag.nl](https://westdenhaag.nl/) | — |
+
+**ICI Contact** — platform-haagse-broedplaatsen@googlegroups.com
+
+### Mondriaan Fund International Partners
+
+*Pre-approved residencies for Dutch-based artists — easier funding path*
+
+| Residency | Location | Duration | Mondriaan Support |
+|-----------|----------|----------|-------------------|
+| **ISCP** | Brooklyn, New York | 11 months | €32,893 total |
+| **Cité internationale des arts** | Paris | 6 months | Full support (2/year) |
+| **Air Berlin Alexanderplatz** | Berlin | Check website | Via Residency grant |
+| **Wiels** | Brussels | Variable | Via Residency grant |
+| **MMCA Changdong** | Seoul | Variable | Via Residency grant |
+| **Arts Initiative Tokyo** | Tokyo | Variable | Via Residency grant |
+| **Cemeti** | Yogyakarta | Variable | Via Residency grant |
+| **Think Tanger** | Morocco | Variable | Via Residency grant |
+| **Deveron Projects** | Scotland | Variable | Via Residency grant |
+
+**ISCP** — [iscp-nyc.org](https://iscp-nyc.org/) — 35 studios in East Williamsburg, Manhattan apartment
+
+**Cité** — [citedesartsparis.net](https://www.citedesartsparis.net/en/) — 325 studios in Paris
+
+### Large-Scale Painting/Installation Friendly
+
+| Residency | Location | Studio Size | Funding | Deadline |
+|-----------|----------|-------------|---------|----------|
+| **LIA Leipzig** | Spinnerei | 83m² | €800/month | Rolling |
+| **Akademie Schloss Solitude** | Stuttgart | Large | €1,200/month + travel | Annual |
+| **Platform** | Vaasa, Finland | Dedicated | Full funding | June 30, 2025 |
+| **Arroscia** | Liguria, Italy | Large | Flights + €300/week | Rolling |
+| **Nordic Artists' Centre** | Dale, Norway | Variable | NOK 10,000/month | Check website |
+| **Villa Lena** | Tuscany | Variable | Full funding | Check website |
+| **Civitella Ranieri** | Umbria | Variable | ~€1,000/month | Check website |
+
+**Platform Finland** — [platform.fi](https://platform.fi/) — Theme 2026: "Practices of resistance, acts of repair"
+
+**Arroscia** — Fully funded including flights, housing, €300/week stipend
+
+**Civitella Ranieri** — [civitella.org](https://civitella.org/) — Yale/King's College London partnerships
+
+---
+
 ## Useful Links
 
 **Information:**
@@ -282,4 +382,4 @@ Typical requirements:
 
 ---
 
-*Last updated: December 2024*
+*Last updated: December 2025*
