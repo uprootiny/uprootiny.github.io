@@ -312,6 +312,138 @@
 
 /* RTL Support for Hebrew content */
 .job-card[dir="rtl"],
-.job-card:lang(he) {
+.job-card:lang(he),
+.job-item[dir="rtl"] {
+  text-align: right;
+}
+
+/* Live Jobs Scraper */
+.levant-jobs {
+  margin-top: 2em;
+  padding: 1.5em;
+  background: #fafafa;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+}
+
+.jobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.jobs-header h3 {
+  margin: 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.jobs-loading {
+  text-align: center;
+  padding: 2em;
+  color: #666;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ddd;
+  border-top-color: #333;
+  border-radius: 50%;
+  margin: 0 auto 1em;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.jobs-empty {
+  text-align: center;
+  padding: 1.5em;
+  color: #666;
+}
+
+.jobs-note {
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 0.5em;
+}
+
+.jobs-count {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 1em;
+}
+
+.jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.job-item {
+  padding: 1em;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.job-item:hover {
+  border-color: #ccc;
+}
+
+.job-title {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.4em;
+}
+
+.job-meta {
+  display: flex;
+  gap: 1em;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.job-org {
+  font-weight: 500;
+}
+
+.job-location {
+  color: #888;
+}
+
+.job-source {
+  font-size: 0.8em;
+  color: #999;
+  margin-top: 0.5em;
+}
+
+.jobs-errors {
+  margin-top: 1em;
+  font-size: 0.85em;
+  color: #888;
+}
+
+.jobs-errors summary {
+  cursor: pointer;
+  color: #a00;
+}
+
+.jobs-errors ul {
+  margin: 0.5em 0 0 1.5em;
+  padding: 0;
+}
+
+.jobs-errors li {
+  margin: 0.3em 0;
+}
+
+.jobs-footer {
+  margin-top: 1em;
+  font-size: 0.8em;
+  color: #999;
   text-align: right;
 }

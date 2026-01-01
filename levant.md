@@ -362,6 +362,10 @@ Direct links to arts/culture job listings (visit directly — scraping blocked):
   </div>
 </div>
 
+<div id="levant-jobs-app"></div>
+
+<script src="{{ '/assets/js/levant-jobs.js' | relative_url }}"></script>
+
 ---
 
 ## Key Resources
