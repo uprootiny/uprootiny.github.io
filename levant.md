@@ -4,261 +4,369 @@ title: Levant Resources
 permalink: /levant/
 ---
 
-# Art Residencies & Grants — Israel & Palestine
+# Art Opportunities — Israel & Palestine
 
-*Research page for residencies and funding in Jerusalem, the Galilee, West Bank, and smaller cities.*
-
----
-
-## Jerusalem
-
-### Al Ma'mal Foundation for Contemporary Art
-
-**Location:** Old City of Jerusalem
-**Focus:** Visual arts with socio-political engagement
-**What's Provided:**
-- Studio apartment in Old City (free)
-- Artist per diem
-- Production costs contribution
-- International travel (up to $700)
-
-**Note:** Applicants encouraged to consider socio-political context
-
-[transartists.org/al-mamal](https://www.transartists.org/en/air/al-mamal-foundation-contemporary-art)
+*Practical guide to finding residencies, grants, commissions, and professional networks in the region.*
 
 ---
 
-### Jerusalem Center for the Visual Arts (JCVA)
+## How Artists Actually Find Work
 
-**What's Provided:**
-- Stipend
-- Accommodation
-- Studio space
-- Access to local art community, museums, audiences
+Most opportunities in this region come through **networks, not job boards**. The key channels:
 
-**Focus:** Cross-cultural dialogue between visiting and local artists/curators
-
-[transartists.org/jcva](https://www.transartists.org/en/air/jerusalem-center-visual-arts)
-
----
-
-### Kol HaOt Artist Residency
-
-**Location:** Hutzot HaYotzer Artists' Colony (outside Old City walls)
-**What's Provided:** Spacious studio space (free)
-**Not Provided:** Travel, accommodation, materials (artist responsibility)
-**Focus:** Artists interested in Jewish sources and traditions
-
-[kolhaot.com/artist-residency](https://www.kolhaot.com/artist-residency)
+1. **Professional associations** — distribute calls to members first
+2. **Newsletters & mailing lists** — Erev Rav, Artis, C4E
+3. **Gallery relationships** — representation, cooperative membership
+4. **Artist registries** — databases curators browse (AICF, ARTBEAT)
+5. **Social media** — Instagram, Facebook groups
+6. **Academic networks** — Bezalel, Shenkar alumni
+7. **Studio communities** — Kiryat HaMelacha, Ein Hod
 
 ---
 
-### Sawa Sawa Residency Program
+## Professional Associations
 
-**Organizer:** Institut Français de Jérusalem
-**Focus:** Palestinian artists across disciplines and generations
-**Goal:** Research and creation project development
+### Israel
 
-[institutfrancais-jerusalem.org](https://www.institutfrancais-jerusalem.org/2024/04/29/sawa-sawa-residency-program/)
+| Organization | Focus | Link |
+|-------------|-------|------|
+| **iartists.org** | 10,000+ independent artists, newsletter, calendar | [iartists.org](https://www.iartists.org/about-us) |
+| **Israel Painters & Sculptors Association** | Regional chapters (TLV, Jerusalem, Haifa, Be'er Sheva) | Founded 1934 |
+| **ICAF** | Israeli artists, designers, cultural figures | [icaf.co.il](https://www.icaf.co.il) |
 
----
+### Palestine
 
-## Tel Aviv / Jaffa / Herzliya
-
-### Artport Tel Aviv
-
-**Type:** Year-long residency for Israeli artists
-**What's Provided:**
-- Studio at Artport
-- Monthly stipend
-- Curatorial support
-
-**Selection:** Annual open call, international jury
-**For International Artists:** By invitation/exchange only — includes apartment in Jaffa + studio
-
-[artport.art](https://www.artport.art/residency/?lang=en)
+| Organization | Focus | Link |
+|-------------|-------|------|
+| **Palestinian Artists Consortium** | Virtual platform connecting diaspora and local artists | [artists-consortium.com](https://artists-consortium.com/) |
+| **General Union of Palestinian Artists** | Founded 1969, international exhibitions | — |
+| **League of Palestinian Artists** | Established 1973 | — |
 
 ---
 
-### SeaPort Residency (Jaffa & Haifa)
+## Newsletters & Mailing Lists
 
-**Type:** Curatorial residency
-**Focus:** Curators working around Mediterranean basin
-**Founded:** 2019 by Dor Guez and Yael Messer
-**Mission:** Regional curator-artist discourse, long-term collaboration
+Subscribe to these for opportunity alerts:
 
-[seaportresidency.com](https://www.seaportresidency.com/)
-
----
-
-### The Artists' Residence Herzliya
-
-**Type:** Year-round programs
-**Facilities:** Gallery, studios, residency programs
-**Focus:** Contemporary art creation, presentation, distribution
-
-[theartistsresidence.org](https://www.theartistsresidence.org/en/)
+| Newsletter | Coverage | Link |
+|-----------|----------|------|
+| **Erev Rav** | Bilingual art journal (HE/EN), events, reviews | [erev-rav.com](https://www.erev-rav.com/archives/english) |
+| **Artis Grants & Open Calls** | Israeli artist funding opportunities | [artis.art/grants](https://artis.art/grants_and_open_calls) |
+| **Call for Entries (C4E)** | Personalized monthly digest, Israel category | [callforentries.com](https://www.callforentries.com/category/art/residencies/location/israel/) |
+| **Jewish Art Salon** | Calls for art, opportunities | [jewishartsalon.org](https://jewishartsalon.org/category/calls-for-art/) |
+| **iartists Newsletter** | Weekly updates for independent artists | [iartists.org](https://www.iartists.org/) |
 
 ---
 
-### Jaffa Artists Residency (Chelouche Gallery)
+## Artist Registries & Databases
 
-**Status:** Check for 2025/2026 announcements
+Where curators find artists:
 
-[chelouchegallery.com/residency](https://chelouchegallery.com/residency/)
-
----
-
-## Galilee & North
-
-### Givat Haviva Artists-in-Residence
-
-**Duration:** 3 months
-**Focus:** Recent art graduates, minority artists, community engagement
-**What's Provided:**
-- ~18 hours individual consulting
-- Professional/artistic/curatorial support
-- 3 multidisciplinary group workshops
-
-**Partnership:** Bezalel Academy of Design and Art
-
-[usfogh.org/programs/artists-in-residence](https://www.usfogh.org/programs/artists-in-residence)
+| Registry | Artists | Notes |
+|----------|---------|-------|
+| **AICF Israeli Artist Network** | 2,000+ active | 300k annual views, searchable by field | [aicf.org/ian](https://aicf.org/our-programs/israeli-artist-network/) |
+| **ARTBEAT** | Israeli painters, sculptors, photographers | Online portfolios, bios, shows | [artbeat.co.il](https://www.artbeat.co.il/Eng/israeli-artists) |
+| **Israel Museum Info Center** | 12,000 Israeli artists | In-person access, 4,500+ works | [museum.imj.org.il](https://museum.imj.org.il/artcenter/) |
+| **Artsy — Israel** | International platform | Browsable by location | [artsy.net/gene/israel](https://www.artsy.net/gene/israel) |
+| **Israel Art Guide** | Comprehensive search engine | Exhibitions, artists, galleries | [israelartguide.co.il](http://www.israelartguide.co.il/) |
 
 ---
 
-### Other Locations with Art Activity
+## Gallery Networks
 
-- **Tzfat (Safed)** — Historic artists' quarter
-- **Acre (Akko)** — Old City galleries
-- **Ein Hod** — Artists' village near Haifa
-- **Nazareth** — Contemporary art scene developing
+### Tel Aviv — Commercial
 
----
+| Gallery | Founded | Focus |
+|---------|---------|-------|
+| **Chelouche Gallery** | 1985 | New media, video, installation, painting | [chelouche](https://chelouchegallery.com/) |
+| **Gordon Gallery** | 1966 | Leading Israeli artists, estates | — |
+| **Alon Segev Gallery** | — | Young + established, international | — |
+| **Sommer Contemporary** | — | Promotes Israeli artists abroad | — |
+| **Rosenfeld Gallery** | 1952 | Contemporary, South TLV | — |
 
-## Palestine — West Bank
+### Tel Aviv — Non-Profit / Alternative
 
-### Mammarat Residency (Ramallah)
+| Space | Model | Notes |
+|-------|-------|-------|
+| **Alfred Cooperative** | Membership (fees + 10hrs/week) | 12-artist collective, ~300 exhibitions | [alfredinstitute.org](https://www.alfredinstitute.org/eng/alfred-institute-welcome) |
+| **CCA Tel Aviv-Yafo** | Non-collecting institution | Contemporary issues | [cca.org.il](https://www.cca.org.il/) |
+| **Artspace Tel Aviv** | Non-profit | Kiryat HaMelacha hub | [artspacetlv.org](https://www.artspacetlv.org/) |
+| **Israeli Center for Digital Art** | Platform | Digital practices | — |
 
-**Organizer:** Ramallah Municipality
-**Established:** 2016
-**Spring 2026:** April 15 – June 15
+### Palestine
 
-**Name meaning:** "Paths" in Arabic
-
----
-
-### International Art Academy Palestine (IAAP)
-
-**Location:** Ramallah
-**Established:** 2006
-**Offers:** BA in Contemporary Visual Art
-**Parent org:** Palestinian Association for Contemporary Art (PACA)
-
-**Founders:** Suleiman Mansour, Nabil Anani, Khalid Hourani, Tayseer Barakat
-
----
-
-### Visual Arts Forum (VAF)
-
-**Location:** Ramallah
-**Founded:** 2002
-**Focus:** Artistic expression, education, community engagement
-**Recent:** "House of the Milky Way" residency (April 2025) — 25+ Palestinian artists
-
----
-
-### Dar Jacir (Bethlehem)
-
-**Type:** Artist-led residency
-**Open to:** All artistic disciplines
-**For:** International and Palestinian artists
-**Focus:** Immersion in Bethlehem, local contemporary cultural field
-
-[darjacir.com](https://darjacir.com/Residents)
-
----
-
-### Sakiya (Ein Qiniya)
-
-**Type:** Community-based art initiative
-**Founded by:** Sahar Qawasmi (architect) + Nida Sinnokrot (filmmaker)
-**Focus:** Visual arts + farming + archiving + knowledge production
-**Supported by:** A.M. Qattan Foundation (VAFF grant)
+| Space | Location | Focus |
+|-------|----------|-------|
+| **Zawyeh Gallery** | Ramallah + Dubai | Contemporary Palestinian art, Ramallah Art Fair | [zawyeh.net](https://zawyeh.net/) |
+| **Al-Ma'mal Foundation** | Jerusalem Old City | Residencies, socio-political engagement | [almamal.org](https://almamal.org/) |
+| **Khalil Sakakini Cultural Center** | Ramallah | Visual arts, Palestinian identity, Land Program | [sakakini.org](https://sakakini.org/?lang=en) |
+| **Palestinian Art Court (al-Hoash)** | East Jerusalem | 100+ exhibitions, digital archive since 2004 | — |
+| **The Palestinian Museum** | Birzeit | Exhibitions, research, education | [palmuseum.org](https://www.palmuseum.org/en/exhibitions-and-events/exhibitions) |
+| **Umm El Fahem Gallery** | Near Haifa | Contemporary Palestinian art | — |
 
 ---
 
 ## Funding & Grants
 
-### A.M. Qattan Foundation
+### Israeli Artists
 
-**Type:** Independent developmental organization
-**Focus:** Culture and education in Palestine — children, teachers, young artists
+| Grant | Amount | Eligibility |
+|-------|--------|-------------|
+| **AICF Scholarships** | Varies | Ages 10-35, annual auditions in visual arts | [aicf.org](https://aicf.org/) |
+| **Artis Exhibition Grants** | Project-based | For institutions showing Israeli artists | [artis.art](https://artis.art/) |
+| **Artis Residency Grants** | Travel + stipend | Artists accepted to international programs | [artis.art](https://artis.art/) |
+| **Mifal HaPais** | Project-based | Exhibitions abroad, training, workshops | [culture.pais.co.il](https://culture.pais.co.il/Pages/AboutUsEn.aspx) |
+| **Ministry of Culture Prize** | Recognition | Accomplished artists | — |
+| **Lauren & Mitchell Presser Grant** | Solo show | Herzliya Museum | — |
 
-**Visual Arts Grants:**
-- Exhibitions and workshops
-- Priority: promising young artists without solo exhibitions
-- Both individuals and organizations
+### Palestinian Artists
 
-**VAFF Project (Visual Arts: A Flourishing Field):**
-- Core + programme funding
-- ~$888,000 first round
-- Funded by Swedish International Development Cooperation Agency (Sida)
-
-**International Residency Partnerships:**
-- Cité Internationale des Arts, Paris (with French Consulate)
-- Università delle Idee, Biella (Italy)
-- Delfina Foundation, London (ages 25-40)
-
-[qattanfoundation.org](https://qattanfoundation.org/en/visual-arts/residencies)
+| Grant | Amount | Eligibility |
+|-------|--------|-------------|
+| **A.M. Qattan Foundation** | $100k-300k/org | Organizations, collectives in WB/Gaza/Jerusalem | [qattanfoundation.org](https://qattanfoundation.org/en) |
+| **VAFF (Visual Arts: A Flourishing Field)** | Sub-grants | $4M project (2017-2022), capacity building | [qattanfoundation.org](https://qattanfoundation.org/en) |
+| **Goethe-Institut Mishkal** | 4,000-6,500 EUR | Emerging Palestinian + European artists | — |
+| **French Institute Jerusalem** | 2,500 EUR + travel | All disciplines, Palestinian artists | — |
 
 ---
 
-### Mifal HaPais Council for Culture and Arts
+## Residencies
 
-**Type:** Israeli national lottery arts council
-**Established:** 2000
+### Jerusalem
 
-**Visual Arts Support:**
-- Art exhibitions abroad
-- Professional training abroad
-- International workshops in Israel
+**Al Ma'mal Foundation** — Old City
+- Studio apartment (free) + per diem + production costs + travel (up to $700)
+- Focus: socio-political engagement
+- [transartists.org/al-mamal](https://www.transartists.org/en/air/al-mamal-foundation-contemporary-art)
 
-**Note:** Project-based, one-off grants (not annual budgets)
+**Jerusalem Center for Visual Arts (JCVA)**
+- Stipend + accommodation + studio + community access
+- Focus: cross-cultural dialogue
+- [transartists.org/jcva](https://www.transartists.org/en/air/jerusalem-center-visual-arts)
 
-[culture.pais.co.il](https://culture.pais.co.il/Pages/AboutUsEn.aspx)
+**Kol HaOt** — Hutzot HaYotzer
+- Studio space (free), self-funded travel/accommodation
+- Focus: Jewish sources and traditions
+- [kolhaot.com/artist-residency](https://www.kolhaot.com/artist-residency)
+
+**Sawa Sawa** — Institut Français
+- For Palestinian artists across disciplines
+- [institutfrancais-jerusalem.org](https://www.institutfrancais-jerusalem.org/2024/04/29/sawa-sawa-residency-program/)
+
+### Tel Aviv / Central
+
+**Artport Tel Aviv**
+- Year-long for Israeli artists (studio + stipend + curatorial support)
+- International: by invitation/exchange only (apartment in Jaffa + studio)
+- [artport.art](https://www.artport.art/residency/?lang=en)
+
+**Tel Aviv Artists' Studios**
+- Founded 1990, 12 studios + gallery
+- Biannual exchange with Düsseldorf (Goethe Institute)
+
+**SeaPort Residency** — Jaffa & Haifa
+- Curatorial residency, Mediterranean focus
+- [seaportresidency.com](https://www.seaportresidency.com/)
+
+**The Artists' Residence Herzliya**
+- Year-round programs, gallery + studios
+- [theartistsresidence.org](https://www.theartistsresidence.org/en/)
+
+### North / Galilee
+
+**Givat Haviva**
+- 3 months, recent graduates + minority artists
+- 18hrs consulting + workshops, Bezalel partnership
+- [usfogh.org](https://www.usfogh.org/programs/artists-in-residence)
+
+**Ein Hod Artists' Village**
+- Founded 1953 by Marcel Janco (Dadaist)
+- 150 artists/families, crafts, galleries, workshops
+
+### Palestine — West Bank
+
+**Mammarat Residency** — Ramallah
+- Ramallah Municipality, established 2016
+- Spring 2026: April 15 – June 15
+
+**Dar Jacir** — Bethlehem
+- Artist-led, all disciplines, international + Palestinian
+- [darjacir.com](https://darjacir.com/Residents)
+
+**Sakiya** — Ein Qiniya
+- Visual arts + farming + archiving
+- Founded by Sahar Qawasmi + Nida Sinnokrot
 
 ---
 
-### America-Israel Cultural Foundation (AICF)
+## International Residencies for Regional Artists
 
-**Focus:** Israeli artists
-**Programs:** Scholarships, grants for studies and projects
+### For Israeli Artists
 
-[aicf.org](https://aicf.org/our-programs/)
+**Artis Residency Partnership Initiative**
+- Fully funded: New York, Los Angeles, Berlin, Lagos
+- Studio + programming + travel grant
+- Next open call: Spring 2026 for 2027
+- [artis.art/residency](https://artis.art/grants_and_open_calls/program/residency_partnership_initiative5)
+
+### For Palestinian Artists
+
+| Residency | Location | Duration | Support |
+|-----------|----------|----------|---------|
+| **Gasworks** | London | 11 weeks | Fully funded, July-Sept 2026, deadline Jan 12 2026 |
+| **Goethe-Institut Mishkal** | Various | Varies | Studio, per diem, 4-6.5k EUR |
+| **French Institute Jerusalem** | France | Varies | Travel + 2,500 EUR |
+| **ArteEast Initiative** | US institutions | Varies | Access to prestigious US residencies |
+| **Soil Futures** | Italy | 6 weeks | £1,500 fee + £1,000 production |
+
+### Exchange Programs
+
+**Finland ↔ Palestine** — HIAP + Sumud + Ramallah Municipality
+- 3-month residency in Helsinki/Turku, Spring 2026
+
+**Scotland ↔ Palestine** — CCA Glasgow
+- [cca-glasgow.com](https://www.cca-glasgow.com/programme/residency-in-palestine)
 
 ---
 
-## Exchange Programs
+## Studio Communities
 
-### Finland ↔ Palestine
+### Kiryat HaMelacha (South Tel Aviv)
 
-**HIAP + Sumud + Ramallah Municipality:**
-- 3-month residency in Helsinki/Turku
-- For Palestinian artists
-- Spring 2026
+Industrial district with 300+ artists, major galleries, low(er) rent.
 
-### Scotland ↔ Palestine
+| Space | Type | Access |
+|-------|------|--------|
+| **HaMifal 1** | Coworking for designers/artists | 24/7, workstations + events | [spacing.co.il](https://www.spacing.co.il/en/location/2946_1) |
+| **Artspace Tel Aviv** | Non-profit hub | 13+ galleries, 150+ studios nearby | [artspacetlv.org](https://www.artspacetlv.org/) |
+| **Benyamini Ceramics Center** | Ceramics studios + gallery | 3-year programs, young artist studios | — |
 
-**CCA Glasgow Pilot Residency:**
-- Exchange program with Palestinian artists/curators
+### Other Hubs
 
-[cca-glasgow.com](https://www.cca-glasgow.com/programme/residency-in-palestine)
+- **Ein Hod** — Artists' village, Mt. Carmel (1hr north of TLV)
+- **Tzfat (Safed)** — Historic artists' quarter
+- **Acre (Akko)** — Old City galleries
+- **Nazareth** — Developing contemporary scene
+
+---
+
+## Academic Networks
+
+### Bezalel Academy (Jerusalem)
+
+- Founded 1906, largest art school in Israel
+- **Career Development Center**: job strategies, industry meetings
+- **Annual Exhibition**: largest public show, attracts employers
+- **180+ exchange partnerships** internationally
+- [bezalel.ac.il](https://www.bezalel.ac.il/en)
+
+### Shenkar College (Ramat Gan)
+
+- **Alumni Association**: 5,000+ members
+- **Contact**: bogrim@shenkar.ac.il
+- **ACT Innovation Center**: creative startups
+- **Facebook job groups**: "Jobs for Design Graduates"
+- [shenkar.ac.il](https://www.shenkar.ac.il/en/pages/shenkar-alumni)
+
+### International Art Academy Palestine (Ramallah)
+
+- BA in Contemporary Visual Art
+- Founded 2006 by Suleiman Mansour, Nabil Anani, Khalid Hourani, Tayseer Barakat
+
+---
+
+## Social Media to Follow
+
+### Instagram
+
+- **@israeli_artists** — Showcases Israeli artists
+- **@khalilsakakinicenter** — Ramallah events/exhibitions
+- **@artlevinstudio** — Jerusalem painter (3k+ followers)
+
+### Facebook
+
+- **iartists community** — 9,000+ artists
+- **Shenkar/Bezalel alumni job groups**
+- **Nature Israel** — 108k photographers
+
+---
+
+## Job & Opportunity Links
+
+Direct links to arts/culture job listings (visit directly — scraping blocked):
+
+<link rel="stylesheet" href="{{ '/assets/css/levant-jobs.css' | relative_url }}">
+
+<div class="source-categories">
+  <div class="source-category">
+    <h4>Government & Institutional</h4>
+    <div class="source-cards">
+      <a href="https://www.taasuka.gov.il/he/Applicants/pages/jobs.aspx" target="_blank" class="source-card">
+        <div class="source-name">שירות התעסוקה</div>
+        <div class="source-name-en">Misrad HaTaasuka</div>
+        <div class="source-desc">Official government employment (13,000+ jobs)</div>
+      </a>
+      <a href="https://www.bezalel.ac.il/services/wrk4stud" target="_blank" class="source-card">
+        <div class="source-name">בצלאל</div>
+        <div class="source-name-en">Bezalel Jobs</div>
+        <div class="source-desc">Student & graduate positions</div>
+      </a>
+      <a href="https://www.icom.org.il/en/node/8" target="_blank" class="source-card">
+        <div class="source-name">ICOM Israel</div>
+        <div class="source-name-en">Museum Jobs</div>
+        <div class="source-desc">Israel Museum, TAM, Yad Vashem, etc.</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="source-category">
+    <h4>General Job Boards — Arts Categories</h4>
+    <div class="source-cards">
+      <a href="https://www.alljobs.co.il/SearchResultsGuest.aspx?page=1&position=278" target="_blank" class="source-card">
+        <div class="source-name">AllJobs - אמנות</div>
+        <div class="source-name-en">AllJobs Arts</div>
+        <div class="source-desc">Largest Israeli job board</div>
+      </a>
+      <a href="https://www.drushim.co.il/jobs/search/%D7%90%D7%9E%D7%A0%D7%95%D7%AA/" target="_blank" class="source-card">
+        <div class="source-name">Drushim - אמנות</div>
+        <div class="source-name-en">Drushim Art</div>
+        <div class="source-desc">General board, art category</div>
+      </a>
+      <a href="https://www.jobmaster.co.il/jobs/?q=%D7%90%D7%95%D7%9E%D7%A0%D7%95%D7%AA" target="_blank" class="source-card">
+        <div class="source-name">JobMaster</div>
+        <div class="source-name-en">Entertainment & Media</div>
+        <div class="source-desc">Arts, entertainment, media jobs</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="source-category">
+    <h4>Art-Specific</h4>
+    <div class="source-cards">
+      <a href="https://artis.art/grants_and_open_calls" target="_blank" class="source-card">
+        <div class="source-name">Artis</div>
+        <div class="source-name-en">Grants & Open Calls</div>
+        <div class="source-desc">Israeli contemporary art opportunities</div>
+      </a>
+      <a href="https://www.callforentries.com/category/art/residencies/location/israel/" target="_blank" class="source-card">
+        <div class="source-name">C4E Israel</div>
+        <div class="source-name-en">Call for Entries</div>
+        <div class="source-desc">Residencies, competitions, workshops</div>
+      </a>
+      <a href="https://www.artport.art/residency/?lang=en" target="_blank" class="source-card">
+        <div class="source-name">Artport</div>
+        <div class="source-name-en">Tel Aviv Residency</div>
+        <div class="source-desc">Israel's leading residency program</div>
+      </a>
+    </div>
+  </div>
+</div>
 
 ---
 
 ## Key Resources
 
-**Databases:**
+**Residency Databases:**
 - [TransArtists — Israel](https://www.transartists.org/en/residencies?country=Israel)
 - [TransArtists — Palestine](https://www.transartists.org/en/residencies?country=Palestine)
 - [Reviewed by Artists — Israel](https://reviewedbyartists.com/residency_list_country/israel-1714921259028x503606488575840450)
@@ -266,15 +374,8 @@ permalink: /levant/
 **Organizations:**
 - [A.M. Qattan Foundation](https://qattanfoundation.org/)
 - [Palestinian Association for Contemporary Art](http://paca.ps/)
-- [Artport Tel Aviv](https://www.artport.art/)
-
----
-
-<link rel="stylesheet" href="{{ '/assets/css/levant-jobs.css' | relative_url }}">
-
-<div id="levant-jobs-app"></div>
-
-<script src="{{ '/assets/js/levant-jobs.js' | relative_url }}"></script>
+- [Artis](https://artis.art/)
+- [AICF](https://aicf.org/)
 
 ---
 
