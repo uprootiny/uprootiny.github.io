@@ -367,6 +367,69 @@ Typical requirements:
 
 **Civitella Ranieri** — [civitella.org](https://civitella.org/) — Yale/King's College London partnerships
 
+### France — Beyond Paris
+
+| Residency | Location | Duration | Funding | Deadline |
+|-----------|----------|----------|---------|----------|
+| **La Napoule Art Foundation** | Château de La Napoule | March 2026 | Partial | Check website |
+| **Le Moulin de la Barde** | Périgord Noir, Dordogne | 2-4 weeks | One fully funded/year | Rolling |
+| **Summer Residency** | Château de Forbin, Marseille | 2 weeks Aug | Fully funded (50 artists) | Annual |
+| **Camargo Foundation** | Cassis | Variable | Funded | Annual |
+| **La Porte Peinte** | Noyers-sur-Serein | 1-2 months | Self-funded €2,100-3,000/month | Rolling |
+
+**La Napoule** — [lanapoulefoundation.org](https://www.lanapoulefoundation.org/) — Château on Mediterranean, interdisciplinary
+
+**Camargo** — [camargofoundation.org](https://camargofoundation.org/) — Est. 1971, research + experimentation focus
+
+**Summer Residency** — [summer-residency.co](https://www.summer-residency.co/) — All expenses covered incl. visa fees
+
+### Belgium — Brussels/Antwerp/Ghent
+
+| Residency | Location | Duration | Funding | Deadline |
+|-----------|----------|----------|---------|----------|
+| **WIELS** | Brussels | 6 months | Mondriaan partner (€12,737) | May 31 |
+| **MASEREEL** | Kasterlee (near Antwerp) | 6 weeks | Accommodation only | Check website |
+| **Morpho** | Antwerp | 3 months | Exchange program | Check website |
+| **Boghossian Foundation** | Villa Empain, Brussels | Variable | Check website | Early 2026 |
+| **Kunsthal Gent** | Ghent | 1 week mini | Small budget | Rolling |
+| **LIBITUM** | Belgium | Variable | €1,000 creation grants | Check website |
+
+**WIELS** — [wiels.org](https://www.wiels.org/en/residency-programme) — 20 artists/year, 9 studios, Mondriaan Fund partner
+
+**MASEREEL** — [masereel.be](https://www.masereel.be/) — Formerly Frans Masereel Centrum, printmaking focus
+
+**Morpho** — [morphoantwerp.be](https://morphoantwerp.be/en/residenties) — Development + exchange residencies
+
+### Northern Netherlands — Noordenaars Network
+
+| Program | Location | Duration | Funding | Notes |
+|---------|----------|----------|---------|-------|
+| **Kunsthuis SYB** | Beetsterzwaag, Friesland | Variable | Supported | Research + exhibition |
+| **VHDG Connect** | Friesland | Year-long | Support program | For Northern NL artists |
+| **Groninger Stipends** | Groningen | 1 year | €10,000 + €10,000 budget | Under 35 |
+| **Het Resort** | Groningen | Variable | Check website | Noordenaars member |
+| **SIGN** | Groningen | Variable | Check website | Noordenaars member |
+| **NP3** | Groningen | Variable | Check website | Noordenaars member |
+
+**Noordenaars** — Network of Northern NL institutions: Academie Minerva, Bierumer School, CBK Emmen, Kunstpunt Groningen, Kunsthuis SYB, Media Art Friesland, Noorderlicht, NP3, Het Resort, SIGN, VHDG
+
+**Kunsthuis SYB** — [kunsthuissyb.nl](https://www.kunsthuissyb.nl/en) — Exhibitions at SYB + Casco Utrecht
+
+**VHDG** — [vhdg.nl](https://www.vhdg.nl/en/) — Talent development for emerging Northern NL artists
+
+### Western Germany — NRW/Rhineland
+
+| Residency | Location | Duration | Funding | Notes |
+|-----------|----------|----------|---------|-------|
+| **WELTKUNSTZIMMER** | Düsseldorf | Variable | €1,000/month + travel | Hans Peter Zimmer Foundation |
+| **Ateliers Höherweg** | Düsseldorf | Variable | Studio + apartment | Studio exhibition at end |
+| **ZERO Foundation** | Düsseldorf | 3 months | Mondriaan partner | Curators, under 35 |
+| **Residence NRW+** | Various NRW venues | Variable | Check website | Exhibition in NRW institution |
+
+**Borderland Residencies** — [borderland-residencies.eu](https://borderland-residencies.eu/) — Network including WELTKUNSTZIMMER, Ateliers Höherweg
+
+**NRW Venues** — Kunsthaus NRW Kornelimünster (Aachen), Marta Herford, Museum Kurhaus Kleve, Dortmunder Kunstverein, Kunstverein Bielefeld, NAK Aachen
+
 ---
 
 ## Useful Links
