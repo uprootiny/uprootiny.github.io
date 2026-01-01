@@ -210,62 +210,165 @@ COLLECTIONS / AWARDS / PUBLICATIONS
 
 ---
 
-## Application Checklist
+## Application Preparation
 
-### Before Applying
+### Realistic Time Investment
 
-- [ ] Check eligibility (age, location, career stage)
-- [ ] Note deadline and required format
-- [ ] Review selection criteria
-- [ ] Check budget limits and co-financing requirements
-- [ ] Gather required attachments (portfolio, CV, references)
+**A serious application takes 3-6 weeks.** This is normal. Rushing produces weak applications.
 
-### Application Contents
+| Application Type | Prep Time | Active Writing | Review/Polish |
+|-----------------|-----------|----------------|---------------|
+| **Major grant** (Mondriaan Basic) | 4-6 weeks | 2-3 weeks | 1-2 weeks |
+| **Project grant** (Mondriaan Project, Stroom PRO) | 3-4 weeks | 1-2 weeks | 1 week |
+| **Residency** (competitive) | 2-4 weeks | 1-2 weeks | 1 week |
+| **Open call** (exhibition, prize) | 1-2 weeks | 3-5 days | 2-3 days |
 
-- [ ] Completed application form
-- [ ] Project description (within word limit)
-- [ ] Artist statement
-- [ ] CV (formatted per requirements)
-- [ ] Portfolio (10-20 images, specified resolution)
-- [ ] Budget breakdown
-- [ ] Timeline
-- [ ] Letters of support/confirmation (if required)
+### What Preparation Actually Involves
+
+**Week 1-2: Research & Planning**
+- [ ] Read the full guidelines twice (not skimming)
+- [ ] Study past recipients — what did they propose? what's the pattern?
+- [ ] Check if your work actually fits their mission/criteria
+- [ ] Sketch rough project idea, test if it's viable within budget
+- [ ] Identify what documentation you're missing
+
+**Week 2-3: Content Development**
+- [ ] Draft project description (expect 3-5 revisions)
+- [ ] Update artist statement if needed
+- [ ] Write budget with realistic costs (get actual quotes)
+- [ ] Create or update timeline
+- [ ] Request letters of support early (give people 2 weeks)
+
+**Week 3-4: Portfolio & Documentation**
+- [ ] Select works that support *this specific* proposal
+- [ ] Photograph/document any undocumented work
+- [ ] Process images to specifications
+- [ ] Write image list with accurate dimensions
+- [ ] Update CV to match required format
+
+**Week 4-5: Review & Polish**
+- [ ] Read everything aloud — does it make sense?
+- [ ] Have someone outside art read it — is it clear?
+- [ ] Check word counts, file sizes, naming conventions
+- [ ] Verify all attachments open correctly
+- [ ] Submit 2-3 days before deadline (systems crash)
+
+### Application Contents Checklist
+
+**Core Materials:**
+- [ ] Completed application form (all fields)
+- [ ] Project description (within word limit, usually 300-800 words)
+- [ ] Artist statement (usually 150-300 words)
+- [ ] CV (formatted per their requirements, not your standard CV)
+- [ ] Portfolio (10-20 images, check resolution/size limits)
+- [ ] Image list (title, year, medium, dimensions for each)
+
+**Financial:**
+- [ ] Budget breakdown (be specific, include contingency)
+- [ ] Co-financing confirmation if required
+- [ ] Bank details / registration number if requested
+
+**Supporting:**
+- [ ] Timeline / work plan
+- [ ] Letters of support (venue confirmation, collaborator statements)
+- [ ] References if requested
+- [ ] Proof of residency / professional status if required
 
 ### Portfolio Image Specifications
 
-Typical requirements:
-- JPEG format
-- 72-300 dpi
-- Max 5MB per image
-- Filename: `LastName_Title_Year_Number.jpg`
-- Include image list with: title, year, medium, dimensions
+Most common requirements:
+- **Format:** JPEG or PNG
+- **Resolution:** 72-300 dpi (web vs. print)
+- **Size:** 1-5 MB per image, sometimes max 10MB total
+- **Dimensions:** Often 1920px on longest side
+- **Filename:** `LastName_Title_Year_01.jpg`
+- **Image list:** title, year, medium, dimensions (h × w × d cm)
+
+**For video/time-based:**
+- Vimeo/YouTube links with password
+- 1-3 minute excerpts, not full works
+- Include duration and technical specs
 
 ### After Submitting
 
-- [ ] Save confirmation email/number
-- [ ] Note expected response date
-- [ ] Calendar reminder for result
-- [ ] If rejected: request feedback (if offered)
+- [ ] Screenshot/save confirmation page
+- [ ] Save confirmation email with reference number
+- [ ] Calendar: expected response date
+- [ ] Calendar: follow-up if no response by X date
+- [ ] If rejected: request feedback (some funds offer this)
+- [ ] Note what worked/didn't for next application
 
 ---
 
-## Key Dates & Deadlines
+## Strategic Application Calendar
 
-### Recurring
+### When to Apply (Working Backwards)
 
-| Fund | Deadline | Frequency |
-|------|----------|-----------|
-| Mondriaan Artist Project | Rolling | Continuous |
-| Mondriaan Artist Basic | Check website | Annual rounds |
-| Stroom PRO | Check website | Multiple rounds |
-| Royal Painting Prize | ~November | Annual |
+**For a January deadline:**
+- November 15: Start research & planning
+- November 30: First draft of project description
+- December 10: Portfolio selection finalized
+- December 20: All materials complete, review phase
+- December 28: Final review
+- December 30: Submit (not January 1)
 
-### Residency Cycles
+### Suggested Annual Rhythm
 
-| Residency | Application Period |
-|-----------|-------------------|
-| Pilotenkueche | Rolling, quarterly |
-| Togatta TR-044 | Permanent open call |
+**Q1 (January-March)** — Major grant applications
+- Mondriaan Artist Basic (if eligible)
+- International residencies with spring deadlines
+- Post-academic programs (De Ateliers, Rijksakademie)
+
+**Q2 (April-June)** — Project funding
+- Stroom PRO rounds (May, August deadlines)
+- Summer residency applications
+- Exhibition proposals for following year
+
+**Q3 (July-September)** — Residencies & international
+- Autumn residency deadlines
+- International exchange programs
+- Portfolio updates with new summer work
+
+**Q4 (October-December)** — Prizes & next year prep
+- Royal Painting Prize (November)
+- Year-end open calls
+- Plan next year's application strategy
+
+### Parallel Applications
+
+Apply to 3-5 opportunities at once, but stagger preparation:
+
+| Week | Application A | Application B | Application C |
+|------|--------------|---------------|---------------|
+| 1 | Research | — | — |
+| 2 | Draft | Research | — |
+| 3 | Polish | Draft | Research |
+| 4 | Submit | Polish | Draft |
+| 5 | — | Submit | Polish |
+| 6 | — | — | Submit |
+
+This maintains quality without burnout.
+
+### Key Recurring Deadlines
+
+| Opportunity | Deadline | Lead Time Needed |
+|-------------|----------|------------------|
+| **Mondriaan Artist Basic** | Check website | 6 weeks |
+| **Mondriaan Artist Project** | Rolling | 4 weeks |
+| **Stroom PRO Art Projects** | Feb 9, May 11, Aug 17, Nov 9 | 4 weeks |
+| **Royal Painting Prize** | ~November | 3 weeks |
+| **De Ateliers** | ~February | 5 weeks |
+| **Rijksakademie** | ~October | 5 weeks |
+
+### Residencies — Typical Cycles
+
+| Residency | When to Apply | For Residency In |
+|-----------|--------------|------------------|
+| ISCP (New York) | February | Following year |
+| Cité des Arts (Paris) | Spring | 6-12 months later |
+| Akademie Schloss Solitude | Annual call | Following year |
+| WIELS (Brussels) | May 31 | Following year |
+| Pilotenkueche (Leipzig) | Rolling/quarterly | 2-4 months later |
 
 ---
 
