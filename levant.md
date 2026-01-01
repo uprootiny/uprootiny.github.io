@@ -436,6 +436,266 @@ Direct links to arts/culture job listings (visit directly — scraping blocked):
 
 ---
 
+## Weizmann Application Prep Guide
+
+*For: Physics/computational linguistics background → Math, CS, or interdisciplinary research*
+
+### Why Weizmann?
+
+- **No tuition** — completely free
+- **Guaranteed stipend** — covers living expenses for all admitted students
+- **Small cohorts** — ~15-25 students per department per year
+- **Research-focused** — no undergraduate teaching load
+- **English instruction** — all courses in English
+- **World-class faculty** — Fields Medal, Turing Award affiliations
+
+### Step 1: Identify Your Research Direction (Now)
+
+Your background (physics + computational linguistics) opens several paths:
+
+**Option A: Mathematics (Applied)**
+- Computational complexity, algorithmic game theory
+- Mathematical foundations of ML
+- Probability, combinatorics
+
+**Option B: Computer Science**
+- Machine learning theory
+- Natural language processing
+- Computational biology
+
+**Option C: Interdisciplinary**
+- Physics of computation
+- Quantum information (if physics background is strong)
+- Computational neuroscience
+
+**Action:** Pick 1-2 directions. Read 3-5 recent papers in each to confirm interest.
+
+---
+
+### Step 2: Research Faculty (Weeks 1-2)
+
+Browse these departments and identify 2-4 potential advisors:
+
+**Mathematics Department:** [weizmann.ac.il/math/faculty](https://www.weizmann.ac.il/math/faculty)
+
+| Faculty | Research Area | Why Relevant |
+|---------|---------------|--------------|
+| Tamar Ziegler | Ergodic theory, combinatorics | Pure math with applications |
+| Boaz Klartag | Convex geometry, probability | Geometric analysis |
+| Ofer Zeitouni | Probability, random matrices | Statistical physics connections |
+| Assaf Naor | Metric geometry, algorithms | CS-math intersection |
+
+**Computer Science Department:** [weizmann.ac.il/cs/faculty](https://www.weizmann.ac.il/cs/faculty)
+
+| Faculty | Research Area | Why Relevant |
+|---------|---------------|--------------|
+| Shimon Ullman | Computer vision, cognition | Computational linguistics adjacent |
+| David Harel | Software engineering, biology | Interdisciplinary |
+| Oded Goldreich | Complexity theory | Theoretical foundations |
+| Michal Irani | Vision, ML | Applied ML research |
+| Yoav Goldberg (Bar-Ilan, but collaborates) | NLP | If NLP focus |
+
+**Action items:**
+- [ ] Read 2-3 recent papers from each potential advisor
+- [ ] Note specific questions or ideas their work raises
+- [ ] Check if they're accepting students (some faculty pages say)
+- [ ] Look at their current PhD students' work
+
+---
+
+### Step 3: Skills to Review/Strengthen (Weeks 2-6)
+
+**If targeting Math:**
+- [ ] Real analysis (Rudin level)
+- [ ] Linear algebra (Axler or Hoffman-Kunze level)
+- [ ] Probability theory (measure-theoretic)
+- [ ] Abstract algebra basics
+- [ ] One specialty area deeply (your differentiator)
+
+**If targeting CS:**
+- [ ] Algorithms (CLRS level)
+- [ ] Complexity theory basics (P, NP, reductions)
+- [ ] Machine learning theory (statistical learning)
+- [ ] Programming proficiency (Python, ideally also C++/Julia)
+- [ ] One specialty area deeply
+
+**If targeting interdisciplinary:**
+- [ ] Strong in one core area (math OR CS)
+- [ ] Conversant in the other
+- [ ] Clear articulation of how you bridge them
+
+**Resources:**
+- MIT OCW for review courses
+- Weizmann course catalog: [feinberg.weizmann.ac.il/courses](https://www.weizmann.ac.il/feinberg/courses)
+- ArXiv for recent research papers
+
+---
+
+### Step 4: Contact Potential Advisors (Weeks 3-4)
+
+**When to email:** After you've read their work, before you apply.
+
+**Email template:**
+
+```
+Subject: Prospective MSc/PhD student inquiry — [Your specialty]
+
+Dear Prof. [Name],
+
+I am a [nationality] graduate with degrees in physics and computational
+linguistics from [University]. I am preparing to apply to Weizmann's
+[Math/CS] MSc program for Fall 2026.
+
+I read your recent paper on [specific paper title] and found [specific
+aspect] particularly interesting because [brief reason connecting to
+your background]. I am curious whether [specific question about their
+work or potential extensions].
+
+My background includes [1-2 sentences on relevant experience/skills].
+I am interested in [research direction] and believe your group's work
+on [topic] aligns well with my interests.
+
+Would you be open to a brief conversation about potential research
+directions and whether you are accepting students?
+
+Thank you for your time.
+
+Best regards,
+[Your name]
+[LinkedIn or brief CV link if you have one]
+```
+
+**Do:**
+- Be specific about their work (shows you actually read it)
+- Keep it under 200 words
+- Ask a genuine question
+- Send to 2-4 faculty, not 10
+
+**Don't:**
+- Send generic emails
+- Attach full CV in first email
+- Ask questions answered on their website
+- Be pushy about response
+
+**Expected response rate:** ~30-50%. No response ≠ rejection.
+
+---
+
+### Step 5: Prepare Application Materials (Weeks 4-8)
+
+#### Statement of Purpose
+
+**Structure:**
+1. **Opening** (1 paragraph): What you want to study and why Weizmann
+2. **Background** (2 paragraphs): Your relevant experience, what you learned
+3. **Research interests** (2 paragraphs): Specific directions, connection to faculty
+4. **Why you** (1 paragraph): What makes you a good fit, what you bring
+
+**For your background specifically:**
+- Physics → mathematical maturity, problem-solving
+- Computational linguistics → NLP, formal methods, programming
+- Combination → rare interdisciplinary perspective
+
+**Length:** 1-2 pages (they don't specify, but this is standard)
+
+#### Academic CV
+
+**Include:**
+- Education (with thesis titles if applicable)
+- Research experience (even if informal)
+- Publications/preprints (even course projects that became papers)
+- Programming languages and tools
+- Relevant coursework (especially advanced math/CS)
+- Conferences, presentations
+- Languages
+
+**Omit:**
+- High school details
+- Non-academic jobs (unless relevant)
+- Hobbies (unless directly relevant, e.g., competitive programming)
+
+#### Recommendation Letters
+
+**Who to ask:**
+1. Thesis advisor (most important)
+2. Professor who taught you an advanced course
+3. Research supervisor (if different from thesis advisor)
+
+**What to give them:**
+- Your CV
+- Your statement draft
+- Specific deadline
+- Why you're applying to Weizmann
+- What you'd like them to emphasize
+
+**Timeline:** Ask 6 weeks before deadline (by mid-February)
+
+---
+
+### Step 6: Interview Preparation (If Invited)
+
+Weizmann interviews selected candidates for 30-60 minutes.
+
+**Expect questions on:**
+- Your research interests (be specific)
+- Your background (technical depth)
+- Why Weizmann specifically
+- Specific faculty you want to work with
+- A technical question related to your field
+
+**Prepare:**
+- [ ] 2-minute pitch of your research interests
+- [ ] Deep knowledge of 1-2 potential advisors' work
+- [ ] Ability to discuss a technical topic in depth
+- [ ] Questions to ask them (shows genuine interest)
+
+**Questions to ask:**
+- "What does a typical first year look like for MSc students?"
+- "How do students find advisors — is it before or after admission?"
+- "What's the collaboration culture like between math and CS?"
+
+---
+
+### Step 7: Timeline Summary
+
+| Date | Action |
+|------|--------|
+| **Now** | Identify research direction, start reading papers |
+| **Oct 2025** | Research faculty, start reaching out |
+| **Nov 5, 2025** | Application opens — create account |
+| **Nov-Dec 2025** | Request transcripts, ask recommenders |
+| **Jan 2026** | Draft statement of purpose |
+| **Feb 2026** | Finalize all materials, follow up with recommenders |
+| **Mid-March 2026** | Submit application (don't wait until March 28) |
+| **April-May 2026** | Interviews (if invited) |
+| **May-June 2026** | Decisions |
+
+---
+
+### Checklist: Weizmann-Specific
+
+**Before applying:**
+- [ ] Identified 2-4 potential advisors
+- [ ] Read 2-3 papers from each
+- [ ] Emailed at least 2 faculty
+- [ ] Confirmed GPA meets 90+ threshold (or prepared explanation)
+
+**Application materials:**
+- [ ] Online application form completed
+- [ ] Official BSc transcripts uploaded
+- [ ] CV with photograph
+- [ ] Statement of purpose (Weizmann-specific)
+- [ ] 2-3 recommendation letters submitted
+- [ ] ID/Passport copy
+- [ ] Translations notarized (if applicable)
+
+**After submitting:**
+- [ ] Confirmation saved
+- [ ] Calendar reminder for April (interview period)
+- [ ] Continued reading in target area
+
+---
+
 ### Hebrew University of Jerusalem
 
 **Best for:** NLP, cognitive science, interdisciplinary research
