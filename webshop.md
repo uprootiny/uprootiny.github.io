@@ -432,6 +432,114 @@ Typical requirements:
 
 ---
 
+## Conferences & Professional Events
+
+### Residency Network Conferences
+
+| Event | Location | Date | Focus |
+|-------|----------|------|-------|
+| **Res Artis Annual** | São Paulo, Brazil | Sep 18-23, 2025 | Global South perspectives |
+| **Res Artis 2026** | TBA | TBA | Check resartis.org |
+
+**Res Artis** — [resartis.org/conferences](https://resartis.org/res-artis-conferences/) — 700+ member network, 30-500 participants
+
+### Art & Science Conferences
+
+| Event | Location | Date | Focus |
+|-------|----------|------|-------|
+| **VSAC** | Wiesbaden, Germany | Aug 21-23, 2025 | Visual perception, aesthetics |
+| **VSAC** | UK | Aug 20-22, 2026 | Same |
+| **Athens Institute** | Athens, Greece | Jun 8-12, 2026 | Visual & performing arts |
+
+**VSAC** — [vsac.eu](https://vsac.eu/) — Cognitive science meets art, at Museum Reinhard Ernst
+
+---
+
+## Open Calls & Competitions
+
+### Painting Prizes (Netherlands)
+
+| Prize | Deadline | Eligibility | Award |
+|-------|----------|-------------|-------|
+| **Royal Award of Modern Painting** | Aug 15, 2025 | Dutch, 24-35 | Exhibition at Royal Palace |
+| **Koninklijke Prijs Schilderkunst** | ~Nov | Dutch, under 35 | €9,000 |
+
+**Royal Award** — [paleisamsterdam.nl/open-call](https://www.paleisamsterdam.nl/en/open-call-2026-eng/) — Exhibition Jan-Mar 2026
+
+### Exhibition Open Calls
+
+| Call | Location | Deadline | Notes |
+|------|----------|----------|-------|
+| **Amsterdam Open Art** | Amsterdam | Rolling | No fee, all media |
+| **puntWG** | Amsterdam | Check website | 1 month access to space |
+| **This Art Fair** | The Hague | Feb 9, 2025 | Via Stroom |
+| **KUNST magazine** | Groningen | Jan 8, 2026 | €750 commission, Northern NL only |
+
+**Artenda** — [artenda.net/Netherlands](https://artenda.net/selected-country/exhibition/Netherlands) — Aggregated open calls
+
+**DutchCulture** — [dutchculture.nl/open-calls](https://dutchculture.nl/en/open-calls) — Curated opportunities
+
+### Post-Academic Programs
+
+| Program | Location | Duration | Support |
+|---------|----------|----------|---------|
+| **De Ateliers** | Amsterdam | 2 years | €17,916/year + €2,100 budget |
+| **Rijksakademie** | Amsterdam | 2 years | €14,000/year |
+| **Jan van Eyck** | Maastricht | 11 months | Stipend + housing |
+
+**De Ateliers** — [de-ateliers.nl](https://www.de-ateliers.nl/en/aanmelding/) — 70-100m² studio, weekly tutoring
+
+---
+
+## Public Art Commissions
+
+### Percent for Art (Percentageregeling)
+
+Dutch government buildings allocate 0.5-2% of construction costs to art.
+
+**Administered by:**
+- **Stroom Den Haag** — The Hague commissions
+- **Amsterdams Fonds voor de Kunst** — Amsterdam
+- **CBK (Centrum Beeldende Kunst)** — Regional centers
+
+**How artists are selected:**
+- Open calls/advertisements
+- Direct requests for documentation
+- Reputation/portfolio review
+
+**Stroom** — [stroom.nl/art-in-the-city](https://www.stroom.nl/en/art-in-the-city) — Public art program
+
+---
+
+## Job Boards & Teaching
+
+### Art Job Platforms
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **e-flux** | International, curatorial | [e-flux.com/announcements](https://www.e-flux.com/announcements/) |
+| **artjobs.eu** | Europe, all roles | [artjobs.eu](https://artjobs.eu/) |
+| **Academic Positions** | University/research | [academicpositions.com](https://academicpositions.com/) |
+| **Tes** | Art teaching, Europe | [tes.com/jobs](https://www.tes.com/jobs/browse/art-and-design-europe) |
+
+### Dutch Art Academies (Check vacancies)
+
+| Institution | Vacancies Page |
+|-------------|----------------|
+| KABK (The Hague) | [kabk.nl/vacancies](https://www.kabk.nl/en/about/organisation/vacancies) |
+| Gerrit Rietveld (Amsterdam) | [rietveldacademie.nl](https://rietveldacademie.nl/) |
+| ArtEZ (Arnhem/Zwolle) | [artez.nl](https://www.artez.nl/) |
+| Academie Minerva (Groningen) | [academieminerva.nl](https://www.academieminerva.nl/) |
+| Willem de Kooning (Rotterdam) | [wdka.nl](https://www.wdka.nl/) |
+
+### Recent Notable Positions (via e-flux)
+
+- **Portikus/Städelschule** (Frankfurt) — Curator, deadline May 31, 2025
+- **Bildmuseet** (Umeå, Sweden) — Curator, starts Oct 2025
+- **Moderna Museet** (Stockholm) — International Curator, deadline Jan 12, 2026
+
+---
+
 ## Useful Links
 
 **Information:**
