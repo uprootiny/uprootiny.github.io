@@ -21,17 +21,32 @@
   color: #444;
 }
 
-/* Source Grid */
-.source-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1em;
+/* Source Categories */
+.source-categories {
   margin-bottom: 2em;
+}
+
+.source-category {
+  margin-bottom: 1.5em;
+}
+
+.source-category h4 {
+  font-size: 0.95em;
+  color: #555;
+  margin: 0 0 0.8em 0;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eee;
+}
+
+.source-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.8em;
 }
 
 .source-card {
   display: block;
-  padding: 1em;
+  padding: 0.8em;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   text-decoration: none;
@@ -47,25 +62,20 @@
 .source-name {
   font-weight: bold;
   color: #333;
-  margin-bottom: 0.3em;
+  font-size: 0.95em;
+  direction: rtl;
 }
 
-.source-region {
+.source-name-en {
   font-size: 0.8em;
-  color: #888;
-  margin-bottom: 0.5em;
+  color: #666;
+  margin-bottom: 0.4em;
 }
 
 .source-desc {
-  font-size: 0.85em;
-  color: #666;
-  line-height: 1.3;
-}
-
-.source-lang {
   font-size: 0.75em;
-  color: #999;
-  margin-top: 0.5em;
+  color: #888;
+  line-height: 1.3;
 }
 
 /* Filters */
@@ -176,10 +186,16 @@
   border-radius: 4px;
 }
 
+/* Job Grid */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1em;
+}
+
 /* Job Cards */
 .job-card {
   padding: 1em;
-  margin-bottom: 0.8em;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
   background: white;
@@ -202,10 +218,27 @@
   background: #fffef8;
 }
 
+.job-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  margin-bottom: 0.3em;
+}
+
+.job-cat-icon {
+  font-size: 1em;
+  flex-shrink: 0;
+}
+
 .job-title {
   font-weight: 500;
   color: #333;
-  margin-bottom: 0.3em;
+}
+
+.job-title-en {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 0.4em;
 }
 
 .job-org {
@@ -216,6 +249,13 @@
 .job-location {
   font-size: 0.85em;
   color: #888;
+  margin-top: 0.3em;
+}
+
+.job-note {
+  font-size: 0.8em;
+  color: #777;
+  font-style: italic;
   margin-top: 0.3em;
 }
 
@@ -249,7 +289,11 @@
 
 /* Responsive */
 @media (max-width: 600px) {
-  .source-grid {
+  .source-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .job-grid {
     grid-template-columns: 1fr;
   }
 
