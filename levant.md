@@ -4,9 +4,12 @@ title: Levant Resources
 permalink: /levant/
 ---
 
-# Art Opportunities — Israel & Palestine
+# Israel & Palestine Resources
 
-*Practical guide to finding residencies, grants, commissions, and professional networks in the region.*
+*Practical guide for two tracks: art residencies/grants and academic/tech careers in the region.*
+
+**Art Track:** Residencies, grants, galleries, professional networks
+**Research Track:** Graduate programs, academic positions, senior tech roles
 
 ---
 
@@ -368,7 +371,338 @@ Direct links to arts/culture job listings (visit directly — scraping blocked):
 
 ---
 
+# Research & Tech Track
+
+*For: Physics/computational linguistics background → Math, CS, AI research, or senior tech roles*
+
+---
+
+## Israeli Universities — Graduate Programs
+
+### Mathematics, CS & AI Programs
+
+| University | Programs | Strengths | Links |
+|------------|----------|-----------|-------|
+| **Technion** | MSc/PhD Math, CS, Data Science | Applied math, ML, optimization | [graduate.technion.ac.il](https://graduate.technion.ac.il/en/) |
+| **Weizmann Institute** | MSc/PhD Math, CS | Theory, pure math, ML research | [weizmann.ac.il/feinberg](https://www.weizmann.ac.il/feinberg/) |
+| **Hebrew University** | MSc/PhD Math, CS, Cognitive Science | NLP, computational linguistics | [huji.ac.il/graduate](https://new.huji.ac.il/en/page/2370) |
+| **Tel Aviv University** | MSc/PhD Math, CS, Statistics | Applied ML, NLP, theoretical CS | [tau.ac.il/graduate](https://english.tau.ac.il/graduate_students) |
+| **Ben-Gurion University** | MSc/PhD Math, CS, Data Science | Cyber, ML, applied math | [bgu.ac.il/gradstudies](https://in.bgu.ac.il/en/Pages/graduate-studies.aspx) |
+| **Bar-Ilan University** | MSc/PhD Math, CS | NLP, computational linguistics | [biu.ac.il/graduate](https://www.biu.ac.il/en/graduate-studies) |
+| **Reichman University (IDC)** | MSc Data Science, ML | Industry connections, applied | [runi.ac.il](https://www.runi.ac.il/en/schools/efi-arazi/graduate/data-science/) |
+
+### Particularly Strong For Your Background
+
+**Computational Linguistics / NLP:**
+- Hebrew University — [cs.huji.ac.il](https://www.cs.huji.ac.il/) — Strong NLP group
+- Bar-Ilan University — [biu-nlp.github.io](https://biu-nlp.github.io/) — Yoav Goldberg's group
+- Technion — [cs.technion.ac.il](https://www.cs.technion.ac.il/) — NLP & ML
+
+**Mathematical Physics / Applied Math:**
+- Weizmann — [weizmann.ac.il/math](https://www.weizmann.ac.il/math/) — World-class theory
+- Technion — Applied math, optimization, physics connections
+- Hebrew University — Einstein Institute of Mathematics
+
+**Machine Learning / AI Research:**
+- Tel Aviv University — Blavatnik School of CS
+- Technion — Andrew and Erna Viterbi Faculty of EE
+- Weizmann — [weizmann.ac.il/cs](https://www.weizmann.ac.il/cs/)
+
+---
+
+## Academic Application Timeline
+
+### Israeli Academic Calendar
+
+- **Academic year:** October – July (Semester A: Oct-Feb, Semester B: Mar-Jul)
+- **Application period:** Typically January – May for following October
+- **Results:** April – July
+
+### Realistic Time Investment
+
+**A strong graduate application takes 6-10 weeks.** This includes research, writing, and coordination.
+
+| Component | Time Needed | Notes |
+|-----------|-------------|-------|
+| Program research | 2-3 weeks | Identify 5-8 programs, read faculty profiles |
+| Statement of purpose | 2-3 weeks | Expect 5+ drafts |
+| CV/academic CV | 1 week | Different from industry CV |
+| Recommendation letters | 3-4 weeks | Ask early, send reminders |
+| Research proposal (PhD) | 2-4 weeks | Required for most PhD programs |
+| Language tests (if needed) | 4-8 weeks | Hebrew proficiency, GRE |
+| Application forms | 1 week | Tedious but necessary |
+
+### Month-by-Month Calendar (For October Start)
+
+**November-December:** Research phase
+- [ ] Identify target programs (5-8 realistic options)
+- [ ] Read faculty publications — who would you want to work with?
+- [ ] Email 2-3 potential advisors (brief, specific questions)
+- [ ] Check funding options (scholarships, TA positions)
+
+**January:** Preparation begins
+- [ ] Request transcripts (official, translated if needed)
+- [ ] Ask recommenders (minimum 3, ideally 4)
+- [ ] Start statement of purpose draft
+- [ ] Register for any required tests
+
+**February-March:** Core writing
+- [ ] Complete statement of purpose (get feedback from 2-3 people)
+- [ ] Write research proposal if required
+- [ ] Finalize academic CV
+- [ ] Follow up with recommenders
+
+**March-April:** Submission
+- [ ] Submit applications (aim for 2 weeks before deadline)
+- [ ] Confirm all materials received
+- [ ] Send thank-you notes to recommenders
+
+**April-June:** Waiting & interviews
+- [ ] Prepare for interviews (common for competitive programs)
+- [ ] Visit campuses if invited
+- [ ] Compare offers (funding, advisor fit, program structure)
+
+**July:** Decision
+- [ ] Accept offer, decline others promptly
+- [ ] Begin housing search
+- [ ] Connect with future cohort
+
+### Application Components
+
+**Statement of Purpose (תכנית מחקר)**
+- 1-2 pages, specific to each program
+- What you want to study and why
+- Why this program/faculty specifically
+- Your relevant background
+- Career goals
+
+**Research Proposal (PhD)**
+- 3-5 pages typical
+- Clear research question
+- Methodology outline
+- Connection to faculty expertise
+- Feasibility within program timeframe
+
+**Academic CV**
+- Education with thesis titles
+- Publications (even preprints)
+- Research experience
+- Teaching experience
+- Relevant skills (programming, languages)
+- Conferences, presentations
+
+**Recommendation Letters**
+- 3 required, 4 safer
+- Academic recommenders preferred
+- Give them: your CV, statement draft, deadline, submission link
+- 4 weeks minimum notice
+
+### Funding Options
+
+| Source | Amount | Notes |
+|--------|--------|-------|
+| **University scholarships** | Full tuition + stipend | Competitive, apply simultaneously |
+| **Israel Academy of Sciences** | Varies | [academy.ac.il](https://www.academy.ac.il/) |
+| **Azrieli Foundation** | Full funding | [azrielifoundation.org](https://azrielifoundation.org/fellows/) |
+| **Rothschild Foundation** | Varies | Post-doc focus |
+| **Teaching Assistantship** | Partial tuition + stipend | Common for MSc/PhD |
+| **Research Assistantship** | Varies | Depends on advisor grants |
+
+---
+
+## Senior Tech & Research Positions
+
+### For: Data Science, AI, Finance, Software Engineering — Senior/Lead/Director Level
+
+### Israeli Tech Job Boards
+
+<div class="source-categories">
+  <div class="source-category">
+    <h4>Senior Tech & AI Roles</h4>
+    <div class="source-cards">
+      <a href="https://www.linkedin.com/jobs/search/?keywords=data%20science%20director&location=Israel" target="_blank" class="source-card">
+        <div class="source-name">LinkedIn Israel</div>
+        <div class="source-name-en">Senior Tech Roles</div>
+        <div class="source-desc">Filter: Director, VP, Principal, Staff</div>
+      </a>
+      <a href="https://www.glassdoor.com/Job/israel-data-science-jobs-SRCH_IL.0,6_IN119_KO7,19.htm" target="_blank" class="source-card">
+        <div class="source-name">Glassdoor Israel</div>
+        <div class="source-name-en">Data Science</div>
+        <div class="source-desc">Salary data, company reviews</div>
+      </a>
+      <a href="https://www.indeed.co.il/jobs?q=AI+machine+learning+senior" target="_blank" class="source-card">
+        <div class="source-name">Indeed Israel</div>
+        <div class="source-name-en">AI/ML Positions</div>
+        <div class="source-desc">Wide coverage, filter by seniority</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="source-category">
+    <h4>Startup & VC Networks</h4>
+    <div class="source-cards">
+      <a href="https://www.startuphub.org.il/jobs" target="_blank" class="source-card">
+        <div class="source-name">Startup Hub</div>
+        <div class="source-name-en">Israel Innovation Authority</div>
+        <div class="source-desc">Government startup ecosystem</div>
+      </a>
+      <a href="https://wellfound.com/jobs?locationAttr=Israel" target="_blank" class="source-card">
+        <div class="source-name">Wellfound (AngelList)</div>
+        <div class="source-name-en">Startup Jobs</div>
+        <div class="source-desc">Equity, founding team roles</div>
+      </a>
+      <a href="https://www.f6s.com/jobs?location=Israel" target="_blank" class="source-card">
+        <div class="source-name">F6S</div>
+        <div class="source-name-en">Founder Network</div>
+        <div class="source-desc">Startup co-founder matching</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="source-category">
+    <h4>Finance & Quant</h4>
+    <div class="source-cards">
+      <a href="https://www.efinancialcareers.com/jobs-Israel-Tel_Aviv.t05" target="_blank" class="source-card">
+        <div class="source-name">eFinancialCareers</div>
+        <div class="source-name-en">Finance & Quant</div>
+        <div class="source-desc">Quant, risk, algo trading</div>
+      </a>
+      <a href="https://www.linkedin.com/jobs/search/?keywords=quantitative%20researcher&location=Israel" target="_blank" class="source-card">
+        <div class="source-name">LinkedIn Quant</div>
+        <div class="source-name-en">Quantitative Research</div>
+        <div class="source-desc">Hedge funds, prop trading</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="source-category">
+    <h4>Israeli Tech Companies (Direct)</h4>
+    <div class="source-cards">
+      <a href="https://www.comeet.com/jobs" target="_blank" class="source-card">
+        <div class="source-name">Comeet</div>
+        <div class="source-name-en">Israeli Tech Jobs</div>
+        <div class="source-desc">Many Israeli companies use this</div>
+      </a>
+      <a href="https://jobs.lever.co/" target="_blank" class="source-card">
+        <div class="source-name">Lever</div>
+        <div class="source-name-en">Tech Company ATS</div>
+        <div class="source-desc">Common in Israeli startups</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+### Major Israeli Tech Employers — Check Directly
+
+**AI/ML Research Labs:**
+| Company | Focus | Careers Page |
+|---------|-------|--------------|
+| **Google Israel** | Research, Cloud AI | [careers.google.com](https://careers.google.com/jobs/results/?location=Israel) |
+| **Meta (Facebook) Israel** | AI Research | [metacareers.com](https://www.metacareers.com/jobs/?locations[0]=Israel) |
+| **Microsoft Israel** | R&D, AI | [careers.microsoft.com](https://careers.microsoft.com/us/en/search-results?keywords=&location=Israel) |
+| **NVIDIA Israel** | GPU, Deep Learning | [nvidia.com/careers](https://www.nvidia.com/en-us/about-nvidia/careers/) |
+| **Intel Israel** | AI, Hardware | [jobs.intel.com](https://jobs.intel.com/en/search-jobs/Israel) |
+| **Amazon Israel** | AWS, ML | [amazon.jobs](https://www.amazon.jobs/en/locations/israel) |
+| **Apple Israel** | ML, Computer Vision | [jobs.apple.com](https://jobs.apple.com/en-us/search?location=israel) |
+
+**Israeli AI Unicorns:**
+| Company | Focus | Notes |
+|---------|-------|-------|
+| **Mobileye** | Autonomous driving | Intel subsidiary, Jerusalem |
+| **Wiz** | Cloud security | Fastest to $10B valuation |
+| **Snyk** | Developer security | Tel Aviv HQ |
+| **Gong** | Revenue intelligence | NLP, conversation AI |
+| **Lightricks** | Creative AI | Jerusalem, consumer apps |
+| **AI21 Labs** | LLMs, NLP | Founded by AI researchers |
+| **Run:ai** | ML infrastructure | GPU orchestration |
+| **Dataiku** | Enterprise AI | Data science platform |
+
+**Quant/Finance:**
+| Company | Focus | Notes |
+|---------|-------|-------|
+| **Two Sigma** | Quant hedge fund | R&D in Israel |
+| **Citadel** | Quant trading | Offices in Tel Aviv |
+| **Jump Trading** | Prop trading | Tech-heavy |
+| **Tower Research** | Algo trading | — |
+| **Bank Leumi** | Traditional + fintech | Largest Israeli bank |
+| **Bank Hapoalim** | Data science team | — |
+| **Pagaya** | AI lending | NYSE listed |
+
+### Academic/Research Positions
+
+| Source | Focus | Link |
+|--------|-------|------|
+| **Israel Academy of Sciences** | Research positions | [academy.ac.il](https://www.academy.ac.il/) |
+| **Weizmann Jobs** | Research staff | [weizmann.ac.il/jobs](https://www.weizmann.ac.il/pages/jobs) |
+| **Technion Jobs** | Faculty, research | [technion.ac.il/jobs](https://www.admin.technion.ac.il/hr/jobs/) |
+| **Academic Jobs IL** | All universities | Often posted on university sites |
+
+---
+
+## Senior Role Application Strategy
+
+### What "Senior" Means in Israel
+
+| Level | Years Experience | Typical Titles |
+|-------|-----------------|----------------|
+| **Senior** | 5-8 years | Senior Data Scientist, Staff Engineer |
+| **Lead/Principal** | 8-12 years | Tech Lead, Principal Scientist, Architect |
+| **Director** | 10-15 years | Director of Data Science, VP Engineering |
+| **C-Level/Founder** | 12+ years | CTO, Chief Scientist, Co-founder |
+
+### Application Timeline for Senior Roles
+
+**Unlike junior roles, senior hiring is often off-cycle.** Typical timeline:
+
+| Week | Activity |
+|------|----------|
+| 1-2 | Research target companies, update LinkedIn, CV |
+| 3-4 | Reach out to network, apply to 10-15 roles |
+| 5-8 | Interviews (often 4-6 rounds for senior) |
+| 9-10 | Offers, negotiation |
+| 11-12 | Notice period (common: 1-3 months in Israel) |
+
+### What Senior Applications Need
+
+**CV/Resume:**
+- 2 pages max, impact-focused
+- Metrics: "Reduced inference time by 40%", "Led team of 8"
+- Technologies AND leadership experience
+- Publications if research-oriented
+
+**LinkedIn:**
+- "Open to Work" badge (visible to recruiters only)
+- Detailed headline: "Director of ML | NLP | Ex-Google"
+- Skills endorsements matter less, recommendations more
+
+**Portfolio/GitHub:**
+- Less important at senior level than track record
+- But: strong GitHub can differentiate for research roles
+- Blog posts, talks, papers matter more
+
+**Network:**
+- 60-80% of senior roles filled through referrals
+- Israeli tech is small — everyone knows everyone
+- Attend: Reversim Summit, DataHack, AI conferences
+
+### Negotiation (Israel-Specific)
+
+| Component | Notes |
+|-----------|-------|
+| **Base salary** | Negotiate in ILS, compare to USD benchmarks |
+| **Stock options** | Common in startups, vest 4 years |
+| **Signing bonus** | Less common than US, but negotiable |
+| **Keren Hishtalmut** | Tax-advantaged savings, employer matches — ASK FOR IT |
+| **Pension (Pensia)** | Required by law, but employer contribution % negotiable |
+| **Recreation pay (Dmei Havra'a)** | Legally required annually |
+| **Notice period** | Negotiate down from 3 months if possible |
+| **Remote work** | Increasingly common, especially hybrid |
+
+---
+
 ## Key Resources
+
+### Art Track
 
 **Residency Databases:**
 - [TransArtists — Israel](https://www.transartists.org/en/residencies?country=Israel)
@@ -380,6 +714,25 @@ Direct links to arts/culture job listings (visit directly — scraping blocked):
 - [Palestinian Association for Contemporary Art](http://paca.ps/)
 - [Artis](https://artis.art/)
 - [AICF](https://aicf.org/)
+
+### Research & Tech Track
+
+**Graduate Programs:**
+- [Technion Graduate School](https://graduate.technion.ac.il/en/)
+- [Weizmann Feinberg School](https://www.weizmann.ac.il/feinberg/)
+- [Hebrew University Graduate](https://new.huji.ac.il/en/page/2370)
+- [Tel Aviv University Graduate](https://english.tau.ac.il/graduate_students)
+
+**Funding:**
+- [Azrieli Foundation Fellowships](https://azrielifoundation.org/fellows/)
+- [Israel Academy of Sciences](https://www.academy.ac.il/)
+- [Fulbright Israel](https://www.fulbright.org.il/)
+
+**Tech Networks:**
+- [Reversim Summit](https://summit.reversim.com/) — Israel's largest dev conference
+- [DataHack](https://datahack-il.com/) — Annual data science competition
+- [Startup Nation Central](https://startupnationcentral.org/) — Ecosystem database
+- [Israel Tech Jobs (Facebook)](https://www.facebook.com/groups/israelitechjobs/) — 50k+ members
 
 ---
 
