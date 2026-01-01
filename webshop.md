@@ -269,6 +269,84 @@ Typical requirements:
 
 ---
 
+## Profile-Matched Opportunities
+
+*Opportunities specifically suited to: mid-career, painting/installation, large-scale, Netherlands-based, international experience*
+
+### Mid-Career Grants (4+ years professional practice)
+
+| Grant | Amount | Deadline | Eligibility |
+|-------|--------|----------|-------------|
+| **Mondriaan Artist Basic** | €50,000 (2-4 years) | Rolling | 4+ years practice, income <€55k |
+| **Mondriaan Artist Project** | €2,785/month (up to 6 mo) | Rolling | 1+ years practice |
+| **Stroom PRO Art Projects** | Up to €20,000/year | Feb 9, May 11, Aug 17, Nov 9 | The Hague based |
+| **Münze Österreich Prize** | €35,000 + MAK exhibition | Check website | Mid-career, international |
+
+**Mondriaan Artist Basic** — [mondriaanfonds.nl](https://www.mondriaanfonds.nl/en/apply-for-a-grant/grants/artist-basic/) — Best for oeuvre development, research, experimentation
+
+**Stroom PRO** — [stroom.nl/pro](https://www.stroom.nl/en/stroom-for-artists/financial-arrangements/pro-subsidies) — New digital portal from April 15, 2025
+
+### Large-Scale Exhibition Opportunities
+
+| Opportunity | Location | Deadline | Notes |
+|-------------|----------|----------|-------|
+| **Overgaden** | Copenhagen | Feb 5, 2025 | 22,500 DKK honorarium + production |
+| **Triangle-Astérides** | Marseille | May 9, 2025 | 2-month residency, mid-career focus |
+| **DOM Art Residence Venice** | Venice Biennale | Check website | Personal Structures 2026, €2,200 covered |
+| **Folly Art Norg** | Drenthe, NL | Check website | Land art, public space, Aug 2026 |
+
+**Overgaden** — [overgaden.org](https://overgaden.org/en/open-calls/) — Grand-scale exhibitions, new production support
+
+**Triangle-Astérides** — Early/mid-career focus, research residency in Marseille
+
+### Japan Exchange (Building on Togatta Experience)
+
+| Program | Location | Duration | Deadline |
+|---------|----------|----------|----------|
+| **ARCUS Project** | Ibaraki | 3 months | ~March annually |
+| **ARCUS Research** | Ibaraki | 1 month | Rolling |
+| **TOKAS International** | Tokyo | 3 months | Check website |
+| **Akiyoshidai** | Yamaguchi | Variable | Jan 2026 |
+
+**TOKAS** — [tokyoartsandspace.jp](https://www.tokyoartsandspace.jp/en/) — Airfare + 4,200 JPY/day + 300,000 JPY project fee
+
+**ARCUS** — [arcus-project.com](https://www.arcus-project.com/en/) — Has hosted Netherlands artists, longest-running Japan residency
+
+### Teaching & Mentoring
+
+| Position | Institution | Notes |
+|----------|-------------|-------|
+| **Guest Tutor** | KABK | Check KABK vacancies regularly |
+| **Workshop Leader** | Grafische Werkplaats | Contact directly |
+| **Mentor** | De Ateliers | By invitation, check website |
+| **Visiting Artist** | Various academies | Via e-flux announcements |
+
+**KABK Vacancies** — [kabk.nl/vacancies](https://www.kabk.nl/en/about/organisation/vacancies)
+
+**e-flux Jobs** — [e-flux.com/announcements](https://www.e-flux.com/announcements/) — Filter by "teaching" or "education"
+
+### Prizes (Age-Appropriate)
+
+| Prize | Eligibility | Award | Deadline |
+|-------|-------------|-------|----------|
+| **Luxembourg Art Prize** | Any age | €20,000 / €10,000 / €5,000 | Check website |
+| **Münze Österreich** | Mid-career | €35,000 + exhibition | 2026 |
+| **NRW Mid-Career** | Born 1970-1985, NRW resident | Check website | Regional |
+
+**Note:** Royal Painting Prize (Koninklijke Prijs) has age limit of 35, now past eligibility
+
+### KABK Alumni Network
+
+**Keep an Eye Scholarship** — €10,000 (for recent graduates, via KABK)
+
+**Paul Schuitema Stipendium** — €3,000 (via KABK)
+
+**Stichting tot Steun** — Various grants for KABK alumni
+
+**KABK Alumni Services** — [kabk.nl/alumni](https://www.kabk.nl/en/alumni/alumni-services) — Job postings, workshops, open calls
+
+---
+
 ## Network Recommendations
 
 *Places similar to where applications have already succeeded — "who else would they recommend?"*
