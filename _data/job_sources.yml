@@ -1,0 +1,153 @@
+# Job boards and opportunity sources for visual artists
+# Categories: residency, teaching, curatorial, commission, grant, exhibition
+
+sources:
+  - name: e-flux Announcements
+    url: https://www.e-flux.com/announcements/
+    categories: [curatorial, teaching, exhibition, residency]
+    region: international
+    description: Leading platform for art world announcements
+    update_frequency: daily
+
+  - name: artjobs.eu
+    url: https://artjobs.eu/
+    categories: [teaching, curatorial, museum]
+    region: europe
+    description: European arts and culture job board
+    update_frequency: daily
+
+  - name: Academic Positions
+    url: https://academicpositions.com/jobs/field/entertainment-and-arts
+    categories: [teaching, research]
+    region: international
+    description: University and research positions
+    update_frequency: daily
+
+  - name: Tes Arts Jobs
+    url: https://www.tes.com/jobs/browse/art-and-design-europe
+    categories: [teaching]
+    region: europe
+    description: Art and design teaching positions
+    update_frequency: daily
+
+  - name: TransArtists Open Calls
+    url: https://www.transartists.org/en/transartists-calls
+    categories: [residency]
+    region: international
+    description: Largest residency database (1700+)
+    update_frequency: weekly
+
+  - name: Res Artis Open Calls
+    url: https://resartis.org/open-calls/
+    categories: [residency]
+    region: international
+    description: Worldwide residency network
+    update_frequency: weekly
+
+  - name: DutchCulture Open Calls
+    url: https://dutchculture.nl/en/open-calls
+    categories: [residency, grant, exhibition]
+    region: netherlands
+    description: Dutch arts opportunities
+    update_frequency: weekly
+
+  - name: Artenda Netherlands
+    url: https://artenda.net/selected-country/exhibition/Netherlands
+    categories: [exhibition, competition, grant]
+    region: netherlands
+    description: Aggregated Dutch art calls
+    update_frequency: daily
+
+  - name: Stroom Bulletin Board
+    url: https://www.stroom.nl/en/stroom-for-artists/bulletin-board-en
+    categories: [exhibition, grant, commission]
+    region: the_hague
+    description: The Hague arts opportunities
+    update_frequency: weekly
+
+  - name: Kunstpunt Groningen
+    url: https://www.kunstpuntgroningen.nl/en/for-artists/open-calls/
+    categories: [exhibition, commission]
+    region: groningen
+    description: Northern Netherlands calls
+    update_frequency: monthly
+
+  - name: KABK Vacancies
+    url: https://www.kabk.nl/en/about/organisation/vacancies
+    categories: [teaching]
+    region: the_hague
+    description: Royal Academy of Art positions
+    update_frequency: as_posted
+
+  - name: Gerrit Rietveld Academie
+    url: https://rietveldacademie.nl/en/page/25163/residencies-open-calls
+    categories: [residency, teaching]
+    region: amsterdam
+    description: Amsterdam academy opportunities
+    update_frequency: as_posted
+
+  - name: Mondriaan Fund
+    url: https://www.mondriaanfonds.nl/en/apply-for-a-grant/
+    categories: [grant, residency]
+    region: netherlands
+    description: Dutch national visual arts fund
+    update_frequency: continuous
+
+  - name: AIR-J Japan
+    url: https://air-j.info/en/program/
+    categories: [residency]
+    region: japan
+    description: Japanese residency database
+    update_frequency: weekly
+
+  - name: Paleis Amsterdam Open Call
+    url: https://www.paleisamsterdam.nl/en/open-call-2026-eng/
+    categories: [competition, exhibition]
+    region: netherlands
+    description: Royal Award of Modern Painting
+    update_frequency: annual
+
+categories:
+  residency:
+    label: Residencies
+    icon: 🏠
+  teaching:
+    label: Teaching
+    icon: 🎓
+  curatorial:
+    label: Curatorial
+    icon: 🖼️
+  commission:
+    label: Commissions
+    icon: 🎨
+  grant:
+    label: Grants
+    icon: 💰
+  exhibition:
+    label: Exhibitions
+    icon: 🖼️
+  competition:
+    label: Competitions
+    icon: 🏆
+  museum:
+    label: Museum Jobs
+    icon: 🏛️
+  research:
+    label: Research
+    icon: 🔬
+
+regions:
+  international:
+    label: International
+  europe:
+    label: Europe
+  netherlands:
+    label: Netherlands
+  the_hague:
+    label: The Hague
+  amsterdam:
+    label: Amsterdam
+  groningen:
+    label: Groningen
+  japan:
+    label: Japan
