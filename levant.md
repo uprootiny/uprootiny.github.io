@@ -379,134 +379,300 @@ Direct links to arts/culture job listings (visit directly — scraping blocked):
 
 ## Israeli Universities — Graduate Programs
 
-### Mathematics, CS & AI Programs
+### Quick Comparison
 
-| University | Programs | Strengths | Links |
-|------------|----------|-----------|-------|
-| **Technion** | MSc/PhD Math, CS, Data Science | Applied math, ML, optimization | [graduate.technion.ac.il](https://graduate.technion.ac.il/en/) |
-| **Weizmann Institute** | MSc/PhD Math, CS | Theory, pure math, ML research | [weizmann.ac.il/feinberg](https://www.weizmann.ac.il/feinberg/) |
-| **Hebrew University** | MSc/PhD Math, CS, Cognitive Science | NLP, computational linguistics | [huji.ac.il/graduate](https://new.huji.ac.il/en/page/2370) |
-| **Tel Aviv University** | MSc/PhD Math, CS, Statistics | Applied ML, NLP, theoretical CS | [tau.ac.il/graduate](https://english.tau.ac.il/graduate_students) |
-| **Ben-Gurion University** | MSc/PhD Math, CS, Data Science | Cyber, ML, applied math | [bgu.ac.il/gradstudies](https://in.bgu.ac.il/en/Pages/graduate-studies.aspx) |
-| **Bar-Ilan University** | MSc/PhD Math, CS | NLP, computational linguistics | [biu.ac.il/graduate](https://www.biu.ac.il/en/graduate-studies) |
-| **Reichman University (IDC)** | MSc Data Science, ML | Industry connections, applied | [runi.ac.il](https://www.runi.ac.il/en/schools/efi-arazi/graduate/data-science/) |
+| University | Deadline (Fall 2026) | GPA Required | GRE | App Fee | Tuition/Year |
+|------------|---------------------|--------------|-----|---------|--------------|
+| **Weizmann** | March 28, 2026 | 90+ | Optional | Free | Free + stipend |
+| **Hebrew U** | March 31, 2026 | 80-85 | Optional | $120 | $10-30k |
+| **Tel Aviv U** | May 31, 2026 | Varies | Varies | $130-150 | $10-30k |
+| **Technion** | April & November | Varies | Program-dep. | TBD | Varies |
+| **Ben-Gurion** | October 2025+ | Varies | Program-dep. | ~$100 | $10-30k |
+| **Bar-Ilan** | Varies by program | 3.0+ | Program-dep. | ~$100 | $5-12k |
 
 ### Particularly Strong For Your Background
 
 **Computational Linguistics / NLP:**
-- Hebrew University — [cs.huji.ac.il](https://www.cs.huji.ac.il/) — Strong NLP group
-- Bar-Ilan University — [biu-nlp.github.io](https://biu-nlp.github.io/) — Yoav Goldberg's group
-- Technion — [cs.technion.ac.il](https://www.cs.technion.ac.il/) — NLP & ML
+- **Bar-Ilan University** — [biu-nlp.github.io](https://biu-nlp.github.io/) — Yoav Goldberg's group (world-class)
+- **Hebrew University** — [cs.huji.ac.il](https://www.cs.huji.ac.il/) — Strong NLP group
+- **Technion** — [cs.technion.ac.il](https://www.cs.technion.ac.il/) — NLP & ML
 
 **Mathematical Physics / Applied Math:**
-- Weizmann — [weizmann.ac.il/math](https://www.weizmann.ac.il/math/) — World-class theory
-- Technion — Applied math, optimization, physics connections
-- Hebrew University — Einstein Institute of Mathematics
+- **Weizmann** — [weizmann.ac.il/math](https://www.weizmann.ac.il/math/) — World-class theory
+- **Technion** — Applied math, optimization, physics connections
+- **Hebrew University** — Einstein Institute of Mathematics
 
 **Machine Learning / AI Research:**
-- Tel Aviv University — Blavatnik School of CS
-- Technion — Andrew and Erna Viterbi Faculty of EE
-- Weizmann — [weizmann.ac.il/cs](https://www.weizmann.ac.il/cs/)
+- **Tel Aviv University** — Blavatnik School of CS
+- **Technion** — Andrew and Erna Viterbi Faculty of EE
+- **Weizmann** — [weizmann.ac.il/cs](https://www.weizmann.ac.il/cs/)
 
 ---
 
-## Academic Application Timeline
+## University-Specific Requirements
 
-### Israeli Academic Calendar
+### Weizmann Institute of Science
 
-- **Academic year:** October – July (Semester A: Oct-Feb, Semester B: Mar-Jul)
-- **Application period:** Typically January – May for following October
-- **Results:** April – July
+**Best for:** Pure math, theoretical CS, ML research. **No tuition, stipend provided.**
 
-### Realistic Time Investment
+| Requirement | Details |
+|-------------|---------|
+| **Deadline** | March 28, 2026 (opens November 5, 2025) |
+| **GPA** | 90+ required (below 90: submit explanation letter) |
+| **GRE** | Optional but "useful" for non-Israeli degrees |
+| **TOEFL/IELTS** | Required only if mother tongue ≠ English |
+| **Application fee** | None |
+| **Interview** | Selected candidates only (30-60 min) |
 
-**A strong graduate application takes 6-10 weeks.** This includes research, writing, and coordination.
+**Required documents:**
+- [ ] Online application form
+- [ ] Official BSc transcripts
+- [ ] Recommendation letters (research supervisors preferred)
+- [ ] CV with photograph
+- [ ] ID/Passport copy
+- [ ] Notarized translations if documents not in English/Hebrew
 
-| Component | Time Needed | Notes |
-|-----------|-------------|-------|
-| Program research | 2-3 weeks | Identify 5-8 programs, read faculty profiles |
-| Statement of purpose | 2-3 weeks | Expect 5+ drafts |
-| CV/academic CV | 1 week | Different from industry CV |
-| Recommendation letters | 3-4 weeks | Ask early, send reminders |
+**Apply:** [erez.weizmann.ac.il](https://erez.weizmann.ac.il/pls/htmldb/f?p=372:102) | [How to apply](https://www.weizmann.ac.il/feinberg/admissions/how-apply)
+
+---
+
+### Hebrew University of Jerusalem
+
+**Best for:** NLP, cognitive science, interdisciplinary research
+
+| Requirement | Details |
+|-------------|---------|
+| **Deadline** | March 31, 2026 (late: June 2 – Aug 1, case-by-case) |
+| **GPA** | 80 (non-research) / 85 (research track) / 85+ (Math MSc) |
+| **GRE** | Optional; high scores exempt from Psychometric |
+| **TOEFL** | 550 PBT / IELTS 6.5 (if native language ≠ English) |
+| **Hebrew** | Yael test 105+ for Hebrew-taught programs |
+| **Application fee** | $120 USD (non-refundable) |
+| **Interview** | Some programs |
+
+**Required documents:**
+- [ ] Online application (portal only)
+- [ ] Official transcripts
+- [ ] Recommendation letters
+- [ ] Personal statement
+- [ ] Degree certificate (official or conditional)
+- [ ] Resume/CV
+
+**Scholarships:** 10% tuition discount for applying by deadline; GPA 3.8+ may qualify for Outstanding Student Waiver
+
+**Apply:** [info-overseas.huji.ac.il](https://info-overseas.huji.ac.il/) | [Graduate application](https://overseas.huji.ac.il/admissions/apply-now/apply-now-graduate/)
+
+---
+
+### Tel Aviv University
+
+**Best for:** Applied ML, statistics, large research community
+
+| Requirement | Details |
+|-------------|---------|
+| **Deadline** | May 31, 2026 (dorm: apply by Feb 15) |
+| **GPA** | Program-dependent (typically 80+) |
+| **GRE/GMAT** | Required for some programs |
+| **TOEFL** | 79 iBT / 550 PBT / IELTS 6.5 |
+| **Hebrew** | Yael test 105+ for Hebrew-taught programs |
+| **Application fee** | $130-150 USD (non-refundable) |
+
+**Required documents:**
+- [ ] Online application
+- [ ] Bachelor's degree diploma (certified copy)
+- [ ] Official transcript
+- [ ] Statement of purpose
+- [ ] Resume/CV
+- [ ] TOEFL/IELTS scores
+
+**Apply:** [portal.telavivuniv.org](https://portal.telavivuniv.org/createprofile.php) | [Graduate info](https://en-go.tau.ac.il/graduate)
+
+---
+
+### Technion — Israel Institute of Technology
+
+**Best for:** Applied math, optimization, engineering applications of ML
+
+| Requirement | Details |
+|-------------|---------|
+| **Deadlines** | April and November (rolling for some programs) |
+| **GPA** | Not publicly specified |
+| **GRE** | Required for: Aerospace, Nano, EE, Autonomous Systems, Robotics. Optional otherwise |
+| **TOEFL/IELTS** | Required for non-English speaking countries |
+| **Hebrew** | Yael/YAELnet 121+ for Hebrew programs |
+| **Interview** | May be required (English proficiency) |
+
+**Required documents:**
+- [ ] Online application form
+- [ ] Academic transcripts
+- [ ] Degree certificate
+- [ ] CV with relevant background
+- [ ] Recommendation letters (PhD: 2+, including thesis advisor)
+- [ ] ID/Passport copy
+
+**CS-specific:** MSc requires 20-32 credits + thesis. Mandatory: Computability Theory, Computer Architecture.
+
+**Apply:** [graduate.technion.ac.il](https://graduate.technion.ac.il/en/) | Contact: IntGrad@technion.ac.il
+
+---
+
+### Ben-Gurion University
+
+**Best for:** Cyber, data science, smaller cohorts
+
+| Requirement | Details |
+|-------------|---------|
+| **Deadline** | October 2025+ (visa consideration: November 2025) |
+| **GPA** | Not publicly specified |
+| **GRE/GMAT** | Program-dependent |
+| **TOEFL** | 85/120 or IELTS 6.5 |
+| **Application fee** | ~$100 USD |
+| **Thesis track** | Must contact supervisor before applying |
+
+**Required documents:**
+- [ ] Online application
+- [ ] Academic transcripts (original or authorized copies)
+- [ ] Bachelor's certificate
+- [ ] Notarized translations for non-English documents
+- [ ] Letter of recommendation
+- [ ] Thesis track: supervisor confirmation
+
+**CS MSc:** 24-27 credits + thesis. Specializations: Cyber Security, AI, Autonomous Systems, Bioinformatics.
+
+**Apply:** [bgu.ac.il/graduate](https://in.bgu.ac.il/en/international/Pages/Graduate-Studies.aspx)
+
+---
+
+### Bar-Ilan University
+
+**Best for:** NLP (Yoav Goldberg), data science, lower tuition
+
+| Requirement | Details |
+|-------------|---------|
+| **Deadline** | Varies by program (registration opens Feb 2025) |
+| **GPA** | 3.0+ recommended |
+| **GRE/GMAT** | Program-dependent (MBA requires) |
+| **TOEFL/IELTS** | Required for English-taught programs |
+| **Hebrew** | Yael test 105+ for Hebrew programs |
+| **Tuition** | $5,000-12,000/year (lowest among major universities) |
+
+**Required documents:**
+- [ ] Online application
+- [ ] Academic transcripts
+- [ ] Recommendation letters
+- [ ] Personal statement
+- [ ] Portfolio (if applicable)
+- [ ] ID documents
+
+**CS MSc:** 26 semester hours. Data Science joint specialization available.
+
+**PhD tracks:** Standard (requires MSc with thesis 90+, GPA 85+), Direct (without MSc), Combined (MSc+PhD)
+
+**Apply:** [graduate-school.biu.ac.il](https://graduate-school.biu.ac.il/en)
+
+---
+
+## Application Timeline (Fall 2026 Start)
+
+### Time Investment
+
+**A strong application takes 8-12 weeks.** Don't rush.
+
+| Component | Time | Notes |
+|-----------|------|-------|
+| Program research | 2-3 weeks | Read faculty publications, identify 5-8 programs |
+| Statement of purpose | 2-3 weeks | Expect 5+ drafts, get feedback |
 | Research proposal (PhD) | 2-4 weeks | Required for most PhD programs |
-| Language tests (if needed) | 4-8 weeks | Hebrew proficiency, GRE |
-| Application forms | 1 week | Tedious but necessary |
+| CV preparation | 1 week | Academic format, not industry |
+| Recommendation letters | 4 weeks | Ask early, send reminders |
+| Language tests | 4-8 weeks | Register early for TOEFL/Yael if needed |
+| Application forms | 1 week | Tedious but important |
 
-### Month-by-Month Calendar (For October Start)
+### Month-by-Month Calendar
 
-**November-December:** Research phase
-- [ ] Identify target programs (5-8 realistic options)
+**October-November 2025:** Research phase
+- [ ] Identify 5-8 target programs
 - [ ] Read faculty publications — who would you want to work with?
 - [ ] Email 2-3 potential advisors (brief, specific questions)
-- [ ] Check funding options (scholarships, TA positions)
+- [ ] Check application deadlines (they vary!)
+- [ ] Register for TOEFL/IELTS if needed
 
-**January:** Preparation begins
-- [ ] Request transcripts (official, translated if needed)
-- [ ] Ask recommenders (minimum 3, ideally 4)
+**December 2025:** Preparation
+- [ ] Request official transcripts (allow 2-4 weeks)
+- [ ] Ask recommenders (minimum 3, give them 4+ weeks)
 - [ ] Start statement of purpose draft
-- [ ] Register for any required tests
+- [ ] Begin research proposal outline (for PhD)
 
-**February-March:** Core writing
+**January-February 2026:** Core writing
 - [ ] Complete statement of purpose (get feedback from 2-3 people)
 - [ ] Write research proposal if required
 - [ ] Finalize academic CV
 - [ ] Follow up with recommenders
+- [ ] Take language tests if needed
 
-**March-April:** Submission
-- [ ] Submit applications (aim for 2 weeks before deadline)
+**March 2026:** Submission
+- [ ] Submit Weizmann (deadline: March 28)
+- [ ] Submit Hebrew University (deadline: March 31)
 - [ ] Confirm all materials received
 - [ ] Send thank-you notes to recommenders
 
-**April-June:** Waiting & interviews
-- [ ] Prepare for interviews (common for competitive programs)
-- [ ] Visit campuses if invited
-- [ ] Compare offers (funding, advisor fit, program structure)
+**April-May 2026:** Remaining submissions
+- [ ] Submit Technion (April deadline)
+- [ ] Submit Tel Aviv University (deadline: May 31)
+- [ ] Prepare for interviews
 
-**July:** Decision
+**May-July 2026:** Decisions
+- [ ] Attend interviews if invited
+- [ ] Visit campuses
+- [ ] Compare offers (funding, advisor fit, location)
 - [ ] Accept offer, decline others promptly
 - [ ] Begin housing search
-- [ ] Connect with future cohort
 
-### Application Components
+### Application Checklist (Universal)
 
-**Statement of Purpose (תכנית מחקר)**
-- 1-2 pages, specific to each program
-- What you want to study and why
-- Why this program/faculty specifically
-- Your relevant background
-- Career goals
+**Before applying:**
+- [ ] Check eligibility (degree requirements, GPA minimums)
+- [ ] Verify deadline and format
+- [ ] Review selection criteria
+- [ ] Confirm language test scores are ready or scheduled
 
-**Research Proposal (PhD)**
-- 3-5 pages typical
-- Clear research question
-- Methodology outline
-- Connection to faculty expertise
-- Feasibility within program timeframe
+**Core materials:**
+- [ ] Application form (complete all fields)
+- [ ] Statement of purpose (1-2 pages, program-specific)
+- [ ] Academic CV (publications, research, teaching)
+- [ ] Official transcripts (translated if needed)
+- [ ] Degree certificate or expected completion letter
+- [ ] 2-3 recommendation letters
+- [ ] Research proposal (PhD programs)
 
-**Academic CV**
-- Education with thesis titles
-- Publications (even preprints)
-- Research experience
-- Teaching experience
-- Relevant skills (programming, languages)
-- Conferences, presentations
+**If required:**
+- [ ] TOEFL/IELTS scores (send to institution)
+- [ ] GRE scores
+- [ ] Hebrew proficiency (Yael test)
+- [ ] Portfolio or writing samples
+- [ ] Application fee payment
 
-**Recommendation Letters**
-- 3 required, 4 safer
-- Academic recommenders preferred
-- Give them: your CV, statement draft, deadline, submission link
-- 4 weeks minimum notice
+**After submitting:**
+- [ ] Screenshot/save confirmation
+- [ ] Note expected response date
+- [ ] Calendar reminder for follow-up
+- [ ] If rejected: request feedback
 
-### Funding Options
+---
 
-| Source | Amount | Notes |
-|--------|--------|-------|
-| **University scholarships** | Full tuition + stipend | Competitive, apply simultaneously |
-| **Israel Academy of Sciences** | Varies | [academy.ac.il](https://www.academy.ac.il/) |
-| **Azrieli Foundation** | Full funding | [azrielifoundation.org](https://azrielifoundation.org/fellows/) |
-| **Rothschild Foundation** | Varies | Post-doc focus |
-| **Teaching Assistantship** | Partial tuition + stipend | Common for MSc/PhD |
-| **Research Assistantship** | Varies | Depends on advisor grants |
+## Funding Options
+
+| Source | Amount | Eligibility | Link |
+|--------|--------|-------------|------|
+| **Weizmann stipend** | Full living expenses | All admitted students | Included with admission |
+| **Azrieli Foundation** | Full funding | Excellent candidates | [azrielifoundation.org/fellows](https://azrielifoundation.org/fellows/) |
+| **Israel Academy of Sciences** | Varies | Research excellence | [academy.ac.il](https://www.academy.ac.il/) |
+| **Fulbright Israel** | Full funding | US citizens | [fulbright.org.il](https://www.fulbright.org.il/) |
+| **University scholarships** | Partial-full | Apply with admission | Check each university |
+| **Teaching Assistantship** | Tuition + stipend | Most MSc/PhD programs | Apply through department |
+| **Research Assistantship** | Varies | Advisor's grant funding | Negotiate with advisor |
+
+**Note:** Weizmann is unique — no tuition and guaranteed stipend for all admitted students.
 
 ---
 
