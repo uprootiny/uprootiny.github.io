@@ -409,11 +409,61 @@ Direct links to arts/culture job listings (visit directly — scraping blocked):
 
 ---
 
-## University-Specific Requirements
+## University Checklists & Key Links
 
-### Weizmann Institute of Science
+Each university section includes: **Portal** → **Departments** → **Faculty** → **Seminars** → **Checklist**
+
+---
+
+## 1. Weizmann Institute of Science
 
 **Best for:** Pure math, theoretical CS, ML research. **No tuition, stipend provided.**
+
+### Key Links
+
+| Resource | Link |
+|----------|------|
+| **Application Portal** | [erez.weizmann.ac.il](https://erez.weizmann.ac.il/pls/htmldb/f?p=372:102) |
+| **How to Apply (MSc)** | [weizmann.ac.il/feinberg/admissions/how-apply](https://www.weizmann.ac.il/feinberg/admissions/how-apply) |
+| **How to Apply (PhD)** | [weizmann.ac.il/feinberg/admissions/how-apply-0](https://www.weizmann.ac.il/feinberg/admissions/how-apply-0) |
+| **MSc Programs** | [weizmann.ac.il/feinberg/admissions/about-msc-tracks](https://www.weizmann.ac.il/feinberg/admissions/about-msc-tracks) |
+| **PhD Programs** | [weizmann.ac.il/feinberg/admissions/about-phd-program](https://www.weizmann.ac.il/feinberg/admissions/about-phd-program) |
+| **Direct PhD** | [weizmann.ac.il/feinberg/admissions/about-direct-phd-program](https://www.weizmann.ac.il/feinberg/admissions/about-direct-phd-program) |
+| **Summer School (Kupcinet-Getz)** | [weizmann-pages.co.il/kupcinet-getz](https://weizmann-pages.co.il/kupcinet-getz-international-summer-program/) |
+
+### Departments & Faculty
+
+| Department | Faculty Directory | Research Areas |
+|------------|------------------|----------------|
+| **Mathematics** | [weizmann.ac.il/math/people](https://www.weizmann.ac.il/math/people) | Algebra, analysis, geometry, probability, combinatorics |
+| **Computer Science & Applied Math** | [weizmann.ac.il/math/people](https://www.weizmann.ac.il/math/people) | AI, systems, computational biology, theory |
+| **Physics** | [weizmann.ac.il/physics/faculty](https://www.weizmann.ac.il/physics/faculty) | Condensed matter, particle physics, astrophysics |
+| **Research by Interest** | [weizmann.ac.il/math/about/research-interests](https://www.weizmann.ac.il/math/about/research-interests-faculty-member) | Browse faculty by topic |
+
+### Seminars
+
+| Seminar | Schedule | Link |
+|---------|----------|------|
+| **All Events & Seminars** | Varies | [weizmann.ac.il/math/events](https://www.weizmann.ac.il/math/events?filter=seminars_and_lectures) |
+| **Foundations of CS Seminar** | Weekly | Check events page |
+| **Geometric Functional Analysis & Probability** | Weekly | Check events page |
+| **Graduate Studies Info** | — | [weizmann.ac.il/math/graduate-studies](https://www.weizmann.ac.il/math/graduate-studies) |
+| **Join Us / Recruitment** | — | [weizmann.ac.il/math/join-us](https://www.weizmann.ac.il/math/join-us) |
+
+### Potential Advisors (Math/CS)
+
+| Faculty | Research Area | Page |
+|---------|---------------|------|
+| **Tamar Ziegler** | Ergodic theory, combinatorics | [weizmann.ac.il/math/ziegler](https://www.weizmann.ac.il/math/ziegler/) |
+| **Boaz Klartag** | Convex geometry, probability | [weizmann.ac.il/math/klartag](https://www.weizmann.ac.il/math/klartag/) |
+| **Ofer Zeitouni** | Probability, random matrices | [weizmann.ac.il/math/zeitouni](https://www.weizmann.ac.il/math/zeitouni/) |
+| **Assaf Naor** | Metric geometry, algorithms | [weizmann.ac.il/math/naor](https://www.weizmann.ac.il/math/naor/) |
+| **Shimon Ullman** | Computer vision, cognition | [weizmann.ac.il/cs/ullman](https://www.weizmann.ac.il/cs/ullman/) |
+| **David Harel** | Software engineering, biology | [weizmann.ac.il/cs/harel](https://www.weizmann.ac.il/cs/harel/) |
+| **Oded Goldreich** | Complexity theory | [weizmann.ac.il/cs/oded](https://www.weizmann.ac.il/cs/oded/) |
+| **Michal Irani** | Vision, ML | [weizmann.ac.il/cs/irani](https://www.weizmann.ac.il/cs/irani/) |
+
+### Requirements
 
 | Requirement | Details |
 |-------------|---------|
@@ -424,15 +474,30 @@ Direct links to arts/culture job listings (visit directly — scraping blocked):
 | **Application fee** | None |
 | **Interview** | Selected candidates only (30-60 min) |
 
-**Required documents:**
-- [ ] Online application form
-- [ ] Official BSc transcripts
-- [ ] Recommendation letters (research supervisors preferred)
-- [ ] CV with photograph
-- [ ] ID/Passport copy
-- [ ] Notarized translations if documents not in English/Hebrew
+### Checklist
 
-**Apply:** [erez.weizmann.ac.il](https://erez.weizmann.ac.il/pls/htmldb/f?p=372:102) | [How to apply](https://www.weizmann.ac.il/feinberg/admissions/how-apply)
+**Before applying:**
+- [ ] Identified 2-4 potential advisors from faculty list above
+- [ ] Read 2-3 recent papers from each advisor
+- [ ] Emailed at least 2 faculty members (use template in prep guide below)
+- [ ] Confirmed GPA meets 90+ threshold (or prepared explanation)
+- [ ] Checked [events page](https://www.weizmann.ac.il/math/events) for upcoming seminars to attend virtually
+
+**Application materials:**
+- [ ] Create account at [erez.weizmann.ac.il](https://erez.weizmann.ac.il/pls/htmldb/f?p=372:102)
+- [ ] Official BSc transcripts (PDF, institutional letterhead)
+- [ ] CV with passport photograph
+- [ ] Statement of purpose (1-2 pages, Weizmann-specific)
+- [ ] 2-3 recommendation letters (entered referee emails in system)
+- [ ] ID/Passport copy
+- [ ] GRE/TOEFL scores (if applicable)
+- [ ] Notarized translations (if documents not in English/Hebrew)
+
+**After submitting:**
+- [ ] Save confirmation number
+- [ ] Calendar reminder: April-May (interview period)
+- [ ] Follow up with recommenders to confirm submission
+- [ ] Continue reading in target area
 
 ---
 
@@ -696,9 +761,51 @@ Weizmann interviews selected candidates for 30-60 minutes.
 
 ---
 
-### Hebrew University of Jerusalem
+## 2. Hebrew University of Jerusalem
 
-**Best for:** NLP, cognitive science, interdisciplinary research
+**Best for:** NLP, cognitive science, interdisciplinary research, Einstein Institute of Mathematics
+
+### Key Links
+
+| Resource | Link |
+|----------|------|
+| **Application Portal (International)** | [overseas.huji.ac.il](https://overseas.huji.ac.il/admissions/apply-now/apply-now-graduate/) |
+| **Graduate Studies (General)** | [huji.ac.il/graduate](https://new.huji.ac.il/en/page/2370) |
+| **International Admissions** | [info-overseas.huji.ac.il](https://info-overseas.huji.ac.il/) |
+| **Rothberg International School** | [overseas.huji.ac.il](https://overseas.huji.ac.il/) |
+
+### Departments & Faculty
+
+| Department | Faculty Directory | Research Areas |
+|------------|------------------|----------------|
+| **Einstein Institute of Mathematics** | [math.huji.ac.il/people](http://mathematics.huji.ac.il/people) | Pure math, algebra, analysis, geometry, topology |
+| **School of Computer Science** | [cs.huji.ac.il/people](https://www.cs.huji.ac.il/people) | AI, NLP, ML, cryptography, algorithms |
+| **Racah Institute of Physics** | [phys.huji.ac.il/people](https://phys.huji.ac.il/people) | Theoretical physics, quantum, astrophysics |
+| **Edmond & Lily Safra Center for Brain Sciences** | [elsc.huji.ac.il](https://elsc.huji.ac.il/) | Computational neuroscience |
+
+### Seminars
+
+| Seminar | Schedule | Link |
+|---------|----------|------|
+| **Math Colloquia** | Thursdays | [math.huji.ac.il/seminars](http://mathematics.huji.ac.il/seminars) |
+| **CS Seminars** | Varies | [cs.huji.ac.il/seminars](https://www.cs.huji.ac.il/seminars) |
+| **Algebra Seminar** | Weekly | Check department page |
+| **Analysis Seminar** | Weekly | Check department page |
+| **Logic Seminar** | Weekly | Check department page |
+| **Machine Learning Seminar** | Weekly | Check CS page |
+
+### Potential Advisors (Math/CS/NLP)
+
+| Faculty | Research Area | Department |
+|---------|---------------|------------|
+| **Nati Linial** | Combinatorics, TCS | Computer Science |
+| **Amnon Shashua** | Computer vision, ML | CS / Mobileye founder |
+| **Yishay Mansour** | ML theory, algorithms | CS (also TAU) |
+| **Gil Kalai** | Combinatorics, quantum | Mathematics |
+| **Alex Lubotzky** | Group theory, graph theory | Mathematics |
+| **Eran Yahav** | Programming languages | Computer Science |
+
+### Requirements
 
 | Requirement | Details |
 |-------------|---------|
@@ -710,23 +817,80 @@ Weizmann interviews selected candidates for 30-60 minutes.
 | **Application fee** | $120 USD (non-refundable) |
 | **Interview** | Some programs |
 
-**Required documents:**
-- [ ] Online application (portal only)
-- [ ] Official transcripts
-- [ ] Recommendation letters
-- [ ] Personal statement
-- [ ] Degree certificate (official or conditional)
-- [ ] Resume/CV
-
 **Scholarships:** 10% tuition discount for applying by deadline; GPA 3.8+ may qualify for Outstanding Student Waiver
 
-**Apply:** [info-overseas.huji.ac.il](https://info-overseas.huji.ac.il/) | [Graduate application](https://overseas.huji.ac.il/admissions/apply-now/apply-now-graduate/)
+### Checklist
+
+**Before applying:**
+- [ ] Identified target department (Math vs CS vs interdisciplinary)
+- [ ] Browsed [math seminars](http://mathematics.huji.ac.il/seminars) to understand research culture
+- [ ] Identified 2-3 potential advisors from faculty lists
+- [ ] Emailed advisors with specific questions about their work
+- [ ] Registered for TOEFL/IELTS if required
+- [ ] Checked if Yael Hebrew test needed (for Hebrew-taught programs)
+
+**Application materials:**
+- [ ] Create account at [overseas.huji.ac.il](https://overseas.huji.ac.il/admissions/apply-now/apply-now-graduate/)
+- [ ] Official transcripts (authorized copies)
+- [ ] Degree certificate (or expected completion letter)
+- [ ] Personal statement (1-2 pages)
+- [ ] Academic CV/Resume
+- [ ] 2-3 recommendation letters
+- [ ] TOEFL/IELTS scores (if required)
+- [ ] Application fee: $120 USD
+
+**After submitting:**
+- [ ] Save confirmation
+- [ ] Check for scholarship eligibility (10% early discount)
+- [ ] Follow up with recommenders
+- [ ] Prepare for possible interview
 
 ---
 
-### Tel Aviv University
+## 3. Tel Aviv University
 
-**Best for:** Applied ML, statistics, large research community
+**Best for:** Applied ML, statistics, large research community, industry connections
+
+### Key Links
+
+| Resource | Link |
+|----------|------|
+| **Application Portal** | [portal.telavivuniv.org](https://portal.telavivuniv.org/createprofile.php) |
+| **Graduate Admissions** | [en-go.tau.ac.il/graduate](https://en-go.tau.ac.il/graduate) |
+| **International Students** | [international.tau.ac.il](https://international.tau.ac.il/) |
+| **Graduate School** | [english.tau.ac.il/graduate_students](https://english.tau.ac.il/graduate_students) |
+
+### Departments & Faculty
+
+| Department | Faculty Directory | Research Areas |
+|------------|------------------|----------------|
+| **School of Computer Science & AI** | [en.cs.tau.ac.il/computer/CSResearchers](https://en.cs.tau.ac.il/computer/CSResearchers) | ML, NLP, vision, theory, systems |
+| **School of Mathematical Sciences** | [en-math.tau.ac.il/people](https://en-math.tau.ac.il/people) | Pure math, applied math, statistics |
+| **School of Physics & Astronomy** | [en-physics.tau.ac.il/people](https://en-physics.tau.ac.il/people) | Theoretical physics, astrophysics |
+| **Sagol School of Neuroscience** | [sagol.tau.ac.il](https://sagol.tau.ac.il/) | Computational neuroscience |
+
+### Seminars
+
+| Seminar | Schedule | Link |
+|---------|----------|------|
+| **CS School Calendar** | Varies | [CS Calendar](https://sites.google.com/view/cscalendar/cs-school-calendar) |
+| **CS Events & Seminars** | Varies | [tau.ac.il/computer/events](https://exactsci-english-cms.tau.ac.il/computer/events_main) |
+| **Math Colloquia** | Mondays | Check department page |
+| **Combinatorics Seminar** | Weekly | Check department page |
+| **Theory of Computing Seminar** | Weekly | Check CS page |
+
+### Potential Advisors (Math/CS/ML)
+
+| Faculty | Research Area | Department |
+|---------|---------------|------------|
+| **Lior Wolf** | Deep learning, vision | Computer Science |
+| **Yishay Mansour** | ML theory, algorithms | CS (also HUJI) |
+| **Amir Globerson** | Machine learning | Computer Science |
+| **Haim Avron** | Numerical linear algebra | Applied Math |
+| **Ran El-Yaniv** | ML, NLP | Computer Science |
+| **Daniel Soudry** | Deep learning theory | EE (Technion, collaborates) |
+
+### Requirements
 
 | Requirement | Details |
 |-------------|---------|
@@ -737,21 +901,79 @@ Weizmann interviews selected candidates for 30-60 minutes.
 | **Hebrew** | Yael test 105+ for Hebrew-taught programs |
 | **Application fee** | $130-150 USD (non-refundable) |
 
-**Required documents:**
-- [ ] Online application
-- [ ] Bachelor's degree diploma (certified copy)
-- [ ] Official transcript
-- [ ] Statement of purpose
-- [ ] Resume/CV
-- [ ] TOEFL/IELTS scores
+### Checklist
 
-**Apply:** [portal.telavivuniv.org](https://portal.telavivuniv.org/createprofile.php) | [Graduate info](https://en-go.tau.ac.il/graduate)
+**Before applying:**
+- [ ] Identified target school (CS, Math, or interdisciplinary)
+- [ ] Checked [CS calendar](https://sites.google.com/view/cscalendar/cs-school-calendar) for seminar schedule
+- [ ] Reviewed [faculty research pages](https://en.cs.tau.ac.il/computer/CSResearchers)
+- [ ] Contacted 2-3 potential advisors
+- [ ] Checked housing deadlines (Feb 15 for dorms)
+- [ ] Registered for TOEFL/IELTS if required
+
+**Application materials:**
+- [ ] Create account at [portal.telavivuniv.org](https://portal.telavivuniv.org/createprofile.php)
+- [ ] Bachelor's degree diploma (certified copy)
+- [ ] Official transcripts
+- [ ] Statement of purpose
+- [ ] Academic CV/Resume
+- [ ] 2-3 recommendation letters
+- [ ] TOEFL/IELTS scores
+- [ ] Application fee: $130-150 USD
+
+**After submitting:**
+- [ ] Save confirmation
+- [ ] Apply for housing if needed (by Feb 15)
+- [ ] Follow up with recommenders
+- [ ] Monitor [CS news](https://en.cs.tau.ac.il/computer/news_main) for updates
 
 ---
 
-### Technion — Israel Institute of Technology
+## 4. Technion — Israel Institute of Technology
 
-**Best for:** Applied math, optimization, engineering applications of ML
+**Best for:** Applied math, optimization, engineering applications of ML, autonomous systems
+
+### Key Links
+
+| Resource | Link |
+|----------|------|
+| **Application Portal** | [graduate.technion.ac.il](https://graduate.technion.ac.il/en/) |
+| **Graduate School** | [graduate.technion.ac.il/en/graduate-studies](https://graduate.cs.technion.ac.il/en/graduate-studies/) |
+| **International Admissions** | Contact: IntGrad@technion.ac.il |
+| **CS Graduate Studies** | [graduate.cs.technion.ac.il](https://graduate.cs.technion.ac.il/) |
+
+### Departments & Faculty
+
+| Department | Faculty Directory | Research Areas |
+|------------|------------------|----------------|
+| **Taub Faculty of Computer Science** | [cs.technion.ac.il/people/faculty](https://www.cs.technion.ac.il/people/faculty/) | Algorithms, ML, systems, security |
+| **Faculty of Mathematics** | [math.technion.ac.il/en/people](https://math.technion.ac.il/en/people/) | Pure math, applied math, combinatorics |
+| **Andrew & Erna Viterbi Faculty of EE** | [ee.technion.ac.il/people](https://ee.technion.ac.il/people/) | Signal processing, ML, communications |
+| **Faculty of Physics** | [physics.technion.ac.il/people](https://physics.technion.ac.il/people/) | Theoretical physics, quantum |
+
+### Seminars
+
+| Seminar | Schedule | Link |
+|---------|----------|------|
+| **CS Colloquia & Seminars** | Varies | [cs.technion.ac.il/colloq](https://www.cs.technion.ac.il/colloq/) |
+| **CS Events** | Varies | [cs.technion.ac.il/events](https://www.cs.technion.ac.il/events/) |
+| **Math Seminars** | Varies | Check department page |
+| **Theory Seminar** | Weekly | Check CS colloquia page |
+| **ML/Vision Seminar** | Weekly | Check CS colloquia page |
+
+### Potential Advisors (Math/CS/ML)
+
+| Faculty | Research Area | Department |
+|---------|---------------|------------|
+| **Daniel Soudry** | Deep learning theory | Electrical Engineering |
+| **Shie Mannor** | Reinforcement learning | Electrical Engineering |
+| **Roy Schwartz** | NLP | Computer Science |
+| **Amir Globerson** | Machine learning | CS (also TAU) |
+| **Ron Kimmel** | Geometry, vision | Computer Science |
+| **Nir Ailon** | ML, algorithms | Computer Science |
+| **Gil Barequet** | Computational geometry | Computer Science |
+
+### Requirements
 
 | Requirement | Details |
 |-------------|---------|
@@ -762,23 +984,81 @@ Weizmann interviews selected candidates for 30-60 minutes.
 | **Hebrew** | Yael/YAELnet 121+ for Hebrew programs |
 | **Interview** | May be required (English proficiency) |
 
-**Required documents:**
-- [ ] Online application form
-- [ ] Academic transcripts
-- [ ] Degree certificate
-- [ ] CV with relevant background
-- [ ] Recommendation letters (PhD: 2+, including thesis advisor)
-- [ ] ID/Passport copy
-
 **CS-specific:** MSc requires 20-32 credits + thesis. Mandatory: Computability Theory, Computer Architecture.
 
-**Apply:** [graduate.technion.ac.il](https://graduate.technion.ac.il/en/) | Contact: IntGrad@technion.ac.il
+### Checklist
+
+**Before applying:**
+- [ ] Identified target faculty (CS, Math, EE)
+- [ ] Browsed [CS colloquia](https://www.cs.technion.ac.il/colloq/) to understand research areas
+- [ ] Reviewed [faculty directory](https://www.cs.technion.ac.il/people/faculty/)
+- [ ] Contacted 2-3 potential advisors
+- [ ] Checked if GRE required for your program
+- [ ] Registered for TOEFL/IELTS if required
+
+**Application materials:**
+- [ ] Apply at [graduate.technion.ac.il](https://graduate.technion.ac.il/en/)
+- [ ] Academic transcripts (official)
+- [ ] Degree certificate
+- [ ] CV with relevant background
+- [ ] Statement of purpose
+- [ ] 2+ recommendation letters (PhD: must include thesis advisor)
+- [ ] ID/Passport copy
+- [ ] GRE scores (if required)
+- [ ] TOEFL/IELTS scores
+
+**After submitting:**
+- [ ] Save confirmation
+- [ ] Contact graduate office: 073-378-4226
+- [ ] Email contacts: akleiner@cs.technion.ac.il, sharonem@cs.technion.ac.il
+- [ ] Check for scholarship opportunities
+- [ ] Prepare for possible interview
 
 ---
 
-### Ben-Gurion University
+## 5. Ben-Gurion University of the Negev
 
-**Best for:** Cyber, data science, smaller cohorts
+**Best for:** Cyber security, data science, smaller cohorts, desert research
+
+### Key Links
+
+| Resource | Link |
+|----------|------|
+| **Application Portal** | [bgu.ac.il/graduate](https://in.bgu.ac.il/en/international/Pages/Graduate-Studies.aspx) |
+| **CS Admission (Graduate)** | [bgu.ac.il/cs/admission](https://in.bgu.ac.il/en/natural_science/cs/Pages/Education/Admission_Graduate.aspx) |
+| **Graduate Programs** | [bgu.ac.il/cs/programs](https://in.bgu.ac.il/en/natural_science/cs/Pages/Education/Programs_of_Study_Graduate.aspx) |
+| **PhD Studies** | [bgu.ac.il/cs/phd](https://in.bgu.ac.il/en/natural_science/cs/Pages/Education/PhD_studies_Graduate.aspx) |
+| **Faculty Recruitment** | [bgu-academic-recruitment](https://bgu-academic-recruitment.my.site.com/Recruiters/VF_BGUPositions) |
+
+### Departments & Faculty
+
+| Department | Faculty Directory | Research Areas |
+|------------|------------------|----------------|
+| **Computer Science** | [bgu.ac.il/cs/faculty](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx) | Cyber, AI, data science, bioinformatics |
+| **CS Teaching Faculty** | [bgu.ac.il/cs/lecturers](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBLecturers.aspx) | — |
+| **Mathematics** | [math.bgu.ac.il/people](https://in.bgu.ac.il/en/natural_science/math/Pages/default.aspx) | Pure math, applied math |
+| **Physics** | [physics.bgu.ac.il](https://in.bgu.ac.il/en/natural_science/physics/Pages/default.aspx) | Condensed matter, quantum |
+
+### Seminars
+
+| Seminar | Schedule | Link |
+|---------|----------|------|
+| **CS Department Seminar** | Tuesdays, 12:00-13:00 | [bgu.ac.il/cs/seminar](https://in.bgu.ac.il/en/natural_science/cs/Pages/SeminarSchedule2022.aspx) |
+| **Theory Seminar** | Mondays, 14:00-15:00 | [cs.bgu.ac.il/~theory](https://www.cs.bgu.ac.il/~theory/) |
+| **Formal Methods Seminar** | Wednesdays, 13:00-14:00 | [cs.bgu.ac.il/~formal](https://www.cs.bgu.ac.il/~formal/) |
+| **Math Colloquia** | Weekly | Check department page |
+
+### Potential Advisors (CS/Math)
+
+| Faculty | Research Area | Department |
+|---------|---------------|------------|
+| **Rami Puzis** | Network analysis, cyber | Computer Science |
+| **Bracha Shapira** | Information retrieval, recommender systems | Computer Science |
+| **Yuval Elovici** | Cyber security | Computer Science |
+| **Oren Salzman** | Robotics, motion planning | Computer Science |
+| **Michael Elkin** | Graph algorithms | Computer Science |
+
+### Requirements
 
 | Requirement | Details |
 |-------------|---------|
@@ -789,23 +1069,88 @@ Weizmann interviews selected candidates for 30-60 minutes.
 | **Application fee** | ~$100 USD |
 | **Thesis track** | Must contact supervisor before applying |
 
-**Required documents:**
-- [ ] Online application
-- [ ] Academic transcripts (original or authorized copies)
-- [ ] Bachelor's certificate
-- [ ] Notarized translations for non-English documents
-- [ ] Letter of recommendation
-- [ ] Thesis track: supervisor confirmation
-
 **CS MSc:** 24-27 credits + thesis. Specializations: Cyber Security, AI, Autonomous Systems, Bioinformatics.
 
-**Apply:** [bgu.ac.il/graduate](https://in.bgu.ac.il/en/international/Pages/Graduate-Studies.aspx)
+### Checklist
+
+**Before applying:**
+- [ ] Identified specialization (Cyber, AI, Data Science, Bioinformatics)
+- [ ] Browsed [CS seminars](https://in.bgu.ac.il/en/natural_science/cs/Pages/SeminarSchedule2022.aspx)
+- [ ] Reviewed [faculty directory](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx)
+- [ ] **Thesis track: contacted supervisor BEFORE applying** (required)
+- [ ] Checked [Theory seminar](https://www.cs.bgu.ac.il/~theory/) if interested in algorithms
+- [ ] Registered for TOEFL/IELTS if required
+
+**Application materials:**
+- [ ] Apply at [bgu.ac.il/graduate](https://in.bgu.ac.il/en/international/Pages/Graduate-Studies.aspx)
+- [ ] Academic transcripts (original or authorized copies)
+- [ ] Bachelor's certificate
+- [ ] Statement of purpose
+- [ ] CV/Resume
+- [ ] 1-2 recommendation letters
+- [ ] Notarized translations (if documents not in English)
+- [ ] Supervisor confirmation (thesis track)
+- [ ] Application fee: ~$100 USD
+
+**After submitting:**
+- [ ] Save confirmation
+- [ ] Check visa timeline (apply by November for visa processing)
+- [ ] Follow up with supervisor
+- [ ] Monitor department announcements
 
 ---
 
-### Bar-Ilan University
+## 6. Bar-Ilan University
 
-**Best for:** NLP (Yoav Goldberg), data science, lower tuition
+**Best for:** NLP (world-class BIU-NLP lab), data science, lower tuition, accessible location
+
+### Key Links
+
+| Resource | Link |
+|----------|------|
+| **Application Portal** | [graduate-school.biu.ac.il](https://graduate-school.biu.ac.il/en) |
+| **CS Department** | [cs.biu.ac.il](https://cs.biu.ac.il/) |
+| **MSc Studies** | [cs.biu.ac.il/msc](https://cs.biu.ac.il/node/235) |
+| **PhD Studies** | [cs.biu.ac.il/phd](https://cs.biu.ac.il/node/297) |
+| **PhD Requirements** | [cs.biu.ac.il/phd-requirements](https://cs.biu.ac.il/node/405) |
+| **BIU NLP Lab** | [biu-nlp.github.io](https://biu-nlp.github.io/) |
+
+### Departments & Faculty
+
+| Department | Faculty Directory | Research Areas |
+|------------|------------------|----------------|
+| **Computer Science** | [cs.biu.ac.il/faculty](https://cs.biu.ac.il/faculty) | NLP, ML, algorithms, security |
+| **Junior Faculty** | [cs.biu.ac.il/junior](https://cs.biu.ac.il/node/153) | Newer research groups |
+| **Mathematics** | [math.biu.ac.il](https://math.biu.ac.il/) | Pure math, applied math |
+| **Physics** | [physics.biu.ac.il](https://physics.biu.ac.il/) | Condensed matter, quantum |
+
+### Seminars
+
+| Seminar | Schedule | Link |
+|---------|----------|------|
+| **CS Seminars** | Varies | [cs.biu.ac.il/seminars](https://cs.biu.ac.il/node/58) |
+| **CS Events** | Varies | [cs.biu.ac.il/events](https://cs.biu.ac.il/events/220) |
+| **NLP Seminar** | Weekly | Check BIU-NLP page |
+| **Math Colloquia** | Weekly | Check department page |
+| **Theory Seminar** | Weekly | Check CS seminars page |
+
+### BIU NLP Lab — World-Class NLP Research
+
+**The BIU NLP Lab is one of the world's top NLP research groups.**
+
+| Faculty | Research Area | Notes |
+|---------|---------------|-------|
+| **Yoav Goldberg** | NLP, deep learning | AllenNLP contributor, former Google |
+| **Ido Dagan** | NLP, textual entailment | Founder of RTE challenge |
+| **Reut Tsarfaty** | Hebrew NLP, parsing | Key Hebrew NLP resources |
+
+**To join BIU-NLP:**
+1. Apply to Bar-Ilan CS MSc/PhD program
+2. Contact lab members directly with your background
+3. Show NLP project experience or relevant research
+4. Strong coding skills (Python, PyTorch)
+
+### Requirements
 
 | Requirement | Details |
 |-------------|---------|
@@ -816,19 +1161,42 @@ Weizmann interviews selected candidates for 30-60 minutes.
 | **Hebrew** | Yael test 105+ for Hebrew programs |
 | **Tuition** | $5,000-12,000/year (lowest among major universities) |
 
-**Required documents:**
-- [ ] Online application
-- [ ] Academic transcripts
-- [ ] Recommendation letters
-- [ ] Personal statement
-- [ ] Portfolio (if applicable)
-- [ ] ID documents
-
 **CS MSc:** 26 semester hours. Data Science joint specialization available.
 
 **PhD tracks:** Standard (requires MSc with thesis 90+, GPA 85+), Direct (without MSc), Combined (MSc+PhD)
 
-**Apply:** [graduate-school.biu.ac.il](https://graduate-school.biu.ac.il/en)
+### Checklist
+
+**Before applying:**
+- [ ] Identified target lab (especially [BIU-NLP](https://biu-nlp.github.io/) for NLP)
+- [ ] Browsed [CS seminars](https://cs.biu.ac.il/node/58)
+- [ ] Reviewed [faculty page](https://cs.biu.ac.il/faculty)
+- [ ] Contacted potential advisors (especially for NLP lab)
+- [ ] Checked Data Science joint program if interested
+- [ ] Registered for TOEFL/IELTS if required
+
+**Application materials:**
+- [ ] Apply at [graduate-school.biu.ac.il](https://graduate-school.biu.ac.il/en)
+- [ ] Academic transcripts
+- [ ] Bachelor's degree certificate
+- [ ] Personal statement
+- [ ] Academic CV
+- [ ] 2-3 recommendation letters
+- [ ] Portfolio (if applicable)
+- [ ] TOEFL/IELTS scores (if required)
+- [ ] ID documents
+
+**For PhD specifically:**
+- [ ] MSc with thesis (grade 90+)
+- [ ] GPA 85+
+- [ ] Research proposal
+- [ ] Advisor confirmation
+
+**After submitting:**
+- [ ] Save confirmation
+- [ ] Follow up with potential advisor
+- [ ] Check for scholarship opportunities (lowest tuition among major universities)
+- [ ] Monitor [events page](https://cs.biu.ac.il/events/220) for research talks
 
 ---
 
