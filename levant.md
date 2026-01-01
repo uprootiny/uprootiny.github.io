@@ -270,4 +270,12 @@ permalink: /levant/
 
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/levant-jobs.css' | relative_url }}">
+
+<div id="levant-jobs-app"></div>
+
+<script src="{{ '/assets/js/levant-jobs.js' | relative_url }}"></script>
+
+---
+
 *Last updated: January 2026*
