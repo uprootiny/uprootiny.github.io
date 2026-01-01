@@ -1,12 +1,12 @@
 ---
 layout: text
-title: Artist Resources
-permalink: /webshop/
+title: Den Haag & Europe
+permalink: /DenHaag/
 ---
 
-# Artist Resources & Grant Preparation
+# European Art Resources
 
-*Private reference page for applications, residencies, and professional development.*
+*Reference page for applications, residencies, jobs, and professional development in Europe.*
 
 ---
 
@@ -589,26 +589,121 @@ Dutch government buildings allocate 0.5-2% of construction costs to art.
 
 ---
 
-## Job Boards & Teaching
+## European Job Sources
 
-### Art Job Platforms
+### Job Aggregators
 
 | Platform | Focus | Link |
 |----------|-------|------|
-| **e-flux** | International, curatorial | [e-flux.com/announcements](https://www.e-flux.com/announcements/) |
-| **artjobs.eu** | Europe, all roles | [artjobs.eu](https://artjobs.eu/) |
+| **e-flux** | International curatorial, institutional | [e-flux.com/announcements](https://www.e-flux.com/announcements/) |
+| **artjobs.eu** | All European art roles | [artjobs.eu](https://artjobs.eu/) |
 | **Academic Positions** | University/research | [academicpositions.com](https://academicpositions.com/) |
-| **Tes** | Art teaching, Europe | [tes.com/jobs](https://www.tes.com/jobs/browse/art-and-design-europe) |
+| **Creative Access** | UK arts/cultural sector | [creativeaccess.org.uk](https://creativeaccess.org.uk/) |
+| **Arts Council England** | UK funded sector | [artscouncil.org.uk/jobs](https://www.artscouncil.org.uk/jobs) |
+| **Deutscher Museumsbund** | German museums | [museumsbund.de/stellenmarkt](https://www.museumsbund.de/category/stellenmarkt/) |
 
-### Dutch Art Academies (Check vacancies)
+### Major European Museums (Check vacancies)
 
-| Institution | Vacancies Page |
-|-------------|----------------|
-| KABK (The Hague) | [kabk.nl/vacancies](https://www.kabk.nl/en/about/organisation/vacancies) |
-| Gerrit Rietveld (Amsterdam) | [rietveldacademie.nl](https://rietveldacademie.nl/) |
-| ArtEZ (Arnhem/Zwolle) | [artez.nl](https://www.artez.nl/) |
-| Academie Minerva (Groningen) | [academieminerva.nl](https://www.academieminerva.nl/) |
-| Willem de Kooning (Rotterdam) | [wdka.nl](https://www.wdka.nl/) |
+| Institution | Location | Vacancies |
+|-------------|----------|-----------|
+| **Stedelijk Museum** | Amsterdam | [stedelijk.nl/vacatures](https://www.stedelijk.nl/nl/over-het-stedelijk/vacatures) |
+| **Van Gogh Museum** | Amsterdam | [vangoghmuseum.nl/jobs](https://www.vangoghmuseum.nl/en/about/jobs) |
+| **Rijksmuseum** | Amsterdam | [rijksmuseum.nl/vacatures](https://www.rijksmuseum.nl/nl/over-ons/werken-bij) |
+| **Kunstmuseum** | The Hague | [kunstmuseum.nl](https://www.kunstmuseum.nl/) |
+| **Boijmans Van Beuningen** | Rotterdam | [boijmans.nl/vacatures](https://www.boijmans.nl/vacatures) |
+| **Tate** | London | [tate.org.uk/careers](https://www.tate.org.uk/about-us/working-at-tate/current-vacancies) |
+| **Centre Pompidou** | Paris | [centrepompidou.fr/emploi](https://www.centrepompidou.fr/fr/le-centre-pompidou/recrutement) |
+| **Palais de Tokyo** | Paris | [palaisdetokyo.com](https://www.palaisdetokyo.com/) |
+| **Hamburger Bahnhof** | Berlin | [smb.museum/jobs](https://www.smb.museum/ueber-uns/jobs-karriere/) |
+| **Haus der Kunst** | Munich | [hausderkunst.de/jobs](https://www.hausderkunst.de/jobs) |
+| **Kunsthalle Wien** | Vienna | [kunsthallewien.at](https://www.kunsthallewien.at/) |
+| **MACBA** | Barcelona | [macba.cat/treballa](https://www.macba.cat/en/work-with-us) |
+| **Museo Reina Sofía** | Madrid | [museoreinasofia.es](https://www.museoreinasofia.es/) |
+| **Kunsthal** | Rotterdam | [kunsthal.nl](https://www.kunsthal.nl/) |
+
+### Contemporary Art Centers
+
+| Institution | Location | Vacancies |
+|-------------|----------|-----------|
+| **Witte de With / Kunstinstituut Melly** | Rotterdam | [kunstinstituutmelly.nl](https://www.kunstinstituutmelly.nl/) |
+| **De Appel** | Amsterdam | [deappel.nl](https://deappel.nl/) |
+| **Stroom Den Haag** | The Hague | [stroom.nl/vacatures](https://www.stroom.nl/nl/over-stroom/vacatures) |
+| **TENT** | Rotterdam | [tentrotterdam.nl](https://www.tentrotterdam.nl/) |
+| **Framer Framed** | Amsterdam | [framerframed.nl](https://framerframed.nl/) |
+| **WIELS** | Brussels | [wiels.org/jobs](https://www.wiels.org/en/jobs) |
+| **Kunstverein** | Various German cities | Check individual websites |
+| **Serpentine** | London | [serpentinegalleries.org/jobs](https://www.serpentinegalleries.org/about/jobs/) |
+| **ICA** | London | [ica.art/jobs](https://www.ica.art/jobs) |
+| **Kunsthalle Basel** | Basel | [kunsthallebasel.ch](https://www.kunsthallebasel.ch/) |
+| **Le Consortium** | Dijon | [leconsortium.fr](https://www.leconsortium.fr/) |
+
+### Art Academies & Universities
+
+**Netherlands:**
+| Institution | Vacancies |
+|-------------|-----------|
+| KABK (The Hague) | [kabk.nl/vacatures](https://www.kabk.nl/nl/over-de-kabk/vacatures) |
+| Gerrit Rietveld (Amsterdam) | [rietveldacademie.nl/vacatures](https://rietveldacademie.nl/nl/page/vacatures) |
+| ArtEZ (Arnhem/Zwolle) | [artez.nl/vacatures](https://www.artez.nl/vacatures) |
+| Academie Minerva (Groningen) | [hanze.nl/vacatures](https://www.hanze.nl/nld/werken-bij/vacatures) |
+| Willem de Kooning (Rotterdam) | [wdka.nl/vacatures](https://www.wdka.nl/vacatures) |
+| Sandberg Instituut (Amsterdam) | [sandberg.nl](https://sandfrberg.nl/) |
+
+**Germany:**
+| Institution | Location |
+|-------------|----------|
+| Universität der Künste (UdK) | Berlin |
+| Hochschule für Bildende Künste (HfBK) | Dresden |
+| Kunstakademie | Düsseldorf |
+| Städelschule | Frankfurt |
+| Akademie der Bildenden Künste | Munich |
+
+**Belgium/France/UK:**
+| Institution | Location |
+|-------------|----------|
+| La Cambre | Brussels |
+| ERG | Brussels |
+| École des Beaux-Arts | Paris |
+| Le Fresnoy | Tourcoing |
+| Royal College of Art | London |
+| Slade School | London |
+| Goldsmiths | London |
+
+### Biennales & Art Fairs (Staffing)
+
+| Event | Location | Notes |
+|-------|----------|-------|
+| **Venice Biennale** | Venice | Check culturalavvocato.it |
+| **documenta** | Kassel | documenta.de |
+| **Manifesta** | Rotating | manifesta.org |
+| **Art Basel** | Basel/Miami/HK | artbasel.com/about/careers |
+| **Frieze** | London/NY/LA | frieze.com/careers |
+| **TEFAF** | Maastricht | tefaf.com |
+| **Art Rotterdam** | Rotterdam | artrotterdam.com |
+
+### Residency Programs (Staff Positions)
+
+| Program | Location | Link |
+|---------|----------|------|
+| **Rijksakademie** | Amsterdam | [rijksakademie.nl/vacatures](https://www.rijksakademie.nl/nl/vacatures) |
+| **De Ateliers** | Amsterdam | [de-ateliers.nl](https://www.de-ateliers.nl/) |
+| **Jan van Eyck** | Maastricht | [janvaneyck.nl](https://www.janvaneyck.nl/) |
+| **BAK** | Utrecht | [bakonline.org](https://www.bakonline.org/) |
+| **Akademie Schloss Solitude** | Stuttgart | [akademie-solitude.de](https://www.akademie-solitude.de/) |
+| **ISCP** | New York | [iscp-nyc.org](https://iscp-nyc.org/) |
+| **Cité des Arts** | Paris | [citedesartsparis.net](https://www.citedesartsparis.net/) |
+
+### Foundations & Funding Bodies
+
+| Organization | Focus | Link |
+|--------------|-------|------|
+| **Mondriaan Fund** | NL visual arts | [mondriaanfonds.nl/vacatures](https://www.mondriaanfonds.nl/vacatures/) |
+| **Creative Industries Fund NL** | Design/architecture | [stimuleringsfonds.nl](https://stimuleringsfonds.nl/) |
+| **Goethe-Institut** | German cultural | [goethe.de/jobs](https://www.goethe.de/de/uun/kar.html) |
+| **Institut Français** | French cultural | [institutfrancais.com](https://www.institutfrancais.com/) |
+| **British Council** | UK cultural | [britishcouncil.org/careers](https://www.britishcouncil.org/about-us/jobs) |
+| **Pro Helvetia** | Swiss arts | [prohelvetia.ch](https://prohelvetia.ch/) |
+| **Arts Council England** | UK funding | [artscouncil.org.uk](https://www.artscouncil.org.uk/) |
 
 ### Recent Notable Positions (via e-flux)
 
@@ -631,4 +726,4 @@ Dutch government buildings allocate 0.5-2% of construction costs to art.
 
 ---
 
-*Last updated: December 2025*
+*Last updated: January 2026*
