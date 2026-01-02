@@ -768,6 +768,183 @@ Questions that may already have answers in existing data:
 
 ---
 
+#### Nine: The Hypothesis Reformulation Loop
+
+A hypothesis is not static. It transforms as we gather evidence and shift perspective.
+
+**The Loop:**
+```
+┌─────────────────────────────────────────────────────────┐
+│ H(n) = current hypothesis                               │
+│ C(n) = current context (what we know, what we can do)   │
+│ A(n) = actionable perspective (what experiments feasible)│
+│                                                         │
+│ OBSERVE: Run probes affordable under A(n)               │
+│ UPDATE: Evidence E modifies confidence in H(n)          │
+│ REFORMULATE: H(n+1) = refine(H(n), E, C(n+1))          │
+│ SHIFT: New evidence changes what's actionable → A(n+1)  │
+│ REPEAT                                                  │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Example trajectory:**
+
+| Iteration | Hypothesis | Context | Actionable | Result |
+|-----------|------------|---------|------------|--------|
+| n=0 | "Morphology predicts degradation" | Have Marchisio data | Re-analyze their tables | r=0.4, weak |
+| n=1 | "Fertility mediates the effect" | Computed fertility for 30 langs | Add fertility to regression | r=0.65, partial mediation |
+| n=2 | "Fertility + script type jointly predict" | Added script categorical | Multiple regression | R²=0.72, good fit |
+| n=3 | "Effect strongest in layers 12-18" | Can now justify layer probing | Run probing on Aya-8B | Confirmed: middle layers |
+| n=4 | "Quantization threshold varies by fertility" | Have layer × fertility data | Fit threshold function | τ(fertility) = 4.2 - 0.3*fertility |
+
+**Key properties:**
+- Each iteration is cheaper than starting fresh
+- Evidence accumulates across iterations
+- Hypotheses become more specific and predictive
+- Actionability expands as confidence grows
+
+---
+
+#### Ten: Expected Instrumental Results — Quantitative Predictions
+
+The goal is not "correlation exists" but **specific numerical predictions** that can be tested.
+
+**Form of a prediction:**
+```
+GIVEN: Language L with properties P = {fertility=f, complexity=c, script=s}
+       Model M with properties Q = {size=n, architecture=a}
+       Quantization method Z at bit-width b
+
+PREDICT: Performance degradation Δ = g(P, Q, Z, b)
+         With confidence interval CI
+         And threshold b* where degradation becomes unacceptable
+```
+
+**Concrete example predictions (to be validated):**
+
+| Language | Fertility | Complexity | Predicted Δ at W4 | Threshold b* | Confidence |
+|----------|-----------|------------|-------------------|--------------|------------|
+| English | 1.2 | -12 | -2% ± 1% | 3.2 bits | High (baseline) |
+| German | 1.8 | -8 | -5% ± 2% | 3.8 bits | Medium |
+| Hebrew | 2.1 | -4 | -8% ± 3% | 4.2 bits | Medium |
+| Arabic | 3.0 | -3 | -12% ± 4% | 4.5 bits | Medium |
+| Finnish | 2.5 | -2 | -10% ± 3% | 4.3 bits | Medium |
+| Turkish | 2.3 | -1 | -11% ± 4% | 4.4 bits | Medium |
+| Japanese | 2.5 | -6 | -9% ± 3% | 4.1 bits | Low (script confound) |
+
+**The threshold function (hypothesized form):**
+```
+b*(L) = b_base + α·fertility(L) + β·complexity(L) + γ·script_penalty(L)
+
+Where:
+  b_base ≈ 3.2 (English baseline threshold)
+  α ≈ 0.3-0.5 (fertility coefficient)
+  β ≈ 0.05-0.1 (complexity coefficient)
+  γ ≈ 0.3-0.5 (non-Latin script penalty)
+```
+
+**Interpretation:**
+- English needs only 3.2 bits before quality degrades
+- Arabic needs 4.5 bits for equivalent quality
+- This is ~40% more precision required
+
+---
+
+#### Eleven: Weight Set "Clumpiness" and Network Properties
+
+Beyond linguistic features, the model itself has measurable properties that affect quantization sensitivity.
+
+**Weight distribution properties:**
+
+| Property | Definition | How it affects quantization |
+|----------|------------|----------------------------|
+| **Kurtosis** | "Peakedness" of weight distribution | High kurtosis → outliers → needs more bits |
+| **Outlier ratio** | % of weights > 3σ from mean | More outliers → worse quantization |
+| **Layer entropy** | H(weights) per layer | Higher entropy → more information → more bits needed |
+| **Activation range** | max/min ratio of activations | Wider range → harder to quantize |
+| **Gradient variance** | Var(∂L/∂w) during training | High variance → unstable under quantization |
+
+**The "clumpiness" concept:**
+- Weights cluster non-uniformly across the representational space
+- Some regions are dense (well-learned, stable)
+- Some regions are sparse (rare features, unstable)
+- Quantization affects sparse regions more
+
+**Observable proxies:**
+```
+clumpiness(layer) = kurtosis(W) × outlier_ratio(W) × (1 / effective_rank(W))
+```
+
+**Hypothesis:** Languages with lower training frequency have representations in "sparse" (clumpy) regions, hence more sensitive to quantization.
+
+**Testable prediction:**
+```
+Δ(language) ∝ clumpiness(language_specific_subspace)
+```
+
+If we can identify which parts of the weight space encode which languages (via probing), we can measure clumpiness per language and predict degradation.
+
+---
+
+#### Twelve: The Instrumental Results Table
+
+What specific numbers do we expect our instruments to produce?
+
+**Instrument 1: Benchmark Aggregator**
+| Output | Expected range | What it tells us |
+|--------|----------------|------------------|
+| Δ(English, W4) | -1% to -3% | Baseline degradation |
+| Δ(Arabic, W4) | -8% to -15% | High-morphology degradation |
+| Δ(Japanese, W4) | -5% to -12% | Script + morphology interaction |
+| Correlation(fertility, Δ) | 0.5 to 0.8 | Fertility as predictor |
+| Correlation(WALS_complexity, Δ) | 0.3 to 0.6 | Morphology as predictor |
+
+**Instrument 2: Fertility Calculator**
+| Output | Expected range | What it tells us |
+|--------|----------------|------------------|
+| fertility(English) | 1.1 to 1.4 | Baseline |
+| fertility(Hebrew) | 1.8 to 2.4 | Moderate inflation |
+| fertility(Arabic) | 2.5 to 3.5 | High inflation |
+| fertility(Telugu) | 8.0 to 12.0 | Extreme inflation |
+| Variance across models | 10-20% | Tokenizer quality matters |
+
+**Instrument 3: Threshold Estimator**
+| Output | Expected range | What it tells us |
+|--------|----------------|------------------|
+| b*(English) | 3.0 to 3.5 bits | English is easy |
+| b*(Arabic) | 4.2 to 5.0 bits | Arabic needs more precision |
+| b*(Finnish) | 4.0 to 4.8 bits | Agglutinative penalty |
+| Slope(b* vs fertility) | 0.2 to 0.5 | Strength of fertility effect |
+
+**Instrument 4: Layer Sensitivity Profiler**
+| Output | Expected pattern | What it tells us |
+|--------|------------------|------------------|
+| Sensitivity(layers 0-6) | Low, uniform | Early layers language-agnostic |
+| Sensitivity(layers 12-18) | High, language-varying | Middle layers encode language-specific |
+| Sensitivity(final layers) | Medium, task-specific | Late layers more about task |
+| Language × Layer interaction | Significant | Different languages in different layers |
+
+---
+
+#### Thirteen: Decision Points — When to Stop, Pivot, or Proceed
+
+**Stop conditions:**
+- R² > 0.7 and predictions validate on held-out data → Write paper
+- All hypotheses falsified, no pattern → Abandon this direction
+- Found but trivial (e.g., just training data size) → Reframe contribution
+
+**Pivot conditions:**
+- Fertility dominates, morphology irrelevant → Focus on tokenization research
+- Layer effects dominate linguistic features → Focus on architecture analysis
+- Model size swamps all other effects → Focus on scaling laws
+
+**Proceed conditions:**
+- Preliminary correlation confirmed → Invest in larger-scale probing
+- Held-out predictions work → Design intervention experiments
+- Clear mechanism emerging → Write theoretical paper
+
+---
+
 ### Part I: Empirical Foundation (What Already Exists)
 
 Before designing experiments, we survey existing quantized models, benchmarks, and findings.
