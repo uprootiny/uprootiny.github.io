@@ -1232,24 +1232,24 @@ Weizmann interviews selected candidates for 30-60 minutes.
 
 ### Recent PhD Graduates (Proof of Active Supervision)
 
-| Graduate | Advisor(s) | University | Year | Now At |
-|----------|-----------|-----------|------|--------|
-| **Valentina Pyatkin** | Dagan, Tsarfaty | BIU | 2024 | AI2/UW PostDoc — ACL Outstanding Paper |
-| **Shauli Ravfogel** | Goldberg | BIU | Recent | Research — co-authoring 2025 papers |
-| **Guy Kaplan** | Schwartz | HUJI | 2025 | (MSc defended July 2025) |
-| **Leshem Choshen** | Abend | HUJI | Ongoing | MIT/IBM collaboration |
-| **Mor Shpigel Nacson** | Soudry | Technion | Ongoing | PhD student |
+| Graduate | Advisor(s) | University | Year | Now At | Source |
+|----------|-----------|-----------|------|--------|--------|
+| **Valentina Pyatkin** | Dagan, Tsarfaty | BIU | 2024 | AI2/UW PostDoc — ACL Outstanding Paper | [valentinapy.github.io](https://valentinapy.github.io/) |
+| **Shauli Ravfogel** | Goldberg | BIU | Recent | Research — co-authoring 2025 papers | [ResearchGate](https://www.researchgate.net/profile/Yoav-Goldberg) |
+| **Guy Kaplan** | Schwartz | HUJI | 2025 | (MSc defended July 2025) | [schwartz-lab news](https://schwartz-lab-huji.github.io/) |
+| **Leshem Choshen** | Abend | HUJI | Ongoing | MIT/IBM collaboration | [ResearchGate](https://www.researchgate.net/profile/Leshem-Choshen-2) |
+| **Mor Shpigel Nacson** | Soudry | Technion | Ongoing | PhD student | [Technion CRIS](https://cris.technion.ac.il/en/persons/daniel-soudry) |
 
 ### Weizmann Math Faculty — Research Interests
 
-| Faculty | Area | Recent Work | Contact for |
-|---------|------|-------------|-------------|
-| **Tamar Ziegler** | Ergodic theory, combinatorics | Corners problem (FOCS 2025) | Additive combinatorics |
-| **Ofer Zeitouni** | Probability, random matrices | Mathematical physics | Probability theory |
-| **Boaz Klartag** | Convex geometry | High-dimensional geometry | Geometric analysis |
-| **Assaf Naor** | Metric geometry, algorithms | TCS connections | Metric embeddings |
-| **Oded Goldreich** | Complexity theory | Foundations of cryptography | TCS, complexity |
-| **Michal Irani** | Computer vision | Dean of Faculty | Vision, ML |
+| Faculty | Area | Recent Work | Contact for | Source |
+|---------|------|-------------|-------------|--------|
+| **Tamar Ziegler** | Ergodic theory, combinatorics | Corners problem (FOCS 2025) | Additive combinatorics | [weizmann.ac.il/math/ziegler](https://www.weizmann.ac.il/math/ziegler/) |
+| **Ofer Zeitouni** | Probability, random matrices | Mathematical physics | Probability theory | [weizmann.ac.il/math/zeitouni](https://www.weizmann.ac.il/math/zeitouni/) |
+| **Boaz Klartag** | Convex geometry | High-dimensional geometry | Geometric analysis | [weizmann.ac.il/math/klartag](https://www.weizmann.ac.il/math/klartag/) |
+| **Assaf Naor** | Metric geometry, algorithms | TCS connections | Metric embeddings | [weizmann.ac.il/math/naor](https://www.weizmann.ac.il/math/naor/) |
+| **Oded Goldreich** | Complexity theory | Foundations of cryptography | TCS, complexity | [weizmann.ac.il/cs/oded](https://www.weizmann.ac.il/cs/oded/) |
+| **Michal Irani** | Computer vision | Dean of Faculty | Vision, ML | [weizmann.ac.il/cs/irani](https://www.weizmann.ac.il/cs/irani/) |
 
 ### How to Verify Current Status
 
@@ -1457,13 +1457,117 @@ Weizmann interviews selected candidates for 30-60 minutes.
 
 ### Cross-Institutional Collaborations
 
-| Collaboration | Institutions | Focus |
-|--------------|--------------|-------|
-| **Belinkov × Pupko** | Technion CS + TAU Biology | Biological language models |
-| **Goldberg × AI2** | BIU + Allen Institute | NLP research |
-| **Mansour × Google** | TAU + Google Research | Learning theory |
-| **Elovici × Telekom** | BGU + Deutsche Telekom | Cybersecurity innovation |
-| **WAIC × Industry** | Weizmann | $100M AI initiative |
+| Collaboration | Institutions | Focus | Source |
+|--------------|--------------|-------|--------|
+| **Belinkov × Pupko** | Technion CS + TAU Biology | Biological language models | [belinkov.com](https://belinkov.com/) |
+| **Goldberg × AI2** | BIU + Allen Institute | NLP research | [AI2](https://allenai.org/) |
+| **Mansour × Google** | TAU + Google Research | Learning theory | [research.google](https://research.google/people/105861/) |
+| **Elovici × Telekom** | BGU + Deutsche Telekom | Cybersecurity innovation | [cyber.bgu.ac.il](https://cyber.bgu.ac.il/) |
+| **WAIC × Industry** | Weizmann | $100M AI initiative | [WAIC](https://www.weizmann.ac.il/math/waic/) |
+
+---
+
+## Research Funding & Collaboration Structure
+
+*Understanding how Israeli research is funded helps you identify opportunities and frame proposals.*
+
+### PhD Student Funding (Typical Amounts)
+
+| Source | Amount | Duration | Notes | Source |
+|--------|--------|----------|-------|--------|
+| **Weizmann stipend** | Full + living | 4-5 years | No tuition, stipend covers expenses | [weizmann.ac.il/math/join-us](https://www.weizmann.ac.il/math/join-us) |
+| **HUJI Mandel School** | 75,000 NIS/year | 4 years max | + 15,000 NIS for Humanities | [mandelschool.huji.ac.il](https://en.mandelschool.huji.ac.il/) |
+| **Mosse Foundation** | 60,000 NIS/year | Varies | + tuition + research grant | [HUJI scholarships](https://en.mandelschool.huji.ac.il/) |
+| **Excellence Fellowship** | 168,000 NIS/year | 2-3 years | + 20,000 NIS research expenses | [gov.il](https://www.gov.il/en/pages/research_students_scholarship) |
+| **Azrieli Visiting** | 12,000 NIS/month | 3-4 months | For short visits | [azrielifoundation.org](https://azrielifoundation.org/fellows/visiting-phd-fellowship/) |
+| **University of Haifa** | 60,000 NIS total | 2 years | + 75% tuition | [studyisrael.org.il](https://studyisrael.org.il/) |
+
+**Note:** Most Israeli universities waive PhD tuition fees. Stipends vary by department and advisor's grants.
+
+### Major Funding Agencies
+
+#### Israel Science Foundation (ISF)
+
+**Website:** [isf.org.il](https://www.isf.org.il/) | [academy.ac.il](https://academy.ac.il/RichText/GeneralPage.aspx?nodeId=860)
+
+- **Budget (2025):** ~755 million NIS across all programs
+- **Individual grants:** 1-4 investigators, 4-5 years
+- **Application deadline:** November (results in July, funding starts October)
+- **Beresheet Program:** Large grants for returning Israeli researchers
+
+#### European Research Council (ERC)
+
+**Website:** [erc.europa.eu](https://erc.europa.eu/) | [ISERD](https://innovationisrael.org.il/iserd/european-research-council/)
+
+Israel is among the top ERC recipients globally:
+- **2021-2024:** 390 researchers, €489 million total ([Times of Israel](https://www.timesofisrael.com/three-hebrew-university-professors-awarded-top-eu-research-grants/))
+- **Starting Grants (~€1.5M):** Young researchers with breakthrough potential
+- **Advanced Grants (~€2.5M):** Established researchers
+
+**2024 CS/ML Recipients:**
+- **Nadav Cohen (TAU):** Neural network theory ([TAU news](https://english.tau.ac.il/news/erc-2024-grant-winners))
+- **Yaniv Romano (Technion):** SafetyBounds — safe ML predictions ([ERC 2024 list](https://erc.europa.eu/sites/default/files/2024-09/erc-2024-stg-results-pe.pdf))
+- **Reut Tsarfaty (BIU):** NLPRO — Hebrew NLP (ongoing ERC project)
+
+#### Binational Science Foundation (BSF)
+
+**Website:** [bsf.org.il](https://www.bsf.org.il/)
+
+- US-Israel collaborative research grants
+- Requires one Israeli + one US investigator
+- Strong in CS/Engineering
+
+#### German-Israeli Foundation (GIF)
+
+- Germany-Israel bilateral research
+- ISF-DFG joint program available ([DFG announcement](https://www.dfg.de/en/news/news-topics/announcements-proposals/2024/ifr-24-71))
+
+### Industry-University Partnerships
+
+#### Major Tech Company Presence
+
+| Company | Israel Presence | University Ties | Source |
+|---------|----------------|-----------------|--------|
+| **NVIDIA** | "Second home" — 10,000+ employees, new mega-campus 2031 | Technion, Weizmann collaboration | [Times of Israel](https://www.timesofisrael.com/nvidia-plans-to-boost-presence-in-israel-with-massive-tech-campus-in-north/) |
+| **Google** | Research labs, TAU partnership | TAD Center, Yandex Initiative | [datascience.tau.ac.il](https://datascience.tau.ac.il/) |
+| **Microsoft** | R&D center | Various university collaborations | |
+| **Meta** | AI research | | |
+| **Amazon** | AWS, Alexa development | | |
+
+#### Funded Research Centers
+
+| Center | University | Industry Partner | Focus |
+|--------|-----------|-----------------|-------|
+| **Telekom Innovation Labs** | BGU | Deutsche Telekom | Cybersecurity | [cyber.bgu.ac.il](https://cyber.bgu.ac.il/) |
+| **WAIC** | Weizmann | Multiple ($100M) | AI research | [WAIC](https://www.weizmann.ac.il/math/waic/) |
+| **TAD Center** | TAU | Google | Data science, AI | [datascience.tau.ac.il](https://datascience.tau.ac.il/) |
+| **Yandex Initiative** | TAU | Yandex | ML education | [TAU Yandex](https://en-exact-sciences.tau.ac.il/computer/research_centers_yandex) |
+| **ELLIS Unit** | TAU | European network | ML theory | [ellis.eu](https://ellis.eu/units/tel-aviv) |
+
+### Fellowship & Scholarship Programs
+
+| Program | For | Amount | Deadline | Source |
+|---------|-----|--------|----------|--------|
+| **Fulbright Israel PhD** | US citizens | Full support | Varies | [fulbrightonline.org](https://us.fulbrightonline.org/countries/middle-east-and-north-africa/israel/1857) |
+| **Azrieli Visiting PhD** | International | 12,000 NIS/month | Rolling | [azrielifoundation.org](https://azrielifoundation.org/fellows/visiting-phd-fellowship/) |
+| **DAAD Israel** | German citizens | Varies | Check website | [daad.org.il](https://www.daad.org.il/en/find-funding/scholarships-for-israel/) |
+| **Zuckerman STEM** | US postdocs | Competitive | Annual | [zuckermanstem.org](https://zuckermanstem.org/research-grants-and-awards/) |
+| **Max Planck-Weizmann** | Postdocs | Joint program | Annual | [mpg.de](https://www.mpg.de/20566192/max-planck-weizmann-postdoc-programm) |
+
+### How Funding Works for PhD Students
+
+1. **Advisor's grants:** Most PhD stipends come from advisor's ISF/ERC/industry grants
+2. **Department funding:** Some departments guarantee base stipends
+3. **Teaching assistantships:** Common supplement (check workload expectations)
+4. **External fellowships:** Apply independently (Azrieli, Fulbright, etc.)
+5. **Industry internships:** Summer positions at Google, NVIDIA, Microsoft often available
+
+### Tips for Funding Proposals
+
+- **Read recent grants:** ISF and ERC publish funded project titles
+- **Mention collaborations:** Cross-institutional and industry ties strengthen proposals
+- **Align with national priorities:** AI, cybersecurity, biotech are strategic areas
+- **Check advisor's track record:** PIs with ISF/ERC grants can fund students
 
 ---
 
