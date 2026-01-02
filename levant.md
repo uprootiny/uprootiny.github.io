@@ -1663,9 +1663,47 @@ Israel is among the top ERC recipients globally:
 
 ---
 
-## PhD Project Ideas
+## PhD Project Ideas (128 Directions)
 
-*Dozens of research directions suitable for refining into PhD proposals. Each idea is grounded in recent research (2024-2025) and linked to potential advisors at Israeli universities.*
+*Research directions suitable for refining into PhD proposals. Each idea is grounded in recent research (2024-2025) and linked to potential advisors at Israeli universities. See the [Advisor-Project Match Audit](#advisor-project-match-audit-january-2026) below to prioritize based on advisor availability.*
+
+**Quick navigation:**
+- [High-Tractability Projects](#high-tractability-well-specified-problems) — Best starting points
+- [NLP & Computational Linguistics](#natural-language-processing--computational-linguistics) (#1-6)
+- [ML Theory](#machine-learning-theory) (#7-11)
+- [Mathematics](#mathematics--combinatorics) (#12-16)
+- [Safety & Robustness](#advanced-nlp-safety-robustness--alignment) (#47-50)
+- [Multimodal](#multimodal-learning) (#51-54)
+- [Hebrew/Arabic NLP](#hebrew-arabic--semitic-nlp) (#55-58)
+- [Energy & Climate](#energy-climate--sustainability) (#83-87)
+- [Biotech & Chemistry](#computational-chemistry--drug-discovery) (#88-128)
+
+### High-Tractability: Well-Specified Problems
+
+*These project ideas have clear problem definitions, established evaluation methods, actively recruiting advisors, and strong alignment with a physics + computational linguistics background. Start here.*
+
+| # | Project | Why Tractable | Advisor | Fit |
+|---|---------|---------------|---------|-----|
+| **44** | Vocabulary Optimization for Efficient LLMs | Well-defined objective (efficiency metrics), active advisor, clear experiments | Roy Schwartz (HUJI) ✅ | Linguistics + optimization |
+| **45** | Green AI: Carbon-Aware Training | Measurable goal (energy/accuracy), established benchmarks, active advisor | Roy Schwartz (HUJI) ✅ | Physics (energy) + ML |
+| **30** | Optimization Landscape of Deep Learning | Physics-native (loss surfaces), active advisor, strong theory tradition | Daniel Soudry (Technion) ✅ | Physics + ML theory |
+| **39** | Developmental Interpretability | Well-defined (training dynamics), active advisor, tractable experiments | Daniel Soudry (Technion) ✅ | Physics (dynamics) + ML |
+| **2** | Hebrew NLP: Beyond Morpho-Syntactic | Clear gap (semantic benchmarks missing), ERC-funded lab, unique contribution | Reut Tsarfaty (BIU) | Linguistics core |
+| **6** | Morphological Analysis for Low-Resource Languages | Clear methodology, measurable BLEU gains, builds on linguistics expertise | Reut Tsarfaty (BIU) | Linguistics core |
+| **75** | Information Bottleneck in Deep Learning | Physics-native (information theory), clear questions, strong theory | Nati Linial (HUJI) | Physics + information theory |
+| **13** | Random Matrices and Probability | Your physics background is directly relevant, world-class advisors | Zeitouni/Klartag (Weizmann) ✅ | Physics core |
+| **85** | Desalination Process Optimization | Clear objective (energy/m³), Israel leads field, real-world impact | BGU Water Research | Physics + optimization |
+| **84** | Climate Modeling with PINNs | Physics-informed, clear methodology, growing field | Weizmann Earth Sciences | Physics core |
+| **88** | Molecular Property Prediction (GNNs) | Well-defined tasks, established benchmarks (MoleculeNet), clear evaluation | Ron Kimmel (Technion) | Physics + geometry |
+| **112** | Precision Irrigation | Clear objective (water efficiency), Israel leads, measurable impact | BGU Water Research | Physics + sensing |
+
+**Why these are tractable:**
+1. **Clear objectives** — You can measure success (accuracy, efficiency, BLEU, energy)
+2. **Established methods** — You're extending proven approaches, not inventing from scratch
+3. **Active advisors** — ✅ indicates explicitly recruiting; others have recent publications
+4. **Background fit** — Physics intuition directly applicable
+5. **Unique contribution** — Your linguistics background adds value in NLP projects
+6. **Civilian impact** — All serve peaceful, humanitarian goals
 
 **How to use this section:**
 1. Find 2-3 ideas that resonate with your background
@@ -2148,26 +2186,1036 @@ Neural networks forget previous tasks when learning new ones. Theory for **preve
 
 ---
 
+### Advanced NLP: Safety, Robustness & Alignment
+
+#### 47. Mechanistic Analysis of Jailbreak Attacks
+
+Recent work shows LLMs can be "jailbroken" through carefully crafted prompts. Understanding the **internal mechanisms** that enable bypassing safety training could lead to more robust alignment.
+
+**Research questions:** What circuits are activated during successful jailbreaks vs. refused requests? Can we detect jailbreak attempts from internal activations? How do different RLHF methods affect internal safety representations?
+
+**Advisors:** [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/) — LLM analysis; [Roy Schwartz (HUJI)](https://schwartz-lab-huji.github.io/) — reliable models
+
+---
+
+#### 48. Adversarial Robustness in Morphologically-Rich Languages
+
+Hebrew and Arabic have rich morphology where small character changes can dramatically alter meaning. This creates unique **adversarial attack surfaces** not present in English.
+
+**Research questions:** How do morphological structure and adversarial robustness interact? Can morphologically-aware defenses improve robustness? What attack strategies exploit morphological complexity?
+
+**Advisors:** [Reut Tsarfaty (BIU)](https://biu-nlp.github.io/) — morphological NLP; [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/)
+
+---
+
+#### 49. Uncertainty Quantification in LLM Outputs
+
+LLMs often produce confident-sounding text even when uncertain. Developing **calibrated uncertainty estimates** is critical for high-stakes applications.
+
+**Research questions:** How can we extract meaningful uncertainty from LLM activations? Do different decoding strategies affect calibration? Can uncertainty decomposition distinguish knowledge gaps from ambiguity?
+
+**Advisors:** [Roy Schwartz (HUJI)](https://schwartz-lab-huji.github.io/) — reliable models; [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/)
+
+---
+
+#### 50. Constitutional AI and Value Learning
+
+Training AI systems to follow human values requires both theoretical understanding and practical methods. How can we **formally specify and verify** value alignment?
+
+**Research questions:** What formal frameworks can express alignment constraints? How do we handle value uncertainty and disagreement? Can we prove alignment properties about trained systems?
+
+**Advisors:** [Yishay Mansour (TAU)](https://www.tau.ac.il/~mansour/) — learning theory; Formal methods faculty
+
+---
+
+### Multimodal Learning
+
+#### 51. Grounded Language Learning from Minimal Supervision
+
+Children learn language with far less data than LLMs. **Multimodal grounding** — connecting language to perception — may explain this efficiency gap.
+
+**Research questions:** What perceptual grounding is necessary for sample-efficient language learning? Can embodied interaction accelerate linguistic generalization? How do vision-language models compare to child language acquisition?
+
+**Advisors:** [Omri Abend (HUJI)](https://www.cs.huji.ac.il/~oabend/) — language acquisition; [Lior Wolf (TAU)](https://www.cs.tau.ac.il/~wolf/) — vision-language
+
+---
+
+#### 52. Video Understanding and Temporal Reasoning
+
+Extending vision-language models to **video** requires reasoning about temporal structure, causality, and dynamics — areas where current models struggle.
+
+**Research questions:** What temporal representations enable long-range video understanding? Can physics knowledge improve video prediction? How should language descriptions align with video events?
+
+**Advisors:** [Michal Irani (Weizmann)](https://www.weizmann.ac.il/cs/irani/) — video analysis; [Lior Wolf (TAU)](https://www.cs.tau.ac.il/~wolf/)
+
+---
+
+#### 53. Audio-Visual Speech Recognition for Semitic Languages
+
+Hebrew and Arabic have complex phonology that interacts with morphology. **Multimodal speech recognition** combining audio and visual (lip-reading) signals could improve robustness.
+
+**Research questions:** How do visual cues help disambiguate phonologically similar morphemes? Can multimodal models handle dialectal variation? What is the minimum visual information needed?
+
+**Advisors:** NLP faculty; [ELSC (HUJI)](https://elsc.huji.ac.il/) — speech perception
+
+---
+
+#### 54. Cross-Modal Retrieval with Semantic Alignment
+
+Retrieving content across modalities (text→image, audio→video) requires **aligned semantic spaces**. How can we learn representations that preserve meaning across modalities?
+
+**Research questions:** What training objectives produce the best cross-modal alignment? How do we handle modality-specific information that doesn't transfer? Can compositional structure be preserved across modalities?
+
+**Advisors:** [Lior Wolf (TAU)](https://www.cs.tau.ac.il/~wolf/); [Amir Globerson (TAU)](https://www.cs.tau.ac.il/~gamir/)
+
+---
+
+### Hebrew, Arabic & Semitic NLP
+
+#### 55. Code-Switching in Hebrew-English Text
+
+Many Israeli texts freely mix Hebrew and English ("Hebrish"). **Code-switching NLP** must handle mixed scripts, borrowings, and rapid language alternation.
+
+**Research questions:** How should tokenizers handle code-switched text? Can language ID improve downstream NLP tasks? What linguistic patterns govern code-switching in Israeli social media?
+
+**Advisors:** [Reut Tsarfaty (BIU)](https://biu-nlp.github.io/) — Hebrew NLP; [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/)
+
+---
+
+#### 56. Palestinian Arabic NLP
+
+Palestinian Arabic is underrepresented in NLP resources. Developing **dialect-specific models** requires addressing orthographic variation, limited data, and cross-dialectal transfer.
+
+**Research questions:** How can we leverage Modern Standard Arabic resources for Palestinian Arabic? What annotation schemes work for non-standardized dialects? Can we build competitive models with limited data?
+
+**Advisors:** [Reut Tsarfaty (BIU)](https://biu-nlp.github.io/) — Semitic NLP; Computational linguistics researchers
+
+---
+
+#### 57. Hebrew-Arabic Cross-Lingual Transfer
+
+Hebrew and Arabic are both Semitic languages with similar morphological structures. **Cross-lingual transfer** could benefit low-resource tasks in both languages.
+
+**Research questions:** Which Semitic features transfer well across languages? How do we handle script differences? Can joint training improve both Hebrew and Arabic NLP?
+
+**Advisors:** [Reut Tsarfaty (BIU)](https://biu-nlp.github.io/); Technion NLP lab (Arabic expertise)
+
+---
+
+#### 58. Diacritization and Vowelization for Semitic Languages
+
+Hebrew and Arabic texts often omit vowels, creating ambiguity. **Automatic diacritization** is both linguistically interesting and practically important.
+
+**Research questions:** How do context and morphology interact in vowel prediction? Can neural models learn the underlying phonological rules? How does diacritization affect downstream task performance?
+
+**Advisors:** [Reut Tsarfaty (BIU)](https://biu-nlp.github.io/) — morphological parsing
+
+---
+
+### Reasoning & Knowledge
+
+#### 59. Neuro-Symbolic Reasoning Integration
+
+Pure neural approaches struggle with systematic reasoning. **Neuro-symbolic** methods combine neural pattern recognition with symbolic logic, but integration challenges remain.
+
+**Research questions:** What reasoning tasks benefit most from symbolic components? How can neural networks learn to invoke symbolic modules? What are the computational tradeoffs?
+
+**Advisors:** [Ido Dagan (BIU)](https://u.cs.biu.ac.il/~dagan/) — semantic inference; [Omri Abend (HUJI)](https://www.cs.huji.ac.il/~oabend/)
+
+---
+
+#### 60. Compositional Generalization in Language Models
+
+LLMs often fail on **compositional generalization** — combining known concepts in novel ways. Understanding and fixing this limitation is fundamental.
+
+**Research questions:** What architectural choices enable compositional generalization? Can we design training curricula that improve compositionality? How do different tokenization strategies affect compositional structure?
+
+**Advisors:** [Omri Abend (HUJI)](https://www.cs.huji.ac.il/~oabend/) — semantic structure; [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/)
+
+---
+
+#### 61. Temporal Reasoning and Event Understanding
+
+Understanding **temporal relations** between events (before, after, during) requires reasoning beyond surface patterns. Current models often rely on shortcuts.
+
+**Research questions:** What representations capture temporal structure? How can we evaluate genuine temporal reasoning vs. pattern matching? Can explicit temporal logic improve model capabilities?
+
+**Advisors:** [Ido Dagan (BIU)](https://u.cs.biu.ac.il/~dagan/) — textual inference; NLP faculty
+
+---
+
+#### 62. Knowledge Graph Completion with LLMs
+
+LLMs encode implicit knowledge, while knowledge graphs provide explicit structure. **Combining both** could yield more complete and reliable knowledge systems.
+
+**Research questions:** How can LLMs be used to populate and verify knowledge graphs? What knowledge is better encoded implicitly vs. explicitly? How do we handle contradictions between sources?
+
+**Advisors:** [Ido Dagan (BIU)](https://u.cs.biu.ac.il/~dagan/); [Bracha Shapira (BGU)](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx)
+
+---
+
+### Program Synthesis & Code
+
+#### 63. Program Synthesis from Natural Language Specifications
+
+Translating natural language to code requires understanding both **intent and programming semantics**. Formal verification can ensure correctness.
+
+**Research questions:** What natural language constructs are hardest to translate? Can we guarantee correctness of synthesized code? How do different programming paradigms affect synthesis difficulty?
+
+**Advisors:** [Eran Yahav (Technion)](https://www.cs.technion.ac.il/~yahave/) — programming languages; NLP faculty
+
+---
+
+#### 64. Code Clone Detection and Semantic Similarity
+
+Detecting functionally equivalent code (despite syntactic differences) requires **semantic understanding**. This connects program analysis to NLP.
+
+**Research questions:** What representations capture code semantics? How do we handle different implementation styles? Can code similarity improve code search and recommendation?
+
+**Advisors:** [Eran Yahav (Technion)](https://www.cs.technion.ac.il/~yahave/)
+
+---
+
+#### 65. Automated Bug Detection via Neural Analysis
+
+Neural networks can learn to detect bugs from code patterns. Understanding what they learn connects to **software engineering and ML interpretability**.
+
+**Research questions:** What bug patterns are learnable? How do neural detectors compare to static analysis? Can we explain why the model flags certain code?
+
+**Advisors:** [Eran Yahav (Technion)](https://www.cs.technion.ac.il/~yahave/); [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/)
+
+---
+
+#### 66. LLM-Assisted Theorem Proving
+
+Using LLMs to guide formal proof search combines **language understanding with logical reasoning**. Recent successes in Lean/Coq suggest significant potential.
+
+**Research questions:** What proof strategies can LLMs learn? How should formal systems interact with neural components? Can LLMs discover novel proof techniques?
+
+**Advisors:** Math/CS faculty with formalization interests; [Oded Goldreich (Weizmann)](https://www.weizmann.ac.il/cs/oded/)
+
+---
+
+### Privacy & Federated Learning
+
+#### 67. Differentially Private NLP
+
+Training NLP models with **differential privacy** ensures individual data points don't leak. But privacy-utility tradeoffs in NLP are poorly understood.
+
+**Research questions:** What is the privacy cost of text memorization? Can we design architectures with better privacy-utility tradeoffs? How does vocabulary size affect privacy guarantees?
+
+**Advisors:** [Yishay Mansour (TAU)](https://www.tau.ac.il/~mansour/) — learning theory; [Roy Schwartz (HUJI)](https://schwartz-lab-huji.github.io/)
+
+---
+
+#### 68. Federated Learning for Multilingual Models
+
+Training multilingual models across jurisdictions with **federated learning** addresses both privacy and data sovereignty concerns.
+
+**Research questions:** How does data heterogeneity across clients affect multilingual model quality? Can we aggregate gradients from different languages? What communication efficiency is achievable?
+
+**Advisors:** [Shie Mannor (Technion)](https://www.ee.technion.ac.il/~shie/); [Yishay Mansour (TAU)](https://www.tau.ac.il/~mansour/)
+
+---
+
+#### 69. Membership Inference Attacks on Language Models
+
+Can we determine if **specific text was in the training data**? This connects to privacy, copyright, and understanding memorization.
+
+**Research questions:** What makes text memorable to models? Can we design training procedures that resist membership inference? How do different model sizes affect attack success?
+
+**Advisors:** [Yuval Elovici (BGU)](https://cyber.bgu.ac.il/yuval/) — security; NLP faculty
+
+---
+
+#### 70. Unlearning in Large Language Models
+
+After training, how can we make a model **forget** specific information (e.g., for GDPR compliance)? True unlearning is harder than fine-tuning.
+
+**Research questions:** Can we verify that unlearning is complete? What is the computational cost of unlearning vs. retraining? How does unlearning interact with capabilities?
+
+**Advisors:** [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/) — forgetting; [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/)
+
+---
+
+### Geometric Deep Learning
+
+#### 71. Equivariant Neural Networks for Scientific Data
+
+Many scientific domains have natural **symmetries** (rotation, translation, permutation). Equivariant architectures respect these symmetries.
+
+**Research questions:** What symmetries should be hardcoded vs. learned? How do equivariant networks compare to data augmentation? Can we learn unknown symmetries from data?
+
+**Advisors:** [Ron Kimmel (Technion)](https://www.cs.technion.ac.il/~ron/); Physics faculty
+
+---
+
+#### 72. Geometric Attention Mechanisms
+
+Standard attention treats all positions equally. **Geometric attention** incorporates positional structure, potentially improving efficiency and generalization.
+
+**Research questions:** What geometric structures are useful for attention? How does geometric attention affect computational complexity? Can geometric priors reduce sample complexity?
+
+**Advisors:** [Ron Kimmel (Technion)](https://www.cs.technion.ac.il/~ron/); [Nir Ailon (Technion)](https://www.cs.technion.ac.il/~nailon/)
+
+---
+
+#### 73. Neural Implicit Representations for 3D Understanding
+
+Representing shapes as neural networks (**neural implicit surfaces**) enables continuous, resolution-independent 3D modeling.
+
+**Research questions:** What architectures best represent complex geometries? How can we combine implicit representations with physics simulation? What is the compression-fidelity tradeoff?
+
+**Advisors:** [Ron Kimmel (Technion)](https://www.cs.technion.ac.il/~ron/); [Michal Irani (Weizmann)](https://www.weizmann.ac.il/cs/irani/)
+
+---
+
+#### 74. Manifold Learning for High-Dimensional Data
+
+Real data often lies on **low-dimensional manifolds** within high-dimensional spaces. Learning this structure can improve generalization.
+
+**Research questions:** How can we estimate manifold dimension and structure? What architectures respect manifold geometry? Can manifold learning explain deep network success?
+
+**Advisors:** [Boaz Klartag (Weizmann)](https://www.weizmann.ac.il/math/klartag/) — geometry; [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/)
+
+---
+
+### Information Theory & Learning
+
+#### 75. Information Bottleneck in Deep Learning
+
+The **information bottleneck principle** suggests networks compress inputs while preserving task-relevant information. This connects information theory to deep learning.
+
+**Research questions:** Does training actually optimize the information bottleneck? How does architecture affect information flow? Can we design architectures that explicitly optimize information objectives?
+
+**Advisors:** [Nati Linial (HUJI)](https://www.cs.huji.ac.il/~nati/) — information theory; [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/)
+
+---
+
+#### 76. Minimum Description Length and Neural Networks
+
+**MDL** formalizes Occam's razor: prefer models with shorter descriptions. How does this connect to neural network generalization?
+
+**Research questions:** Can we compute practical MDL bounds for neural networks? Does training implicitly minimize description length? How does MDL explain double descent?
+
+**Advisors:** [Nati Linial (HUJI)](https://www.cs.huji.ac.il/~nati/); [Yishay Mansour (TAU)](https://www.tau.ac.il/~mansour/)
+
+---
+
+#### 77. Compression-Based Similarity for Text
+
+Using **compression algorithms** to measure text similarity is theoretically grounded and surprisingly effective. How does this connect to neural representations?
+
+**Research questions:** What makes compression-based metrics work? Can we design neural networks that learn compression-based representations? How do different compressors capture different similarity aspects?
+
+**Advisors:** [Nati Linial (HUJI)](https://www.cs.huji.ac.il/~nati/); NLP faculty
+
+---
+
+#### 78. Rate-Distortion Theory for Generative Models
+
+**Rate-distortion theory** provides fundamental limits on lossy compression. How does this constrain generative model capabilities?
+
+**Research questions:** What are the rate-distortion limits for generating natural images/text? How close do diffusion models come to these limits? Can rate-distortion analysis guide architecture design?
+
+**Advisors:** [Amir Globerson (TAU)](https://www.cs.tau.ac.il/~gamir/); [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/)
+
+---
+
+### Healthcare & Societal Applications
+
+#### 79. Clinical NLP for Hebrew Medical Records
+
+Hebrew medical records present unique NLP challenges: **domain-specific vocabulary, abbreviations, and morphological complexity** within a high-stakes setting.
+
+**Research questions:** How can we adapt NLP models to Hebrew clinical text? What privacy-preserving approaches work for medical data? Can we build reliable clinical decision support systems?
+
+**Advisors:** [Reut Tsarfaty (BIU)](https://biu-nlp.github.io/) — Hebrew NLP; Medical informatics researchers
+
+---
+
+#### 80. Misinformation Detection in Multilingual Settings
+
+Detecting **misinformation** across Hebrew, Arabic, and English requires understanding cultural context and cross-lingual information flow.
+
+**Research questions:** What signals distinguish misinformation across languages? Can models detect translated/adapted misinformation? How does social network structure affect misinformation spread?
+
+**Advisors:** [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/); [Yuval Elovici (BGU)](https://cyber.bgu.ac.il/yuval/)
+
+---
+
+#### 81. Educational NLP: Automated Assessment and Feedback
+
+Using NLP for **educational assessment** (essay grading, feedback generation) raises both technical and ethical questions.
+
+**Research questions:** How do we ensure fair assessment across demographic groups? Can NLP provide pedagogically useful feedback? What are the limits of automated assessment?
+
+**Advisors:** NLP faculty; Cognitive science researchers at TAU/HUJI
+
+---
+
+#### 82. Legal NLP for Israeli Law
+
+Israeli legal texts combine Hebrew, English precedents, and unique legal concepts. **Legal NLP** must handle this multilingual, specialized domain.
+
+**Research questions:** How can we build domain-specific models for Israeli law? What legal reasoning can be automated? How do we handle evolving legal interpretations?
+
+**Advisors:** [Ido Dagan (BIU)](https://u.cs.biu.ac.il/~dagan/) — textual inference; Law & technology researchers
+
+---
+
+### Energy, Climate & Sustainability
+
+#### 83. Machine Learning for Solar Cell Materials Discovery
+
+Israel's leadership in solar energy connects to **computational materials discovery**. ML can accelerate identification of novel photovoltaic materials.
+
+**Research questions:** What molecular descriptors predict photovoltaic efficiency? Can generative models propose synthesizable candidates? How do we balance exploration vs. exploitation in materials search?
+
+**Advisors:** [Weizmann Chemistry faculty](https://www.weizmann.ac.il/chemistry/); [Technion Materials Science](https://materials.technion.ac.il/)
+
+**Context:** Israel is a global leader in solar technology; Weizmann's Yeda has commercialized solar innovations.
+
+---
+
+#### 84. Climate Modeling with Physics-Informed Neural Networks
+
+Combining **physics constraints with neural networks** can improve climate predictions. Your physics background provides natural entry points.
+
+**Research questions:** How should conservation laws be encoded in climate models? Can neural networks learn subgrid-scale processes? What uncertainty quantification is achievable?
+
+**Advisors:** Weizmann Earth and Planetary Sciences; Physics faculty with atmospheric interests
+
+---
+
+#### 85. Desalination Process Optimization
+
+Israel leads the world in desalination technology. **ML-based optimization** can reduce energy consumption and improve efficiency of reverse osmosis and other processes.
+
+**Research questions:** Can we predict membrane fouling before it occurs? What control strategies minimize energy per cubic meter? How do we handle varying water quality inputs?
+
+**Advisors:** [Technion Civil & Environmental Engineering](https://cee.technion.ac.il/); BGU Zuckerberg Institute for Water Research
+
+**Context:** Israel produces ~70% of domestic water from desalination; significant room for efficiency gains.
+
+---
+
+#### 86. Smart Grid Optimization for Renewable Integration
+
+Integrating variable renewable energy sources (solar, wind) into power grids requires **intelligent scheduling and storage**. This combines optimization, RL, and forecasting.
+
+**Research questions:** How should battery storage be scheduled with uncertain renewable generation? Can we learn optimal grid control policies? What fairness considerations arise in distributed energy systems?
+
+**Advisors:** [Shie Mannor (Technion)](https://www.ee.technion.ac.il/~shie/) — RL/optimization; EE faculty
+
+---
+
+#### 87. Agricultural Yield Prediction from Remote Sensing
+
+Israel's precision agriculture innovations can be enhanced with **satellite imagery and ML**. This supports food security and sustainable farming.
+
+**Research questions:** What spectral features predict crop health? Can we detect irrigation stress before visible symptoms? How do we handle sparse ground-truth labels?
+
+**Advisors:** Weizmann Earth Sciences; Agricultural research institutions (Volcani Center)
+
+---
+
+### Computational Chemistry & Drug Discovery
+
+#### 88. Molecular Property Prediction with Graph Neural Networks
+
+Predicting molecular properties (solubility, toxicity, binding affinity) from structure using **GNNs** accelerates drug discovery and materials science.
+
+**Research questions:** What graph representations capture chemical knowledge? How do we handle 3D conformational flexibility? Can we learn transferable molecular representations?
+
+**Advisors:** [Ron Kimmel (Technion)](https://www.cs.technion.ac.il/~ron/) — geometric learning; Chemistry faculty
+
+**Key resource:** [Weizmann Structural Biology](https://www.weizmann.ac.il/Structural_Biology/)
+
+---
+
+#### 89. Protein Structure Prediction and Design
+
+Following AlphaFold's success, **protein design** — creating proteins with desired functions — is a major frontier. This connects ML to biotechnology.
+
+**Research questions:** Can we design proteins with novel folds? How do we verify designs computationally before synthesis? What are the sample complexity limits of learning from protein databases?
+
+**Advisors:** [Weizmann Structural Biology](https://www.weizmann.ac.il/Structural_Biology/); [David Harel (Weizmann)](https://www.weizmann.ac.il/cs/harel/) — biological modeling
+
+---
+
+#### 90. Retrosynthesis Planning with AI
+
+Given a target molecule, finding a **synthesis route** from available precursors is challenging. ML can assist synthetic chemists in route planning.
+
+**Research questions:** How should chemical knowledge be encoded? Can we predict reaction outcomes reliably? What makes some synthesis routes more practical than others?
+
+**Advisors:** Weizmann Chemistry faculty; CS faculty interested in planning
+
+---
+
+#### 91. Drug-Target Interaction Prediction
+
+Predicting how drugs bind to protein targets guides **drug discovery and repurposing**. This connects NLP (protein sequences as language) to structural biology.
+
+**Research questions:** What representations best capture binding interactions? Can we predict off-target effects? How do we handle limited experimental data for novel targets?
+
+**Advisors:** [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/) — sequence modeling; Weizmann Structural Biology
+
+**Note:** Yonatan Belinkov's lab studies biological language models (proteins/DNA) — contact for 2026-27.
+
+---
+
+### Biotechnology & Computational Biology
+
+#### 92. Single-Cell RNA Sequencing Analysis
+
+**Single-cell technologies** generate high-dimensional data about individual cells. ML methods for clustering, trajectory inference, and interpretation are critical.
+
+**Research questions:** How do we handle the sparsity of single-cell data? Can we learn biologically meaningful cell type hierarchies? What causes batch effects and how can we remove them?
+
+**Advisors:** [Weizmann Biological Regulation](https://www.weizmann.ac.il/Biological_Regulation/); CS faculty with bio interests
+
+---
+
+#### 93. CRISPR Guide RNA Design Optimization
+
+**CRISPR gene editing** efficiency depends on guide RNA design. ML can predict on-target efficiency and off-target effects to improve editing outcomes.
+
+**Research questions:** What sequence features predict editing efficiency? Can we design guides with minimal off-target effects? How do chromatin state and other context affect outcomes?
+
+**Advisors:** Weizmann Molecular Genetics; [David Harel (Weizmann)](https://www.weizmann.ac.il/cs/harel/)
+
+---
+
+#### 94. Microbiome-Host Interaction Modeling
+
+The human **microbiome** influences health and disease. Understanding microbiome-host interactions requires integrating metagenomics, metabolomics, and clinical data.
+
+**Research questions:** Can we predict disease risk from microbiome composition? What metabolic pathways mediate microbiome effects? How do we handle the high dimensionality and compositionality of microbiome data?
+
+**Advisors:** Weizmann Immunology faculty; CS faculty with biological interests
+
+---
+
+#### 95. Antibiotic Resistance Prediction
+
+With antibiotic resistance a global health threat, **predicting resistance from genomic data** can guide treatment decisions and research priorities.
+
+**Research questions:** What genetic markers predict resistance? Can we predict emergence of new resistance mechanisms? How do resistance genes spread through microbial populations?
+
+**Advisors:** Weizmann Molecular Genetics; BGU Life Sciences
+
+---
+
+### Medical Imaging & Diagnostics
+
+#### 96. Interpretable Medical Image Analysis
+
+While deep learning excels at medical image classification, **interpretability** is essential for clinical adoption. How can we explain model predictions to clinicians?
+
+**Research questions:** What interpretation methods are appropriate for medical decisions? Can we provide uncertainty estimates alongside predictions? How do we validate that explanations are faithful?
+
+**Advisors:** [Michal Irani (Weizmann)](https://www.weizmann.ac.il/cs/irani/) — vision; Medical informatics researchers
+
+---
+
+#### 97. Multi-Modal Medical Data Integration
+
+Combining **imaging, genomics, clinical notes, and lab values** can improve diagnostic accuracy. How should heterogeneous medical data be integrated?
+
+**Research questions:** What fusion strategies work best for medical data? How do we handle missing modalities? Can multimodal models generalize across hospitals?
+
+**Advisors:** [Amir Globerson (TAU)](https://www.cs.tau.ac.il/~gamir/) — multimodal learning; Sagol School of Neuroscience
+
+---
+
+#### 98. Federated Learning for Medical Imaging
+
+Medical data is siloed across institutions due to privacy concerns. **Federated learning** enables collaborative model training without sharing raw data.
+
+**Research questions:** How does data heterogeneity across hospitals affect federated model quality? What privacy guarantees can we provide? Can we detect and handle outlier sites?
+
+**Advisors:** [Yishay Mansour (TAU)](https://www.tau.ac.il/~mansour/) — learning theory; Medical informatics
+
+---
+
+### Environmental & Earth Sciences
+
+#### 99. Biodiversity Monitoring from Acoustic Data
+
+**Bioacoustics** — analyzing animal sounds — can monitor biodiversity at scale. ML enables automated species identification and population tracking.
+
+**Research questions:** How do we handle unlabeled species and novel sounds? Can we detect ecosystem changes from audio? What is the sample complexity of learning rare species?
+
+**Advisors:** Weizmann Earth Sciences; HUJI Ecology faculty
+
+---
+
+#### 100. Air Quality Prediction and Source Attribution
+
+Predicting **air pollution** levels and identifying sources supports public health. This combines atmospheric physics, chemistry, and ML.
+
+**Research questions:** What ML architectures capture pollution dynamics? Can we attribute pollution to specific sources? How do we handle spatial and temporal variation?
+
+**Advisors:** Technion Environmental Engineering; Weizmann Earth Sciences
+
+---
+
+#### 101. Carbon Capture Materials Discovery
+
+Discovering materials for **carbon capture and storage** addresses climate change. ML can accelerate screening of candidate materials.
+
+**Research questions:** What properties predict CO2 capture efficiency? Can generative models propose novel capture materials? How do we balance capture efficiency with synthesis feasibility?
+
+**Advisors:** Weizmann Chemistry; Technion Materials Science
+
+---
+
+### Peaceful Technology Applications
+
+#### 102. Assistive Technology and Accessibility
+
+Using **ML for accessibility** — speech synthesis, image description, gesture recognition — creates positive social impact.
+
+**Research questions:** How can we adapt NLP/vision models for users with disabilities? What evaluation metrics capture real-world utility? How do we handle diverse accessibility needs?
+
+**Advisors:** NLP faculty; HUJI Cognitive Science
+
+---
+
+#### 103. Archaeological Site Detection from Satellite Imagery
+
+**Remote sensing** can identify archaeological sites before damage or looting. This applies vision ML to cultural heritage preservation.
+
+**Research questions:** What image features distinguish archaeological sites from natural features? Can we detect subsurface structures? How do we handle rare positive examples?
+
+**Advisors:** HUJI Archaeology; [Michal Irani (Weizmann)](https://www.weizmann.ac.il/cs/irani/) — vision
+
+---
+
+#### 104. Language Documentation for Endangered Languages
+
+Many languages are endangered with few speakers. **NLP tools for documentation** can preserve linguistic heritage and support revitalization.
+
+**Research questions:** How can we build useful tools with extremely limited data? What linguistic universals can be transferred? How should communities be involved in technology development?
+
+**Advisors:** [Reut Tsarfaty (BIU)](https://biu-nlp.github.io/) — low-resource NLP; Linguistics faculty
+
+---
+
+#### 105. Humanitarian Applications of Earth Observation
+
+Satellite imagery can support **humanitarian response** — tracking refugee movements, assessing disaster damage, monitoring food security.
+
+**Research questions:** How can ML provide actionable intelligence for humanitarian organizations? What privacy considerations arise? How do we handle domain shift between regions?
+
+**Advisors:** Technion EE (remote sensing); HUJI Geography
+
+---
+
+### Advanced Energy & Storage
+
+#### 106. Battery Materials Discovery via Active Learning
+
+Next-generation batteries require new materials for **higher energy density and faster charging**. Active learning can prioritize which candidate materials to synthesize.
+
+**Research questions:** What features predict battery performance? How should we balance exploration of new chemistries vs. exploitation of known ones? Can we discover materials beyond lithium-ion?
+
+**Advisors:** Technion Materials Science; Weizmann Chemistry
+
+**Context:** Israel has significant battery technology R&D (StoreDot, Addionics).
+
+---
+
+#### 107. Hydrogen Fuel Cell Catalyst Optimization
+
+**Green hydrogen** requires efficient electrolysis catalysts. ML can accelerate discovery of earth-abundant alternatives to platinum-group metals.
+
+**Research questions:** What atomic-scale features predict catalytic activity? Can we design catalysts with both high activity and stability? How do we model electrochemical interfaces?
+
+**Advisors:** Weizmann Chemistry; Technion Chemical Engineering
+
+---
+
+#### 108. Building Energy Efficiency via Digital Twins
+
+**Digital twins** — virtual replicas of buildings — can optimize HVAC, lighting, and energy use. This combines physics simulation with data-driven learning.
+
+**Research questions:** How should physics models and neural networks be combined for building simulation? Can we learn occupancy patterns to optimize comfort and efficiency? What control strategies minimize energy while maintaining comfort?
+
+**Advisors:** Technion Architecture/Civil Engineering; CS faculty
+
+---
+
+#### 109. Wind Farm Layout Optimization
+
+**Wind turbine placement** affects farm efficiency through wake effects. Optimization under uncertainty (variable wind) is challenging.
+
+**Research questions:** How do we model turbine wake interactions? Can RL learn better control strategies than rule-based approaches? How do we optimize for both energy and turbine lifespan?
+
+**Advisors:** [Shie Mannor (Technion)](https://www.ee.technion.ac.il/~shie/) — RL; Technion Aerospace
+
+---
+
+#### 110. Perovskite Solar Cell Stability Prediction
+
+**Perovskite solar cells** offer high efficiency but suffer from stability issues. ML can predict degradation pathways and suggest stabilization strategies.
+
+**Research questions:** What structural features predict long-term stability? Can we design accelerated aging tests that correlate with field performance? How do environmental factors interact with material properties?
+
+**Advisors:** Weizmann Chemistry; Technion Materials Science
+
+---
+
+### Sustainable Agriculture & Food Security
+
+#### 111. Plant Disease Detection from Leaf Images
+
+Early detection of **crop diseases** enables targeted treatment, reducing pesticide use and crop loss. Computer vision can identify diseases from smartphone photos.
+
+**Research questions:** How do we handle the diversity of disease presentations? Can we distinguish diseases from nutrient deficiencies? What is the minimum image quality for reliable detection?
+
+**Advisors:** [Michal Irani (Weizmann)](https://www.weizmann.ac.il/cs/irani/) — vision; Volcani Center (agricultural research)
+
+---
+
+#### 112. Precision Irrigation from Soil Sensors and Weather Data
+
+**Water-efficient agriculture** is critical in arid regions. ML can optimize irrigation scheduling based on soil moisture, weather forecasts, and crop models.
+
+**Research questions:** How should sensor data and weather forecasts be combined? Can we learn crop-specific water needs? What is the optimal sensor density for different farm sizes?
+
+**Advisors:** BGU Zuckerberg Institute for Water Research; Technion Agricultural Engineering
+
+**Context:** Israel is a world leader in drip irrigation technology.
+
+---
+
+#### 113. Sustainable Aquaculture Monitoring
+
+**Fish farming** can provide sustainable protein but requires careful monitoring. ML can analyze fish behavior, water quality, and feeding patterns.
+
+**Research questions:** What behaviors indicate fish stress or disease? Can we optimize feeding to minimize waste? How do we handle underwater imaging challenges?
+
+**Advisors:** Technion Marine Sciences; HUJI Evolution faculty
+
+---
+
+#### 114. Food Waste Reduction via Demand Forecasting
+
+**Food waste** contributes significantly to greenhouse emissions. Better demand forecasting can reduce overproduction and spoilage.
+
+**Research questions:** What features predict food demand? How should seasonal and cultural patterns be modeled? Can we provide actionable recommendations to retailers?
+
+**Advisors:** [Bracha Shapira (BGU)](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx) — recommender systems; Operations research faculty
+
+---
+
+### Water & Environmental Monitoring
+
+#### 115. Water Quality Monitoring via IoT and ML
+
+Real-time **water quality monitoring** can detect contamination early. ML can identify anomalies and predict quality from sparse sensor networks.
+
+**Research questions:** How do we detect novel contaminants not seen in training? What is the optimal placement of sensors in water networks? Can we predict quality at unmonitored locations?
+
+**Advisors:** BGU Zuckerberg Institute for Water Research; Technion Environmental Engineering
+
+---
+
+#### 116. Plastic Pollution Detection in Waterways
+
+**Microplastic pollution** threatens ecosystems. Computer vision and spectroscopy combined with ML can identify and quantify plastic contamination.
+
+**Research questions:** What imaging modalities best detect microplastics? Can we identify plastic types for recycling? How do we scale from lab measurements to field deployment?
+
+**Advisors:** Weizmann Earth Sciences; Technion Environmental Engineering
+
+---
+
+#### 117. Soil Health Assessment from Spectroscopy
+
+**Soil health** affects crop yields and carbon sequestration. ML can predict soil properties from spectroscopic measurements, reducing need for lab analysis.
+
+**Research questions:** What spectral features predict which soil properties? Can we build models that transfer across soil types? How do we handle measurement noise in field conditions?
+
+**Advisors:** Weizmann Earth Sciences; Volcani Center
+
+---
+
+### Public Health & Epidemiology
+
+#### 118. Epidemiological Modeling with Mobility Data
+
+Understanding **disease spread** requires modeling human movement. Privacy-preserving mobility data can improve epidemic forecasting.
+
+**Research questions:** How should mobility patterns be incorporated into compartmental models? What privacy guarantees can we provide? Can we predict intervention effectiveness?
+
+**Advisors:** [Yishay Mansour (TAU)](https://www.tau.ac.il/~mansour/) — learning theory; HUJI Public Health
+
+---
+
+#### 119. Vaccine Development Target Identification
+
+ML can accelerate **vaccine design** by identifying promising immunogenic targets from pathogen genomes and protein structures.
+
+**Research questions:** What features predict immunogenicity? Can we design vaccines for rapidly mutating pathogens? How do we account for population diversity in immune responses?
+
+**Advisors:** Weizmann Immunology; [David Harel (Weizmann)](https://www.weizmann.ac.il/cs/harel/)
+
+---
+
+#### 120. Mental Health Monitoring via Natural Language
+
+Analyzing **language patterns** can provide early indicators of mental health changes, enabling timely intervention with appropriate consent and privacy protections.
+
+**Research questions:** What linguistic features correlate with mental health? How do we ensure privacy and prevent misuse? Can NLP support (not replace) clinical care?
+
+**Advisors:** [Roy Schwartz (HUJI)](https://schwartz-lab-huji.github.io/) — NLP; HUJI Psychology
+
+---
+
+#### 121. Personalized Nutrition from Microbiome and Genetics
+
+Individual responses to food vary based on **genetics and microbiome**. ML can predict personalized dietary recommendations.
+
+**Research questions:** How do genetics and microbiome interact in food response? What data is needed for accurate personalization? How do we handle the complexity of dietary patterns?
+
+**Advisors:** Weizmann Immunology (Eran Segal's group has pioneered this); CS faculty
+
+**Context:** Weizmann's personalized nutrition research has led to multiple startups.
+
+---
+
+### Circular Economy & Sustainability
+
+#### 122. Waste Sorting Optimization with Computer Vision
+
+Effective **recycling** requires accurate waste sorting. Computer vision can identify materials in waste streams, improving recycling rates.
+
+**Research questions:** How do we handle the diversity and occlusion of waste items? Can we achieve real-time sorting speeds? How do contamination levels affect recyclability?
+
+**Advisors:** [Michal Irani (Weizmann)](https://www.weizmann.ac.il/cs/irani/) — vision; Environmental Engineering faculty
+
+---
+
+#### 123. Sustainable Polymer Design
+
+Designing **biodegradable polymers** with desired mechanical properties requires balancing functionality with environmental impact.
+
+**Research questions:** What molecular features predict biodegradability? Can we design drop-in replacements for common plastics? How do we model long-term environmental fate?
+
+**Advisors:** Weizmann Chemistry; Technion Chemical Engineering
+
+---
+
+#### 124. Life Cycle Assessment Automation
+
+**Life cycle assessment** quantifies environmental impact but is labor-intensive. NLP can extract relevant data from scientific literature and reports.
+
+**Research questions:** How can we automate data extraction for LCA? Can we handle uncertainty in environmental impact estimates? What standards enable comparison across products?
+
+**Advisors:** [Ido Dagan (BIU)](https://u.cs.biu.ac.il/~dagan/) — information extraction; Environmental Science faculty
+
+---
+
+### Quantum Computing for Science
+
+#### 125. Quantum Algorithms for Molecular Simulation
+
+**Quantum computers** may eventually simulate molecules beyond classical capabilities. Developing near-term algorithms is an active research area.
+
+**Research questions:** What molecular systems are tractable on near-term quantum hardware? How do we mitigate noise in variational algorithms? Can quantum advantage be demonstrated for chemistry?
+
+**Advisors:** [Dorit Aharonov (HUJI)](https://www.cs.huji.ac.il/~dorit/) — quantum computation; Weizmann Chemistry
+
+---
+
+#### 126. Hybrid Classical-Quantum Optimization
+
+**Variational quantum algorithms** combine classical optimization with quantum circuits. Understanding when they outperform classical methods is open.
+
+**Research questions:** For which optimization problems do quantum methods help? How should classical and quantum components be balanced? What is the sample complexity of learning quantum circuit parameters?
+
+**Advisors:** [Dorit Aharonov (HUJI)](https://www.cs.huji.ac.il/~dorit/); [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/)
+
+---
+
+### Tissue Engineering & Regenerative Medicine
+
+#### 127. Organ-on-Chip Data Analysis
+
+**Organs-on-chips** are microfluidic devices that model human organs. ML can analyze the complex data from these systems for drug testing.
+
+**Research questions:** How do we model multi-organ interactions? Can chip data predict clinical outcomes? What experimental designs maximize information content?
+
+**Advisors:** Technion Biomedical Engineering; Weizmann Biological Regulation
+
+---
+
+#### 128. Stem Cell Differentiation Prediction
+
+Controlling **stem cell differentiation** is key to regenerative medicine. ML can predict differentiation outcomes from gene expression and culture conditions.
+
+**Research questions:** What signals drive differentiation decisions? Can we design protocols for specific cell types? How do we ensure safety of differentiated cells?
+
+**Advisors:** Weizmann Molecular Cell Biology; HUJI Developmental Biology
+
+---
+
+### Note on Peaceful Research Focus
+
+*All project ideas in this document focus on civilian, peaceful applications. Topics with potential dual-use concerns (certain robotics, surveillance, network attack/defense) are intentionally excluded. Research should serve humanitarian goals: health, sustainability, knowledge, and human flourishing.*
+
+---
+
 ### Summary: Matching Ideas to Your Background
 
+(128 total project ideas across 25 research categories)
+
 **Physics + Computational Linguistics → Strongest fits:**
-- #21-23: Computational neuroscience of language
-- #24, 29-30: Physics-informed ML, tensor networks, loss landscapes
-- #12-14: Probability, random matrices, metric geometry
-- #17-18: Neuroalgebraic geometry
 
-**For NLP/ML focus:**
-- #1-6: Core NLP directions with Goldberg, Tsarfaty, Dagan
-- #7-11: ML theory with Mansour, Soudry, Globerson
+| Category | Projects | Why Strong Fit |
+|----------|----------|----------------|
+| **Efficient NLP** | #44-46 (Roy Schwartz) | Linguistics + optimization + energy physics |
+| **Deep Learning Theory** | #30, 39, 41, 75-78 | Loss landscapes, dynamics, information theory |
+| **Hebrew/Semitic NLP** | #2, 6, 55-58 | Direct linguistics application, underexplored |
+| **Probability/Random Matrices** | #13 | Direct physics relevance, Weizmann strength |
+| **Climate/Energy** | #83-87, 106-110 | Physics-informed modeling, sustainability impact |
+| **Computational Chemistry** | #88-91, 125-126 | Physics core, molecular modeling |
+| **Neuroscience of Language** | #21-23 | Bridge physics and linguistics |
 
-**For mathematics focus:**
-- #12-16: Combinatorics, algorithms, optimization
-- #36-38: Graph algorithms and TCS
+**Recommended First Contacts (Actively Recruiting):**
 
-**For interdisciplinary:**
-- #19-20: Quantum information
-- #24-30: Physics × computation crossovers
-- #35: Computational biology
+1. **Roy Schwartz (HUJI)** — Efficient NLP, Green AI
+   - Projects: #44, 45, 46, 49, 67, 120
+   - Email: schwartz@cs.huji.ac.il
+   - [Lab page](https://schwartz-lab-huji.github.io/)
+
+2. **Daniel Soudry (Technion)** — Deep learning theory
+   - Projects: #11, 18, 30, 39, 41, 70, 74, 75, 78, 126
+   - Email: daniel.soudry@gmail.com
+   - [Lab page](https://soudry.github.io/)
+
+3. **Weizmann Math/CS** — ~10 PhD/year admitted
+   - Projects: #12-14, 17, 29, 84, 88-90, 101
+   - Apply through [Feinberg School](https://www.weizmann.ac.il/feinberg/)
+
+4. **Reut Tsarfaty (BIU)** — Hebrew NLP (ERC-funded)
+   - Projects: #2, 6, 28, 48, 55-58, 79, 104
+   - [ONLP Lab](https://nlp.biu.ac.il/~rtsarfaty/onlp)
+
+**Civilian Impact Focus:**
+
+All 128 project ideas serve peaceful, humanitarian goals:
+- 🌱 Sustainability: #83-87, 99-101, 106-117, 122-124
+- 🏥 Health: #79, 88-98, 118-121, 127-128
+- 📚 Knowledge: #1-43, 59-78
+- 🌍 Humanitarian: #102-105
+
+**Next Steps:**
+1. Pick 2-3 projects from the [High-Tractability table](#high-tractability-well-specified-problems)
+2. Read the linked papers/resources
+3. Contact advisors marked with ✅ (explicitly recruiting)
+4. Use the [application timeline](#application-timeline-fall-2026-start) to plan submissions
+
+---
+
+## Advisor-Project Match Audit (January 2026)
+
+*Cross-referencing all 128 project ideas with verified advisor recruitment status. Use this to prioritize your outreach.*
+
+### Best Matches: Actively Recruiting Advisors
+
+These advisors explicitly state they're recruiting — projects mentioning them are high-priority:
+
+| Advisor | Status | Relevant Projects | Notes |
+|---------|--------|-------------------|-------|
+| **Daniel Soudry (Technion)** | ✅ Recruiting MSc/PhD/PostDoc | #11 (Diffusion sample complexity), #18 (Subnetworks as singularities), #30 (Optimization landscape), #39 (Developmental interpretability), #41 (Efficient training) | [soudry.github.io](https://soudry.github.io/) — explicit recruitment statement |
+| **Roy Schwartz (HUJI)** | ✅ Actively recruiting | **See new projects 44-46 below** | [schwartz-lab-huji.github.io](https://schwartz-lab-huji.github.io/) — "Join us!" page |
+| **Weizmann Math/CS** | ✅ ~10 PhD/year | #12 (Additive combinatorics), #13 (Random matrices), #14 (Metric geometry), #17-18 (Neuroalgebraic), #29 (Tensor networks) | [weizmann.ac.il/math/join-us](https://www.weizmann.ac.il/math/join-us) |
+
+### Conditional: Contact with Care
+
+| Advisor | Status | Relevant Projects | Action |
+|---------|--------|-------------------|--------|
+| **Yonatan Belinkov (Technion)** | ⚠️ Not accepting 2025-26; **open 2026-27** | #1 mentions interpretability (his area) | Apply for 2026-27 start if interested |
+| **Yoav Goldberg (BIU)** | ⚠️ High standards — [read this first](http://u.cs.biu.ac.il/~yogo/note-to-grads.html) | #1-5, #31, #34, #39 (many projects) | Only contact if you meet his criteria |
+
+### Active Labs: Good to Contact
+
+These advisors have active research groups with recent publications and graduates:
+
+| Advisor | Activity | Relevant Projects |
+|---------|----------|-------------------|
+| **Reut Tsarfaty (BIU)** | ERC-funded NLPRO, 4+ papers 2024 | #2 (Hebrew NLP), #6 (Morphological analysis), #28 (Ancient languages) |
+| **Ido Dagan (BIU)** | 6+ papers 2024, graduated Valentina Pyatkin | #3 (Counterfactuals), #27 (Scientific NLP), #41-42 (RAG) |
+| **Omri Abend (HUJI)** | 4+ papers EMNLP 2024 | Currently underrepresented — consider for semantics/cross-lingual work |
+| **Yishay Mansour (TAU)** | NeurIPS/ICML regular, also at Google | #5 (Few-shot), #7-9 (RL/PAC/Margin bounds), #26 (Fairness) |
+| **Amir Globerson (TAU)** | NeurIPS 2024 General Chair | #9, #11 (ML theory), #21 (Neuroscience), #30, #41 |
+| **Shie Mannor (Technion)** | RLRL lab, also at NVIDIA | #7 (RL sample complexity), #16 (Diffusion optimization), #42-43 |
+
+### Missing: Roy Schwartz Project Ideas
+
+Roy Schwartz's lab focuses on **efficient NLP, green AI, and reliable models** — areas not well covered in the original 43 projects. Adding three:
+
+---
+
+#### 44. Efficient Language Model Inference via Vocabulary Optimization
+
+Roy Schwartz's group studies how vocabulary design affects model efficiency. Their work on optimal vocabulary construction can reduce compute costs while maintaining performance.
+
+**Research questions:** What is the optimal vocabulary size for different tasks and languages? How do subword tokenizers affect downstream efficiency? Can vocabulary be dynamically adjusted during inference?
+
+**Advisor:** [Roy Schwartz (HUJI)](https://schwartz-lab-huji.github.io/) — vocabulary design, efficient NLP
+
+**Key papers:** [Schwartz Lab publications](https://schwartz-lab-huji.github.io/publications/)
+
+---
+
+#### 45. Green AI: Carbon-Aware Training and Inference
+
+Following Schwartz's "Green AI" agenda (highly-cited 2020 paper), this direction develops methods to minimize the environmental impact of NLP systems while maintaining capability.
+
+**Research questions:** How do we measure the true energy cost of NLP systems? Can we design carbon-aware training schedules? What architectural choices minimize compute-per-accuracy?
+
+**Advisor:** [Roy Schwartz (HUJI)](https://schwartz-lab-huji.github.io/) — green AI, efficiency
+
+**Key paper:** [Green AI (Schwartz et al., 2020)](https://cacm.acm.org/magazines/2020/12/248800-green-ai/fulltext)
+
+---
+
+#### 46. SSM Pruning for Efficient Sequence Models
+
+The Schwartz Lab's EMNLP 2025 paper on SSM Pruning shows how state space models (Mamba, etc.) can be pruned for efficiency. This connects to post-transformer architectures.
+
+**Research questions:** What is the optimal pruning strategy for recurrent vs. attention mechanisms? How do SSMs and Transformers compare in efficiency-quality tradeoffs? Can hybrid architectures achieve best of both?
+
+**Advisor:** [Roy Schwartz (HUJI)](https://schwartz-lab-huji.github.io/) — SSM efficiency
+
+**Key paper:** [SSM Pruning (EMNLP 2025)](https://schwartz-lab-huji.github.io/)
+
+---
+
+### Summary: Priority Contact List
+
+Based on verified recruitment status and research fit:
+
+**Tier 1 (Explicitly Recruiting):**
+1. Daniel Soudry (Technion) — Deep learning theory
+2. Roy Schwartz (HUJI) — Efficient NLP
+3. Weizmann Math/CS department — Math/TCS
+
+**Tier 2 (Active Labs, Contact Directly):**
+4. Reut Tsarfaty (BIU) — Hebrew NLP
+5. Amir Globerson (TAU) — ML theory/neuroscience
+6. Shie Mannor (Technion) — RL theory
+7. Ido Dagan (BIU) — NLP semantics
+
+**Tier 3 (Conditional/Careful):**
+8. Yoav Goldberg (BIU) — Only if you meet high standards
+9. Yonatan Belinkov (Technion) — For 2026-27 start only
 
 ---
 
