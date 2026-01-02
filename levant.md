@@ -1270,6 +1270,203 @@ Weizmann interviews selected candidates for 30-60 minutes.
 
 ---
 
+## Research Groups & Labs (Verified January 2026)
+
+*Detailed information on major Israeli research groups. Use this to identify labs that match your interests.*
+
+### Technion NLP Lab
+
+**PI:** [Yonatan Belinkov](https://belinkov.com/) (Associate Professor, CS)
+**Website:** [nlp.cs.technion.ac.il](https://nlp.cs.technion.ac.il/)
+**Status:** Not accepting 2025-26 (sabbatical); open for 2026-27
+
+**Current Members:**
+- **Postdocs:** Aaron Mueller, Martin Tutek, Anja Reusch
+- **PhD Students (10):** Hadas Orgad, Boaz Carmeli, Itay Itzhak, Adir Rahamim, Edo Dotan, Adi Simhi, Dana Arad, Michael Toker, Yaniv Nikankin, Michael Hanna
+- **MSc Students:** Tal Haklay, Yanay Soker, Ido Levy, Tomer Ashuach
+
+**Research Focus:** Interpretability, robustness/safety of LLMs, emergent communication, biological language models (proteins/DNA), Hebrew/Arabic NLP
+
+**Recent Alumni:** Zachary Bamberger (2024→Technion), Shadi Iskander (2024→Amazon), Shachar Katz (2024→TAU)
+
+**How to Join:** [nlp.cs.technion.ac.il/joining](https://nlp.cs.technion.ac.il/joining/)
+
+---
+
+### Bar-Ilan NLP Lab (BIU-NLP)
+
+**PIs:** [Yoav Goldberg](https://u.cs.biu.ac.il/~yogo/), [Ido Dagan](https://u.cs.biu.ac.il/~dagani/), [Reut Tsarfaty](https://nlp.biu.ac.il/~rtsarfaty/)
+**Website:** [biu-nlp.github.io](https://biu-nlp.github.io/)
+**Status:** Active recruitment; high standards ([read this first](http://u.cs.biu.ac.il/~yogo/note-to-grads.html))
+
+**Research Focus:**
+- **Goldberg:** Neural NLP methods, LLM behavior, interpretability
+- **Dagan:** Textual entailment (invented the paradigm), semantic inference
+- **Tsarfaty:** Hebrew NLP, morphologically-rich languages, ERC-funded NLPRO project
+
+**Recent Graduates:**
+- Valentina Pyatkin (2024→AI2/UW, ACL Outstanding Paper)
+- Shauli Ravfogel (co-authoring 2025 papers)
+
+**2024-2025 Publications:** 10+ papers at ACL, EMNLP, NAACL including string counterfactuals, zero-shot NER, Hebrew MRC
+
+**How to Join:** Complete BIU CS application; contact specific PI with your background
+
+---
+
+### Hebrew University — Multiple Groups
+
+#### ELSC (Edmond & Lily Safra Center for Brain Sciences)
+
+**Website:** [elsc.huji.ac.il](https://elsc.huji.ac.il/)
+**PhD Director:** [Yonatan Loewenstein](mailto:yonatan.loewenstein@mail.huji.ac.il)
+**Coordinator:** Nili Vershov (teaching@elsc.huji.ac.il)
+
+**Program:** 5-year PhD in Computational Neuroscience (in English)
+**Funding:** Full tuition + generous stipend + travel grants
+**Application:** Winter admissions
+
+**2024 Highlights:**
+- Haim Sompolinsky won **2024 Brain Prize** (theoretical/computational neuroscience)
+- Hagai Bergman won **Israel Prize for Life Sciences 2024**
+
+**Research Areas:** Neural computation, machine learning, cognitive neuroscience, theoretical neuroscience
+
+---
+
+#### Schwartz Lab (NLP)
+
+**PI:** [Roy Schwartz](https://schwartz-lab-huji.github.io/)
+**Status:** ✅ **Actively recruiting** ("Join us!" page)
+
+**Research Focus:** Efficient NLP, green AI, reliable/explainable models, vocabulary design
+
+**Recent Graduates:** Guy Kaplan (MSc 2025), Tamer (MSc 2025)
+
+**2024-2025 Publications:** SSM Pruning (EMNLP 2025), vocabulary research
+
+---
+
+#### Omri Abend Group
+
+**PI:** [Omri Abend](https://www.cs.huji.ac.il/~oabend/) (CS + Cognitive Science)
+
+**Research Focus:** Semantic representation (UCCA), computational linguistics, cross-lingual semantics
+
+**2024 Publications:** 4+ papers at EMNLP including LEVERWORLDS, CONTESTS, language-agnostic child language acquisition
+
+**Collaborators:** Eitan Wagner, Taelin Karidi, Uri Berger, Yuli Slavutsky
+
+---
+
+### Tel Aviv University — Multiple Groups
+
+#### TAD Center for AI & Data Science
+
+**Website:** [datascience.tau.ac.il](https://datascience.tau.ac.il/)
+**Offers:** Direct PhD program, Google AI partnership
+
+#### ELLIS Unit Tel Aviv
+
+**Website:** [ellis.eu/units/tel-aviv](https://ellis.eu/units/tel-aviv)
+**Focus Areas:** (1) Vision & Language, (2) Theory of Deep Learning, (3) Privacy & Fairness, (4) Generative Models, (5) Common Sense Knowledge
+
+#### Key Faculty
+
+| Faculty | Lab/Focus | 2024 Highlights |
+|---------|-----------|-----------------|
+| **Lior Wolf** | Vision & Language | EMNLP 2024 Best Paper ("Backward Lens") |
+| **Amir Globerson** | ML Theory, NLP | NeurIPS 2024 General Chair |
+| **Yishay Mansour** | Learning Theory, RL | Also at Google Research |
+| **Noam Koenigstein** | [DELTA Lab](https://www.deltalab.sites.tau.ac.il) — Recommender Systems | Web Conf 2024 |
+
+#### Sagol School of Neuroscience
+
+**Website:** [sagol.tau.ac.il](https://sagol.tau.ac.il/)
+**Connection:** Amir Globerson is affiliated; ML for neuroscience
+
+---
+
+### Ben-Gurion University — Cyber Security
+
+#### BGU Cyber Security Research Center
+
+**Director:** [Yuval Elovici](https://cyber.bgu.ac.il/yuval/)
+**Website:** [cyber.bgu.ac.il](https://cyber.bgu.ac.il/)
+
+**Key Faculty:** Asaf Shabtai, Lior Rokach, Rami Puzis, Mordechai Guri, Bracha Shapira
+
+**Current Team:**
+- **Postdocs (3):** Dov Shirtz, David Toubiana, Polina Zilberman
+- **PhD Students (11):** Ben Nassi, Ziv Katzir, Aviad Cohen, Gabi Kedma, Yisrael Mirsky, Adi Sagi, Daniel Dor, Amitai Laufer, Ran Yahalom, Shachar Siboni, Sofia Belikovetsky
+- **MSc Students (7):** Including Matan Edri, Yuval Lapidot, Assaf Morami
+
+**Research Focus:** AI-driven security, malware detection, adversarial ML, mobile security, network security
+
+**2024 Publications:** MIL-STD-1553 security, serverless cloud detection, O-RAN adversarial ML
+
+---
+
+### Weizmann Institute — AI Center (WAIC)
+
+**Website:** [weizmann.ac.il/math/waic](https://www.weizmann.ac.il/math/waic/)
+**Director:** [Shimon Ullman](https://www.weizmann.ac.il/cs/ullman/) (Israel Prize 2015)
+
+**Key Faculty:**
+
+| Faculty | Area | Notes |
+|---------|------|-------|
+| **Shimon Ullman** | Computer vision, visual cognition | Israel Prize 2015 |
+| **Michal Irani** | Vision, ML | Dean of Faculty |
+| **Ronen Basri** | 3D reconstruction, shape analysis | |
+| **Robert Krauthgamer** | Algorithms, massive data | |
+| **Boaz Nadler** | Statistical ML, signal processing | |
+| **Gal Vardi** | Neural network theory | Zuckerman Scholar (new recruit) |
+| **Tamar Flash** | Robotics, motor control | |
+
+**Research Focus:** Computer vision, vision-language models, robotics, theoretical ML, computational biology
+
+**$100M Initiative:** Building new AI research capacity, hiring faculty
+
+**How to Join:** [weizmann.ac.il/math/waic/available-positions](https://www.weizmann.ac.il/math/waic/available-positions)
+
+---
+
+### Technion — Additional Labs
+
+#### RLRL (Reinforcement Learning Research Labs)
+
+**PI:** [Shie Mannor](https://rlrl.net.technion.ac.il/shie-mannor/)
+**Website:** [rlrl.net.technion.ac.il](https://rlrl.net.technion.ac.il/)
+
+**Research Focus:** RL theory, MDPs, learning theory
+**Also at:** NVIDIA Research
+
+#### Soudry Lab (Deep Learning)
+
+**PI:** [Daniel Soudry](https://soudry.github.io/)
+**Status:** ✅ **Actively recruiting** MSc/PhD/PostDoc
+
+**Research Focus:** Neural network theory, quantization, catastrophic forgetting, gradient descent dynamics
+
+**2024-2025:** ICLR 2024, 3 papers at ICML 2025 (including diffusion models)
+
+**Current Students:** Mor Shpigel Nacson (PhD), Niv Giladi (PhD), others
+
+---
+
+### Cross-Institutional Collaborations
+
+| Collaboration | Institutions | Focus |
+|--------------|--------------|-------|
+| **Belinkov × Pupko** | Technion CS + TAU Biology | Biological language models |
+| **Goldberg × AI2** | BIU + Allen Institute | NLP research |
+| **Mansour × Google** | TAU + Google Research | Learning theory |
+| **Elovici × Telekom** | BGU + Deutsche Telekom | Cybersecurity innovation |
+| **WAIC × Industry** | Weizmann | $100M AI initiative |
+
+---
+
 ## PhD Project Ideas
 
 *Dozens of research directions suitable for refining into PhD proposals. Each idea is grounded in recent research (2024-2025) and linked to potential advisors at Israeli universities.*
