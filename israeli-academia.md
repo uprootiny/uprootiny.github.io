@@ -567,30 +567,162 @@ Best,
 
 *A concrete research plan to test whether linguistic typology predicts quantization sensitivity.*
 
-### Background: What We Know
+---
 
-**From Marchisio et al. (EMNLP 2024 Findings):**
-- Quantization affects languages differently
-- Non-Latin scripts are more harmed on average
-- Human evaluation shows 16% drop in Japanese while automatic metrics show only 1.7%
-- Degradation correlates negatively with training data size
-- Challenging tasks (math reasoning) degrade fastest
-- Sometimes quantization helps: +1.3% for 35B model at W8A8
+### Part I: Empirical Foundation (What Already Exists)
 
-**From tokenization research:**
-- English: ~1.2 tokens/word; Japanese: ~2.5 tokens/word
-- Morphologically rich languages fragment more under BPE
-- Using English-centric tokenizers increases training cost by up to 68% for other languages
+Before designing experiments, we survey existing quantized models, benchmarks, and findings.
 
-**From layer sensitivity analysis:**
-- Attention layers typically have high outliers → favor rotation-based quantization
-- FFN layers have lower outliers → can use simpler affine transforms
-- Projection layers most sensitive in vision transformers
-- Sensitivity patterns consistent within model families
+#### A. Existing Quantized Multilingual Models
+
+| Model | Size | Languages | Quantized Versions | Source |
+|-------|------|-----------|-------------------|--------|
+| **BLOOM** | 176B | 46 spoken + 13 programming | GPTQ 4-bit (TheBloke) | [HuggingFace](https://huggingface.co/TheBloke/bloomz-176B-GPTQ) |
+| **BLOOMChat** | 176B | Multilingual chat | GPTQ 4-bit | [HuggingFace](https://huggingface.co/TheBloke/BLOOMChat-176B-v1-GPTQ) |
+| **mGPT** | 1.3B, 13B | 61 languages | 8-bit quantized | [HuggingFace](https://huggingface.co/monsoon-nlp/mGPT-13B-quantized) |
+| **Aya-23** | 8B, 35B | 23 languages | AWQ, GGUF | [HuggingFace](https://huggingface.co/alijawad07/aya-23-8B-AWQ-GEMM) |
+| **Qwen2.5** | 1.5B-72B | 29 languages | AWQ official | [HuggingFace](https://huggingface.co/Qwen/Qwen2.5-72B-Instruct-AWQ) |
+| **Command R/R+** | 35B, 103B | Multilingual | W4-g, W8, W8A8 | Cohere (studied in Marchisio et al.) |
+
+**Key insight:** Quantized versions exist for most major multilingual models. We can analyze existing benchmark data before running new experiments.
 
 ---
 
-### Hypothesis 1: Morphological Complexity Predicts Quantization Sensitivity
+#### B. Existing Benchmark Results: Marchisio et al. (EMNLP 2024)
+
+The most comprehensive study to date. [Paper](https://arxiv.org/abs/2407.03211)
+
+**Models tested:** Command R (35B), Command R+ (103B), Aya 23 (8B, 35B)
+
+**Languages tested:** 10 primary (Arabic, French, German, English, Spanish, Italian, Portuguese, Korean, Japanese, Chinese) + 13 extended
+
+**Quantization methods:**
+- W8: 8-bit weight-only, per-column
+- W8A8: 8-bit weight and activation
+- W4-g: 4-bit weight-only with GPTQ, group-wise
+- W4: 4-bit weight-only, per-column
+
+**Key findings with specific numbers:**
+
+| Language Group | Model | W8 | W8A8 | W4-g | W4 |
+|----------------|-------|-----|------|------|-----|
+| Latin/IE (de, es, fr, it, pt) | 103B | -0.1% | -0.7% | -0.4% | -0.7% |
+| Non-Latin (ar, ja, ko, zh) | 103B | -0.1% | -0.9% | -1.5% | -1.9% |
+| Latin/IE | 35B | — | — | -12.2% | — |
+| Non-Latin | 35B | — | — | -14.4% | — |
+
+**Human evaluation (critical finding):**
+- Automatic metrics: Japanese -1.7% at W4-g
+- Human evaluation: Japanese **-16.0%** at W4-g
+- French: **-16.6%** at W4-g on challenging prompts
+
+**Implication:** Automatic metrics severely underestimate degradation. Need human evaluation or more sensitive metrics.
+
+---
+
+#### C. Tokenization Fertility Data
+
+Fertility = tokens per word. Higher = worse for that language.
+
+| Language | Typical Fertility | Model | Source |
+|----------|-------------------|-------|--------|
+| English | 1.2-1.5 | Most models | Baseline |
+| Japanese | 2.5+ | GPT-4 | Medium article |
+| Arabic | 3.0+ | GPT-4 | "3× more tokens than English" |
+| Ukrainian | 6.0+ | GPT-2, Phi-2 | Frontiers AI 2025 |
+| Telugu, Odia | 11.7 | LLaMA-3 | ArXiv 2411.12240 |
+| Chinese | High but varies | — | Logographic, different dynamics |
+
+**Correlation with performance:**
+- "Fertility explains 20-50% of variance in accuracy" (AfriMMLU study)
+- "Doubling fertility leads to 4× increases in training cost"
+- English-centric tokenizers cost up to 68% more for other languages
+
+**Key insight:** Fertility is a strong predictor we can compute without running experiments.
+
+---
+
+#### D. Morphological Complexity Data (WALS)
+
+[WALS Online](https://wals.info/) provides typological features for 2,600+ languages.
+
+**Relevant features:**
+| Feature | Code | Description |
+|---------|------|-------------|
+| Fusion of inflection | 20A | Isolating/concatenative/fusional |
+| Prefixing vs suffixing | 26A | Suffixing/prefixing/both |
+| Case marking | 49A | Number of grammatical cases |
+| Word order | 81A | SOV/SVO/VSO/etc. |
+
+**Lupyan-Dale Morphological Index:**
+- Scores languages from -18 (no morphology) to 0 (maximal morphology)
+- Based on 18 WALS features
+- Available for 2,200+ languages
+
+**Language complexity examples:**
+| Language | Type | Complexity | Notes |
+|----------|------|------------|-------|
+| Mandarin | Isolating | Low | Few affixes, analytic |
+| Vietnamese | Isolating | Low | Tonal, no morphology |
+| English | Weakly fusional | Low-medium | Limited inflection |
+| German | Fusional | Medium | Case, gender, number |
+| Russian | Fusional | High | Rich case system |
+| Arabic | Fusional + templatic | High | Root-pattern morphology |
+| Hebrew | Fusional + templatic | High | Similar to Arabic |
+| Turkish | Agglutinative | Very high | Many suffixes, regular |
+| Finnish | Agglutinative | Very high | 15 cases, complex |
+| Hungarian | Agglutinative | Very high | 18 cases |
+| Inuktitut | Polysynthetic | Extreme | Sentence = one word |
+
+---
+
+#### E. Quantization Theory: Why Degradation Happens
+
+**Core equation:** Quantization error Δx is irreversible information loss.
+
+**Layer sensitivity predictors:**
+1. **Hessian trace:** Higher curvature = more sensitive
+2. **Output entropy:** Higher information = needs more bits
+3. **Position:** Later layers more sensitive than early
+
+**Key theoretical result (Soudry et al.):**
+- Straight-Through Estimator enables gradient flow through quantization
+- Provable bounds exist for single-layer quantization error
+- FP4 feasible with proper techniques (2025 spotlights)
+
+**Information-theoretic bound:**
+```
+optimal_bits(layer_i) ∝ H(output_layer_i)
+```
+
+Layers with higher entropy require proportionally more bits.
+
+---
+
+#### F. What Existing Research Tells Us
+
+**Established facts:**
+1. Non-Latin scripts degrade more (Marchisio et al.)
+2. Fertility predicts accuracy (multiple studies)
+3. Human eval shows 10× worse degradation than automatic metrics
+4. Smaller models (<10B) degrade more than larger models
+5. Challenging tasks (math reasoning) degrade fastest
+6. GGUF most consistent across bit-widths
+
+**Open questions (not yet tested):**
+1. Does morphological complexity predict degradation *independently* of fertility?
+2. Which layers are sensitive for which languages?
+3. Does script type matter beyond fertility effects?
+4. Can linguistic features predict precision requirements a priori?
+5. Does morpheme-aware tokenization help?
+
+---
+
+### Part II: Refined Hypotheses
+
+Based on empirical foundation above, we refine our hypotheses.
+
+#### Hypothesis 1: Morphological Complexity Predicts Quantization Sensitivity
 
 **Claim:** Languages with higher morphological complexity (measured by WALS features or Lupyan-Dale index) show greater perplexity degradation under FP4/FP8 quantization.
 
@@ -769,7 +901,112 @@ Best,
 
 ---
 
-### Priority Order
+### Part III: Zero-Cost Analysis (Before Running Experiments)
+
+Before spending compute, we can extract substantial insight from existing data.
+
+#### Analysis 0.1: Re-Analyze Marchisio et al. Data
+
+**Data available:** Per-language degradation for 23 languages across 4 quantization methods.
+
+**What we can compute:**
+1. Correlate their results with WALS morphological features
+2. Correlate with tokenization fertility (compute from their models)
+3. Partial correlation: morphology controlling for fertility
+4. Script type as categorical predictor
+
+**Time:** ~1 day of data wrangling, zero compute
+
+---
+
+#### Analysis 0.2: Compute Fertility for All Languages
+
+**Method:** Run tokenizers of BLOOM, Aya, Qwen on parallel corpora (Flores-200, WikiMatrix)
+
+**What we get:** Fertility scores for 100+ languages
+
+**Can then correlate with:**
+- Existing benchmark scores (Open LLM Leaderboard)
+- Intel Low-Bit Leaderboard results
+- WALS morphological complexity
+
+**Time:** ~2 days, minimal compute (just tokenization)
+
+---
+
+#### Analysis 0.3: Download and Analyze Intel Leaderboard
+
+[Intel Low-Bit Quantized Leaderboard](https://huggingface.co/spaces/Intel/low_bit_open_llm_leaderboard)
+
+**Available data:**
+- Scores for 10 benchmarks across many quantized models
+- Filter by quantization method (AutoRound, GPTQ, AWQ, bitsandbytes, GGUF)
+- Filter by bit-width (int4, int8, fp4, etc.)
+
+**What we can extract:**
+- Performance variance across models at different bit-widths
+- Which quantization methods most consistent
+- Baseline for expected degradation
+
+**Time:** ~1 day
+
+---
+
+#### Analysis 0.4: Survey HuggingFace Model Cards
+
+**Method:** Scrape/download model cards for quantized multilingual models
+
+**What to look for:**
+- Any reported benchmark scores
+- Training data composition (language proportions)
+- Evaluation on non-English tasks
+
+**Models to check:**
+- TheBloke's BLOOM variants
+- Qwen2.5 AWQ variants
+- Aya quantized variants
+- mGPT quantized
+
+**Time:** ~2 days manual review
+
+---
+
+#### Analysis 0.5: Build Language-Feature Database
+
+**Compile:**
+| Language | ISO | WALS Complexity | Fertility (BLOOM) | Fertility (Aya) | Script | Family |
+|----------|-----|-----------------|-------------------|-----------------|--------|--------|
+| English | eng | -12 | 1.2 | 1.3 | Latin | Germanic |
+| Hebrew | heb | -4 | ? | 2.1 | Hebrew | Semitic |
+| Arabic | ara | -3 | ? | 3.0 | Arabic | Semitic |
+| Finnish | fin | -2 | ? | ? | Latin | Uralic |
+| Turkish | tur | -1 | ? | ? | Latin | Turkic |
+| ... | ... | ... | ... | ... | ... | ... |
+
+**Purpose:** Foundation for all subsequent analysis
+
+**Time:** ~3 days to compile properly
+
+---
+
+#### Zero-Cost Analysis Summary
+
+| Analysis | Data Source | Time | Insight |
+|----------|-------------|------|---------|
+| 0.1 Re-analyze Marchisio | Their paper + WALS | 1 day | Test H1 immediately |
+| 0.2 Compute fertility | Tokenizers + corpora | 2 days | Foundation for H2 |
+| 0.3 Intel Leaderboard | HuggingFace | 1 day | Baseline expectations |
+| 0.4 Model card survey | HuggingFace | 2 days | Find gaps in literature |
+| 0.5 Language database | WALS + computed | 3 days | Foundation for everything |
+
+**Total zero-cost phase:** ~9 days of work, produces:
+- Preliminary test of H1 and H2
+- Clear picture of what's missing
+- Refined hypotheses for compute-intensive experiments
+
+---
+
+### Priority Order (After Zero-Cost Analysis)
 
 | Priority | Experiment | Risk | Payoff | Time |
 |----------|------------|------|--------|------|
