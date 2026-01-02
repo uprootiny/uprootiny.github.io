@@ -10,6 +10,20 @@ permalink: /israeli-academia/
 
 ---
 
+## TL;DR — What To Do Now
+
+**It's January 2026. For Fall 2026 entry:**
+
+| If you want to... | Do this NOW |
+|-------------------|-------------|
+| **Apply formally** | Email 2-3 advisors this month; deadlines are March-May |
+| **Avoid paperwork** | Start a remote collaboration instead (see [low-bureaucracy paths](#if-you-refuse-to-provide-records)) |
+| **Just explore** | Read advisor papers, attend online seminars, no commitment |
+
+**Key insight:** The formal application is not the bottleneck. Finding an advisor who wants to work with you is. Everything else follows.
+
+---
+
 ## Timelines: When to Engage
 
 *Your first question answered: when do I need to act?*
@@ -61,6 +75,40 @@ permalink: /israeli-academia/
 | **GRE** | Some | Technion EE/Aero require; others optional |
 | **Research proposal** | PhD | 2-5 pages on proposed research |
 | **Application fee** | Most | $100-150 (Weizmann: free) |
+
+### If You Refuse to Provide Records
+
+*Reality check: formal PhD programs require documentation. But there are paths with lower bureaucratic burden.*
+
+**Absolute minimums (can't avoid):**
+- Some form of identity verification
+- Proof you can do the work (publications, code, or demonstrated expertise)
+- An advisor willing to vouch for you
+
+**What you can often skip:**
+- GRE — Most Israeli programs don't require it (except Technion EE/Aero)
+- TOEFL — If you're clearly fluent (interview demonstrates this)
+- Official transcripts — Some advisors will advocate for you without seeing grades
+- Application fee — Weizmann is free; others may waive with explanation
+
+**Alternative paths with less paperwork:**
+
+| Path | Bureaucracy | How it works |
+|------|-------------|--------------|
+| **Research visitor** | Low | Email advisor directly, propose 3-6 month visit, no formal admission |
+| **Collaboration** | Very low | Co-author papers remotely, build relationship, formalize later |
+| **Industry → Academia** | Medium | Join Israeli tech company, publish, transition to research role |
+| **Conference networking** | Very low | Present at Israeli venues (ISCOL, Reversim), meet faculty in person |
+| **Postdoc** | Medium | If you have PhD elsewhere, postdoc applications are simpler |
+
+**The "advisor-first" strategy:**
+
+1. Find an advisor whose work you genuinely admire
+2. Email them with a specific research idea (not "I want to join your lab")
+3. If they're interested, they'll tell you what paperwork actually matters
+4. Let them navigate the bureaucracy for you
+
+*Many Israeli academics are pragmatic — if you can do the work, paperwork becomes a formality they'll help you handle.*
 
 ### If You're Missing Credentials
 
