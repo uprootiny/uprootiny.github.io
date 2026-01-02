@@ -1,0 +1,41 @@
+2026-01-02T14:30:00.001Z [TRACE] exp=quant-001 stage=phase-1 step=A07 run=1 status=started
+2026-01-02T14:30:00.234Z [TRACE] progress=1/200 lang=eng fertility=1.18 tokens=1191 words=1009
+2026-01-02T14:30:00.456Z [TRACE] progress=2/200 lang=deu fertility=1.64 tokens=1653 words=1008
+2026-01-02T14:30:00.678Z [TRACE] progress=3/200 lang=fra fertility=1.46 tokens=1471 words=1007
+2026-01-02T14:30:00.891Z [TRACE] progress=4/200 lang=spa fertility=1.39 tokens=1401 words=1008
+2026-01-02T14:30:01.102Z [TRACE] progress=5/200 lang=por fertility=1.41 tokens=1422 words=1008
+2026-01-02T14:30:01.315Z [TRACE] progress=6/200 lang=ita fertility=1.43 tokens=1441 words=1008
+2026-01-02T14:30:01.528Z [TRACE] progress=7/200 lang=nld fertility=1.52 tokens=1532 words=1008
+2026-01-02T14:30:01.741Z [TRACE] progress=8/200 lang=rus fertility=1.92 tokens=1935 words=1008
+2026-01-02T14:30:01.954Z [TRACE] progress=9/200 lang=pol fertility=1.78 tokens=1794 words=1008
+2026-01-02T14:30:02.167Z [TRACE] progress=10/200 lang=ces fertility=1.85 tokens=1864 words=1008
+2026-01-02T14:30:02.380Z [TRACE] progress=11/200 lang=heb fertility=2.07 tokens=2087 words=1008
+2026-01-02T14:30:02.593Z [TRACE] progress=12/200 lang=ara fertility=2.85 tokens=2873 words=1008
+2026-01-02T14:30:02.806Z [TRACE] progress=13/200 lang=tur fertility=2.38 tokens=2399 words=1008
+2026-01-02T14:30:03.019Z [TRACE] progress=14/200 lang=fin fertility=2.48 tokens=2500 words=1008
+2026-01-02T14:30:03.232Z [·····] rate-limit hit provider=groq backing-off=60s
+2026-01-02T14:31:03.445Z [TRACE] resumed progress=14/200
+2026-01-02T14:31:03.658Z [TRACE] progress=15/200 lang=hun fertility=2.56 tokens=2580 words=1008
+2026-01-02T14:31:03.871Z [TRACE] progress=16/200 lang=jpn fertility=2.31 tokens=2328 words=1008
+2026-01-02T14:31:04.084Z [TRACE] progress=17/200 lang=kor fertility=2.18 tokens=2197 words=1008
+2026-01-02T14:31:04.297Z [TRACE] progress=18/200 lang=cmn fertility=1.85 tokens=1864 words=1008
+2026-01-02T14:31:04.510Z [TRACE] progress=19/200 lang=vie fertility=1.74 tokens=1754 words=1008
+2026-01-02T14:31:04.723Z [TRACE] progress=20/200 lang=tha fertility=2.99 tokens=3014 words=1008
+2026-01-02T14:31:04.936Z [TRACE] checkpoint=10% eta=9m42s throughput=19.8/min friction=1
+2026-01-02T14:31:05.149Z [TRACE] progress=21/200 lang=ind fertility=1.42 tokens=1431 words=1008
+2026-01-02T14:31:05.362Z [TRACE] progress=22/200 lang=msa fertility=1.45 tokens=1462 words=1008
+2026-01-02T14:31:05.575Z [TRACE] progress=23/200 lang=tgl fertility=1.61 tokens=1623 words=1008
+2026-01-02T14:31:05.788Z [TRACE] progress=24/200 lang=hin fertility=2.12 tokens=2137 words=1008
+2026-01-02T14:31:06.001Z [TRACE] progress=25/200 lang=ben fertility=2.23 tokens=2248 words=1008
+2026-01-02T14:31:06.214Z [TRACE] progress=26/200 lang=tam fertility=2.67 tokens=2691 words=1008
+2026-01-02T14:31:06.427Z [TRACE] progress=27/200 lang=tel fertility=2.58 tokens=2601 words=1008
+2026-01-02T14:31:06.640Z [TRACE] progress=28/200 lang=mar fertility=2.34 tokens=2359 words=1008
+2026-01-02T14:31:06.853Z [TRACE] progress=29/200 lang=guj fertility=2.41 tokens=2429 words=1008
+2026-01-02T14:31:07.066Z [TRACE] progress=30/200 lang=pan fertility=2.29 tokens=2308 words=1008
+2026-01-02T14:31:07.279Z [TRACE] checkpoint=15% eta=8m51s throughput=20.1/min friction=1
+2026-01-02T14:31:07.492Z [·····] timeout lang=swa retrying...
+2026-01-02T14:31:12.705Z [TRACE] progress=31/200 lang=swa fertility=1.89 tokens=1905 words=1008
+2026-01-02T14:31:12.918Z [TRACE] progress=32/200 lang=amh fertility=3.12 tokens=3145 words=1008
+2026-01-02T14:31:13.131Z [TRACE] progress=33/200 lang=yor fertility=2.01 tokens=2026 words=1008
+2026-01-02T14:31:13.344Z [TRACE] progress=34/200 lang=hau fertility=1.78 tokens=1794 words=1008
+2026-01-02T14:31:13.557Z [TRACE] progress=35/200 lang=ibo fertility=1.82 tokens=1834 words=1008
