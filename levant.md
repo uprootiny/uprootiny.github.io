@@ -1571,6 +1571,98 @@ Israel is among the top ERC recipients globally:
 
 ---
 
+## Impact: Breakthroughs, Companies & Technology Transfer
+
+*Israeli universities have produced foundational research that shaped modern computing, plus hundreds of successful startups. Understanding this legacy helps you frame your own research contribution.*
+
+### Turing Award Winners (Computer Science's "Nobel Prize")
+
+| Laureate | Year | Contribution | Israeli Connection | Source |
+|----------|------|--------------|-------------------|--------|
+| **Adi Shamir** | 2002 | RSA cryptography (with Rivest & Adleman) | BSc Tel Aviv U, PhD Weizmann | [ACM Turing](https://amturing.acm.org/award_winners/shamir_2327856.cfm) |
+| **Amir Pnueli** | 1996 | Temporal logic in computing | Weizmann faculty | [Wikipedia](https://en.wikipedia.org/wiki/Amir_Pnueli) |
+| **Shafi Goldwasser** | 2012 | Probabilistic encryption, zero-knowledge proofs | Weizmann faculty | [Wikipedia](https://en.wikipedia.org/wiki/Shafi_Goldwasser) |
+
+### Nobel Prize & Related (Science with Computational Methods)
+
+| Laureate | Year | Field | Institution | Source |
+|----------|------|-------|-------------|--------|
+| **Arieh Warshel** | 2013 | Computational chemistry | BSc Technion, PhD Weizmann | [Wikipedia](https://en.wikipedia.org/wiki/Arieh_Warshel) |
+| **Dan Shechtman** | 2011 | Quasicrystals | Technion | [Technion](https://www.technion.ac.il/en/about/) |
+| **Aaron Ciechanover & Avram Hershko** | 2004 | Protein degradation | Technion | [Wikipedia](https://en.wikipedia.org/wiki/Technion) |
+| **Haim Sompolinsky** | 2024 | Brain Prize — Computational neuroscience | HUJI/ELSC | [AFHU](https://www.afhu.org/2024/03/07/first-israeli-scientist-hebrew-university-prof-haim-sompolinsky-awarded-prestigious-2024-brain-prize-by-lundbeck-foundation/) |
+
+### IEEE Milestones & Foundational Algorithms
+
+| Innovation | Year | Researchers | Institution | Impact | Source |
+|------------|------|-------------|-------------|--------|--------|
+| **Lempel-Ziv Compression (LZ77/LZ78)** | 1977-78 | Jacob Ziv, Abraham Lempel | Technion | Powers ZIP, GIF, PNG — enables internet data transfer | [IEEE Milestone](https://ethw.org/Milestones:Lempel-Ziv_Data_Compression_Algorithm,_1977) |
+| **RSA Cryptography** | 1977 | Adi Shamir (+ Rivest, Adleman) | Weizmann PhD | Secures billions of internet transactions | [ACM](https://amturing.acm.org/award_winners/shamir_2327856.cfm) |
+| **Differential Cryptanalysis** | 1990 | Adi Shamir, Eli Biham | Weizmann | Foundational cryptanalysis technique | [Wikipedia](https://en.wikipedia.org/wiki/Differential_cryptanalysis) |
+
+### Billion-Dollar Exits & Major Acquisitions
+
+| Company | Founded | University Connection | Acquired By | Price | Focus | Source |
+|---------|---------|----------------------|-------------|-------|-------|--------|
+| **Wiz** | 2020 | Co-founders: Technion alumni (Rappaport, Costica) | Google | **$32B** (2025) | Cloud security | [Technion UK](https://technionuk.org/press-release/technion-graduate-strikes-32-billion-deal-for-cybersecurity-startup-wiz/) |
+| **Mobileye** | 1999 | Amnon Shashua (HUJI Prof, Weizmann MSc) | Intel → IPO | **$15.3B** (2017) | Autonomous driving | [Mobileye](https://www.mobileye.com/about/) |
+| **Waze** | 2008 | Founders: TAU alumni (Shabtai, Levine) | Google | **$1.3B** (2013) | Navigation | [Wikipedia](https://en.wikipedia.org/wiki/Waze) |
+| **Check Point** | 1993 | Gil Shwed (HUJI student) | Public (NASDAQ) | ~$17B market cap | Firewall/cybersecurity | [Wikipedia](https://en.wikipedia.org/wiki/Gil_Shwed) |
+| **AI21 Labs** | 2017 | Amnon Shashua (HUJI), Yoav Shoham (Stanford) | NVIDIA (pending) | **$2-3B** | LLMs (Jamba, Jurassic) | [Calcalist](https://www.calcalistech.com/ctechnews/article/rkbh00xnzl) |
+| **Adallom** | 2012 | Wiz founders' previous startup | Microsoft | **$320M** (2015) | Cloud security | [Wikipedia](https://en.wikipedia.org/wiki/Adallom) |
+
+### Technology Transfer Organizations
+
+| Organization | University | Notable Spinoffs | Source |
+|--------------|-----------|------------------|--------|
+| **Yeda** (1959) | Weizmann | Copaxone (MS drug), Rebif, Humira, Yescarta (CAR-T), LightSolver, Quantum Source | [yedarnd.com](https://www.yedarnd.com/) |
+| **Yissum** | HUJI | Mobileye partnership, ExSeed Health | [yissum.co.il](https://www.yissum.co.il/) |
+| **Ramot** | TAU | Check Point Institute | [ramot.org](https://ramot.org/) |
+| **T3** | Technion | 1,000+ startups by alumni | [t3.technion.ac.il](https://t3.technion.ac.il/) |
+
+### Startup Ecosystem Statistics
+
+| Metric | Value | Source |
+|--------|-------|--------|
+| **Technion alumni startups** | 1,552 companies, $43.5B total funding | [Crunchbase](https://www.crunchbase.com/hub/technion-alumni-founded-companies) |
+| **Technion alumni unicorns** | 24 | [Tracxn](https://tracxn.com/d/startups-by-alumni/technion-israel-institute-of-technology-alumni/__PiNFK6l_PKrZzJqdxIwy4PO-KS4ygELu2kfnQD1aqZQ) |
+| **Technion share of Israeli startups (2015-2022)** | 25% (1,021 of ~4,000) | [Technion](https://www.technion.ac.il/en/about/) |
+| **Israeli engineers from Technion** | >50% | [ATS](https://ats.org/ats-news/startups-dominating-israels-innovation-scene/) |
+
+### Israel Prize for Computer Science / Technology
+
+| Laureate | Year | Contribution | Institution | Source |
+|----------|------|--------------|-------------|--------|
+| **Amnon Shashua** | 2023 | Lifetime achievement (Mobileye) | HUJI | [Mobileye](https://www.mobileye.com/amnon-shashua/) |
+| **Gil Shwed** | 2018 | First Israel Prize in Technology | HUJI | [Haaretz](https://www.haaretz.com/israel-news/2018-03-05/ty-article/cybersecurity-pioneer-gil-shwed-to-receive-first-israel-prize-in-tech/0000017f-f37c-d223-a97f-fffd160c0000) |
+| **Adi Shamir** | 2008 | Computer science | Weizmann | [Wikipedia](https://en.wikipedia.org/wiki/Adi_Shamir) |
+| **Shimon Ullman** | 2015 | Computer vision | Weizmann | [Weizmann](https://www.weizmann.ac.il/cs/ullman/) |
+
+### Highly Cited Researchers
+
+| Researcher | Institution | Citations | Field | Source |
+|------------|-------------|-----------|-------|--------|
+| **Yoav Goldberg** | Bar-Ilan | 42,000+ | NLP, Neural Networks | [Google Scholar](https://scholar.google.com/citations?user=0rskDKgAAAAJ) |
+| **Amnon Shashua** | HUJI | 50,000+ | Computer Vision, ML | [Google Scholar](https://scholar.google.com/citations?user=4ik96E4AAAAJ) |
+
+### Influential Books & Resources
+
+| Work | Author | Institution | Impact | Source |
+|------|--------|-------------|--------|--------|
+| **Neural Network Methods for NLP** | Yoav Goldberg | Bar-Ilan | Standard reference for neural NLP | [Springer](https://link.springer.com/book/10.1007/978-3-031-02165-7) |
+| **Foundations of Machine Learning** | Shai Shalev-Shwartz | HUJI | Graduate ML textbook | [MIT Press](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/) |
+| **Computer Vision** contributions | Shimon Ullman | Weizmann | Foundational vision research | [Weizmann](https://www.weizmann.ac.il/cs/ullman/) |
+
+### Why This Matters for PhD Applicants
+
+1. **Proven pipeline:** Israeli universities have demonstrated ability to produce both academic breakthroughs and commercial success
+2. **Industry connections:** Faculty often have startup experience or industry ties (Shashua, Shwed, Goldberg at AI2)
+3. **Funding:** Successful tech transfer generates university resources
+4. **Network effects:** Alumni help each other (Wiz founders all from Unit 8200 → Technion)
+5. **Visibility:** Work from these groups gets attention (Mobileye, AI21, Wiz)
+
+---
+
 ## PhD Project Ideas
 
 *Dozens of research directions suitable for refining into PhD proposals. Each idea is grounded in recent research (2024-2025) and linked to potential advisors at Israeli universities.*
