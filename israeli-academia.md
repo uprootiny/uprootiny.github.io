@@ -563,6 +563,245 @@ Best,
 
 ---
 
+## Multilingual Quantization: Hypotheses & Experiments
+
+*A concrete research plan to test whether linguistic typology predicts quantization sensitivity.*
+
+### Background: What We Know
+
+**From Marchisio et al. (EMNLP 2024 Findings):**
+- Quantization affects languages differently
+- Non-Latin scripts are more harmed on average
+- Human evaluation shows 16% drop in Japanese while automatic metrics show only 1.7%
+- Degradation correlates negatively with training data size
+- Challenging tasks (math reasoning) degrade fastest
+- Sometimes quantization helps: +1.3% for 35B model at W8A8
+
+**From tokenization research:**
+- English: ~1.2 tokens/word; Japanese: ~2.5 tokens/word
+- Morphologically rich languages fragment more under BPE
+- Using English-centric tokenizers increases training cost by up to 68% for other languages
+
+**From layer sensitivity analysis:**
+- Attention layers typically have high outliers → favor rotation-based quantization
+- FFN layers have lower outliers → can use simpler affine transforms
+- Projection layers most sensitive in vision transformers
+- Sensitivity patterns consistent within model families
+
+---
+
+### Hypothesis 1: Morphological Complexity Predicts Quantization Sensitivity
+
+**Claim:** Languages with higher morphological complexity (measured by WALS features or Lupyan-Dale index) show greater perplexity degradation under FP4/FP8 quantization.
+
+**Rationale:** Morphologically rich languages encode more grammatical information per token. When tokens are "compressed" via quantization, this information is more likely to be lost.
+
+**Prediction:**
+- Agglutinative languages (Turkish, Finnish, Hungarian) degrade more than isolating languages (Mandarin, Vietnamese)
+- Fusional languages (Russian, Arabic, Hebrew) fall in between
+- Correlation: r > 0.5 between WALS morphological complexity index and perplexity increase at W4
+
+**Experiment 1.1: Cross-Linguistic Perplexity Analysis**
+
+| Step | Action |
+|------|--------|
+| 1 | Select 20 languages spanning morphological types: 5 isolating, 5 agglutinative, 5 fusional, 5 polysynthetic |
+| 2 | Use BLOOM-7B or Aya-23 (both have broad language coverage) |
+| 3 | Quantize with AWQ at W8, W4, W3 precision |
+| 4 | Measure perplexity on held-out Wikipedia text for each language |
+| 5 | Calculate degradation: Δperplexity = (PPL_quantized - PPL_fp16) / PPL_fp16 |
+| 6 | Correlate with Lupyan-Dale morphological complexity scores |
+
+**Tools needed:**
+- `transformers` + `auto-awq` for quantization
+- WALS database for morphological features
+- Flores-200 or CC-100 for evaluation data
+
+**Expected output:** Scatter plot of complexity vs. degradation with regression line
+
+---
+
+### Hypothesis 2: Tokenization Fertility Mediates Quantization Harm
+
+**Claim:** Languages with higher tokenization fertility (more tokens per word) suffer greater quantization degradation, independent of morphological complexity.
+
+**Rationale:** High fertility means more "decision points" per word → more opportunities for quantization error to accumulate.
+
+**Prediction:**
+- Fertility (tokens/word) predicts degradation better than training data size
+- After controlling for fertility, morphological complexity still has residual effect
+
+**Experiment 2.1: Fertility-Controlled Analysis**
+
+| Step | Action |
+|------|--------|
+| 1 | Measure fertility for 30 languages in BLOOM/Aya vocabulary |
+| 2 | Quantize and measure perplexity as in Experiment 1.1 |
+| 3 | Fit regression: Δperplexity ~ fertility + complexity + training_data_size |
+| 4 | Report standardized coefficients for each predictor |
+
+**Experiment 2.2: Matched-Fertility Comparison**
+
+| Step | Action |
+|------|--------|
+| 1 | Find language pairs with similar fertility but different complexity: e.g., German (fusional) vs. Dutch (less fusional) |
+| 2 | Compare quantization degradation within pairs |
+| 3 | If complexity matters beyond fertility, pairs should differ |
+
+---
+
+### Hypothesis 3: Attention Layers Are Differentially Sensitive Across Languages
+
+**Claim:** Attention layers are more sensitive to quantization for languages with flexible word order, while FFN layers are more sensitive for morphologically complex languages.
+
+**Rationale:**
+- Attention encodes positional/structural relationships → word order flexibility requires higher precision
+- FFN encodes lexical/semantic information → morphological complexity requires higher precision
+
+**Prediction:**
+- For SOV languages (Japanese, Turkish, Korean): attention layers need higher precision
+- For morphologically rich languages: FFN layers need higher precision
+
+**Experiment 3.1: Layer-wise Sensitivity by Language**
+
+| Step | Action |
+|------|--------|
+| 1 | For each language, apply mixed-precision quantization |
+| 2 | Try: Attention at FP8, FFN at FP4 (and vice versa) |
+| 3 | Measure perplexity and downstream task accuracy |
+| 4 | Build language × layer sensitivity matrix |
+
+**Experiment 3.2: Attention Pattern Analysis**
+
+| Step | Action |
+|------|--------|
+| 1 | Extract attention weights before and after quantization |
+| 2 | Compute Jensen-Shannon divergence between attention distributions |
+| 3 | Correlate divergence with word order flexibility (WALS feature 81A) |
+
+---
+
+### Hypothesis 4: Script Type Interacts with Quantization
+
+**Claim:** Languages using logographic scripts (Chinese, Japanese kanji) are more robust to quantization than alphabetic/syllabic scripts.
+
+**Rationale:** Logographic tokens are semantically denser (one token ≈ one morpheme), so fewer tokens need to "cooperate" for meaning. Quantization errors are more isolated.
+
+**Prediction:**
+- Mandarin Chinese degrades less than Korean (syllabic) which degrades less than Hindi (alphabetic with complex conjuncts)
+
+**Experiment 4.1: Script-Controlled Comparison**
+
+| Step | Action |
+|------|--------|
+| 1 | Select language triplets: same family, different scripts (e.g., Japanese written in kanji vs. hiragana) |
+| 2 | Or: different families, same script type |
+| 3 | Quantize and compare |
+
+---
+
+### Hypothesis 5: Quantization-Aware Morphological Tokenization Helps
+
+**Claim:** A tokenizer trained to respect morpheme boundaries will produce representations more robust to quantization than BPE.
+
+**Rationale:** BPE splits arbitrarily based on frequency; morpheme-aware tokenization creates linguistically meaningful units that may have more stable representations.
+
+**Prediction:**
+- Morfessor-based tokenization + quantization outperforms BPE + quantization for morphologically rich languages
+- No difference for isolating languages (no morphology to respect)
+
+**Experiment 5.1: Tokenizer Comparison**
+
+| Step | Action |
+|------|--------|
+| 1 | Train small LM (350M) with BPE vs. Morfessor tokenizer on Finnish/Turkish |
+| 2 | Quantize both to FP4 |
+| 3 | Compare perplexity degradation |
+
+---
+
+### Experimental Infrastructure
+
+**Models to use:**
+| Model | Size | Languages | Why |
+|-------|------|-----------|-----|
+| BLOOM-7B | 7B | 46 languages | Broad coverage, well-documented |
+| Aya-23 | 8B | 23 languages | Recent, instruction-tuned |
+| mT5-XL | 3.7B | 101 languages | Encoder-decoder, different architecture |
+| Llama-3-8B | 8B | English-centric | Baseline comparison |
+
+**Quantization methods:**
+| Method | Precision | Use case |
+|--------|-----------|----------|
+| AWQ | W4, W8 | Primary method (fast, good quality) |
+| GPTQ | W4, W3, W2 | Extreme compression |
+| bitsandbytes | 4-bit, 8-bit | QLoRA fine-tuning |
+
+**Evaluation metrics:**
+| Metric | What it measures | How to compute |
+|--------|------------------|----------------|
+| Perplexity | Language modeling quality | `model.eval()` on held-out text |
+| Fertility | Tokenization efficiency | tokens / words in reference corpus |
+| BLEU (translation) | Task-specific quality | SacreBLEU on Flores-200 |
+| ΔAccuracy | Downstream degradation | XQuAD, XNLI, XCOPA benchmarks |
+
+**Linguistic features (from WALS):**
+| Feature | Code | What it captures |
+|---------|------|------------------|
+| Morphological complexity | Lupyan-Dale index | Overall morphological richness |
+| Word order | 81A-83A | SOV, SVO, etc. |
+| Case marking | 49A | Presence/complexity of case system |
+| Number of cases | 49A | 2, 3-4, 5-6, 7-8, 9+ |
+| Fusion of case/number | 21A | Separate vs. fused affixes |
+
+---
+
+### Compute Requirements
+
+| Experiment | GPU hours (A100) | Notes |
+|------------|------------------|-------|
+| 1.1 (20 languages × 3 precisions) | ~20h | Quantization is fast, eval is cheap |
+| 2.1 (30 languages) | ~30h | Same as 1.1 |
+| 3.1 (layer-wise, 10 languages) | ~50h | Many configurations to test |
+| 5.1 (train 350M model) | ~100h | From scratch training |
+
+**Total for pilot study:** ~200 GPU hours ≈ $400-600 at cloud rates
+
+---
+
+### Priority Order
+
+| Priority | Experiment | Risk | Payoff | Time |
+|----------|------------|------|--------|------|
+| 1 | 1.1 (morphological complexity) | Low | High | 1 week |
+| 2 | 2.1 (fertility analysis) | Low | Medium | 1 week |
+| 3 | 3.1 (layer-wise sensitivity) | Medium | High | 2 weeks |
+| 4 | 4.1 (script analysis) | Low | Medium | 1 week |
+| 5 | 5.1 (tokenizer comparison) | High | High | 4 weeks |
+
+**Recommended starting point:** Experiments 1.1 and 2.1 can be run immediately with existing models and no training. Results will guide whether to pursue the more complex experiments.
+
+---
+
+### Potential First Paper Structure
+
+**Title:** "Does Hebrew Need More Bits? Linguistic Typology Predicts LLM Quantization Sensitivity"
+
+**Abstract (draft):**
+> Low-bit quantization (FP4/FP8) enables efficient LLM deployment but affects languages unequally. We show that morphological complexity, tokenization fertility, and script type predict quantization degradation across 30 languages. Languages with rich morphology (Hebrew, Finnish, Turkish) require 1.5-2× higher precision in attention layers to match English performance. We propose a linguistically-informed precision allocation strategy that recovers 90% of FP16 quality at FP4 compute cost for multilingual models.
+
+**Sections:**
+1. Introduction: Multilingual LLMs + quantization = underexplored
+2. Background: Quantization methods, linguistic typology
+3. Experiments 1-4: Correlational analyses
+4. Experiment 5: Intervention (tokenizer)
+5. Practical recommendations: Precision allocation heuristics
+6. Conclusion: Linguistic knowledge improves efficiency
+
+**Target venues:** EMNLP 2027, ICLR 2027, or ACL 2027
+
+---
+
 ## Top 12 Project Ideas (Developed)
 
 *Well-specified problems with clear objectives, established methods, and active advisors. Start here.*
