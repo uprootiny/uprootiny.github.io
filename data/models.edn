@@ -1,0 +1,142 @@
+;; Model Registry with Traits
+;; See docs/friction-ledger.md F001 for rationale
+
+{:models
+ [;; === FREE TIER (Groq) ===
+  {:id "llama-3.3-70b-versatile"
+   :provider :groq
+   :cost :free
+   :traits #{:tool-use :code :reasoning}
+   :context 131072
+   :rate-limit {:rpm 30 :tpd 6000}
+   :quality-tier :high
+   :tested true
+   :notes "Best free model for general use"}
+
+  {:id "llama-3.1-70b-versatile"
+   :provider :groq
+   :cost :free
+   :traits #{:tool-use :code}
+   :context 131072
+   :rate-limit {:rpm 30 :tpd 6000}
+   :quality-tier :high
+   :tested true
+   :notes "Solid alternative to 3.3"}
+
+  {:id "gemma-2-9b-it"
+   :provider :groq
+   :cost :free
+   :traits #{:tool-use :fast}
+   :context 8192
+   :rate-limit {:rpm 30 :tpd 14400}
+   :quality-tier :medium
+   :tested true
+   :notes "Fast, good for simple tasks"}
+
+  {:id "llama-3.1-8b-instant"
+   :provider :groq
+   :cost :free
+   :traits #{:fast}
+   :context 131072
+   :rate-limit {:rpm 30 :tpd 14400}
+   :quality-tier :low
+   :tested true
+   :notes "Very fast, basic quality"}
+
+  {:id "mixtral-8x7b-32768"
+   :provider :groq
+   :cost :free
+   :traits #{:code}
+   :context 32768
+   :rate-limit {:rpm 30 :tpd 5000}
+   :quality-tier :medium
+   :tested true
+   :notes "Good at code, older architecture"}
+
+  ;; === FREE TIER (Google) ===
+  {:id "gemini-1.5-flash"
+   :provider :google
+   :cost :free  ;; generous free tier
+   :traits #{:tool-use :fast :multimodal :long-context}
+   :context 1000000
+   :rate-limit {:rpm 15 :tpd 1500}
+   :quality-tier :medium
+   :tested false
+   :notes "Very long context, fast"}
+
+  ;; === PAID TIER ===
+  {:id "claude-sonnet-4-20250514"
+   :provider :anthropic
+   :cost {:input 3.0 :output 15.0}
+   :traits #{:tool-use :code :reasoning :agentic}
+   :context 200000
+   :rate-limit {:rpm 50}
+   :quality-tier :top
+   :tested true
+   :notes "Best overall, excellent tool use"}
+
+  {:id "claude-opus-4-5-20251101"
+   :provider :anthropic
+   :cost {:input 15.0 :output 75.0}
+   :traits #{:tool-use :code :reasoning :agentic :deep-thought}
+   :context 200000
+   :rate-limit {:rpm 20}
+   :quality-tier :top
+   :tested true
+   :notes "Most capable, expensive"}
+
+  {:id "gpt-4o"
+   :provider :openai
+   :cost {:input 2.5 :output 10.0}
+   :traits #{:tool-use :code :reasoning :multimodal}
+   :context 128000
+   :rate-limit {:rpm 60}
+   :quality-tier :top
+   :tested true
+   :notes "Strong all-rounder"}
+
+  {:id "gpt-4o-mini"
+   :provider :openai
+   :cost {:input 0.15 :output 0.60}
+   :traits #{:tool-use :fast}
+   :context 128000
+   :rate-limit {:rpm 60}
+   :quality-tier :medium
+   :tested true
+   :notes "Cheap and fast, basic quality"}
+
+  {:id "gemini-1.5-pro"
+   :provider :google
+   :cost {:input 1.25 :output 5.0}
+   :traits #{:tool-use :long-context :multimodal :reasoning}
+   :context 2000000
+   :rate-limit {:rpm 60}
+   :quality-tier :high
+   :tested false
+   :notes "Longest context available"}
+
+  {:id "deepseek-chat"
+   :provider :deepseek
+   :cost {:input 0.14 :output 0.28}
+   :traits #{:code :reasoning}
+   :context 64000
+   :rate-limit {:rpm 60}
+   :quality-tier :high
+   :tested false
+   :notes "Very cheap, strong at code/math"}]
+
+ :trait-descriptions
+ {:tool-use "Reliably calls tools in correct format (>90% success)"
+  :code "Strong code generation (>80% HumanEval)"
+  :reasoning "Chain-of-thought, multi-step (>70% GSM8K)"
+  :fast "Sub-2s typical response time"
+  :long-context "Context window >100k tokens"
+  :multimodal "Accepts images/audio input"
+  :agentic "Good at multi-turn autonomous tasks"
+  :deep-thought "Extended reasoning for complex problems"}
+
+ :quality-tiers
+ {:top "Best available, use for critical tasks"
+  :high "Very good, suitable for most tasks"
+  :medium "Adequate for simple/exploratory tasks"
+  :low "Basic capability, use for drafts/speed"}}
