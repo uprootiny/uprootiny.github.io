@@ -1200,6 +1200,76 @@ Weizmann interviews selected candidates for 30-60 minutes.
 
 ---
 
+## Verified Advisor Recruitment Status (January 2026)
+
+*Researched from official faculty pages, lab websites, and recent publications. Always confirm directly with advisors.*
+
+### Actively Recruiting PhD Students
+
+| Advisor | University | Field | Status | Source |
+|---------|-----------|-------|--------|--------|
+| **Daniel Soudry** | Technion EE | Deep learning theory | ✅ **Actively recruiting** MSc/PhD/PostDoc | [soudry.github.io](https://soudry.github.io/) — explicit statement |
+| **Roy Schwartz** | HUJI CS | NLP, efficiency | ✅ **Actively recruiting** | [schwartz-lab-huji.github.io](https://schwartz-lab-huji.github.io/) — "Join us!" page |
+| **Weizmann Math/CS** | Weizmann | Math, TCS | ✅ ~10 PhD/year admitted | [weizmann.ac.il/math/join-us](https://www.weizmann.ac.il/math/join-us) |
+
+### Limited/Conditional Availability
+
+| Advisor | University | Field | Status | Source |
+|---------|-----------|-------|--------|--------|
+| **Yonatan Belinkov** | Technion CS | NLP, interpretability | ⚠️ **Not accepting 2025-26**; open for **2026-27** | [belinkov.com](https://belinkov.com/) — sabbatical at Kempner Institute |
+| **Yoav Goldberg** | BIU CS | NLP, ML | ⚠️ Has [note to prospective students](http://u.cs.biu.ac.il/~yogo/note-to-grads.html) — high standards, contact directly | [u.cs.biu.ac.il/~yogo](https://u.cs.biu.ac.il/~yogo/) |
+
+### Active Research Groups (Contact Directly)
+
+| Advisor | University | Field | Recent Activity | Lab/Group |
+|---------|-----------|-------|-----------------|-----------|
+| **Reut Tsarfaty** | BIU CS | Hebrew NLP | ERC-funded NLPRO project, 4+ papers 2024 | [ONLP Lab](https://nlp.biu.ac.il/~rtsarfaty/onlp) |
+| **Ido Dagan** | BIU CS | NLP, textual entailment | 6+ papers 2024, graduated Valentina Pyatkin | [NLP Lab](https://u.cs.biu.ac.il/~dagani/) |
+| **Omri Abend** | HUJI CS/Cog | Semantics, NLP | 4+ papers EMNLP 2024 | [cs.huji.ac.il/~oabend](https://www.cs.huji.ac.il/~oabend/) |
+| **Yishay Mansour** | TAU CS | Learning theory, RL | NeurIPS/ICML regular, also at Google | [tau.ac.il/~mansour](https://www.cs.tau.ac.il/~mansour/) |
+| **Amir Globerson** | TAU CS | ML theory, NLP | NeurIPS 2024 General Chair | [Sagol page](https://en-sagol.tau.ac.il/researchers/Amir-Globerson) |
+| **Shie Mannor** | Technion EE | RL theory | Also at NVIDIA, active publications | [rlrl.net.technion.ac.il](https://rlrl.net.technion.ac.il/shie-mannor/) |
+
+### Recent PhD Graduates (Proof of Active Supervision)
+
+| Graduate | Advisor(s) | University | Year | Now At |
+|----------|-----------|-----------|------|--------|
+| **Valentina Pyatkin** | Dagan, Tsarfaty | BIU | 2024 | AI2/UW PostDoc — ACL Outstanding Paper |
+| **Shauli Ravfogel** | Goldberg | BIU | Recent | Research — co-authoring 2025 papers |
+| **Guy Kaplan** | Schwartz | HUJI | 2025 | (MSc defended July 2025) |
+| **Leshem Choshen** | Abend | HUJI | Ongoing | MIT/IBM collaboration |
+| **Mor Shpigel Nacson** | Soudry | Technion | Ongoing | PhD student |
+
+### Weizmann Math Faculty — Research Interests
+
+| Faculty | Area | Recent Work | Contact for |
+|---------|------|-------------|-------------|
+| **Tamar Ziegler** | Ergodic theory, combinatorics | Corners problem (FOCS 2025) | Additive combinatorics |
+| **Ofer Zeitouni** | Probability, random matrices | Mathematical physics | Probability theory |
+| **Boaz Klartag** | Convex geometry | High-dimensional geometry | Geometric analysis |
+| **Assaf Naor** | Metric geometry, algorithms | TCS connections | Metric embeddings |
+| **Oded Goldreich** | Complexity theory | Foundations of cryptography | TCS, complexity |
+| **Michal Irani** | Computer vision | Dean of Faculty | Vision, ML |
+
+### How to Verify Current Status
+
+1. **Check faculty homepage** — Look for "Join us", "Prospective students", or "Open positions"
+2. **Read recent papers** — Co-authors often include current students
+3. **Email directly** — Brief, specific inquiry about availability
+4. **Check lab pages** — Many list current members
+5. **University job boards** — Some post funded positions
+
+### Key Resources
+
+- [FindAPhD Israel Guide](https://www.findaphd.com/guides/phd-study-in-israel) — General information
+- [Technion CS Technical Reports](https://www.cs.technion.ac.il/tech-reports/) — Recent theses
+- [TAU Graduate Studies](https://en-go.tau.ac.il/graduate) — Application info (Feb 2 - May 31, 2025)
+- [HUJI International PhD](https://international.huji.ac.il/doctoral-research) — President's Scholarship info
+- [Azrieli Visiting PhD Fellowship](https://azrielifoundation.org/fellows/visiting-phd-fellowship/) — 3-4 month visits, 12,000 ILS/month
+- [Fulbright Israel PhD](https://us.fulbrightonline.org/countries/middle-east-and-north-africa/israel/1857) — Up to 4 grants for 2026/27
+
+---
+
 ## PhD Project Ideas
 
 *Dozens of research directions suitable for refining into PhD proposals. Each idea is grounded in recent research (2024-2025) and linked to potential advisors at Israeli universities.*
