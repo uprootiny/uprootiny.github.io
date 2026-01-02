@@ -1,3 +1,9 @@
+---
+layout: text
+title: Attention Taxonomy
+permalink: /docs/attention-taxonomy/
+---
+
 # Attention Taxonomy & Corpus Lifecycle
 
 *Managing scarce user attention across the progressive slowing of LLM experiments from conversation to verified result.*

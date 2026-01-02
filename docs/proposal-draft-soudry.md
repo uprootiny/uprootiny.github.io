@@ -1,3 +1,9 @@
+---
+layout: text
+title: PhD Proposal Draft
+permalink: /docs/proposal-draft-soudry/
+---
+
 # PhD Research Proposal: Linguistic Typology as a Predictor of LLM Quantization Sensitivity
 
 **Candidate:** [Name]

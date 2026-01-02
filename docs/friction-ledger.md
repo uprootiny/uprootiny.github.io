@@ -1,3 +1,9 @@
+---
+layout: text
+title: Friction Ledger
+permalink: /docs/friction-ledger/
+---
+
 # Friction Ledger
 
 *Observed friction in workflows and mitigation strategies.*

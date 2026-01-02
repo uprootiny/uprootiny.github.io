@@ -1,3 +1,9 @@
+---
+layout: text
+title: Research Seeds
+permalink: /docs/research-seeds/
+---
+
 # Research Seeds: PhD Proposal Ideas
 
 *Dozens of experimental goals suitable for refining into PhD research proposals. Each grounded in prior work and commits.*

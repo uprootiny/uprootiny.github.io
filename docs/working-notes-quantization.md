@@ -1,3 +1,9 @@
+---
+layout: text
+title: Working Notes
+permalink: /docs/working-notes-quantization/
+---
+
 # Working Notes: Linguistic Typology & Quantization
 
 ```
