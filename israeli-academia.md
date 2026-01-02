@@ -569,6 +569,205 @@ Best,
 
 ---
 
+### Part 0: Reasoning Shape — Epistemology of Artifact Probing
+
+Before diving into data, we formalize the reasoning structure itself.
+
+#### The Problem
+
+We have a "muddled entity" — the landscape of quantized multilingual models — that contains latent structure. We want to:
+1. Discover what structure exists
+2. Formulate hypotheses about it
+3. Test those hypotheses by eliciting behavior
+4. Refine understanding
+
+This is **behavioral epistemology for ML artifacts**: treating existing models as objects of scientific inquiry.
+
+---
+
+#### One: The Universe of Evidential Results
+
+**What exists that we can observe?**
+
+| Category | Artifacts | Observable Properties |
+|----------|-----------|----------------------|
+| **Models** | BLOOM, Aya, Qwen, mGPT, Command R, Llama, Mistral | Architecture, size, training data, languages |
+| **Quantized variants** | GPTQ, AWQ, GGUF, bitsandbytes versions | Bit-width, quantization method, calibration data |
+| **Benchmarks** | MMLU, mMMLU, FLORES, MGSM, XCOPA | Per-language scores, before/after quantization |
+| **Tokenizers** | SentencePiece, BPE, Unigram | Vocabulary, fertility per language |
+| **Linguistic databases** | WALS, Ethnologue, Glottolog | Typological features, genealogy, scripts |
+| **Existing studies** | Marchisio et al., tokenization papers | Published degradation numbers |
+
+**Evidential dimensions:**
+- Model × Language × Task × Quantization → Performance
+- Language → Typological features
+- Language × Tokenizer → Fertility
+- Layer × Language → Sensitivity (if probed)
+
+---
+
+#### Two: Hypothesis Formulation — The Shape of Conjecture
+
+A well-formed hypothesis for artifact probing has:
+
+```
+IF [latent structure X exists in the artifact]
+THEN [observable behavior Y should manifest]
+WHEN [we apply elicitation procedure Z]
+```
+
+**Example (H1):**
+```
+IF morphologically complex languages have higher-entropy representations
+THEN quantization (which reduces entropy capacity) should degrade them more
+WHEN we measure perplexity before/after quantization
+```
+
+**Key requirement:** The observable behavior must be:
+1. **Discriminative** — Different latent structures produce different observables
+2. **Accessible** — We can actually measure it without impossible resources
+3. **Interpretable** — We can map back from observation to structure
+
+---
+
+#### Three: Elicitation Protocol — Probing the Muddled Entity
+
+Three complementary approaches:
+
+**A. Behavioral Testing (CheckList-style)**
+- Define capability (e.g., "handles morphological agreement")
+- Design minimal test cases
+- Measure pass/fail rate before/after quantization
+- Compute degradation by capability type
+
+**B. Probing Classifiers (Belinkov-style)**
+- Extract representations from model layers
+- Train classifier to predict linguistic property
+- Compare probing accuracy: FP16 vs. quantized
+- If accuracy drops, that information was "lost to compression"
+
+**C. Correlational Analysis (Epidemiological)**
+- Gather cross-model, cross-language data
+- Compute correlations with linguistic features
+- Use regression to disentangle predictors
+- Identify residuals — what remains unexplained?
+
+---
+
+#### Four: Interpretation Framework — What Counts as Evidence?
+
+| Observation | Interpretation | Confidence |
+|-------------|----------------|------------|
+| Strong correlation (r > 0.7) between morphological complexity and degradation | Morphology drives sensitivity | Medium-high (could be confounded) |
+| Correlation disappears when controlling for fertility | Fertility is the true driver, morphology is proxy | High |
+| Different layers show different sensitivity patterns by language | Language-specific information is localized | High |
+| Probing accuracy drops for morphology but not syntax | Morphological information specifically lost | High |
+| Random variation, no pattern | Our hypothesis is wrong OR our measurements are noisy | Requires refinement |
+
+**Falsification conditions:**
+- H1 falsified if: No correlation between WALS complexity and degradation
+- H2 falsified if: Fertility uncorrelated with degradation
+- H3 falsified if: All layers equally sensitive for all languages
+
+---
+
+#### Five: Iteration — Refinement Protocol
+
+```
+┌─────────────────────────────────────────┐
+│ 1. Survey → What artifacts exist?       │
+│ 2. Hypothesize → What structure expect? │
+│ 3. Design → What elicits that behavior? │
+│ 4. Observe → Run probes, collect data   │
+│ 5. Interpret → Does it confirm/falsify? │
+│ 6. Refine → New hypotheses, repeat      │
+└─────────────────────────────────────────┘
+```
+
+**Stopping conditions:**
+- Sufficient predictive power (R² > 0.6)
+- Clear mechanistic story (layer-level understanding)
+- Actionable output (precision allocation heuristics)
+
+---
+
+#### Six: Scale Ladder — From Cheap to Expensive
+
+| Scale | Method | Cost | What it tells us |
+|-------|--------|------|------------------|
+| **0. Meta-analysis** | Re-analyze published results | Free | Whether hypotheses worth testing |
+| **1. Tokenizer probing** | Compute fertility on corpora | Minutes | Fertility as predictor |
+| **2. Small model probing** | Run existing quantized small models | Hours | Whether patterns hold |
+| **3. Medium model probing** | Run 7B-13B quantized models | Days | Scale invariance |
+| **4. Layer-wise analysis** | Extract activations, probe | Days | Mechanistic understanding |
+| **5. Controlled training** | Train models with manipulated variables | Weeks | Causal claims |
+
+**Principle:** Don't advance to Scale N+1 until Scale N confirms the pattern.
+
+---
+
+#### Seven: The Instrumentalization Thesis
+
+**Key insight:** The solution to our research problem may already exist — scattered across HuggingFace model cards, academic appendices, community benchmarks, and practitioners' reports. We don't need to discover it; we need to **instrumentalize** it.
+
+**What "instrumentalize" means:**
+1. Build tools that aggregate dispersed evidence
+2. Create formal mappings between observables and theory
+3. Validate that the pattern is real, not noise
+4. Package it as actionable knowledge
+
+**The archaeological metaphor:**
+- Artifacts exist (quantized models, benchmark scores)
+- Evidence exists (degradation patterns, fertility data)
+- The structure exists (linguistic typology → quantization sensitivity)
+- We're not discovering — we're **excavating and reconstructing**
+
+**Concrete instruments we need:**
+
+| Instrument | What it does | Output |
+|------------|--------------|--------|
+| **Benchmark aggregator** | Collects per-language scores across models/papers | Language × Model × Quantization → Score matrix |
+| **Fertility calculator** | Tokenizes corpora, computes tokens/word | Language × Tokenizer → Fertility |
+| **WALS interface** | Maps languages to typological features | Language → Feature vector |
+| **Correlation engine** | Computes partial correlations, regressions | Feature → Degradation relationships |
+| **Visualization dashboard** | Renders patterns interpretably | Interactive exploration |
+
+**What we expect to find:**
+- The pattern is already there: morphologically complex languages degrade more
+- It's already in the Marchisio data, the tokenization studies, the community reports
+- We just haven't connected the dots formally
+
+**What constitutes success:**
+- Not: "We ran experiments and found X"
+- But: "We built an instrument that reveals the existing evidence shows X"
+
+**The validation requirement:**
+- Our instrument should **predict** benchmark scores we haven't looked at yet
+- If we build the model from Marchisio data, it should predict degradation on Aya data we held out
+- This is the test that our formalization captures real structure, not overfitting to noise
+
+---
+
+#### Eight: Catalog of Potentially Solved Questions
+
+Questions that may already have answers in existing data:
+
+| Question | Where evidence likely lives | Instrument needed |
+|----------|----------------------------|-------------------|
+| Does morphology predict degradation? | Marchisio et al. + WALS | Correlation analysis |
+| Does fertility predict degradation? | Tokenization papers + model cards | Regression on fertility |
+| Which layers are sensitive? | Probing literature + AWQ salient weight analysis | Layer-wise aggregation |
+| Does script type matter? | Marchisio non-Latin vs Latin split | Categorical regression |
+| Does model size modulate effects? | Across-scale benchmark comparisons | Size × Language interaction |
+| Do different quantization methods affect languages differently? | Intel leaderboard + model cards | Method × Language matrix |
+
+**What's genuinely unknown (requires new experiments):**
+- Causal mechanisms (why not just what)
+- Layer-specific language interactions (fine-grained)
+- Whether morpheme-aware tokenization helps (interventional)
+
+---
+
 ### Part I: Empirical Foundation (What Already Exists)
 
 Before designing experiments, we survey existing quantized models, benchmarks, and findings.
