@@ -945,6 +945,249 @@ What specific numbers do we expect our instruments to produce?
 
 ---
 
+#### Fourteen: Hyle Architecture — Distributed Reasoning Graph
+
+A system architecture for managing the experimental reasoning as a loopy graph of LLM agents.
+
+**Core Concept:**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     HYLE REASONING CANVAS                        │
+│                                                                  │
+│   ┌─────────┐     ┌─────────┐     ┌─────────┐                   │
+│   │ Agent A │────▶│ Agent B │────▶│ Agent C │──┐                │
+│   │ (H1)    │     │ (H2)    │     │ (H3)    │  │                │
+│   └────▲────┘     └─────────┘     └─────────┘  │                │
+│        │                                        │                │
+│        └────────────────────────────────────────┘ (loop)        │
+│                                                                  │
+│   Each agent: LLM + paragraph + state slice                     │
+│   Edges: typed data flow (hashmap of measurements)              │
+│   Managers: enforce formal properties between stages            │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**The Loopy Graph:**
+
+| Node | Agent Role | Paragraph Responsibility | State Slice |
+|------|------------|-------------------------|-------------|
+| `survey` | Literature scanner | "Related work shows..." | {papers: [], findings: []} |
+| `fertility` | Tokenization analyst | "Fertility varies from..." | {lang→fertility} |
+| `wals` | Typology mapper | "Morphological complexity..." | {lang→features} |
+| `correlate` | Statistical engine | "Correlation analysis reveals..." | {r, R², p-values} |
+| `predict` | Threshold modeler | "We predict threshold..." | {b*(L), coefficients} |
+| `probe` | Layer analyst | "Layer-wise sensitivity..." | {layer→sensitivity} |
+| `synthesize` | Paper assembler | "In conclusion..." | {full context} |
+
+**Edges (typed data flows):**
+
+```clojure
+;; Edge types
+{:measurement  {:value float :ci [lo hi] :source keyword :timestamp inst}
+ :correlation  {:r float :p float :n int :variables [kw]}
+ :prediction   {:target kw :value float :ci [lo hi] :features map}
+ :history      {:variable kw :series [{:t inst :v float}]}
+ :causal       {:from kw :to kw :strength float :mechanism string}}
+```
+
+**The Nested Hashmap (Experimental State):**
+
+```clojure
+(def experimental-state
+  {:measurements
+   {:fertility
+    {"eng" {:value 1.2 :ci [1.1 1.4] :source :bloom :t #inst "2026-01-02"}
+     "heb" {:value 2.1 :ci [1.8 2.4] :source :aya :t #inst "2026-01-02"}
+     "ara" {:value 3.0 :ci [2.5 3.5] :source :bloom :t #inst "2026-01-02"}}
+    :degradation
+    {"eng" {:w4 {:value -0.02 :ci [-0.03 -0.01] :source :marchisio}}
+     "ara" {:w4 {:value -0.12 :ci [-0.15 -0.08] :source :marchisio}}}}
+
+   :correlations
+   {:fertility-degradation {:r 0.72 :p 0.001 :n 23}
+    :complexity-degradation {:r 0.45 :p 0.02 :n 23}
+    :fertility-degradation|complexity {:r 0.58 :p 0.005 :n 23}}  ;; partial
+
+   :models
+   {:threshold-function
+    {:form "b*(L) = b_base + α·fertility + β·complexity + γ·script"
+     :params {:b_base 3.2 :alpha 0.4 :beta 0.08 :gamma 0.4}
+     :R² 0.72
+     :validated? false}}
+
+   :causal-graph
+   {:nodes [:fertility :complexity :script :training-data :degradation]
+    :edges [{:from :fertility :to :degradation :type :direct}
+            {:from :complexity :to :fertility :type :confound}
+            {:from :training-data :to :degradation :type :confound}]}
+
+   :history
+   {:correlation-fertility-degradation
+    [{:t #inst "2026-01-02T10:00" :r 0.65 :source :marchisio-only}
+     {:t #inst "2026-01-02T14:00" :r 0.72 :source :marchisio+aya}]}})
+```
+
+**Agent Loop Structure:**
+
+```clojure
+(defn agent-loop [agent-id state-atom context-graph]
+  (loop [iteration 0]
+    (let [;; 1. Read current state slice
+          my-state (get-in @state-atom [:slices agent-id])
+
+          ;; 2. Read upstream outputs (edges into this node)
+          upstream (get-upstream-outputs context-graph agent-id)
+
+          ;; 3. Compose prompt from state + upstream + role
+          prompt (compose-prompt agent-id my-state upstream)
+
+          ;; 4. Call LLM (slow-burning, may take minutes)
+          response (llm-call prompt {:model :sonnet :max-tokens 2000})
+
+          ;; 5. Parse structured output
+          {:keys [paragraph measurements updates]} (parse-response response)
+
+          ;; 6. Validate against formal properties
+          valid? (validate-output agent-id response)
+
+          ;; 7. Update state atom (atomic swap)
+          _ (when valid?
+              (swap! state-atom
+                     (fn [s]
+                       (-> s
+                           (assoc-in [:paragraphs agent-id] paragraph)
+                           (update :measurements merge-measurements measurements)
+                           (update :history conj-history agent-id iteration)))))
+
+          ;; 8. Signal downstream agents
+          _ (when valid?
+              (notify-downstream context-graph agent-id))
+
+          ;; 9. Check termination
+          done? (or (> iteration 100)
+                    (converged? @state-atom agent-id))]
+
+      (if done?
+        @state-atom
+        (do (Thread/sleep 30000)  ;; slow-burn: 30s between iterations
+            (recur (inc iteration)))))))
+```
+
+**Manager Layer (Formal Property Enforcement):**
+
+```clojure
+(def manager-rules
+  {:survey→fertility
+   {:rule "fertility-agent must cite at least 3 measurements from survey"
+    :check (fn [survey-out fertility-out]
+             (>= (count (intersection
+                         (:sources survey-out)
+                         (:sources fertility-out)))
+                 3))}
+
+   :correlate→predict
+   {:rule "predictions must use correlations with p < 0.05"
+    :check (fn [correlate-out predict-out]
+             (every? #(< (:p %) 0.05)
+                     (get-used-correlations predict-out correlate-out)))}
+
+   :all-paragraphs
+   {:rule "no paragraph may contradict another's measurements"
+    :check (fn [paragraphs]
+             (consistent-measurements? paragraphs))}})
+
+(defn manager-loop [state-atom agents]
+  (loop []
+    (let [outputs (get-all-outputs @state-atom agents)]
+      ;; Check all rules
+      (doseq [[rule-id {:keys [check]}] manager-rules]
+        (when-not (check outputs)
+          ;; Signal violation to relevant agents
+          (signal-violation! state-atom rule-id)))
+
+      ;; Check global convergence
+      (when-not (globally-converged? @state-atom)
+        (Thread/sleep 60000)
+        (recur)))))
+```
+
+**Canvas Composition (Article Assembly):**
+
+```clojure
+(defn compose-article [state]
+  (let [paragraphs (:paragraphs state)
+        order [:abstract :introduction :survey :methodology
+               :fertility :wals :correlate :predict :probe
+               :discussion :conclusion]]
+    (->> order
+         (map #(get paragraphs %))
+         (filter some?)
+         (interpose "\n\n")
+         (apply str))))
+```
+
+**The Full System:**
+
+```
+┌───────────────────────────────────────────────────────────────────┐
+│                        MANAGER LAYER                              │
+│   ┌─────────────┐  ┌─────────────┐  ┌─────────────┐              │
+│   │ Consistency │  │ Citation    │  │ Numerical   │              │
+│   │ Manager     │  │ Manager     │  │ Manager     │              │
+│   └──────┬──────┘  └──────┬──────┘  └──────┬──────┘              │
+│          │                │                │                      │
+│          ▼                ▼                ▼                      │
+├───────────────────────────────────────────────────────────────────┤
+│                        AGENT LAYER                                │
+│                                                                   │
+│   survey ──▶ fertility ──▶ correlate ──▶ predict                 │
+│      │           │             │            │                     │
+│      └───────────┴─────────────┴────────────┘ (feedback loops)   │
+│                        │                                          │
+│                        ▼                                          │
+│                    synthesize                                     │
+├───────────────────────────────────────────────────────────────────┤
+│                        STATE LAYER                                │
+│   ┌─────────────────────────────────────────────────────────────┐│
+│   │ {:measurements {...} :correlations {...} :models {...}      ││
+│   │  :causal-graph {...} :history {...} :paragraphs {...}}      ││
+│   └─────────────────────────────────────────────────────────────┘│
+├───────────────────────────────────────────────────────────────────┤
+│                        OUTPUT LAYER                               │
+│                                                                   │
+│   ┌─────────────────────────────────────────────────────────────┐│
+│   │                    ARTICLE.md                                ││
+│   │  Abstract: [synthesize paragraph]                           ││
+│   │  Introduction: [survey paragraph]                           ││
+│   │  Results: [correlate + predict + probe paragraphs]          ││
+│   │  Discussion: [synthesize paragraph]                         ││
+│   └─────────────────────────────────────────────────────────────┘│
+└───────────────────────────────────────────────────────────────────┘
+```
+
+**Properties of the System:**
+
+| Property | How enforced |
+|----------|--------------|
+| **Consistency** | Manager checks measurements don't contradict |
+| **Monotonicity** | New evidence can refine but not delete |
+| **Traceability** | Every claim linked to measurement source |
+| **Convergence** | Agents must stabilize within N iterations |
+| **Formality** | Structured output schema per agent type |
+
+**Implementation Path:**
+
+| Phase | What | Tech |
+|-------|------|------|
+| 1 | Single-agent loop with state atom | Clojure + Claude API |
+| 2 | Multi-agent with simple edges | core.async channels |
+| 3 | Manager layer | spec/validation |
+| 4 | Canvas rendering | Markdown generation |
+| 5 | Persistence | Datomic or Datascript |
+| 6 | Visualization | Re-frame + D3 |
+
+---
+
 ### Part I: Empirical Foundation (What Already Exists)
 
 Before designing experiments, we survey existing quantized models, benchmarks, and findings.
