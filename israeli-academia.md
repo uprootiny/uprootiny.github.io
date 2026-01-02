@@ -160,6 +160,204 @@ permalink: /israeli-academia/
 
 ---
 
+## Advisor Deep Dives
+
+*What their students' careers tell us about working with them.*
+
+### Daniel Soudry (Technion) ✅ Actively Recruiting
+
+**Research:** Neural network theory, quantization, optimization dynamics, generalization
+
+**Recent output (2024-2025):**
+- 6 papers at NeurIPS 2025 (2 spotlights)
+- ICLR 2025 spotlight: "Scaling FP8 training to trillion-token LLMs"
+- ICML 2025: "When Diffusion Models Memorize..."
+- Member of Israel Young Academy
+
+**Current students:** Matan Haroush, Hagay Michaeli, Mikey Shechter (PhD); ~6 MSc students
+
+**Where alumni went:**
+| Name | After PhD | Current |
+|------|-----------|---------|
+| Itay Hubara | Intel Habana Labs | Senior Researcher |
+| Elad Hoffer | Habana Labs | NVIDIA (per Google Scholar) |
+
+**What this tells you:** Strong industry placement (NVIDIA, Intel). Theory-focused but publishable at top venues. Active publication rate suggests hands-on advising.
+
+**Your fit:** Physics background → loss landscape, optimization dynamics. His FP4/FP8 quantization work is highly applied but theoretically grounded.
+
+**Source:** [soudry.github.io](https://soudry.github.io/)
+
+---
+
+### Roy Schwartz (HUJI) ✅ Actively Recruiting
+
+**Research:** Efficient NLP, Green AI, model reliability, vocabulary optimization
+
+**Recent output (2024-2025):**
+- "Vocab Diet" (Oct 2025) — vocabulary restructuring
+- "Context Length Alone Hurts LLM Performance" (Oct 2025)
+- "How Quantization Shapes Bias" (Sep 2025)
+- "SpeLLM" (Jul 2025) — character-level decoding
+- "Don't Overthink It" (May 2025) — reasoning chain optimization
+
+**Current students:** 5 PhD students (Michael Hassid, Yuval Reif, Amit Ben Artzy, Ido Amos, Guy Kaplan)
+
+**Where alumni went:**
+| Name | Degree | Current |
+|------|--------|---------|
+| Yonatan Bitton | PhD 2023 | Google AI |
+| Tamer Ghattas | MSc 2025 | AI21 |
+| Matanel Oren | MSc 2025 | Microsoft |
+| Daniel Rotem | MSc 2023 | Mobileye |
+| Inbal Magar | MSc 2022 | AI21 |
+
+**What this tells you:** Excellent placement at top companies (Google, Microsoft, Mobileye, AI21). MSc students go to good places too — not just PhD. Lab seems productive and well-connected.
+
+**Your fit:** Linguistics background → vocabulary design. Physics background → efficiency optimization. His "Green AI" paper has 3000+ citations — high-impact, well-defined research direction.
+
+**Source:** [schwartz-lab-huji.github.io](https://schwartz-lab-huji.github.io/)
+
+---
+
+### Yoav Goldberg (BIU) ⚠️ High Standards
+
+**Research:** NLP methods, syntactic parsing, neural network analysis, LLM behavior
+
+**What he expects** (from [his note to prospective students](http://u.cs.biu.ac.il/~yogo/note-to-grads.html)):
+- Work competitive with Stanford/MIT/CMU
+- No outside employment during research
+- Strong programming (not just "I know Java")
+- Linux proficiency required
+- Genuine curiosity about language/data/learning
+- No guaranteed timeline — you're done when you're done
+
+**Alumni outcomes** (partial):
+| Name | Current |
+|------|---------|
+| Omer Levy | Meta AI, Tel Aviv |
+| Hila Gonen | Postdoc, UW |
+| Roee Aharoni | Google Research |
+| Gail Weiss | EPFL |
+
+**What this tells you:** Very high bar, but alumni go to top places (Meta AI, Google Research, top universities). Self-directed students thrive. If you need external structure, look elsewhere.
+
+**Your fit:** If you're already self-motivated and have strong programming skills, this could be excellent. If you need hand-holding, avoid.
+
+**Source:** [u.cs.biu.ac.il/~yogo](https://u.cs.biu.ac.il/~yogo/)
+
+---
+
+### Reut Tsarfaty (BIU) — ERC-Funded
+
+**Research:** Hebrew NLP, morphological parsing, natural language programming (NLPRO project)
+
+**Recent output (2024):**
+- ACL 2024 plenary talk (Bangkok)
+- 2 papers at COLM (with Google, Technion collaborators)
+- Eye tracking + NLP research
+
+**Current project:** NLPRO (ERC-funded) — can we program computers in natural language?
+
+**Notable alumni:**
+| Name | After PhD | Current |
+|------|-----------|---------|
+| Valentina Pyatkin | AI2 + UW Postdoc | ACL 2024 Best Theme Paper Award (OLMo) |
+| Do June Min | PhD 2024 | Recently defended |
+
+**What this tells you:** ERC funding = resources and prestige. Valentina Pyatkin's trajectory (AI2, ACL award) shows strong mentorship. Smaller lab than Goldberg's but focused.
+
+**Your fit:** Linguistics background → morphological analysis, Hebrew NLP is underexplored with clear contributions to make.
+
+**Source:** [nlp.biu.ac.il/~rtsarfaty](https://nlp.biu.ac.il/~rtsarfaty/)
+
+---
+
+### Yonatan Belinkov (Technion) ⚠️ Not Accepting 2025-26
+
+**Research:** Interpretability, robustness, emergent communication, biological LMs, Hebrew/Arabic NLP
+
+**Status:** Spending 2025-26 at Harvard Kempner Institute. Contact in spring 2026 for 2026-27 start.
+
+**Current students:**
+- Yaniv Nikankin (PhD) — mechanistic interpretability across language/vision/biology
+- Anja Reusch (Postdoc) — Azrieli Fellow, ICML 2025 workshop on interpretability
+
+**Recent output (2024-2025):**
+- ICLR 2025: "Arithmetic Without Algorithms"
+- COLM 2024: "Have Faith in Faithfulness" (circuits framework)
+- ACL 2024: "Diffusion Lens" (text-to-image interpretability)
+- "Backward Lens" — Best paper award
+
+**What this tells you:** Hot area (interpretability), prestigious visiting position (Harvard). Small but focused lab. Worth waiting for if interpretability is your interest.
+
+**Your fit:** If you want to understand how LLMs work internally, this is the place. Physics intuition could help with mechanistic analysis.
+
+**Source:** [belinkov.com](https://belinkov.com/)
+
+---
+
+### Shie Mannor (Technion) — Also at NVIDIA
+
+**Research:** Reinforcement learning, learning theory, Markov decision processes
+
+**Where alumni went:**
+| Name | Current |
+|------|---------|
+| Aviv Tamar | Associate Prof, Technion (now runs Robot Learning Lab) |
+| Tom Zahavy | Staff Research Scientist, Google DeepMind |
+| Gal Dalal | Sr. Research Scientist, NVIDIA |
+| Chen Tessler | Research Scientist, NVIDIA Research |
+| Daniel Mankowitz | Ethos |
+| Assaf Hallak | NVIDIA Research |
+| Dotan Di Castro | Research Manager, Bosch-AI |
+
+**What this tells you:** Exceptional placement — DeepMind, NVIDIA, faculty positions. Strong industry connections through his NVIDIA affiliation. If you want RL + industry career, this is excellent.
+
+**Your fit:** Physics background → RL theory (MDPs are stochastic dynamics). Strong math required.
+
+**Source:** [rlrl.net.technion.ac.il](https://rlrl.net.technion.ac.il/)
+
+---
+
+### Ido Dagan (BIU) — NLP Pioneer
+
+**Research:** Textual entailment, semantic inference, knowledge acquisition
+
+**Notable alumni:**
+| Name | Year | Current |
+|------|------|---------|
+| Jonathan Berant | 2012 | Associate Prof, TAU (major NLP researcher) |
+| Omer Levy | 2016 | Meta AI |
+| Gabriel Stanovsky | 2018 | HUJI faculty |
+| Vered Shwartz | 2019 | UBC faculty |
+| Valentina Pyatkin | 2024 | AI2 + UW, ACL award winner |
+
+**What this tells you:** Strong track record of producing faculty and top researchers. Co-advises with Tsarfaty. Founder of RTE (Recognizing Textual Entailment) challenge — influential in NLP.
+
+**Your fit:** If you want semantic understanding, inference, knowledge representation. Established researcher with proven mentorship.
+
+**Source:** [u.cs.biu.ac.il/~dagan](https://u.cs.biu.ac.il/~dagani/)
+
+---
+
+### Amir Globerson (TAU) — NeurIPS Leadership
+
+**Research:** Machine learning, probabilistic inference, vision, NLP
+
+**Position:** NeurIPS 2024 General Chair, also at Google Research
+
+**Notable output:** 5 best paper awards (2 NIPS, 2 UAI, 1 ICML)
+
+**Notable students:**
+- Amir Bar (PhD) — TAU + UC Berkeley, now publishing at NeurIPS
+
+**What this tells you:** Very well-connected (NeurIPS chair, Google). High-impact researcher. May be busy with leadership roles.
+
+**Source:** [english.tau.ac.il/profile/gamir](https://english.tau.ac.il/profile/gamir)
+
+---
+
 ## Top 12 Project Ideas (Developed)
 
 *Well-specified problems with clear objectives, established methods, and active advisors. Start here.*
