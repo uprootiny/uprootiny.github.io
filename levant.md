@@ -1200,6 +1200,514 @@ Weizmann interviews selected candidates for 30-60 minutes.
 
 ---
 
+## PhD Project Ideas
+
+*Dozens of research directions suitable for refining into PhD proposals. Each idea is grounded in recent research (2024-2025) and linked to potential advisors at Israeli universities.*
+
+**How to use this section:**
+1. Find 2-3 ideas that resonate with your background
+2. Read the linked papers/resources
+3. Identify which advisor(s) work in this area
+4. Refine the idea into a 1-2 page research proposal
+5. Contact the advisor with specific questions about the direction
+
+---
+
+### Natural Language Processing & Computational Linguistics
+
+#### 1. Mechanistic Interpretability of Language Models
+
+Recent work on [mechanistic interpretability](https://arxiv.org/abs/2501.18915) aims to reverse-engineer the internal computations of neural networks by uncovering human-intelligible circuits. A promising direction is developing a **modular circuit vocabulary** — reusable task-agnostic functional units that enable global interpretability across different language tasks. Your physics background provides intuition for thinking about information flow and conservation laws in computational systems.
+
+**Research questions:** Can we identify universal "linguistic circuits" that appear across different LLMs? How do syntactic vs. semantic processing circuits differ? Can circuit analysis predict model failures before they occur?
+
+**Advisors:** [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/) — LLM behavior analysis; [Roi Reichart (Technion)](https://www.cs.technion.ac.il/~roiri/) — interpretability
+
+**Key papers:** [Modular Circuits in LLMs (OpenReview 2025)](https://openreview.net/forum?id=do5vVfKEXZ); [SemanticLens (Nature Machine Intelligence 2025)](https://www.nature.com/articles/s42256-025-01084-w)
+
+---
+
+#### 2. Hebrew NLP: Beyond Morpho-Syntactic Tasks
+
+Current Hebrew NLP benchmarks focus mainly on morpho-syntactic tasks, neglecting semantic understanding. The [BIU-NLP lab](https://biu-nlp.github.io/) is developing Hebrew Machine Reading Comprehension datasets. Your computational linguistics background is ideal for addressing **Hebrew's unique challenges**: rich morphology, pro-drop phenomena, and limited training data.
+
+**Research questions:** How can morphological analysis improve semantic task performance in Hebrew? Can cross-lingual transfer from Arabic (another Semitic language) help? What evaluation metrics are appropriate for morphologically-rich languages?
+
+**Advisors:** [Reut Tsarfaty (BIU)](https://biu-nlp.github.io/) — Hebrew NLP, morphological parsing; [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/) — NLP methods
+
+**Key resources:** [ISCOL 2024 proceedings](https://sites.google.com/ds.haifa.ac.il/iscol2024/home); [Hebrew MRC development at BIU-NLP](https://biu-nlp.github.io/)
+
+---
+
+#### 3. String Counterfactuals for NLP Robustness
+
+A January 2025 paper by Goldberg's group presents ["A Practical Method for Generating String Counterfactuals"](https://www.researchgate.net/profile/Yoav-Goldberg). This connects to causal inference in NLP — understanding *why* models make particular predictions by generating minimal perturbations that change outputs.
+
+**Research questions:** Can counterfactual generation be extended to morphologically-rich languages where small changes have cascading effects? How do counterfactuals interact with attention patterns? Can we use counterfactuals to detect spurious correlations in training data?
+
+**Advisors:** [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/); [Ido Dagan (BIU)](https://u.cs.biu.ac.il/~dagan/) — textual entailment
+
+**Related:** [Data Contamination Workshop (CONDA 2024)](https://aclanthology.org/) — detecting when evaluation data appears in pre-training
+
+---
+
+#### 4. Zero-Shot Named Entity Recognition via Type-Aware Embeddings
+
+The BIU group's 2025 paper ["NER Retriever"](https://www.researchgate.net/profile/Yoav-Goldberg) introduces zero-shot NER using type-aware embeddings. This opens directions for **domain adaptation without labeled data** — critical for specialized domains (legal, medical, scientific) and low-resource languages.
+
+**Research questions:** How do type embeddings generalize across domains and languages? Can we build hierarchical type systems that enable fine-grained entity recognition? How does this connect to ontology learning?
+
+**Advisors:** [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/); [Oren Glickman](https://scholar.google.com/citations?user=YQqV0CAAAAAJ)
+
+---
+
+#### 5. Few-Shot Learning: Diversity Over Quantity
+
+A December 2024 preprint argues that in few-shot relation classification, **diversity in relation types is more crucial than scaling data size**. This has implications for efficient data collection and curriculum design.
+
+**Research questions:** What mathematical properties make certain examples more "diverse"? Can we develop algorithms that actively select maximally diverse training sets? How does this interact with in-context learning in LLMs?
+
+**Advisors:** [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/); [Yishay Mansour (TAU/HUJI)](https://www.tau.ac.il/~mansour/) — learning theory
+
+---
+
+#### 6. Morphological Analysis for Low-Resource Languages
+
+[Recent work](https://link.springer.com/article/10.1007/s42979-025-04429-9) shows that morphologically-rich low-resource languages (Dogri, Luganda, etc.) benefit from hybrid approaches combining rule-based morphological analyzers with deep learning. Your linguistics background positions you to develop **morphologically-aware neural architectures**.
+
+**Research questions:** Can we design tokenization that respects morphological boundaries? How do morphological features improve translation quality (shown to be 35-38% BLEU improvement)? Can morphological structure guide attention mechanisms?
+
+**Advisors:** [Reut Tsarfaty (BIU)](https://biu-nlp.github.io/) — morphological analysis; [Shuly Wintner (Haifa)](https://sites.google.com/ds.haifa.ac.il/iscol2024/home) — computational linguistics
+
+**Upcoming:** [GlobalNLP 2025 Workshop](https://globalnlp2025.github.io/) — NLP for all languages
+
+---
+
+### Machine Learning Theory
+
+#### 7. Sample Complexity of Online Reinforcement Learning
+
+A landmark [COLT 2024 paper](https://proceedings.mlr.press/v247/zhang24a.html) settles the sample complexity of online RL, proving that modified MVP achieves minimax-optimal regret **without burn-in cost**. This opens new theoretical questions about the structure of optimal learning algorithms.
+
+**Research questions:** Can these techniques extend to continuous state spaces? What is the sample complexity when the transition kernel is unknown but structured (e.g., low-rank)? How do these bounds change under partial observability?
+
+**Advisors:** [Shie Mannor (Technion)](https://www.ee.technion.ac.il/~shie/) — RL theory; [Yishay Mansour (TAU)](https://www.tau.ac.il/~mansour/) — learning theory
+
+**Key paper:** [Settling Sample Complexity (Zhang et al., 2024)](https://arxiv.org/abs/2307.13586)
+
+---
+
+#### 8. Adversarially Robust PAC Learning with Linear Sample Complexity
+
+Recent work at [COLT 2025](https://learningtheory.org/colt2025/abstracts.html) proves that adversarially robust learning can achieve sample complexity **linear in VC-dimension** without additional assumptions. This contradicts earlier pessimistic results suggesting exponential dependence.
+
+**Research questions:** Can these techniques be made computationally efficient? How do they extend to multiclass classification? What is the fundamental limit of robust learning in infinite hypothesis classes?
+
+**Advisors:** [Yishay Mansour (TAU/HUJI)](https://www.tau.ac.il/~mansour/); [Nati Linial (HUJI)](https://www.cs.huji.ac.il/~nati/) — TCS foundations
+
+---
+
+#### 9. Margin-Based Generalization Bounds for Voting Classifiers
+
+New [COLT 2025 results](https://learningtheory.org/colt2025/abstracts.html) refine margin-based generalization bounds for boosting algorithms, yielding an optimal weak-to-strong learner (Majority-of-3) matching theoretical lower bounds.
+
+**Research questions:** How do these bounds extend to neural network ensembles? Can we design boosting algorithms that explicitly optimize for tight generalization? What is the role of margin distribution (not just minimum margin)?
+
+**Advisors:** [Yishay Mansour (TAU)](https://www.tau.ac.il/~mansour/); [Amir Globerson (TAU)](https://www.cs.tau.ac.il/~gamir/) — ML theory
+
+---
+
+#### 10. Kolmogorov Complexity and Generalization
+
+[PAC-learning and MDL theory](https://www.emergentmind.com/topics/kolmogorov-complexity-in-machine-learning) tie generalization error to description length. Simple models (low Kolmogorov complexity) generalize better. This connects to neural network compression, lottery ticket hypothesis, and implicit regularization.
+
+**Research questions:** Can we compute practical approximations to Kolmogorov complexity of neural networks? Does training implicitly minimize description length? What is the relationship between compressibility and flat minima?
+
+**Advisors:** [Nati Linial (HUJI)](https://www.cs.huji.ac.il/~nati/) — TCS, information theory; [Oded Goldreich (Weizmann)](https://www.weizmann.ac.il/cs/oded/) — complexity theory
+
+---
+
+#### 11. Sample Complexity of Diffusion Models
+
+[Recent work](https://arxiv.org/abs/2505.18344) improves sample complexity bounds for score-based generative models, moving beyond exponential dependence on dimension using quantile-based approaches.
+
+**Research questions:** What is the fundamental sample complexity of learning high-dimensional distributions? How do spectral properties of the data distribution affect learning? Can we design diffusion processes optimized for sample efficiency?
+
+**Advisors:** [Amir Globerson (TAU)](https://www.cs.tau.ac.il/~gamir/); [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/) — deep learning theory
+
+---
+
+### Mathematics & Combinatorics
+
+#### 12. Additive Combinatorics and Communication Complexity
+
+The [Weizmann math department](https://www.weizmann.ac.il/math/) hosts active research on the corners problem, combining Shkredov's Fourier-analytic approach with the Kelley-Meka breakthrough on 3-term arithmetic progressions. This work will appear at FOCS 2025.
+
+**Research questions:** Can Fourier-analytic techniques yield new lower bounds for other communication complexity problems? What is the relationship between additive structure and computational hardness? Can these methods extend to higher-dimensional analogs?
+
+**Advisors:** [Tamar Ziegler (Weizmann)](https://www.weizmann.ac.il/math/ziegler/) — ergodic theory, combinatorics
+
+**Key paper:** [Corners and Communication Complexity (FOCS 2025)](https://www.weizmann.ac.il/math/events)
+
+---
+
+#### 13. Random Matrices and Probability
+
+The [Weizmann probability group](https://www.weizmann.ac.il/math/research/mathematics) studies random matrices, Gaussian fields, and probabilistic models in mathematical physics. Your physics background provides natural entry points.
+
+**Research questions:** What are the universality limits of random matrix eigenvalue statistics? How do random matrices connect to neural network training dynamics? Can random matrix theory explain deep learning phenomena?
+
+**Advisors:** [Ofer Zeitouni (Weizmann)](https://www.weizmann.ac.il/math/zeitouni/) — probability, random matrices; [Boaz Klartag (Weizmann)](https://www.weizmann.ac.il/math/klartag/) — convex geometry
+
+---
+
+#### 14. Metric Geometry and Algorithms
+
+[Assaf Naor's group](https://www.weizmann.ac.il/math/naor/) at Weizmann works at the intersection of metric geometry and theoretical computer science, developing geometric tools for algorithm design.
+
+**Research questions:** What metric properties enable efficient nearest-neighbor search? How do dimension reduction techniques preserve metric structure? Can geometric insights improve embedding quality for machine learning?
+
+**Advisors:** [Assaf Naor (Weizmann)](https://www.weizmann.ac.il/math/naor/) — metric geometry
+
+---
+
+#### 15. Graph Neural Networks for Combinatorial Optimization
+
+A [unified GNN framework](https://arxiv.org/abs/2406.13125) for combinatorial optimization includes graph representation, equivalent conversion of non-graph COPs to graph-structured problems, and graph decomposition. Physics intuition about energy minimization maps directly to optimization objectives.
+
+**Research questions:** What graph representations are optimal for which problem classes? Can GNNs learn to exploit problem structure automatically? How do equivariance constraints affect optimization quality?
+
+**Advisors:** [Ron Kimmel (Technion)](https://www.cs.technion.ac.il/~ron/) — geometry and learning; [Nir Ailon (Technion)](https://www.cs.technion.ac.il/~nailon/) — algorithms and ML
+
+**Key paper:** [Physics-Inspired GNNs for Combinatorial Optimization (Nature Machine Intelligence 2022)](https://www.nature.com/articles/s42256-022-00468-6)
+
+---
+
+#### 16. Diffusion-Based Neural Combinatorial Optimization
+
+[Diffusion models for combinatorial optimization](https://arxiv.org/abs/2502.12188) learn discrete diffusion processes for solution generation. Key challenges include **cross-scale and cross-problem generalization**.
+
+**Research questions:** Can we design diffusion processes that respect problem symmetries? How does annealing schedule affect solution quality? What is the sample complexity of learning to solve new problem instances?
+
+**Advisors:** [Shie Mannor (Technion)](https://www.ee.technion.ac.il/~shie/) — optimization and RL; [Gil Barequet (Technion)](https://www.cs.technion.ac.il/~barequet/) — computational geometry
+
+---
+
+### Algebraic Geometry & Deep Learning
+
+#### 17. Neuroalgebraic Geometry: Neuromanifolds and Singularities
+
+A major [position paper at ICML 2025](https://arxiv.org/abs/2501.18915) establishes connections between algebraic geometry and deep learning. **Neuromanifolds** (function spaces parameterized by neural networks) are semi-algebraic varieties whose singularities affect training dynamics.
+
+**Research questions:** How do singularities of the neuromanifold relate to critical points of the loss landscape? Can algebraic degree predict model expressivity? What does the Segre-Veronese structure of CNNs tell us about their inductive bias?
+
+**Advisors:** This is an emerging field — consider contacting authors directly. Related: [Oded Goldreich (Weizmann)](https://www.weizmann.ac.il/cs/oded/) — computational complexity; math faculty interested in algebraic geometry
+
+**Key paper:** [Neuroalgebraic Geometry (arXiv 2501.18915)](https://arxiv.org/abs/2501.18915)
+
+---
+
+#### 18. Subnetworks as Singularities
+
+A [May 2025 paper](https://arxiv.org/abs/2505.11846) relates lottery ticket subnetworks to singularities of the neuromanifold. These degenerate points explain why pruned networks can match full network performance.
+
+**Research questions:** Can we identify prunable subnetworks from the algebraic structure before training? What is the relationship between singularity type and subnetwork importance? Does this explain neural architecture search?
+
+**Advisors:** Math/CS faculty with algebraic interests; [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/) — deep learning theory
+
+---
+
+### Quantum Information & Complexity
+
+#### 19. Complexity Theory for Non-Local Quantum Computation
+
+A [2025 paper](https://hal.science/hal-05095776/document) develops complexity theory for non-local quantum computation (NLQC), proving equivalence between f-measure and f-route under O(1) overhead reductions.
+
+**Research questions:** What other NLQC tasks have equivalent complexity? How does non-local computation relate to quantum advantage? Can these reductions be made computationally efficient?
+
+**Advisors:** [Dorit Aharonov (HUJI)](https://www.cs.huji.ac.il/~dorit/) — quantum computation; Technion physics faculty
+
+**Key program:** [IAS Quantum Information 2024](https://www.ias.edu/sns/program-details-quantum-info-2024) — workshops on complexity and gravity
+
+---
+
+#### 20. Quantum Algorithms and Complexity-Cryptography Interface
+
+[Thomas Vidick's QCC lab at EPFL](https://actu.epfl.ch/news/quantum-computing-is-not-yet-having-its-chatgpt--2/) (formerly collaborating with Israeli researchers) studies problems at the interface of quantum information, theoretical CS, and cryptography.
+
+**Research questions:** What classical problems have quantum speedups that survive error? How do quantum PCP results constrain algorithm design? What is the quantum complexity of natural optimization problems?
+
+**Advisors:** [Dorit Aharonov (HUJI)](https://www.cs.huji.ac.il/~dorit/); physics faculty at Weizmann/Technion
+
+---
+
+### Computational Neuroscience & Language
+
+#### 21. LLMs as Models of Human Language Processing
+
+A [2025 Nature Computational Science paper](https://www.nature.com/articles/s43588-025-00913-7) validates LLMs as in silico models of human language processing using high-quality brain response data. This opens possibilities for using LLMs to **generate hypotheses about neural language processing**.
+
+**Research questions:** Which architectural features make LLMs better brain models? Can we design LLMs optimized for brain prediction rather than task performance? What do brain-LLM mismatches reveal about human language processing?
+
+**Advisors:** [Amir Globerson (TAU)](https://www.cs.tau.ac.il/~gamir/) — ML for neuroscience; [Sagol School of Neuroscience (TAU)](https://sagol.tau.ac.il/)
+
+**Key paper:** [Language in Brains, Minds, and Machines (Annual Review of Neuroscience 2024)](https://www.annualreviews.org/content/journals/10.1146/annurev-neuro-120623-101142)
+
+---
+
+#### 22. Brain Encoding and Decoding with Deep Networks
+
+The [LAMB lab](https://compneurolinglab.github.io/) presented tutorials at ACL 2024 and IJCAI 2024 on "Computational linguistics for brain encoding and decoding." This bridges NLP and neuroscience.
+
+**Research questions:** Can we decode semantic content from brain activity using LLM representations? What linguistic features are most predictable from neural data? Can brain data improve NLP model training?
+
+**Advisors:** [ELSC Center (HUJI)](https://elsc.huji.ac.il/) — computational neuroscience; NLP faculty at TAU/BIU
+
+**Conference:** [Cognitive Computational Neuroscience (Amsterdam, August 2025)](https://2024.ccneuro.org/)
+
+---
+
+#### 23. Neuromorphic Spike-Based Language Models
+
+[2025 research](https://www.news-medical.net/news/20251226/NSLLMs-Bridging-neuroscience-and-LLMs-for-efficient-interpretable-AI-systems.aspx) develops neuromorphic alternatives to transformer-based LLMs that achieve comparable performance with brain-like sparse, event-driven computation.
+
+**Research questions:** Can spike-timing-dependent plasticity rules train language models? What is the energy efficiency vs. performance tradeoff? How do neuromorphic architectures handle long-range dependencies?
+
+**Advisors:** [ELSC Center (HUJI)](https://elsc.huji.ac.il/); Technion EE faculty
+
+---
+
+### Interdisciplinary: Physics × Computation × Language
+
+#### 24. Physics-Informed Machine Learning for Scientific Discovery
+
+Your physics background positions you for **physics-informed neural networks (PINNs)** and related methods that incorporate physical constraints into learning.
+
+**Research questions:** How should conservation laws be encoded in neural architectures? Can physical symmetries guide architecture search? What is the sample complexity of learning physical systems?
+
+**Advisors:** [Weizmann Physics faculty](https://www.weizmann.ac.il/physics/faculty); [Technion Physics](https://physics.technion.ac.il/people/)
+
+---
+
+#### 25. Formal Verification of Neural Networks
+
+[BGU's Formal Methods Seminar](https://www.cs.bgu.ac.il/~formal/) addresses verification of systems including neural networks. Your physics/math background provides tools for understanding continuous dynamics and stability.
+
+**Research questions:** Can we verify robustness properties of language models? How do formal methods scale to billion-parameter models? What verification guarantees are achievable for transformer architectures?
+
+**Advisors:** BGU formal methods faculty; [Eran Yahav (Technion)](https://www.cs.technion.ac.il/~yahave/) — programming languages
+
+---
+
+#### 26. Algorithmic Fairness with Provable Guarantees
+
+Combining ML theory with social concerns, this direction develops **mathematically rigorous fairness definitions and algorithms**.
+
+**Research questions:** What fairness constraints are achievable simultaneously? How does fairness interact with accuracy-robustness tradeoffs? Can we design fair algorithms with optimal sample complexity?
+
+**Advisors:** [Yishay Mansour (TAU)](https://www.tau.ac.il/~mansour/) — learning theory; CS ethics researchers
+
+---
+
+#### 27. Language Models for Scientific Literature
+
+Extending NLP to scientific domains, this direction addresses **scientific information extraction, claim verification, and literature synthesis**.
+
+**Research questions:** How should domain-specific knowledge be incorporated into LLMs? Can models detect contradictions in scientific literature? What evaluation methods are appropriate for scientific NLP?
+
+**Advisors:** [Ido Dagan (BIU)](https://u.cs.biu.ac.il/~dagan/) — textual entailment; NLP faculty across universities
+
+---
+
+#### 28. Computational Approaches to Ancient Languages
+
+The [NLP4DH 2024 conference](https://www.nlp4dh.com/nlp4dh-2024) featured work on computational analysis of Biblical Hebrew, including complementizer variability. Your linguistics background enables contributions to **digital humanities**.
+
+**Research questions:** Can neural methods improve analysis of historical language change? How should we handle orthographic variation in ancient texts? Can cross-lingual transfer help with extinct languages?
+
+**Advisors:** [Reut Tsarfaty (BIU)](https://biu-nlp.github.io/) — Hebrew NLP; Digital humanities faculty
+
+---
+
+#### 29. Tensor Networks and Machine Learning
+
+From quantum physics, **tensor network methods** (MPS, PEPS) are being applied to machine learning. Your physics background provides direct expertise.
+
+**Research questions:** What function classes can tensor networks represent efficiently? How do tensor network methods compare to neural networks? Can tensor structure explain neural network generalization?
+
+**Advisors:** Weizmann Physics faculty; [IAS Quantum Information program](https://www.ias.edu/sns/program-details-quantum-info-2024)
+
+---
+
+#### 30. Optimization Landscape of Deep Learning
+
+Understanding the **loss landscape geometry** connects optimization theory, statistical physics, and machine learning.
+
+**Research questions:** What geometric properties predict trainability? How does overparameterization affect landscape structure? Can we design architectures with favorable landscapes?
+
+**Advisors:** [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/) — deep learning theory; [Amir Globerson (TAU)](https://www.cs.tau.ac.il/~gamir/)
+
+---
+
+### Applied Directions
+
+#### 31. Cyber Security via NLP
+
+[BGU's cyber security group](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx) (Yuval Elovici, Rami Puzis) works on network analysis and threat detection. NLP methods can analyze malware, phishing, and social engineering.
+
+**Research questions:** Can language models detect malicious code patterns? How do we handle adversarial attacks on NLP security systems? What linguistic features distinguish legitimate from malicious communications?
+
+**Advisors:** [Yuval Elovici (BGU)](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx); [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/) — NLP methods
+
+---
+
+#### 32. Recommender Systems and Information Retrieval
+
+[Bracha Shapira at BGU](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx) works on recommender systems. Modern systems increasingly use language models for content understanding.
+
+**Research questions:** How should LLMs be integrated into recommendation pipelines? Can language understanding improve cold-start problems? What fairness issues arise in LLM-powered recommendations?
+
+**Advisors:** [Bracha Shapira (BGU)](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx)
+
+---
+
+#### 33. Autonomous Systems and Motion Planning
+
+[Oren Salzman at BGU](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx) works on robotics and motion planning. Language interfaces for robot control are an emerging area.
+
+**Research questions:** How can language instructions be grounded in physical actions? What safety guarantees are achievable for language-controlled robots? How do we handle ambiguity in natural language commands?
+
+**Advisors:** [Oren Salzman (BGU)](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx); [Ron Kimmel (Technion)](https://www.cs.technion.ac.il/~ron/) — vision and geometry
+
+---
+
+#### 34. Financial NLP and Compliance
+
+[Research on mechanistic interpretability for finance](https://dl.acm.org/doi/10.1145/3677052.3698612) (ICAIF 2024) shows how understanding LLM internals enables compliance monitoring.
+
+**Research questions:** How can we verify that financial LLMs don't generate non-compliant advice? What interpretability guarantees are regulators likely to require? Can mechanistic analysis detect market manipulation?
+
+**Advisors:** [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/) — LLM analysis; finance/economics faculty
+
+---
+
+#### 35. Computational Biology and Language
+
+The [Weizmann Department of Computer Science and Applied Mathematics](https://www.weizmann.ac.il/math/) includes computational biology. Biological sequences (DNA, proteins) have language-like structure.
+
+**Research questions:** Can NLP architectures improve protein structure prediction? How do language models capture evolutionary relationships? What is the "grammar" of genetic regulation?
+
+**Advisors:** [David Harel (Weizmann)](https://www.weizmann.ac.il/cs/harel/) — biological modeling; Weizmann computational biology faculty
+
+---
+
+### Graph Algorithms & Theoretical Computer Science
+
+#### 36. Graph Algorithms with Theoretical Guarantees
+
+[Michael Elkin at BGU](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx) works on graph algorithms. Combining classical algorithmic techniques with learning is a frontier area.
+
+**Research questions:** Can learning improve algorithm performance on structured graph families? What is the sample complexity of learning graph algorithms? How do learned algorithms compare to optimal theoretical algorithms?
+
+**Advisors:** [Michael Elkin (BGU)](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx); [Nati Linial (HUJI)](https://www.cs.huji.ac.il/~nati/)
+
+---
+
+#### 37. LLM Reasoning and Graph Structure
+
+[GraphThought (2025)](https://arxiv.org/abs/2502.11607) explores using LLMs for graph combinatorial optimization through natural language reasoning.
+
+**Research questions:** What graph problems can LLMs solve zero-shot? How should graph structure be encoded in language? Can chain-of-thought prompting discover new algorithms?
+
+**Advisors:** NLP faculty; TCS faculty interested in AI for algorithms
+
+---
+
+#### 38. Computational Geometry and Vision
+
+[Ron Kimmel at Technion](https://www.cs.technion.ac.il/~ron/) combines geometry with computer vision. Language can describe geometric scenes and spatial relationships.
+
+**Research questions:** How can language ground geometric concepts? Can vision-language models understand 3D geometry? What geometric priors improve scene understanding?
+
+**Advisors:** [Ron Kimmel (Technion)](https://www.cs.technion.ac.il/~ron/); [Gil Barequet (Technion)](https://www.cs.technion.ac.il/~barequet/)
+
+---
+
+### Emerging Directions
+
+#### 39. Developmental Interpretability
+
+[A new subfield](https://arxiv.org/abs/2508.15841) studies how neural network mechanisms **form during training** rather than analyzing static trained models. This connects to understanding learning dynamics.
+
+**Research questions:** What phase transitions occur during training? Can we predict final model behavior from early training dynamics? How do circuits emerge and stabilize?
+
+**Advisors:** [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/); [Yoav Goldberg (BIU)](https://u.cs.biu.ac.il/~yogo/)
+
+---
+
+#### 40. Multimodal LLMs and Grounding
+
+Extending language models to vision, audio, and other modalities raises fundamental questions about **grounding symbols in perception**.
+
+**Research questions:** What is the minimum perceptual grounding needed for language understanding? How do multimodal models represent cross-modal concepts? Can grounding improve linguistic generalization?
+
+**Advisors:** [Lior Wolf (TAU)](https://www.cs.tau.ac.il/~wolf/) — vision and language; [Michal Irani (Weizmann)](https://www.weizmann.ac.il/cs/irani/) — computer vision
+
+---
+
+#### 41. Efficient Training at Scale
+
+With models reaching trillion-parameter scales, **training efficiency** becomes critical. Theory can guide practical improvements.
+
+**Research questions:** What is the optimal batch size/learning rate scaling? Can we predict training cost from model architecture? What are the fundamental limits of parallelization?
+
+**Advisors:** [Daniel Soudry (Technion)](https://www.ee.technion.ac.il/~daniels/); [Amir Globerson (TAU)](https://www.cs.tau.ac.il/~gamir/)
+
+---
+
+#### 42. Retrieval-Augmented Generation Theory
+
+RAG systems combine retrieval with generation. Understanding their theoretical properties is nascent.
+
+**Research questions:** What is the sample complexity of retrieval-augmented learning? How should retrieval and generation be balanced? What guarantees can we provide about retrieved information usage?
+
+**Advisors:** [Ido Dagan (BIU)](https://u.cs.biu.ac.il/~dagan/) — NLP; [Bracha Shapira (BGU)](https://in.bgu.ac.il/en/natural_science/cs/Pages/People/CSStaffDBSeniorFaculty.aspx) — IR
+
+---
+
+#### 43. Continual Learning and Catastrophic Forgetting
+
+Neural networks forget previous tasks when learning new ones. Theory for **preventing catastrophic forgetting** while maintaining plasticity is limited.
+
+**Research questions:** What architectural properties enable continual learning? Can we bound forgetting in terms of task similarity? How does memory consolidation in brains inform algorithm design?
+
+**Advisors:** [Shie Mannor (Technion)](https://www.ee.technion.ac.il/~shie/); [ELSC (HUJI)](https://elsc.huji.ac.il/)
+
+---
+
+### Summary: Matching Ideas to Your Background
+
+**Physics + Computational Linguistics → Strongest fits:**
+- #21-23: Computational neuroscience of language
+- #24, 29-30: Physics-informed ML, tensor networks, loss landscapes
+- #12-14: Probability, random matrices, metric geometry
+- #17-18: Neuroalgebraic geometry
+
+**For NLP/ML focus:**
+- #1-6: Core NLP directions with Goldberg, Tsarfaty, Dagan
+- #7-11: ML theory with Mansour, Soudry, Globerson
+
+**For mathematics focus:**
+- #12-16: Combinatorics, algorithms, optimization
+- #36-38: Graph algorithms and TCS
+
+**For interdisciplinary:**
+- #19-20: Quantum information
+- #24-30: Physics × computation crossovers
+- #35: Computational biology
+
+---
+
 ## Application Timeline (Fall 2026 Start)
 
 ### Time Investment
