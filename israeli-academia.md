@@ -168,25 +168,58 @@ permalink: /israeli-academia/
 
 **Research:** Neural network theory, quantization, optimization dynamics, generalization
 
+**Lab metrics:**
+| Metric | Value |
+|--------|-------|
+| Papers 2023-2025 | 25+ (NeurIPS, ICML, ICLR) |
+| Spotlights | 6 (exceptional acceptance rate) |
+| Current PhDs | 3 |
+| Current MSc | 6 |
+| Alumni PhDs | 10 |
+| Funding | ERC A-B-C-Deep, Intel (5 grants), ISF |
+
 **Recent output (2024-2025):**
-- 6 papers at NeurIPS 2025 (2 spotlights)
+- NeurIPS 2025: 6 papers (2 spotlights) — "Temperature is All You Need for Generalization in Langevin Dynamics", "FP4 All the Way: Fully Quantized Training of LLMs"
 - ICLR 2025 spotlight: "Scaling FP8 training to trillion-token LLMs"
 - ICML 2025: "When Diffusion Models Memorize..."
+- ALT 2026: 2 papers on continual learning
 - Member of Israel Young Academy
 
-**Current students:** Matan Haroush, Hagay Michaeli, Mikey Shechter (PhD); ~6 MSc students
+**Research pillars (from 25 papers):**
 
-**Where alumni went:**
-| Name | After PhD | Current |
-|------|-----------|---------|
-| Itay Hubara | Intel Habana Labs | Senior Researcher |
-| Elad Hoffer | Habana Labs | NVIDIA (per Google Scholar) |
+| Pillar | Focus | Key People |
+|--------|-------|------------|
+| **Quantization** | FP4, FP8, binarized networks | Brian Chmiel, Maxim Fishman, Itay Hubara |
+| **Implicit bias** | Why GD finds "good" solutions | Mor Shpigel Nacson (alum) |
+| **Continual learning** | Catastrophic forgetting theory | Itay Evron (alum, now Meta) |
+| **Generalization** | Why overparameterized nets work | Itamar Harel, Gon Buzaglo |
+| **Architecture** | Alias-free networks, shift invariance | Hagay Michaeli |
 
-**What this tells you:** Strong industry placement (NVIDIA, Intel). Theory-focused but publishable at top venues. Active publication rate suggests hands-on advising.
+**Current students:** Matan Haroush, Hagay Michaeli, Mikey Shechter (PhD); Gil Denekamp, Itay Lamprecht, Ran Levinstein, Matan Tsipori, Ido Blayberg, Gilad Karpel (MSc)
 
-**Your fit:** Physics background → loss landscape, optimization dynamics. His FP4/FP8 quantization work is highly applied but theoretically grounded.
+**Alumni thesis summaries:**
 
-**Source:** [soudry.github.io](https://soudry.github.io/)
+| Name | Thesis/Focus | Duration | Where Now |
+|------|--------------|----------|-----------|
+| **Elad Hoffer** | "Deep Learning: Rethinking Common Practices" — batch size ≠ generalization, fixed classifiers work | PhD 2019 | Intel Habana → NVIDIA |
+| **Itay Hubara** | Binarized Neural Networks — 1-bit weights/activations, AlexNet in 1-bit | MSc → PhD | Habana → Startup (Director AI) |
+| **Mor Shpigel Nacson** | Implicit bias of GD — max-margin convergence, step size effects on linear nets | PhD | — |
+| **Itay Evron** | Continual learning theory — forgetting rates, POCS framework | PhD 2025 | Meta |
+| **Brian Chmiel** | FP4/FP8 LLM training — trillion-token scale, instability in SwiGLU | PhD (w/ Bronstein) | — |
+
+**Conceptual inventory (ideas they operate with):**
+- Max-margin solutions (SVM connection)
+- Implicit regularization (GD finds simple solutions without explicit L2)
+- Loss landscape geometry (flat/sharp minima, stability)
+- POCS (projection onto convex sets) for continual learning
+- Stochastic rounding as unbiased estimator (quantization)
+- Thermodynamics of learning (new 2025 direction)
+
+**What this tells you:** Strong industry placement (NVIDIA, Intel, Meta). Theory-focused but publishable at top venues. Active publication rate suggests hands-on advising. Clear research program with multiple entry points.
+
+**Your fit:** Physics background → loss landscape, Langevin dynamics, optimization as physical system. Linguistics background → applying quantization to multilingual models. His FP4/FP8 work is hottest current direction.
+
+**Source:** [soudry.github.io](https://soudry.github.io/), [publications](https://soudry.github.io/publications/), [team](https://soudry.github.io/team/)
 
 ---
 
@@ -355,6 +388,178 @@ permalink: /israeli-academia/
 **What this tells you:** Very well-connected (NeurIPS chair, Google). High-impact researcher. May be busy with leadership roles.
 
 **Source:** [english.tau.ac.il/profile/gamir](https://english.tau.ac.il/profile/gamir)
+
+---
+
+## Research Proposal: Soudry Lab
+
+*A detailed pitch for Daniel Soudry, based on his group's research trajectory and your background.*
+
+### Proposal: Precision-Aware Training for Multilingual LLMs
+
+**One-liner:** Do multilingual models need different numerical precision in different components, and can linguistic structure guide quantization strategy?
+
+---
+
+#### Motivation
+
+FP4 and FP8 training is emerging as the next frontier in efficient deep learning. Soudry's group has published spotlights at ICLR 2025 ("Scaling FP8 to trillion-token LLMs") and NeurIPS 2025 ("FP4 All the Way"). However, all current work focuses on English-centric models.
+
+Multilingual models present distinct challenges:
+- **Morphological complexity:** Hebrew, Arabic, Finnish encode more information per token than English
+- **Tokenization variance:** BPE produces vastly different token counts across languages
+- **Attention patterns:** Syntactically diverse languages may require different precision in attention vs. FFN layers
+
+**Core hypothesis:** Languages with richer morphology are more sensitive to quantization error. Attention layers handling these languages need higher precision than layers handling English.
+
+---
+
+#### Research Questions
+
+1. **Layer sensitivity:** Which transformer components (attention, FFN, embeddings) are most affected by FP4 quantization in multilingual settings?
+
+2. **Language-specific degradation:** Does perplexity degrade uniformly across languages, or do morphologically complex languages suffer disproportionately?
+
+3. **Linguistics-informed quantization:** Can we use linguistic features (morphological richness, word order flexibility) to predict which layers need higher precision?
+
+4. **Mixed-precision strategies:** What's the Pareto frontier of quality vs. efficiency for heterogeneous precision allocation?
+
+---
+
+#### Proposed Experiments
+
+**Phase 1: Characterization (3 months)**
+- Take a pretrained multilingual model (mT5, BLOOM, or Aya)
+- Apply uniform FP8 → FP4 quantization
+- Measure perplexity by language family: Germanic, Semitic, Finno-Ugric, Slavic
+- Identify languages with worst degradation
+
+**Phase 2: Layer Analysis (3 months)**
+- Apply layer-wise quantization (FP4 for some layers, FP8 for others)
+- Track which configurations preserve performance for which languages
+- Build sensitivity profiles per language family
+
+**Phase 3: Linguistic Predictors (3 months)**
+- Correlate quantization sensitivity with:
+  - Morphological richness (WALS features)
+  - Tokenization granularity (tokens per word)
+  - Syntactic flexibility (dependency length)
+- Develop a heuristic for allocating precision budgets
+
+**Phase 4: Training from Scratch (6 months)**
+- Train a small multilingual model (~350M) with heterogeneous precision from the start
+- Compare to uniform FP8 and uniform FP4 baselines
+- Measure final quality/efficiency tradeoff
+
+---
+
+#### Why This Fits Soudry Lab
+
+| Lab strength | Proposal alignment |
+|--------------|-------------------|
+| FP4/FP8 training (Chmiel, Fishman) | Direct extension to multilingual |
+| Quantization theory (Hubara legacy) | Linguistic structure as new variable |
+| LLM-scale experiments | Same scale, new languages |
+| Industry connections (Intel, NVIDIA) | Multilingual efficiency = commercial value |
+
+---
+
+#### Your Unique Contribution
+
+| Background | How it helps |
+|------------|--------------|
+| Physics | Information-theoretic analysis of precision requirements |
+| Computational linguistics | Linguistic typology, morphological analysis, tokenization expertise |
+| Both | Formalize "information density per token" across languages |
+
+---
+
+#### Potential First Paper
+
+**Title:** "Does Hebrew Need More Bits? Language-Specific Precision Requirements in Multilingual LLMs"
+
+**Venue:** EMNLP 2027 or ICLR 2027
+
+**Contribution:** First systematic study of how linguistic typology affects quantization sensitivity. Practical guidelines for multilingual FP4 training.
+
+---
+
+#### Alternative Angle: Langevin Dynamics
+
+If the quantization angle doesn't resonate, a second proposal leverages the 2025 NeurIPS spotlight on temperature in Langevin dynamics:
+
+**Proposal:** "Thermodynamics of Language Model Training"
+
+Treat LLM training as a statistical mechanical system. The "temperature" (learning rate × batch noise) determines which basins the optimization explores. Questions:
+- Do transformers exhibit phase transitions during training?
+- Can we predict "grokking" using thermodynamic tools?
+- Is there an entropy interpretation of the implicit bias in Adam vs. SGD?
+
+This would be higher-risk but leverages your physics background more directly.
+
+---
+
+#### Competitive Landscape: Who Else Works on This
+
+**Quantization / Low-Precision Training:**
+
+| Group | Institution | Focus | Relation to Soudry |
+|-------|-------------|-------|-------------------|
+| **Microsoft Research Asia** | Microsoft | FP4 LLM training framework (Jan 2025) | Direct competitor — same problem, same timeline |
+| **NVIDIA Research** | NVIDIA | NVFP4 format for Blackwell GPUs | Hardware partner — Soudry alumni work here |
+| **DeepSeek-AI** | DeepSeek (China) | FP8 at 671B scale (MoE) | Scale leader — proved FP8 works at extreme scale |
+| **IBM Research** | IBM | Accumulation bit-width for ultra-low precision | Complementary — focuses on different bottleneck |
+| **Han Lab (MIT)** | MIT | TinyML, efficient LLM inference | Parallel track — more inference-focused |
+
+**Implicit Bias / Deep Learning Theory:**
+
+| Researcher | Institution | Focus | Relation to Soudry |
+|------------|-------------|-------|-------------------|
+| **Nathan Srebro** | TTI-Chicago / UChicago | Optimization geometry, implicit bias | Close collaborator — many joint papers |
+| **Sanjeev Arora** | Princeton | DL theory, RLHF, in-context learning | Senior theorist — complementary focus |
+| **Song Mei** | UC Berkeley | Statistical theory of deep learning, CLIP | Rising star — NSF CAREER 2025 |
+| **Peter Bartlett** | UC Berkeley / Google DeepMind | Learning theory, generalization bounds | Foundational figure — writes the theory textbooks |
+| **Jason Lee** | Princeton | Optimization, implicit bias | Active collaborator with Soudry |
+
+**Multilingual Efficiency:**
+
+| Work | Authors | Finding |
+|------|---------|---------|
+| "How Does Quantization Affect Multilingual LLMs?" | Ramesh et al. 2024 | French degrades -16.6% at W4; Japanese +7.4% at W8 then -16% at W4 |
+| IJCAI 2025 | Various | Task difficulty interacts with quantization and model size |
+| EMNLP 2024 Findings | Various | Multilingual fairness concerns in compression |
+
+**Key insight:** The multilingual angle is underexplored. Microsoft and NVIDIA focus on English; Soudry's FP4 work is also English-centric. A linguistics-informed approach would be differentiated.
+
+---
+
+#### Draft Email
+
+```
+Subject: PhD inquiry — FP4 training for multilingual LLMs
+
+Dear Prof. Soudry,
+
+I'm [name], a physicist with computational linguistics experience. Your
+ICLR 2025 spotlight on FP8 training and the NeurIPS 2025 FP4 work are
+exciting — I'm curious whether multilingual models behave differently
+under extreme quantization.
+
+Specifically: languages with rich morphology (Hebrew, Arabic, Finnish)
+encode more information per token than English. I hypothesize that
+attention layers for these languages are more sensitive to FP4
+quantization. If true, we could develop linguistically-informed
+precision allocation strategies.
+
+I'm also drawn to the Langevin dynamics connection in "Temperature is
+All You Need" — training dynamics as a physical system is an unexplored
+angle I'd like to develop.
+
+Would you be open to a brief call to discuss potential directions?
+
+Best,
+[name]
+```
 
 ---
 
