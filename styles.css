@@ -1,36 +1,88 @@
-body {
-  font-family: 'Menlo', 'Courier New', monospace;
-  font-size: 2.5rem; /* Adjust font size to be large */
-  background: linear-gradient(to bottom, white, lightgray);
-  background-size: cover;
-  background-repeat: no-repeat;
+html, body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Menlo', 'Courier New', monospace;
+  font-size: 2.5rem;
+  background: linear-gradient(to bottom, white, lightgray) no-repeat fixed;
+  background-size: 100% 100%;
 }
 
 .horizontal-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   list-style: none;
-  padding: 0;
+  padding: 1em 0;
   margin: 0;
   font-family: 'Menlo', 'Courier New', monospace;
-  font-size: 2.5rem;
-  /* background-color: #f5f5f5; */
-  background-color: rgba(255, 255, 255, 0); /* White background with 50% transparency */
+  font-size: 2rem; /* Slightly smaller */
+  background-color: rgba(255, 255, 255, 0);
+  flex-wrap: wrap;
+  gap: 1em; /* Add consistent spacing between items */
+}
 
+.nav-item {
+  white-space: nowrap; /* Prevent line breaks within nav items */
 }
  
 .content {
   padding: 2em;
-  /* height: 0vmax; */
   max-width: 600px;
   margin: 0 auto;
   font-size: small;
-
 }
 
+/* Mobile-first: clean vertical ribbon layout for iPhones */
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5em;
+  }
+
+  /* Full-width images: override content padding */
+  .gallery,
+  .image-container {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+  }
+
+  /* Remove padding from image containers on mobile */
+  .image-item {
+    padding: 0;
+    margin-bottom: 1em;
+  }
+
+  /* Full-width images, edge to edge */
+  .painting {
+    margin-bottom: 1.5em;
+  }
+
+  /* Compact title info on single line */
+  .painting-info {
+    padding: 0 1em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    font-size: 1.2ex;
+  }
+
+  /* Tighter spacing between title elements on mobile */
+  .title,
+  .dimensions,
+  .year {
+    margin-right: 0.3em;
+    font-size: 0.9em;
+  }
+
+  /* Reduce gallery gap on mobile */
+  .gallery {
+    gap: 0;
+  }
+}
+
+/* Legacy styles for backward compatibility */
 .image-container {
   gap: 2em;
 }
@@ -42,27 +94,118 @@ body {
   /* height: 92vh; */
 }
 
-.image-title-year {
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 0.5em;
-  font-size: 0.8ex;
-}
-
-.image-title,
-.image-dimensions,
-.image-year {
-  margin-right: 0.5em;
-}
-
 .image-item img {
   width: 100%;
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  /* Progressive loading: start invisible, fade in when loaded */
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.image-item img.loaded {
+  opacity: 1;
+}
+
+/* Placeholder shimmer for image-item */
+.image-item {
+  position: relative;
+}
+
+.image-item::before {
+  content: '';
+  display: block;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e8e8e8 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.image-item:has(img.loaded)::before {
+  display: none;
+}
+
+/* New gallery styles */
+.gallery {
+  gap: 4em;
+}
+
+.painting {
+  box-sizing: border-box;
+  padding: 0;
+  margin-bottom: 3em; /* Space between paintings (painting-info adds more) */
+  text-align: center;
+}
+
+.painting-info {
+  margin-top: 0.8em; /* Less space above title */
+  margin-bottom: 2.5em; /* More space below title (before next painting) */
+  font-size: 1.4ex;
+  white-space: nowrap; /* Keep title/year/dimensions on single line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.painting img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  /* Progressive loading: start invisible, fade in when loaded */
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.painting img.loaded {
+  opacity: 1;
+}
+
+/* Placeholder shimmer while image loads */
+.painting {
+  position: relative;
+}
+
+.painting::before {
+  content: '';
+  display: block;
+  /* Reserve space with approximate aspect ratio for paintings */
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e8e8e8 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Hide placeholder once image is loaded */
+.painting:has(img.loaded)::before {
+  display: none;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.title,
+.dimensions,
+.year {
+  margin-right: 0.5em;
+  color: #333;
+  font-weight: bold;
+  opacity: 1;
+  display: inline-block;
 }
 
 .about-page {
@@ -99,29 +242,29 @@ ul {
 
 
 
-/* Hide icons by default */
+/* Show icons in navigation */
 .nav-item i {
-  display: none;
- }
- 
- /* Show icons on small screens */
- @media (max-width: 768px) {
+  font-size: 1.2em;
+}
+
+/* Mobile navbar: compact, wrap if needed */
+@media (max-width: 768px) {
+  .horizontal-list {
+    font-size: 0.75rem;
+    padding: 0.5em 0.5em;
+    gap: 0.4em 0.6em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-item a {
+    display: inline;
+    white-space: nowrap;
+  }
+
   .nav-item i {
-     display: inline;
+    font-size: 1em;
   }
- }
- 
- /* Hide text on small screens */
- @media (max-width: 768px) {
-  .nav-item a {
-     display: none;
-  }
- }
- 
- /* Show text on larger screens */
- @media (min-width: 769px) {
-  .nav-item a {
-     display: inline;
-  }
- }
+}
+
  

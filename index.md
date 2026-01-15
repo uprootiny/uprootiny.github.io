@@ -4,29 +4,43 @@ title: Paintings
 permalink: /
 ---
 
-<div class="image-container">
-  {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/paintings/'" %}
-  {% assign sorted_paintings = paintings | sort: "path" | reverse %}
+{% assign paintings_data = site.data.titles %}
+{% assign static_files = site.static_files %}
 
-  {% for painting in sorted_paintings %}
-    {% assign name_parts = painting.name | split: " " %}
-    {% assign year = name_parts[0] %}
-    {% assign title_parts = name_parts | slice: 1, name_parts.size | join: " " | split: "." %}
-    {% assign title = title_parts[0] %}
+{% assign filtered_files = "" | split: "" %}
 
+{% for file in static_files %}
+  {% if file.path contains '/paintings/' and file.extname == '.jpg' %}
+    {% assign filtered_files = filtered_files | push: file %}
+  {% endif %}
+{% endfor %}
 
-    <div class="image-item">
-      <img src="{{ site.baseurl }}{{ painting.path | relative_url }}" alt="{{ title }}">
-        <div class="image-title-year">
+{% assign sorted_files = filtered_files | sort: "path" | reverse %}
 
-            <div class="image-title">{{ title }}</div>
-
-            <div class="image-year">{{ year }}</div>
-
-        </div>
-      <br/>
+<div class="gallery">
+  {% for file in sorted_files %}
+    {% assign filename = file.name %}
+    {% assign parts = filename | split: ' ' %}
+    {% assign year_str = parts[0] %}
+    {% assign year = year_str | plus: 0 %}
+    {% assign title = parts | slice: 1, parts.size | join: ' ' | remove: '.jpg' %}
+    
+    {% assign dims = "220x120cm" %}
+    {% for entry in paintings_data %}
+      {% if entry.year == year and entry.title == title %}
+        {% assign dims = entry.dimensions %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    
+    <div class="painting">
+      <img src="{{ file.path | relative_url }}" alt="{{ title }}" loading="lazy" onload="this.classList.add('loaded')" />
       
+      <div class="painting-info">
+        <span class="title">{{ title }}</span>
+        <span class="year">{{ year }}</span>
+        <span class="dimensions">{{ dims }}</span>
+      </div>
     </div>
   {% endfor %}
 </div>
-

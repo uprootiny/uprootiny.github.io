@@ -7,6 +7,12 @@ Cyrill Rafael Vasilyev (1992) is an artist from Moscow, Russia, based in The Hag
 
 ### Exhibitions:
 
+2025 Mountains of May, Machiaijo Gallery, Togatta, Japan (Duo)
+
+2024 Fields of Air, SeeLab, the Hague (Solo)
+
+2023 Open Works,  Annastate, the Hague
+
 2022 Garden of Stars, Sterrentuin, the Hague 
 
 2021 Royal Painting Prize nominee, Royal Palace, Amsterdam
@@ -55,6 +61,8 @@ Cyrill Rafael Vasilyev (1992) is an artist from Moscow, Russia, based in The Hag
 
 
 ### Residencies:
+
+2025 Togatta Residence 044, Togatta Onsen, Zao Town, Japan
 
 2020 Pilotenkueche, Leipzig
 
