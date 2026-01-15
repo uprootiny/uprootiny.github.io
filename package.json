@@ -1,0 +1,18 @@
+{
+  "name": "uprootiny-site",
+  "version": "1.0.0",
+  "description": "Artist portfolio with live job board",
+  "private": true,
+  "scripts": {
+    "cljs:watch": "shadow-cljs watch app",
+    "cljs:release": "shadow-cljs release app",
+    "cljs:server": "shadow-cljs server"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.28.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uprootiny/uprootiny.github.io"
+  }
+}

@@ -1,0 +1,14 @@
+{:source-paths ["src"]
+
+ :dependencies [[reagent "1.2.0"]
+                [cljs-ajax "0.8.4"]
+                [hickory "0.7.1"]]
+
+ :builds
+ {:app {:target :browser
+        :output-dir "assets/js/cljs"
+        :asset-path "/assets/js/cljs"
+        :modules {:levant-jobs {:init-fn levant.jobs/init!}}
+        :compiler-options {:optimizations :advanced
+                           :infer-externs :auto}
+        :release {:output-dir "assets/js/cljs"}}}}

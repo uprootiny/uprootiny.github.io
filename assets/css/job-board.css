@@ -1,0 +1,237 @@
+/* Job Board Styles */
+
+.job-board {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.job-board-header {
+  margin-bottom: 2em;
+}
+
+/* Filters */
+#job-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  background: rgba(0,0,0,0.03);
+  border-radius: 4px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px;
+}
+
+.filter-group label {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3em;
+  color: #666;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 0.9em;
+  background: white;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.clear-btn {
+  align-self: flex-end;
+  padding: 0.5em 1em;
+  background: none;
+  border: 1px solid #999;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85em;
+}
+
+.clear-btn:hover {
+  background: #f0f0f0;
+}
+
+/* Stats */
+#job-stats {
+  margin-bottom: 1em;
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* Source cards */
+.job-source {
+  padding: 1.2em;
+  margin-bottom: 1em;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: white;
+  transition: box-shadow 0.2s;
+}
+
+.job-source:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.source-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5em;
+}
+
+.source-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+  text-decoration: none;
+}
+
+.source-name:hover {
+  text-decoration: underline;
+}
+
+.source-region {
+  font-size: 0.8em;
+  color: #888;
+  background: #f5f5f5;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+}
+
+.source-description {
+  margin: 0.5em 0;
+  color: #555;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.source-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin: 0.8em 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  font-size: 0.75em;
+  border-radius: 3px;
+  background: #f0f0f0;
+  color: #555;
+}
+
+.badge-residency { background: #e3f2fd; color: #1565c0; }
+.badge-teaching { background: #f3e5f5; color: #7b1fa2; }
+.badge-curatorial { background: #fff3e0; color: #e65100; }
+.badge-commission { background: #e8f5e9; color: #2e7d32; }
+.badge-grant { background: #fff8e1; color: #f57f17; }
+.badge-exhibition { background: #fce4ec; color: #c2185b; }
+.badge-competition { background: #e1f5fe; color: #0277bd; }
+.badge-museum { background: #efebe9; color: #5d4037; }
+.badge-research { background: #e8eaf6; color: #3949ab; }
+
+.source-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8em;
+  padding-top: 0.8em;
+  border-top: 1px solid #f0f0f0;
+}
+
+.update-freq {
+  font-size: 0.75em;
+  color: #999;
+}
+
+.visit-btn {
+  font-size: 0.85em;
+  color: #333;
+  text-decoration: none;
+  padding: 0.3em 0.8em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.visit-btn:hover {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2em;
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #job-filters {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .source-header {
+    flex-direction: column;
+    gap: 0.3em;
+  }
+
+  .source-region {
+    align-self: flex-start;
+  }
+}
+
+/* Quick links section */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  margin: 2em 0;
+}
+
+.quick-link {
+  padding: 1em;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.quick-link:hover {
+  background: #f9f9f9;
+  border-color: #ccc;
+}
+
+.quick-link-icon {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+.quick-link-label {
+  font-size: 0.9em;
+}

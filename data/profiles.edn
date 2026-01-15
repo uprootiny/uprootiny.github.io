@@ -1,0 +1,133 @@
+;; Model Profiles (Mixtures)
+;; See docs/friction-ledger.md F001 for rationale
+
+{:profiles
+ [;; === COST-OPTIMIZED ===
+  {:id :free-first
+   :description "Free models only, best quality first"
+   :strategy :fallback
+   :models ["llama-3.3-70b-versatile"
+            "gemma-2-9b-it"
+            "llama-3.1-8b-instant"]
+   :escalation-triggers #{:rate-limited :context-exceeded}
+   :tags #{:free :daily-driver}}
+
+  {:id :research-cheap
+   :description "Free primary, paid fallback for failures"
+   :strategy :fallback
+   :models ["llama-3.3-70b-versatile"
+            "gemma-2-9b-it"
+            "claude-sonnet-4-20250514"]
+   :escalation-triggers #{:tool-failure :context-exceeded :rate-limited :quality-low}
+   :quality-threshold 0.7
+   :tags #{:balanced :default}}
+
+  {:id :budget-coding
+   :description "Cheap coding: DeepSeek with Claude fallback"
+   :strategy :fallback
+   :models ["deepseek-chat"
+            "llama-3.3-70b-versatile"
+            "claude-sonnet-4-20250514"]
+   :escalation-triggers #{:tool-failure :rate-limited}
+   :tags #{:code :cheap}}
+
+  ;; === QUALITY-OPTIMIZED ===
+  {:id :best-available
+   :description "Best model for critical tasks"
+   :strategy :primary
+   :models ["claude-sonnet-4-20250514"]
+   :tags #{:quality :agentic}}
+
+  {:id :opus-when-needed
+   :description "Sonnet primary, Opus for deep reasoning"
+   :strategy :escalation
+   :models ["claude-sonnet-4-20250514"
+            "claude-opus-4-5-20251101"]
+   :escalation-triggers #{:task-complex :confidence-low :reasoning-deep}
+   :complexity-threshold 0.8
+   :tags #{:quality :reasoning}}
+
+  {:id :code-heavy
+   :description "Best code model, no compromise"
+   :strategy :primary
+   :models ["claude-sonnet-4-20250514"]
+   :tags #{:code :quality}}
+
+  ;; === EXPLORATION ===
+  {:id :exploration
+   :description "Start cheap, escalate on complexity"
+   :strategy :escalation
+   :models ["gemma-2-9b-it"
+            "llama-3.3-70b-versatile"
+            "claude-sonnet-4-20250514"]
+   :escalation-triggers #{:confidence-low :task-complex :tool-failure}
+   :complexity-threshold 0.5
+   :tags #{:exploration :adaptive}}
+
+  {:id :long-context
+   :description "For very long documents"
+   :strategy :primary
+   :models ["gemini-1.5-pro"]
+   :context-min 100000
+   :tags #{:long-context :documents}}
+
+  ;; === VALIDATION ===
+  {:id :consensus
+   :description "Run multiple free models, take majority"
+   :strategy :ensemble
+   :models ["llama-3.3-70b-versatile"
+            "gemma-2-9b-it"
+            "mixtral-8x7b-32768"]
+   :aggregation :majority-vote
+   :min-agreement 2
+   :tags #{:validation :free}}
+
+  {:id :cross-vendor
+   :description "Cross-check across vendors"
+   :strategy :ensemble
+   :models ["claude-sonnet-4-20250514"
+            "gpt-4o"
+            "gemini-1.5-pro"]
+   :aggregation :unanimous-or-flag
+   :tags #{:validation :quality}}
+
+  ;; === SPECIALIZED ===
+  {:id :multimodal
+   :description "For image/vision tasks"
+   :strategy :fallback
+   :models ["gpt-4o"
+            "gemini-1.5-pro"
+            "claude-sonnet-4-20250514"]
+   :required-traits #{:multimodal}
+   :tags #{:vision :multimodal}}
+
+  {:id :math-heavy
+   :description "For mathematical reasoning"
+   :strategy :escalation
+   :models ["deepseek-chat"
+            "claude-opus-4-5-20251101"]
+   :escalation-triggers #{:math-error :confidence-low}
+   :tags #{:math :reasoning}}]
+
+ :strategies
+ {:primary "Use first model only, no fallback"
+  :fallback "Try models in order until success"
+  :escalation "Start with first, escalate on triggers"
+  :ensemble "Run all models, aggregate results"}
+
+ :escalation-triggers
+ {:tool-failure "Model failed to call tools correctly"
+  :context-exceeded "Input exceeded model's context window"
+  :rate-limited "Hit API rate limits"
+  :quality-low "Output quality below threshold"
+  :confidence-low "Model expressed low confidence"
+  :task-complex "Task detected as complex"
+  :reasoning-deep "Task requires extended reasoning"
+  :math-error "Mathematical errors detected"}
+
+ :defaults
+ {:interactive :research-cheap
+  :batch :free-first
+  :critical :best-available
+  :coding :code-heavy
+  :exploration :exploration}}
