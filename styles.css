@@ -99,24 +99,23 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  /* Progressive loading: start invisible, fade in when loaded */
-  opacity: 0;
-  transition: opacity 0.4s ease-in;
-}
-
-.image-item img.loaded {
-  opacity: 1;
+  position: relative;
+  z-index: 2;
 }
 
 /* Placeholder shimmer for image-item */
 .image-item {
   position: relative;
+  min-height: 200px;
 }
 
 .image-item::before {
   content: '';
-  display: block;
-  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(
     90deg,
     #f0f0f0 25%,
@@ -125,8 +124,15 @@ body {
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+  z-index: 1;
 }
 
+/* Hide shimmer when image loaded - class-based for JS fallback */
+.image-item.loaded::before {
+  display: none;
+}
+
+/* Modern browsers: also support :has() */
 .image-item:has(img.loaded)::before {
   display: none;
 }
@@ -159,25 +165,23 @@ body {
   object-fit: contain;
   display: block;
   margin: 0 auto;
-  /* Progressive loading: start invisible, fade in when loaded */
-  opacity: 0;
-  transition: opacity 0.4s ease-in;
-}
-
-.painting img.loaded {
-  opacity: 1;
+  position: relative;
+  z-index: 2;
 }
 
 /* Placeholder shimmer while image loads */
 .painting {
   position: relative;
+  min-height: 200px;
 }
 
 .painting::before {
   content: '';
-  display: block;
-  /* Reserve space with approximate aspect ratio for paintings */
-  aspect-ratio: 16 / 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(
     90deg,
     #f0f0f0 25%,
@@ -186,9 +190,15 @@ body {
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+  z-index: 1;
 }
 
-/* Hide placeholder once image is loaded */
+/* Hide shimmer when image loaded - class-based for JS fallback */
+.painting.loaded::before {
+  display: none;
+}
+
+/* Modern browsers: also support :has() */
 .painting:has(img.loaded)::before {
   display: none;
 }
