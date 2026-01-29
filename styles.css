@@ -1,3 +1,25 @@
+/*
+ * Design System for Cyrill Vasilyev Portfolio
+ * ============================================
+ *
+ * Principles:
+ *   - Artwork is primary; UI recedes
+ *   - Monospace typography: code/typewriter aesthetic
+ *   - Mobile-first vertical ribbon layout
+ *   - Progressive semantic color-coding
+ *   - Minimal, composable, deletable
+ *
+ * Structure:
+ *   1. Design Tokens (CSS custom properties)
+ *   2. Base styles
+ *   3. Navigation
+ *   4. Content & Layout
+ *   5. Gallery components
+ *   6. Page-specific styles
+ *   7. Semantic utility classes
+ *   8. Mobile overrides
+ */
+
 /* ==========================================================================
    Design Tokens
    ========================================================================== */
