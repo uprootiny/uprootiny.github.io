@@ -1,0 +1,22 @@
+<script>
+(function() {
+  function markLoaded(img) {
+    img.classList.add('loaded');
+    if (img.parentElement) {
+      img.parentElement.classList.add('loaded');
+    }
+  }
+
+  // Handle images that are already cached
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.painting img, .image-item img').forEach(function(img) {
+      if (img.complete && img.naturalHeight !== 0) {
+        markLoaded(img);
+      }
+    });
+  });
+
+  // Expose for inline onload handlers
+  window.imageLoaded = markLoaded;
+})();
+</script>

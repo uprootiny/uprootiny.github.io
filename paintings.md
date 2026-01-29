@@ -53,9 +53,8 @@ permalink: /paintings/
         src="{{ '/paintings/' | append: esc | relative_url }}"
         alt="{{ title }}"
         loading="lazy"
-        onload="this.classList.add('loaded'); this.parentElement.classList.add('loaded')"
+        onload="imageLoaded(this)"
       />
-      
       <div class="painting-info">
         <span class="title">{{ title }}</span>
         <span class="year">{{ year }}</span>
@@ -65,14 +64,3 @@ permalink: /paintings/
   {% endfor %}
 
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.painting img').forEach(function(img) {
-    if (img.complete) {
-      img.classList.add('loaded');
-      img.parentElement.classList.add('loaded');
-    }
-  });
-});
-</script>
