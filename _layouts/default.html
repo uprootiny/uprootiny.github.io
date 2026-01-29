@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>{{ page.title }}</title>
+  </head>
+  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+    {% if layout.background == 'painted' or page.background == 'painted' %}<div class="painted-background">{% endif %}
+    <main>
+      {% include navbar.html %}
+      <div class="wrapper">
+        <div class="content">
+          {{ content }}
+        </div>
+      </div>
+    </main>
+    {% if layout.background == 'painted' or page.background == 'painted' %}</div>{% endif %}
+    {% include image-loader.html %}
+  </body>
+</html>
