@@ -53,9 +53,8 @@ permalink: /paintings/
         src="{{ '/paintings/' | append: esc | relative_url }}"
         alt="{{ title }}"
         loading="lazy"
-        onload="this.classList.add('loaded')"
+        onload="imageLoaded(this)"
       />
-      
       <div class="painting-info">
         <span class="title">{{ title }}</span>
         <span class="year">{{ year }}</span>

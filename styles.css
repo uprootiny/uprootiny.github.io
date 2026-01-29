@@ -1,3 +1,103 @@
+/*
+ * Design System for Cyrill Vasilyev Portfolio
+ * ============================================
+ *
+ * Principles:
+ *   - Artwork is primary; UI recedes
+ *   - Monospace typography: code/typewriter aesthetic
+ *   - Mobile-first vertical ribbon layout
+ *   - Progressive semantic color-coding
+ *   - Minimal, composable, deletable
+ *
+ * Structure:
+ *   1. Design Tokens (CSS custom properties)
+ *   2. Base styles
+ *   3. Navigation
+ *   4. Content & Layout
+ *   5. Gallery components
+ *   6. Page-specific styles
+ *   7. Semantic utility classes
+ *   8. Mobile overrides
+ */
+
+/* ==========================================================================
+   Design Tokens
+   ========================================================================== */
+:root {
+  /* Typography */
+  --font-mono: 'Menlo', 'Courier New', monospace;
+  --font-size-base: 2.5rem;
+  --font-size-nav: 2rem;
+  --font-size-nav-mobile: 0.75rem;
+  --font-size-content: small;
+  --font-size-caption: 1.4ex;
+
+  /* Spacing */
+  --space-xs: 0.5em;
+  --space-sm: 1em;
+  --space-md: 1.5em;
+  --space-lg: 2em;
+  --space-xl: 3em;
+  --space-xxl: 4em;
+
+  /* Layout */
+  --content-width: 600px;
+  --min-image-height: 200px;
+
+  /* Colors: Base */
+  --color-text: #333;
+  --color-text-muted: #666;
+  --color-text-faint: #999;
+  --color-bg-start: white;
+  --color-bg-end: lightgray;
+  --color-shimmer-light: #f0f0f0;
+  --color-shimmer-mid: #e8e8e8;
+  --color-glow: rgba(255, 255, 255, 0.5);
+
+  /* Colors: Epistemic (certainty gradient) */
+  --color-fact: #2d5016;           /* grounded, verified */
+  --color-inference: #4a6741;      /* reasoned, derived */
+  --color-speculation: #7d8a70;    /* tentative, exploratory */
+  --color-question: #a0a0a0;       /* open, unresolved */
+
+  /* Colors: Temporal */
+  --color-past: #6b5b4f;           /* sepia, receding */
+  --color-present: #333;           /* clear, immediate */
+  --color-future: #4a5568;         /* cool, approaching */
+  --color-timeless: #1a1a1a;       /* anchored, persistent */
+
+  /* Colors: Content Type */
+  --color-artwork: transparent;     /* artwork speaks for itself */
+  --color-prose: #333;             /* readable, neutral */
+  --color-data: #2c5282;           /* structured, precise */
+  --color-reference: #553c9a;      /* linked, external */
+  --color-annotation: #975a16;     /* marginal, contextual */
+
+  /* Colors: Affective (resonance with artist's chromatic practice) */
+  --color-neutral: #666;
+  --color-warm: #8b4513;           /* earth, body */
+  --color-cool: #2f4f4f;           /* air, distance */
+  --color-intense: #8b0000;        /* presence, urgency */
+
+  /* Colors: State */
+  --color-state-default: var(--color-text);
+  --color-state-hover: #000;
+  --color-state-active: var(--color-intense);
+  --color-state-focus: #2563eb;
+  --color-state-disabled: var(--color-text-faint);
+
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.4s ease-in;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* Animation */
+  --shimmer-duration: 1.5s;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
 html, body {
   min-height: 100vh;
   margin: 0;
@@ -5,70 +105,73 @@ html, body {
 }
 
 body {
-  font-family: 'Menlo', 'Courier New', monospace;
-  font-size: 2.5rem;
-  background: linear-gradient(to bottom, white, lightgray) no-repeat fixed;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  background: linear-gradient(to bottom, var(--color-bg-start), var(--color-bg-end)) no-repeat fixed;
   background-size: 100% 100%;
 }
 
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
 .horizontal-list {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
-  padding: 1em 0;
+  padding: var(--space-sm) 0;
   margin: 0;
-  font-family: 'Menlo', 'Courier New', monospace;
-  font-size: 2rem; /* Slightly smaller */
-  background-color: rgba(255, 255, 255, 0);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-nav);
+  background-color: transparent;
   flex-wrap: wrap;
-  gap: 1em; /* Add consistent spacing between items */
+  gap: var(--space-sm);
 }
 
 .nav-item {
-  white-space: nowrap; /* Prevent line breaks within nav items */
-}
- 
-.content {
-  padding: 2em;
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: small;
+  white-space: nowrap;
 }
 
-/* Mobile-first: clean vertical ribbon layout for iPhones */
+/* ==========================================================================
+   Content
+   ========================================================================== */
+.content {
+  padding: var(--space-lg);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  font-size: var(--font-size-content);
+}
+
+/* ==========================================================================
+   Mobile Overrides
+   ========================================================================== */
 @media (max-width: 768px) {
   .content {
-    padding: 1.5em;
+    padding: var(--space-md);
   }
 
-  /* Full-width images: override content padding */
   .gallery,
   .image-container {
-    margin-left: -1.5em;
-    margin-right: -1.5em;
+    margin-left: calc(-1 * var(--space-md));
+    margin-right: calc(-1 * var(--space-md));
   }
 
-  /* Remove padding from image containers on mobile */
   .image-item {
     padding: 0;
-    margin-bottom: 1em;
+    margin-bottom: var(--space-sm);
   }
 
-  /* Full-width images, edge to edge */
   .painting {
-    margin-bottom: 1.5em;
+    margin-bottom: var(--space-md);
   }
 
-  /* Compact title info on single line */
   .painting-info {
-    padding: 0 1em;
-    margin-top: 0.5em;
-    margin-bottom: 2em;
+    padding: 0 var(--space-sm);
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-lg);
     font-size: 1.2ex;
   }
 
-  /* Tighter spacing between title elements on mobile */
   .title,
   .dimensions,
   .year {
@@ -76,119 +179,64 @@ body {
     font-size: 0.9em;
   }
 
-  /* Reduce gallery gap on mobile */
   .gallery {
     gap: 0;
   }
 }
 
-/* Legacy styles for backward compatibility */
+/* ==========================================================================
+   Gallery: Shared Base
+   ========================================================================== */
 .image-container {
-  gap: 2em;
+  gap: var(--space-lg);
 }
 
 .image-item {
   box-sizing: border-box;
-  padding: 1em;
-  margin-bottom: 2em;
-  /* height: 92vh; */
+  padding: var(--space-sm);
+  margin-bottom: var(--space-lg);
 }
 
-.image-item img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  /* Progressive loading: start invisible, fade in when loaded */
-  opacity: 0;
-  transition: opacity 0.4s ease-in;
-}
-
-.image-item img.loaded {
-  opacity: 1;
-}
-
-/* Placeholder shimmer for image-item */
-.image-item {
-  position: relative;
-}
-
-.image-item::before {
-  content: '';
-  display: block;
-  aspect-ratio: 1 / 1;
-  background: linear-gradient(
-    90deg,
-    #f0f0f0 25%,
-    #e8e8e8 50%,
-    #f0f0f0 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-.image-item:has(img.loaded)::before {
-  display: none;
-}
-
-/* New gallery styles */
-.gallery {
-  gap: 4em;
-}
-
-.painting {
-  box-sizing: border-box;
-  padding: 0;
-  margin-bottom: 3em; /* Space between paintings (painting-info adds more) */
-  text-align: center;
-}
-
-.painting-info {
-  margin-top: 0.8em; /* Less space above title */
-  margin-bottom: 2.5em; /* More space below title (before next painting) */
-  font-size: 1.4ex;
-  white-space: nowrap; /* Keep title/year/dimensions on single line */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
+/* Shared image styles */
+.image-item img,
 .painting img {
   width: 100%;
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  position: relative;
+  z-index: 2;
   display: block;
   margin: 0 auto;
-  /* Progressive loading: start invisible, fade in when loaded */
-  opacity: 0;
-  transition: opacity 0.4s ease-in;
 }
 
-.painting img.loaded {
-  opacity: 1;
-}
-
-/* Placeholder shimmer while image loads */
+/* Shared shimmer base */
+.image-item,
 .painting {
   position: relative;
+  min-height: var(--min-image-height);
 }
 
+.image-item::before,
 .painting::before {
   content: '';
-  display: block;
-  /* Reserve space with approximate aspect ratio for paintings */
-  aspect-ratio: 16 / 10;
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
     90deg,
-    #f0f0f0 25%,
-    #e8e8e8 50%,
-    #f0f0f0 75%
+    var(--color-shimmer-light) 25%,
+    var(--color-shimmer-mid) 50%,
+    var(--color-shimmer-light) 75%
   );
   background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
+  animation: shimmer var(--shimmer-duration) infinite;
+  z-index: 1;
 }
 
-/* Hide placeholder once image is loaded */
+/* Hide shimmer on load */
+.image-item.loaded::before,
+.painting.loaded::before,
+.image-item:has(img.loaded)::before,
 .painting:has(img.loaded)::before {
   display: none;
 }
@@ -198,40 +246,76 @@ body {
   100% { background-position: -200% 0; }
 }
 
+/* ==========================================================================
+   Gallery: Paintings
+   ========================================================================== */
+.gallery {
+  gap: var(--space-xxl);
+}
+
+.painting {
+  box-sizing: border-box;
+  padding: 0;
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.painting-info {
+  margin-top: 0.8em;
+  margin-bottom: var(--space-lg);
+  font-size: var(--font-size-caption);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   Typography: Captions
+   ========================================================================== */
 .title,
 .dimensions,
 .year {
-  margin-right: 0.5em;
-  color: #333;
+  margin-right: var(--space-xs);
+  color: var(--color-text);
   font-weight: bold;
-  opacity: 1;
   display: inline-block;
 }
 
+/* ==========================================================================
+   Page: About
+   ========================================================================== */
 .about-page {
- display: inline;
- padding: 0.8ex;
- white-space: pre-wrap; /* Preserves white space and breaks lines */
+  display: inline;
+  padding: 0.8ex;
+  white-space: pre-wrap;
 }
 
+/* ==========================================================================
+   Background: Painted
+   ========================================================================== */
 .painted-background {
   background-image: url("/assets/images/background.jpg");
-  background-size: auto; /* Adjusts the size of the background image to fit the container */
-  background-repeat: repeat; /* Allows the background image to tile both horizontally and vertically */
-  background-position: center; /* Centers the background image */
-  min-height: 100vh; /* Ensures the container takes up at least the full height of the viewport */
- }
- 
- 
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
 a {
   text-decoration: none;
-  transition: box-shadow 0.5s ease-in-out;
- }
- 
- a:hover {
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
- }
- 
+  transition: box-shadow var(--transition-slow);
+}
+
+a:hover {
+  box-shadow: 0 0 10px 5px var(--color-glow);
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -240,18 +324,17 @@ ul {
   text-decoration: none;
 }
 
-
-
-/* Show icons in navigation */
+/* ==========================================================================
+   Navigation: Icons & Mobile
+   ========================================================================== */
 .nav-item i {
   font-size: 1.2em;
 }
 
-/* Mobile navbar: compact, wrap if needed */
 @media (max-width: 768px) {
   .horizontal-list {
-    font-size: 0.75rem;
-    padding: 0.5em 0.5em;
+    font-size: var(--font-size-nav-mobile);
+    padding: var(--space-xs);
     gap: 0.4em 0.6em;
     flex-wrap: wrap;
     justify-content: center;
@@ -267,4 +350,46 @@ ul {
   }
 }
 
- 
+/* ==========================================================================
+   Semantic Utilities: Epistemic
+   ========================================================================== */
+.epistemic-fact { color: var(--color-fact); }
+.epistemic-inference { color: var(--color-inference); }
+.epistemic-speculation { color: var(--color-speculation); }
+.epistemic-question { color: var(--color-question); }
+
+/* Subtle background variants for blocks */
+.epistemic-fact-bg { background-color: color-mix(in srgb, var(--color-fact) 8%, transparent); }
+.epistemic-inference-bg { background-color: color-mix(in srgb, var(--color-inference) 8%, transparent); }
+.epistemic-speculation-bg { background-color: color-mix(in srgb, var(--color-speculation) 8%, transparent); }
+.epistemic-question-bg { background-color: color-mix(in srgb, var(--color-question) 8%, transparent); }
+
+/* ==========================================================================
+   Semantic Utilities: Temporal
+   ========================================================================== */
+.temporal-past { color: var(--color-past); }
+.temporal-present { color: var(--color-present); }
+.temporal-future { color: var(--color-future); }
+.temporal-timeless { color: var(--color-timeless); }
+
+/* ==========================================================================
+   Semantic Utilities: Content Type
+   ========================================================================== */
+.content-prose { color: var(--color-prose); }
+.content-data { color: var(--color-data); }
+.content-reference { color: var(--color-reference); }
+.content-annotation { color: var(--color-annotation); }
+
+/* ==========================================================================
+   Semantic Utilities: Affective
+   ========================================================================== */
+.affective-neutral { color: var(--color-neutral); }
+.affective-warm { color: var(--color-warm); }
+.affective-cool { color: var(--color-cool); }
+.affective-intense { color: var(--color-intense); }
+
+/* ==========================================================================
+   Semantic Utilities: Text Weight
+   ========================================================================== */
+.text-muted { color: var(--color-text-muted); }
+.text-faint { color: var(--color-text-faint); }
