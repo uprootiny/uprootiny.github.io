@@ -22,13 +22,47 @@
   --content-width: 600px;
   --min-image-height: 200px;
 
-  /* Colors */
+  /* Colors: Base */
   --color-text: #333;
+  --color-text-muted: #666;
+  --color-text-faint: #999;
   --color-bg-start: white;
   --color-bg-end: lightgray;
   --color-shimmer-light: #f0f0f0;
   --color-shimmer-mid: #e8e8e8;
   --color-glow: rgba(255, 255, 255, 0.5);
+
+  /* Colors: Epistemic (certainty gradient) */
+  --color-fact: #2d5016;           /* grounded, verified */
+  --color-inference: #4a6741;      /* reasoned, derived */
+  --color-speculation: #7d8a70;    /* tentative, exploratory */
+  --color-question: #a0a0a0;       /* open, unresolved */
+
+  /* Colors: Temporal */
+  --color-past: #6b5b4f;           /* sepia, receding */
+  --color-present: #333;           /* clear, immediate */
+  --color-future: #4a5568;         /* cool, approaching */
+  --color-timeless: #1a1a1a;       /* anchored, persistent */
+
+  /* Colors: Content Type */
+  --color-artwork: transparent;     /* artwork speaks for itself */
+  --color-prose: #333;             /* readable, neutral */
+  --color-data: #2c5282;           /* structured, precise */
+  --color-reference: #553c9a;      /* linked, external */
+  --color-annotation: #975a16;     /* marginal, contextual */
+
+  /* Colors: Affective (resonance with artist's chromatic practice) */
+  --color-neutral: #666;
+  --color-warm: #8b4513;           /* earth, body */
+  --color-cool: #2f4f4f;           /* air, distance */
+  --color-intense: #8b0000;        /* presence, urgency */
+
+  /* Colors: State */
+  --color-state-default: var(--color-text);
+  --color-state-hover: #000;
+  --color-state-active: var(--color-intense);
+  --color-state-focus: #2563eb;
+  --color-state-disabled: var(--color-text-faint);
 
   /* Transitions */
   --transition-fast: 0.3s ease;
@@ -294,4 +328,46 @@ ul {
   }
 }
 
- 
+/* ==========================================================================
+   Semantic Utilities: Epistemic
+   ========================================================================== */
+.epistemic-fact { color: var(--color-fact); }
+.epistemic-inference { color: var(--color-inference); }
+.epistemic-speculation { color: var(--color-speculation); }
+.epistemic-question { color: var(--color-question); }
+
+/* Subtle background variants for blocks */
+.epistemic-fact-bg { background-color: color-mix(in srgb, var(--color-fact) 8%, transparent); }
+.epistemic-inference-bg { background-color: color-mix(in srgb, var(--color-inference) 8%, transparent); }
+.epistemic-speculation-bg { background-color: color-mix(in srgb, var(--color-speculation) 8%, transparent); }
+.epistemic-question-bg { background-color: color-mix(in srgb, var(--color-question) 8%, transparent); }
+
+/* ==========================================================================
+   Semantic Utilities: Temporal
+   ========================================================================== */
+.temporal-past { color: var(--color-past); }
+.temporal-present { color: var(--color-present); }
+.temporal-future { color: var(--color-future); }
+.temporal-timeless { color: var(--color-timeless); }
+
+/* ==========================================================================
+   Semantic Utilities: Content Type
+   ========================================================================== */
+.content-prose { color: var(--color-prose); }
+.content-data { color: var(--color-data); }
+.content-reference { color: var(--color-reference); }
+.content-annotation { color: var(--color-annotation); }
+
+/* ==========================================================================
+   Semantic Utilities: Affective
+   ========================================================================== */
+.affective-neutral { color: var(--color-neutral); }
+.affective-warm { color: var(--color-warm); }
+.affective-cool { color: var(--color-cool); }
+.affective-intense { color: var(--color-intense); }
+
+/* ==========================================================================
+   Semantic Utilities: Text Weight
+   ========================================================================== */
+.text-muted { color: var(--color-text-muted); }
+.text-faint { color: var(--color-text-faint); }
