@@ -1,6 +1,6 @@
 ---
 layout: painted-background
-title: Artistic Statement
+title: Artist Bio
 ---
 
 <div class="about-page">
