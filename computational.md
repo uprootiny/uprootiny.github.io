@@ -83,6 +83,50 @@ Works at the intersection of code, concept, and interaction. <span class="live-i
 
 </nav>
 
+### Information Theory
+
+<p class="epistemic-inference">Exploring the mathematics of information: disorder, agreement, custody, and compression.</p>
+
+<nav class="work-nav">
+
+<a href="/computational/entropy/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Entropy Gradient</span>
+  <span class="work-subtitle text-muted">Measuring Disorder in Information</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">Shannon Entropy · Character Distribution</span>
+  </span>
+</a>
+
+<a href="/computational/compression/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Compression Ratios</span>
+  <span class="work-subtitle text-muted">Trading Computation for Storage</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">RLE · Dictionary · Lossy</span>
+  </span>
+</a>
+
+<a href="/computational/provenance/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Provenance Chains</span>
+  <span class="work-subtitle text-muted">Chain of Custody for Information</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">Hash Linking · Tamper Detection</span>
+  </span>
+</a>
+
+<a href="/computational/consensus/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Consensus Mechanisms</span>
+  <span class="work-subtitle text-muted">How Distributed Systems Agree</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">Byzantine Fault Tolerance · Voting</span>
+  </span>
+</a>
+
+</nav>
+
 ### Other Works
 
 <nav class="work-nav">
