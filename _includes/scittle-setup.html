@@ -1,0 +1,184 @@
+<!-- React and ReactDOM required for Reagent -->
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+
+<!-- Scittle: ClojureScript in the browser -->
+<script src="https://cdn.jsdelivr.net/npm/scittle@0.6.15/dist/scittle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scittle@0.6.15/dist/scittle.reagent.js"></script>
+
+<!-- Shared utilities for all live ClojureScript pages -->
+<script type="application/x-scittle">
+;; ════════════════════════════════════════════════════════════════════════════
+;; SHARED UTILITIES (stratum.core)
+;; ════════════════════════════════════════════════════════════════════════════
+;; Common functions used across all permanence gradient pages.
+;; Load this include before page-specific code.
+
+(ns stratum.core)
+
+;; ─────────────────────────────────────────────────────────────────────────────
+;; TIME
+;; ─────────────────────────────────────────────────────────────────────────────
+
+(defn now-ms
+  "Current time in milliseconds since epoch."
+  []
+  (js/Date.now))
+
+(defn relative-time
+  "Human-readable relative time string."
+  [timestamp]
+  (let [diff (- (now-ms) timestamp)]
+    (cond
+      (< diff 1000)    "now"
+      (< diff 60000)   (str (quot diff 1000) "s ago")
+      (< diff 3600000) (str (quot diff 60000) "m ago")
+      :else            (str (quot diff 3600000) "h ago"))))
+
+(defn time-until
+  "Milliseconds until a future timestamp. Returns 0 if past."
+  [target-ms]
+  (when target-ms
+    (max 0 (- target-ms (now-ms)))))
+
+(defn format-duration
+  "Format milliseconds as human-readable duration."
+  [ms]
+  (cond
+    (nil? ms)  "∞"
+    (<= ms 0)  "expired"
+    (< ms 1000) (str ms "ms")
+    (< ms 60000) (str (quot ms 1000) "s")
+    (< ms 3600000) (str (quot ms 60000) "m")
+    :else (str (quot ms 3600000) "h")))
+
+;; ─────────────────────────────────────────────────────────────────────────────
+;; IDENTITY / HASHING
+;; ─────────────────────────────────────────────────────────────────────────────
+
+(defn content-hash
+  "Generate a content-addressed hash for a datum.
+   Uses djb2 algorithm, prefixed with 'baf' (content-addressed identifier)."
+  ([content] (content-hash content true))
+  ([content include-timestamp?]
+   (let [input (if include-timestamp?
+                 (str content (now-ms))
+                 (str content))
+         hash-val (reduce
+                   (fn [acc ch]
+                     (bit-and
+                      (+ (bit-shift-left acc 5) acc (.charCodeAt ch 0))
+                      0x7FFFFFFF))
+                   5381
+                   input)]
+     (str "baf" (.toString hash-val 36)))))
+
+;; ─────────────────────────────────────────────────────────────────────────────
+;; PERSISTENCE
+;; ─────────────────────────────────────────────────────────────────────────────
+
+(def ^:const STORAGE-PREFIX "stratum:")
+
+(defn- storage-key [namespace k]
+  (str STORAGE-PREFIX namespace ":" (clojure.core/name k)))
+
+(defn- serialize [v]
+  (js/JSON.stringify (clj->js v)))
+
+(defn- deserialize [s]
+  (when s
+    (js->clj (js/JSON.parse s) :keywordize-keys true)))
+
+;; Session storage (stratum 3)
+
+(defn save-session!
+  "Persist value to sessionStorage."
+  [namespace k v]
+  (try
+    (.setItem js/sessionStorage (storage-key namespace k) (serialize v))
+    v
+    (catch :default _ nil)))
+
+(defn load-session
+  "Load value from sessionStorage."
+  [namespace k]
+  (try
+    (deserialize (.getItem js/sessionStorage (storage-key namespace k)))
+    (catch :default _ nil)))
+
+;; Local storage (stratum 4)
+
+(defn save-local!
+  "Persist value to localStorage."
+  [namespace k v]
+  (try
+    (.setItem js/localStorage (storage-key namespace k) (serialize v))
+    v
+    (catch :default _ nil)))
+
+(defn load-local
+  "Load value from localStorage."
+  [namespace k]
+  (try
+    (deserialize (.getItem js/localStorage (storage-key namespace k)))
+    (catch :default _ nil)))
+
+;; ─────────────────────────────────────────────────────────────────────────────
+;; STRATA CONFIGURATION
+;; ─────────────────────────────────────────────────────────────────────────────
+
+(def STRATA-CONFIG
+  "Immutable configuration for the seven permanence strata."
+  [{:id 1 :key :ephemeral   :decay-ms 5000   :css-class "stratum-1"}
+   {:id 2 :key :volatile    :decay-ms 30000  :css-class "stratum-2"}
+   {:id 3 :key :session     :decay-ms nil    :css-class "stratum-3"}
+   {:id 4 :key :local       :decay-ms nil    :css-class "stratum-4"}
+   {:id 5 :key :distributed :decay-ms nil    :css-class "stratum-5"}
+   {:id 6 :key :archival    :decay-ms nil    :css-class "stratum-6"}
+   {:id 7 :key :geological  :decay-ms nil    :css-class "stratum-7"}])
+
+(def STRATUM-META
+  "Human-readable metadata for each stratum."
+  {:ephemeral   {:label "Ephemeral"   :duration "~ms"     :color "#f0f0f0" :text "#999"}
+   :volatile    {:label "Volatile"    :duration "~min"    :color "#e0e0e0" :text "#888"}
+   :session     {:label "Session"     :duration "~hrs"    :color "#c8c8c8" :text "#666"}
+   :local       {:label "Local"       :duration "~days"   :color "#a0a0a0" :text "#444"}
+   :distributed {:label "Distributed" :duration "~months" :color "#787878" :text "#fff"}
+   :archival    {:label "Archival"    :duration "~years"  :color "#484848" :text "#fff"}
+   :geological  {:label "Geological"  :duration "~eons"   :color "#1a1a1a" :text "#fff"}})
+
+;; Indexed lookups
+(def ^:private stratum-by-key* (into {} (map (juxt :key identity) STRATA-CONFIG)))
+(def ^:private stratum-by-id* (into {} (map (juxt :id identity) STRATA-CONFIG)))
+
+(defn stratum
+  "Retrieve stratum config by key or id."
+  [k-or-id]
+  (cond
+    (keyword? k-or-id) (get stratum-by-key* k-or-id)
+    (number? k-or-id)  (get stratum-by-id* k-or-id)
+    :else nil))
+
+(defn stratum-meta
+  "Retrieve presentation metadata for a stratum."
+  [k]
+  (get STRATUM-META (if (keyword? k) k (:key (stratum k)))))
+
+;; ─────────────────────────────────────────────────────────────────────────────
+;; LOGGING
+;; ─────────────────────────────────────────────────────────────────────────────
+
+(defn log-event!
+  "Append an event to a volatile event log atom.
+   Usage: (log-event! state :witness {:data here})"
+  [state-atom event-type data]
+  (let [event {:id (content-hash (str event-type (now-ms)))
+               :type event-type
+               :data data
+               :at (now-ms)}]
+    (swap! state-atom update-in [:volatile :event-log]
+           #(take 50 (cons event %)))))
+
+;; Expose utility for other namespaces
+(js/console.log "stratum.core loaded")
+</script>
