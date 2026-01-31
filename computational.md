@@ -125,6 +125,15 @@ Works at the intersection of code, concept, and interaction. <span class="live-i
   </span>
 </a>
 
+<a href="/computational/merkle/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Merkle Trees</span>
+  <span class="work-subtitle text-muted">Hash Trees for Efficient Verification</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">Proofs · Tamper Detection · O(log n)</span>
+  </span>
+</a>
+
 </nav>
 
 ### Other Works
