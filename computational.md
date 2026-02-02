@@ -136,6 +136,50 @@ Works at the intersection of code, concept, and interaction. <span class="live-i
 
 </nav>
 
+### Computational Paradigms
+
+<p class="epistemic-inference">Models of computation: probabilistic structures, distributed state, emergent behavior, and space-memory tradeoffs.</p>
+
+<nav class="work-nav">
+
+<a href="/computational/bloom/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Bloom Filters</span>
+  <span class="work-subtitle text-muted">Probabilistic Set Membership</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">False Positives · Space Efficiency</span>
+  </span>
+</a>
+
+<a href="/computational/crdt/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> CRDTs</span>
+  <span class="work-subtitle text-muted">Conflict-free Replicated Data Types</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Network Sim</span>
+    <span class="content-data">Eventual Consistency · Partition Tolerance</span>
+  </span>
+</a>
+
+<a href="/computational/automata/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Cellular Automata</span>
+  <span class="work-subtitle text-muted">Simple Rules, Emergent Complexity</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">Rule 110 · Turing Complete</span>
+  </span>
+</a>
+
+<a href="/computational/catalytic/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Catalytic Computation</span>
+  <span class="work-subtitle text-muted">Borrowing Memory, Returning Pristine</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">Reversible · Space Reuse</span>
+  </span>
+</a>
+
+</nav>
+
 ### Other Works
 
 <nav class="work-nav">
