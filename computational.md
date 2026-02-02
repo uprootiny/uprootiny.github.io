@@ -178,6 +178,33 @@ Works at the intersection of code, concept, and interaction. <span class="live-i
   </span>
 </a>
 
+<a href="/computational/catalytic-streaming/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Catalytic Streaming</span>
+  <span class="work-subtitle text-muted">Rewindable Streams with O(1) Clean Space</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">Novel · Buffer as Catalyst</span>
+  </span>
+</a>
+
+<a href="/computational/catalytic-probabilistic/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Probabilistic Catalysis</span>
+  <span class="work-subtitle text-muted">Trading Restoration for Power</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">Novel · Hamming Codes · Error Correction</span>
+  </span>
+</a>
+
+<a href="/computational/catalytic-merkle/" class="work-card live">
+  <span class="work-title"><span class="live-indicator"></span> Catalytic Merkle Proofs</span>
+  <span class="work-subtitle text-muted">Tree as Workspace for Proof Generation</span>
+  <span class="work-meta">
+    <span class="temporal-present">Live Demo</span>
+    <span class="content-data">Novel · O(log n) Clean Space</span>
+  </span>
+</a>
+
 </nav>
 
 ### Other Works
