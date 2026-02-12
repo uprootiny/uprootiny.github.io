@@ -86,6 +86,34 @@
   --color-state-focus: #2563eb;
   --color-state-disabled: var(--color-text-faint);
 
+  /* Colors: Permanence Strata (7-level gradient from ephemeral to geological) */
+  --color-stratum-1: #f0f0f0;      /* ephemeral: ~ms, nearly invisible */
+  --color-stratum-2: #e0e0e0;      /* volatile: ~min, fading */
+  --color-stratum-3: #c8c8c8;      /* session: ~hrs, temporary */
+  --color-stratum-4: #a0a0a0;      /* local: ~days, personal */
+  --color-stratum-5: #787878;      /* distributed: ~months, shared */
+  --color-stratum-6: #484848;      /* archival: ~years, preserved */
+  --color-stratum-7: #1a1a1a;      /* geological: ~eons, permanent */
+
+  /* Colors: Stratum text (contrast pairs) */
+  --color-stratum-1-text: #999;
+  --color-stratum-2-text: #888;
+  --color-stratum-3-text: #666;
+  --color-stratum-4-text: #444;
+  --color-stratum-5-text: #333;
+  --color-stratum-6-text: #fff;
+  --color-stratum-7-text: #fff;
+
+  /* Colors: Liveness (for interactive/live code elements) */
+  --color-live-active: #22c55e;    /* green: running, responsive */
+  --color-live-pending: #f59e0b;   /* amber: processing, waiting */
+  --color-live-error: #ef4444;     /* red: failed, broken */
+  --color-live-idle: #94a3b8;      /* slate: dormant, ready */
+  --color-code-bg: #1e1e1e;        /* dark: code background */
+  --color-code-text: #d4d4d4;      /* light: code text */
+  --color-repl-prompt: #569cd6;    /* blue: REPL prompt */
+  --color-repl-result: #dcdcaa;    /* yellow: REPL result */
+
   /* Transitions */
   --transition-fast: 0.3s ease;
   --transition-medium: 0.4s ease-in;
@@ -93,6 +121,10 @@
 
   /* Animation */
   --shimmer-duration: 1.5s;
+  --decay-fast: 0.5s;
+  --decay-medium: 2s;
+  --decay-slow: 5s;
+  --pulse-duration: 2s;
 }
 
 /* ==========================================================================
@@ -123,6 +155,9 @@ body {
   margin: 0;
   font-family: var(--font-mono);
   font-size: var(--font-size-nav);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  opacity: 0.85;
   background-color: transparent;
   flex-wrap: wrap;
   gap: var(--space-sm);
@@ -261,23 +296,36 @@ body {
 }
 
 .painting-info {
-  margin-top: 0.8em;
+  margin-top: 1.2em;
   margin-bottom: var(--space-lg);
   font-size: var(--font-size-caption);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  letter-spacing: 0.02em;
 }
 
 /* ==========================================================================
    Typography: Captions
    ========================================================================== */
-.title,
-.dimensions,
-.year {
-  margin-right: var(--space-xs);
+.title {
+  margin-right: 0.8em;
   color: var(--color-text);
-  font-weight: bold;
+  font-weight: 600;
+  font-style: italic;
+  display: inline-block;
+}
+
+.year {
+  margin-right: 0.8em;
+  color: var(--color-text-muted);
+  font-weight: 400;
+  display: inline-block;
+}
+
+.dimensions {
+  color: var(--color-text-faint);
+  font-weight: 400;
   display: inline-block;
 }
 
@@ -310,7 +358,8 @@ a {
 }
 
 a:hover {
-  box-shadow: 0 0 10px 5px var(--color-glow);
+  box-shadow: 0 0 8px 3px var(--color-glow);
+  opacity: 1;
 }
 
 /* ==========================================================================
@@ -393,3 +442,115 @@ ul {
    ========================================================================== */
 .text-muted { color: var(--color-text-muted); }
 .text-faint { color: var(--color-text-faint); }
+
+/* ==========================================================================
+   Semantic Utilities: Permanence Strata
+   ========================================================================== */
+.stratum-1, .stratum-ephemeral {
+  border-left: 3px solid var(--color-stratum-1);
+  color: var(--color-stratum-1-text);
+}
+.stratum-2, .stratum-volatile {
+  border-left: 3px solid var(--color-stratum-2);
+  color: var(--color-stratum-2-text);
+}
+.stratum-3, .stratum-session {
+  border-left: 3px solid var(--color-stratum-3);
+  color: var(--color-stratum-3-text);
+}
+.stratum-4, .stratum-local {
+  border-left: 3px solid var(--color-stratum-4);
+  color: var(--color-stratum-4-text);
+}
+.stratum-5, .stratum-distributed {
+  border-left: 3px solid var(--color-stratum-5);
+  color: var(--color-stratum-5-text);
+}
+.stratum-6, .stratum-archival {
+  border-left: 3px solid var(--color-stratum-6);
+  color: var(--color-stratum-6-text);
+}
+.stratum-7, .stratum-geological {
+  border-left: 3px solid var(--color-stratum-7);
+  color: var(--color-stratum-7-text);
+}
+
+/* Stratum background variants */
+.stratum-1-bg { background-color: var(--color-stratum-1); color: var(--color-stratum-1-text); }
+.stratum-2-bg { background-color: var(--color-stratum-2); color: var(--color-stratum-2-text); }
+.stratum-3-bg { background-color: var(--color-stratum-3); color: var(--color-stratum-3-text); }
+.stratum-4-bg { background-color: var(--color-stratum-4); color: var(--color-stratum-4-text); }
+.stratum-5-bg { background-color: var(--color-stratum-5); color: var(--color-stratum-5-text); }
+.stratum-6-bg { background-color: var(--color-stratum-6); color: var(--color-stratum-6-text); }
+.stratum-7-bg { background-color: var(--color-stratum-7); color: var(--color-stratum-7-text); }
+
+/* ==========================================================================
+   Semantic Utilities: Liveness & Interactive
+   ========================================================================== */
+.live-active { color: var(--color-live-active); }
+.live-pending { color: var(--color-live-pending); }
+.live-error { color: var(--color-live-error); }
+.live-idle { color: var(--color-live-idle); }
+
+/* Live indicator (pulsing dot) */
+.live-indicator {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  background-color: var(--color-live-active);
+  animation: pulse var(--pulse-duration) ease-in-out infinite;
+}
+.live-indicator.pending { background-color: var(--color-live-pending); }
+.live-indicator.error { background-color: var(--color-live-error); animation: none; }
+.live-indicator.idle { background-color: var(--color-live-idle); animation: none; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.9); }
+}
+
+/* Code well (for live ClojureScript) */
+.code-well {
+  background-color: var(--color-code-bg);
+  color: var(--color-code-text);
+  padding: 1em;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  overflow-x: auto;
+  border-left: 3px solid var(--color-stratum-6);
+}
+.code-well.live { border-left-color: var(--color-live-active); }
+.code-well.error { border-left-color: var(--color-live-error); }
+
+/* REPL-style output */
+.repl-prompt { color: var(--color-repl-prompt); }
+.repl-result { color: var(--color-repl-result); }
+.repl-error { color: var(--color-live-error); }
+
+/* ==========================================================================
+   Decay Animations
+   ========================================================================== */
+.decaying {
+  transition: opacity var(--decay-medium) ease-out;
+}
+.decaying.fast { transition-duration: var(--decay-fast); }
+.decaying.slow { transition-duration: var(--decay-slow); }
+
+/* Fade out completely */
+.decay-out {
+  animation: decayOut var(--decay-medium) ease-out forwards;
+}
+@keyframes decayOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-5px); }
+}
+
+/* Fade in from nothing */
+.emerge {
+  animation: emerge var(--transition-fast) ease-out;
+}
+@keyframes emerge {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
